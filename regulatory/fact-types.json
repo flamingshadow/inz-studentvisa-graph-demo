@@ -1,0 +1,94 @@
+{
+  "fact_types": [
+    {
+      "fact_type_id": "FT-001",
+      "statement": "The Applicant submits the Visa Application.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-002",
+      "statement": "The Visa Application applies for the Student Visa.",
+      "graph_relationship": "APPLIES_TO"
+    },
+    {
+      "fact_type_id": "FT-003",
+      "statement": "The Applicant provides the Evidence Item.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-004",
+      "statement": "The Evidence Item supports the Observed Fact.",
+      "graph_relationship": "SUPPORTS_FACT"
+    },
+    {
+      "fact_type_id": "FT-005",
+      "statement": "The Observed Fact is verified as the Verified Fact.",
+      "graph_relationship": "VERIFIED_AS"
+    },
+    {
+      "fact_type_id": "FT-006",
+      "statement": "The Verified Fact is input to the Decision Check.",
+      "graph_relationship": "INPUT_TO"
+    },
+    {
+      "fact_type_id": "FT-007",
+      "statement": "The Business Rule requires the Verified Fact.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-008",
+      "statement": "The Immigration Officer assesses the Visa Application.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-009",
+      "statement": "The Immigration Officer makes the Decision.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-010",
+      "statement": "The Decision Check evaluates the Business Rule.",
+      "graph_relationship": "EVALUATES"
+    },
+    {
+      "fact_type_id": "FT-011",
+      "statement": "The Business Rule derives from the Provision.",
+      "graph_relationship": "DERIVED_FROM"
+    },
+    {
+      "fact_type_id": "FT-012",
+      "statement": "The Provision belongs to the Authority Source.",
+      "graph_relationship": "CONTAINS"
+    },
+    {
+      "fact_type_id": "FT-013",
+      "statement": "The Education Provider offers the Programme.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-014",
+      "statement": "The Offer of Place relates to the Programme.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-015",
+      "statement": "The Sponsor supports the Applicant.",
+      "graph_relationship": null
+    },
+    {
+      "fact_type_id": "FT-016",
+      "statement": "The Student Visa has the Visa Condition.",
+      "graph_relationship": "HAS_CONDITION"
+    },
+    {
+      "fact_type_id": "FT-017",
+      "statement": "The Visa Condition permits the Activity.",
+      "graph_relationship": "PERMITS"
+    },
+    {
+      "fact_type_id": "FT-018",
+      "statement": "The Visa Condition prohibits the Activity.",
+      "graph_relationship": "PROHIBITS"
+    }
+  ]
+}

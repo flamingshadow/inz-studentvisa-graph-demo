@@ -1,0 +1,202 @@
+{
+  "temporal_constraints": [
+    {
+      "id": "SV-TIME-APP-001",
+      "rule_id": "SV-APP-003",
+      "text": "when the Visa Application is made",
+      "source_provision_id": "NZ-IMM-ACT-2009-S58-1",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-DEC-001",
+      "rule_id": "SV-DEC-004",
+      "text": "when granting the Visa",
+      "source_provision_id": "NZ-IMM-ACT-2009-S45-2-C",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-COND-001",
+      "rule_id": "SV-COND-002",
+      "text": "when granting a Temporary Entry Class Visa",
+      "source_provision_id": "NZ-IMM-ACT-2009-S52-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-COND-002",
+      "rule_id": "SV-COND-003",
+      "text": "when granting a Temporary Entry Class Visa",
+      "source_provision_id": "NZ-IMM-ACT-2009-S52-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-COND-003",
+      "rule_id": "SV-COND-004",
+      "text": "after the Visa is granted",
+      "source_provision_id": "NZ-IMM-ACT-2009-S52-2-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-COND-004",
+      "rule_id": "SV-COND-005",
+      "text": "after the Visa is granted",
+      "source_provision_id": "NZ-IMM-ACT-2009-S52-2-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-LIFE-001",
+      "rule_id": "SV-LIFE-005",
+      "text": "while the Holder is outside New Zealand",
+      "source_provision_id": "NZ-IMM-ACT-2009-S66-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-LIFE-002",
+      "rule_id": "SV-LIFE-006",
+      "text": "while the Person is outside New Zealand",
+      "source_provision_id": "NZ-IMM-ACT-2009-S66-2",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-ENTRY-001",
+      "rule_id": "SV-ENTRY-003",
+      "text": "when granting Entry Permission",
+      "source_provision_id": "NZ-IMM-ACT-2009-S109-2",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-ENTRY-002",
+      "rule_id": "SV-ENTRY-006",
+      "text": "occurring after Visa grant",
+      "source_provision_id": "NZ-IMM-ACT-2009-S112-3",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-ONLINE-001",
+      "rule_id": "SV-ONLINE-009",
+      "text": "before determination or grant",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-H",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-CHAR-001",
+      "rule_id": "SV-CHAR-002",
+      "text": "within the preceding ten years",
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-INS-001",
+      "rule_id": "SV-INS-001",
+      "text": "enrolled for at least two weeks",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44-1",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-SCHOOL-001",
+      "rule_id": "SV-SCHOOL-004",
+      "text": "enrolled for at least two weeks",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL65",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-PRIV-001",
+      "rule_id": "SV-PRIV-009",
+      "text": "before use or disclosure",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP8",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-PRIV-002",
+      "rule_id": "SV-PRIV-010",
+      "text": "longer than lawfully necessary",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP9",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-PRIV-003",
+      "rule_id": "SV-PRIV-015",
+      "text": "as soon as practicable after becoming aware of a Notifiable Privacy Breach",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S114",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TIME-PRIV-004",
+      "rule_id": "SV-PRIV-016",
+      "text": "as soon as practicable after becoming aware of a Notifiable Privacy Breach",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S115",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    }
+  ]
+}

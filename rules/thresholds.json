@@ -1,0 +1,387 @@
+{
+  "thresholds": [
+    {
+      "id": "SV-TH-MIN-001",
+      "rule_id": "SV-MIN-001",
+      "text": "under 18",
+      "value": 18,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-IMM-ACT-2009-S59",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-PHOTO-001",
+      "rule_id": "SV-PHOTO-001",
+      "text": "provide two Passport-sized Photographs",
+      "value": 2,
+      "unit": "count",
+      "comparator": "EQUALS",
+      "applies_to_attribute": "photographs",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-II",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-FAM-001",
+      "rule_id": "SV-FAM-002",
+      "text": "under 20 years old",
+      "value": 20,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2-B-I",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-CHAR-001",
+      "rule_id": "SV-CHAR-001",
+      "text": "for five years or more",
+      "value": 5,
+      "unit": "years",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "sentence_length",
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-CHAR-002",
+      "rule_id": "SV-CHAR-002",
+      "text": "for twelve months or more",
+      "value": 12,
+      "unit": "months",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "sentence_length",
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-CHAR-003",
+      "rule_id": "SV-CHAR-002",
+      "text": "within the preceding ten years",
+      "value": 10,
+      "unit": "years",
+      "comparator": "LESS_THAN_OR_EQUAL",
+      "applies_to_attribute": "time_since_sentence",
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-INS-001",
+      "rule_id": "SV-INS-001",
+      "text": "at least two weeks",
+      "value": 2,
+      "unit": "weeks",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "enrolment_duration",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44-1",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-U18-001",
+      "rule_id": "SV-U18-001",
+      "text": "aged 10 or older",
+      "value": 10,
+      "unit": "years",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-U18-002",
+      "rule_id": "SV-U18-001",
+      "text": "under 18",
+      "value": 18,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-U18-003",
+      "rule_id": "SV-U18-003",
+      "text": "under 18",
+      "value": 18,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-C",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-U10-001",
+      "rule_id": "SV-U10-001",
+      "text": "under 10",
+      "value": 10,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL51-1",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-U18-004",
+      "rule_id": "SV-U18-004",
+      "text": "under 18",
+      "value": 18,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL52",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-ACCOM-001",
+      "rule_id": "SV-ACCOM-001",
+      "text": "under 18",
+      "value": 18,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-ACCOM-002",
+      "rule_id": "SV-ACCOM-003",
+      "text": "under 18",
+      "value": 18,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-J",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-SCHOOL-001",
+      "rule_id": "SV-SCHOOL-004",
+      "text": "at least two weeks",
+      "value": 2,
+      "unit": "weeks",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "enrolment_duration",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL65",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-SCHOOL-002",
+      "rule_id": "SV-SCHOOL-005",
+      "text": "under 18",
+      "value": 18,
+      "unit": "years",
+      "comparator": "LESS_THAN",
+      "applies_to_attribute": "age",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL66",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TH-CAND-PATHWAY-PROGRAMMES",
+      "rule_id": "SV-CAND-PRODUCTS",
+      "text": "up to three programmes",
+      "value": 3,
+      "unit": "programmes",
+      "per": null,
+      "comparator": "LESS_THAN_OR_EQUAL",
+      "applies_to_attribute": null,
+      "version_id": "spec-v0.2-2026-11-17",
+      "effective_from": null,
+      "effective_to": null,
+      "source_provision_id": null,
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "label": null,
+      "executable": false,
+      "derivation": "Section 6 'Illustrative thresholds / logic' column",
+      "interpretation_flag_ids": []
+    },
+    {
+      "id": "SV-TH-CAND-TERTIARY-YEAR",
+      "rule_id": "SV-CAND-MAINT-TERTIARY",
+      "text": "NZD 20,000/year",
+      "value": 20000,
+      "unit": "NZD",
+      "per": "year",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "available_funds_nzd",
+      "version_id": "spec-v0.2-2026-11-17",
+      "effective_from": null,
+      "effective_to": null,
+      "source_provision_id": null,
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "label": "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED",
+      "executable": true,
+      "derivation": "Section 6 'Illustrative thresholds / logic' column",
+      "interpretation_flag_ids": [
+        "IF-01"
+      ]
+    },
+    {
+      "id": "SV-TH-CAND-TERTIARY-MONTH",
+      "rule_id": "SV-CAND-MAINT-TERTIARY",
+      "text": "NZD 1,667/month",
+      "value": 1667,
+      "unit": "NZD",
+      "per": "month",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "available_funds_nzd",
+      "version_id": "spec-v0.2-2026-11-17",
+      "effective_from": null,
+      "effective_to": null,
+      "source_provision_id": null,
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "label": "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED",
+      "executable": true,
+      "derivation": "Section 6 'Illustrative thresholds / logic' column",
+      "interpretation_flag_ids": [
+        "IF-01"
+      ]
+    },
+    {
+      "id": "SV-TH-CAND-SCHOOL-YEAR",
+      "rule_id": "SV-CAND-MAINT-SCHOOL",
+      "text": "NZD 17,000/year",
+      "value": 17000,
+      "unit": "NZD",
+      "per": "year",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "available_funds_nzd",
+      "version_id": "spec-v0.2-2026-11-17",
+      "effective_from": null,
+      "effective_to": null,
+      "source_provision_id": null,
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "label": "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED",
+      "executable": true,
+      "derivation": "Section 6 'Illustrative thresholds / logic' column",
+      "interpretation_flag_ids": [
+        "IF-01"
+      ]
+    },
+    {
+      "id": "SV-TH-CAND-SCHOOL-MONTH",
+      "rule_id": "SV-CAND-MAINT-SCHOOL",
+      "text": "NZD 1,417/month",
+      "value": 1417,
+      "unit": "NZD",
+      "per": "month",
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "available_funds_nzd",
+      "version_id": "spec-v0.2-2026-11-17",
+      "effective_from": null,
+      "effective_to": null,
+      "source_provision_id": null,
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "label": "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED",
+      "executable": true,
+      "derivation": "Section 6 'Illustrative thresholds / logic' column",
+      "interpretation_flag_ids": [
+        "IF-01"
+      ]
+    },
+    {
+      "id": "SV-TH-CAND-MATERNITY-TOTAL",
+      "rule_id": "SV-CAND-MATERNITY",
+      "text": "NZD 9,000",
+      "value": 9000,
+      "unit": "NZD",
+      "per": null,
+      "comparator": "GREATER_THAN_OR_EQUAL",
+      "applies_to_attribute": "available_funds_nzd",
+      "version_id": "spec-v0.2-2026-11-17",
+      "effective_from": null,
+      "effective_to": null,
+      "source_provision_id": null,
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "label": "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED",
+      "executable": true,
+      "derivation": "Section 6 'Illustrative thresholds / logic' column",
+      "interpretation_flag_ids": [
+        "IF-01"
+      ]
+    },
+    {
+      "id": "SV-TH-CAND-WORK-HOURS",
+      "rule_id": "SV-CAND-WORK",
+      "text": "25 hours/week",
+      "value": 25,
+      "unit": "hours",
+      "per": "week",
+      "comparator": "LESS_THAN_OR_EQUAL",
+      "applies_to_attribute": null,
+      "version_id": "spec-v0.2-2026-11-17",
+      "effective_from": null,
+      "effective_to": null,
+      "source_provision_id": null,
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "label": null,
+      "executable": false,
+      "derivation": "Section 6 'Illustrative thresholds / logic' column",
+      "interpretation_flag_ids": []
+    }
+  ]
+}

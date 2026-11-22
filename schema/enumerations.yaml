@@ -1,0 +1,89 @@
+enumerations:
+  evaluation_outcome:
+  - SATISFIED
+  - NOT_SATISFIED
+  - UNKNOWN
+  - NOT_APPLICABLE
+  - HUMAN_REVIEW_REQUIRED
+  - DISCRETION_REQUIRED
+  - AMBIGUOUS
+  - SOURCE_COVERAGE_GAP
+  automation_class:
+    A1:
+      meaning: Deterministic structured-data check
+      agent_action: Execute automatically.
+    A2:
+      meaning: Deterministic after evidence verification
+      agent_action: Verify fact, then execute.
+    A3:
+      meaning: Assisted human assessment
+      agent_action: Retrieve rules/evidence and refer to human.
+    A4:
+      meaning: Statutory discretion
+      agent_action: Present authority and constraints; decision-maker decides.
+    A5:
+      meaning: Ambiguous or non-executable
+      agent_action: Stop and escalate.
+  modality:
+  - MUST
+  - MUST_NOT
+  - MAY
+  rule_type:
+  - BusinessRule
+  - EligibilityRule
+  - Obligation
+  - Prohibition
+  - Permission
+  - Definition
+  - Calculation
+  published_rule_type_code:
+  - OR
+  - PERM
+  - DR
+  - SR
+  provenance_status:
+  - VERIFIED_PRIMARY_SOURCE
+  - RECONCILIATION_REQUIRED
+  verification_status:
+  - VERIFIED
+  - UNVERIFIED
+  interpretation_status:
+  - CONSISTENT
+  source_status:
+  - IN_FORCE
+  coverage_status:
+  - PARTIAL
+  - NOT_COVERED
+  source_coverage:
+  - PARTIAL
+  source_text_status:
+  - RETRIEVED
+  - SOURCE_TEXT_NOT_RETRIEVED
+  coverage_gap_reason_type:
+  - EXCLUDED_SOURCE
+  assessment_impact:
+  - PARTIAL
+  - BLOCKED
+  evaluated_by:
+  - RULE_ENGINE
+  threshold_label:
+  - CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED
+  audit_event:
+  - APPLICATION_SUBMITTED
+  - EVIDENCE_RECEIVED
+  - FACT_VERIFIED
+  - RULE_EVALUATED
+  - HUMAN_REVIEW_REQUESTED
+  - DISCRETION_EXERCISED
+  - STATE_CHANGED
+  - SOURCE_VERSION_CHANGED
+  test_type:
+  - PASS
+  - FAIL
+  - MISSING
+  - BOUNDARY
+  - EXCEPTION
+  - DISCRETION
+  - SOURCE_GAP
+  - HUMAN_REVIEW
+  - EXPLANATION

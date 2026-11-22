@@ -1,0 +1,2381 @@
+{
+  "document": {
+    "file": "Student_Visa_Knowledge_Graph_POC_Consolidated_Export_v0.2.docx",
+    "sha256": "3f3d856343cdc463a1c79438bf3cb139b5ed67694086b66f4706a2d230b0b1d7",
+    "version_line": "Version 0.2 | 17 November 2026 | Proof of concept only",
+    "extracted_on": "2026-11-23"
+  },
+  "rule_provenance": [
+    {
+      "rule_id": "SV-APP-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S57-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 1,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-APP-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S57-2"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 2,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-APP-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S58-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 3,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-APP-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S58-2"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 4,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-APP-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S58-3-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 5,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-APP-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S58-3-B"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 6,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-APP-007",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S58-6-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 7,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-APP-008",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S58-6-B"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 8,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-MIN-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S59"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 9,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-BIO-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S60-1",
+        "NZ-IMM-ACT-2009-S60-3"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 10,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-BIO-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S60-2"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 11,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-DEC-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S45-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 12,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-DEC-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S45-2-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 13,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-DEC-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S45-2-B"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 14,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-DEC-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S45-2-C"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 15,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-SPON-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S48-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 16,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-SPON-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S48-2"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 17,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-SPON-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S48-3"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 18,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-SPON-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S48-4"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 19,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-SPON-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S48-5"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 20,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-SPON-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S48-6"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 21,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-COND-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S49-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 22,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-COND-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S52-1-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 23,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-COND-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S52-1-B"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 24,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-COND-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S52-2-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 25,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-COND-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S52-2-B"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 26,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-COND-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S52-4-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 27,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-COND-007",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S56"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 28,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-WORK-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S77-4-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 29,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-STUDY-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S77-4-B"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 30,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-LIFE-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S62-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 31,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-LIFE-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S62-2"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 32,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-LIFE-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S63"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 33,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-LIFE-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S64-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 34,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-LIFE-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S66-1-A"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 35,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-LIFE-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S66-2"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 36,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-ENTRY-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S46-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 37,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-ENTRY-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S109-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 38,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-ENTRY-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S109-2"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 39,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-ENTRY-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S110"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 40,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-ENTRY-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S112-1"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 41,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-ENTRY-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S112-3"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 5,
+        "row": 42,
+        "section": "5"
+      }
+    },
+    {
+      "rule_id": "SV-FORM-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 1,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FORM-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 2,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FORM-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-C"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 3,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FORM-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-D"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 4,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-ID-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-E-I"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 5,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-PHOTO-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-E-II"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 6,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-INSTR-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-E-III"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 7,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FEE-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-F-I"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 8,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FEE-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-F-II"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 9,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FEE-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-2-F-III"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 10,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-EVID-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-3-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 11,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-EVID-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-3-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 12,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-HEALTH-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-3-C"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 13,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-TRAVEL-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-3-D"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 14,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FIN-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R10-3-E"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 15,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FAM-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R20-1-A",
+        "NZ-IMM-VEPRM-REGS-2010-R20-2"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 16,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FAM-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R20-2-B-I"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 17,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FAM-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R20-1-B",
+        "NZ-IMM-VEPRM-REGS-2010-R20-3-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 18,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FAM-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R20-5-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 19,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-FAM-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R20-5-D"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 20,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-IVL-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R26AAE-5-C"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 6,
+        "row": 21,
+        "section": "5.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-4",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-3"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 1,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-A",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 2,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-B",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 3,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-C",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-C"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 4,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-D",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-D"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 5,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-E",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-E"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 6,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-007",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-F",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-F"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 7,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-008",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-G",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-G"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 8,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-009",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-H",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-H"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 9,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-010",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-I",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-I"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 10,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-011",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-J",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-J"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 11,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-ONLINE-012",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-VEPRM-REGS-2010-R23AA-5-K",
+        "NZ-IMM-VEPRM-REGS-2010-R23A-4-K"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 16,
+        "row": 12,
+        "section": "D.1"
+      }
+    },
+    {
+      "rule_id": "SV-CHAR-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S15-1-A",
+        "NZ-IMM-ACT-2009-S17"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 17,
+        "row": 1,
+        "section": "D.2"
+      }
+    },
+    {
+      "rule_id": "SV-CHAR-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S15-1-B",
+        "NZ-IMM-ACT-2009-S17"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 17,
+        "row": 2,
+        "section": "D.2"
+      }
+    },
+    {
+      "rule_id": "SV-CHAR-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S15-1-C"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 17,
+        "row": 3,
+        "section": "D.2"
+      }
+    },
+    {
+      "rule_id": "SV-CHAR-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S15-1-D",
+        "NZ-IMM-ACT-2009-S15-1-E",
+        "NZ-IMM-ACT-2009-S15-1-F",
+        "NZ-IMM-ACT-2009-S17"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 17,
+        "row": 4,
+        "section": "D.2"
+      }
+    },
+    {
+      "rule_id": "SV-CHAR-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S16",
+        "NZ-IMM-ACT-2009-S17"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 17,
+        "row": 5,
+        "section": "D.2"
+      }
+    },
+    {
+      "rule_id": "SV-CHAR-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-ACT-2009",
+      "provision_ids": [
+        "NZ-IMM-ACT-2009-S17-1",
+        "NZ-IMM-ACT-2009-S17-3"
+      ],
+      "source_version": "2026-07-10",
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 17,
+        "row": 6,
+        "section": "D.2"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL40"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 1,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL41-1"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 2,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL41-1-G"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 3,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL41-1-I"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 4,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL42-1"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 5,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL42-2"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 6,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-INS-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL44-1"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 7,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-INS-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL44"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 8,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-INS-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL44"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 9,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-INS-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL44"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 10,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-INS-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL44"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 11,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-007",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL45"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 12,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-008",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL45-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 13,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-009",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL45-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 14,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-010",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL45-C"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 15,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-EDU-011",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL46-2-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 18,
+        "row": 16,
+        "section": "D.3"
+      }
+    },
+    {
+      "rule_id": "SV-U18-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 1,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-U18-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL50-1-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 2,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-U18-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL50-1-C"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 3,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-U10-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL51-1"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 4,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-U18-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL52"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 5,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-ACCOM-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL53-1-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 6,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-ACCOM-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL53-1-B",
+        "NZ-EDU-PASTORAL-CODE-2021-CL54"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 7,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-ACCOM-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL53-1-J"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 19,
+        "row": 8,
+        "section": "D.4"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL61"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 1,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL62-1-G"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 2,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL63"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 3,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL65"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 4,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL66"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 5,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL67-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 6,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-007",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL67-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 7,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-008",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL68-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 8,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-009",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL68-B"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 9,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-010",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL68-C"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 10,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-SCHOOL-011",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "provision_ids": [
+        "NZ-EDU-PASTORAL-CODE-2021-CL81-2-A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 20,
+        "row": 11,
+        "section": "D.5"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP1"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 1,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP2"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 2,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP3"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 3,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP3A"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 4,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP4"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 5,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-006",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP5"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 6,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-007",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP6"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 7,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-008",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP7"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 8,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-009",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP8"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 9,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-010",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP9"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 10,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-011",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP10"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 11,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-012",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP11"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 12,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-013",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP12"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 13,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-014",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S22",
+        "NZ-PRIVACY-ACT-2020-S22-IPP13"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 14,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-015",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S114"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 15,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-PRIV-016",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "provision_ids": [
+        "NZ-PRIVACY-ACT-2020-S115"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 21,
+        "row": 16,
+        "section": "D.6"
+      }
+    },
+    {
+      "rule_id": "SV-CARRIER-001",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-CIO-REGS-2010-R4-1"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 22,
+        "row": 1,
+        "section": "D.7"
+      }
+    },
+    {
+      "rule_id": "SV-CARRIER-002",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-CIO-REGS-2010-R4-2"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 22,
+        "row": 2,
+        "section": "D.7"
+      }
+    },
+    {
+      "rule_id": "SV-CARRIER-003",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-CIO-REGS-2010-R5-1-A",
+        "NZ-IMM-CIO-REGS-2010-R5-2"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 22,
+        "row": 3,
+        "section": "D.7"
+      }
+    },
+    {
+      "rule_id": "SV-CARRIER-004",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-CIO-REGS-2010-R5-1-B",
+        "NZ-IMM-CIO-REGS-2010-R5-3"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 22,
+        "row": 4,
+        "section": "D.7"
+      }
+    },
+    {
+      "rule_id": "SV-CARRIER-005",
+      "catalogue": "VERIFIED",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "provision_ids": [
+        "NZ-IMM-CIO-REGS-2010-R6"
+      ],
+      "source_version": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "extracted_from": {
+        "table_index": 22,
+        "row": 5,
+        "section": "D.7"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-PRODUCTS",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 1,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-ELIGIBILITY",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 2,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-MAINT-TERTIARY",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 3,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-MAINT-SCHOOL",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 4,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-MATERNITY",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 5,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-WORK",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 6,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-CHANGE-STUDY",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 7,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-GENUINE",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 8,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-FAMILY",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 9,
+        "section": "6"
+      }
+    },
+    {
+      "rule_id": "SV-CAND-GUARDIAN",
+      "catalogue": "CANDIDATE",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "provision_ids": [],
+      "source_version": null,
+      "source_text_status": null,
+      "extracted_from": {
+        "table_index": 8,
+        "row": 10,
+        "section": "6"
+      }
+    }
+  ]
+}

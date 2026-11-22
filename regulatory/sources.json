@@ -1,0 +1,239 @@
+{
+  "sources": [
+    {
+      "source_id": "NZ-IMM-ACT-2009",
+      "title": "Immigration Act 2009",
+      "instrument_type": "PrincipalAct",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "1",
+      "role": "Primary statutory authority for visa applications, decisions, sponsorship, conditions, temporary entry, lifecycle and entry permission.",
+      "poc_coverage": "Verified baseline provisions included.",
+      "version_id": "2026-07-10",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "IN_FORCE",
+      "authoritative_uri": null,
+      "coverage_status": "PARTIAL",
+      "made_under": null,
+      "interpretation_flag_ids": [],
+      "instrument_version_id": "NZ-IMM-ACT-2009@2026-07-10"
+    },
+    {
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "title": "Immigration (Visa, Entry Permission, and Related Matters) Regulations 2010",
+      "instrument_type": "Regulations",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "2",
+      "role": "Subordinate legislation for application form, information, evidence, online applications, fees, levies and family inclusion.",
+      "poc_coverage": "Verified baseline provisions included.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": "IN_FORCE",
+      "authoritative_uri": null,
+      "coverage_status": "PARTIAL",
+      "made_under": "NZ-IMM-ACT-2009",
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ],
+      "instrument_version_id": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED"
+    },
+    {
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "title": "Immigration (Carriers' Information Obligations) Regulations 2010",
+      "instrument_type": "Regulations",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "2",
+      "role": "Subordinate legislation for passenger, travel-document, visa and travel-data obligations.",
+      "poc_coverage": "Relevant pre-arrival rules included.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": "IN_FORCE",
+      "authoritative_uri": null,
+      "coverage_status": "PARTIAL",
+      "made_under": "NZ-IMM-ACT-2009",
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ],
+      "instrument_version_id": "NZ-IMM-CIO-REGS-2010@UNVERSIONED"
+    },
+    {
+      "source_id": "NZ-EDU-TRAINING-ACT-2020",
+      "title": "Education and Training Act 2020",
+      "instrument_type": "PrincipalAct",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "Parallel",
+      "role": "Statutory authority for international education and the Code.",
+      "poc_coverage": "Source relationship included; detailed Act rules require separate extraction.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": "IN_FORCE",
+      "authoritative_uri": null,
+      "coverage_status": "PARTIAL",
+      "made_under": null,
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ],
+      "instrument_version_id": "NZ-EDU-TRAINING-ACT-2020@UNVERSIONED"
+    },
+    {
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "title": "Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021, amended April 2023",
+      "instrument_type": "CodeOfPractice",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "Parallel",
+      "role": "Provider, enrolment, insurance, immigration-status, minor and accommodation requirements.",
+      "poc_coverage": "Relevant tertiary and school learner rules included.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": "IN_FORCE",
+      "authoritative_uri": null,
+      "coverage_status": "PARTIAL",
+      "made_under": "NZ-EDU-TRAINING-ACT-2020",
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ],
+      "instrument_version_id": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED"
+    },
+    {
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "title": "Privacy Act 2020",
+      "instrument_type": "PrincipalAct",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "Parallel",
+      "role": "Cross-cutting information collection, use, security, disclosure, access and correction rules.",
+      "poc_coverage": "Cross-cutting rules included.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": "IN_FORCE",
+      "authoritative_uri": null,
+      "coverage_status": "PARTIAL",
+      "made_under": null,
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ],
+      "instrument_version_id": "NZ-PRIVACY-ACT-2020@UNVERSIONED"
+    },
+    {
+      "source_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
+      "title": "Immigration Instructions / INZ Operational Manual",
+      "instrument_type": "ImmigrationInstruction",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "3 / gap",
+      "role": "Detailed Student Visa product criteria and thresholds.",
+      "poc_coverage": "Not in authoritative verified corpus; candidate rules marked RECONCILIATION_REQUIRED or SOURCE_COVERAGE_GAP.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": null,
+      "authoritative_uri": null,
+      "coverage_status": "NOT_COVERED",
+      "made_under": "NZ-IMM-ACT-2009",
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ],
+      "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@UNVERSIONED"
+    },
+    {
+      "source_id": "DOC-BRA-AI-PROMPTS",
+      "title": "Business Rules Analysis AI Prompts Immigration.docx",
+      "instrument_type": "Method",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "Method",
+      "role": "Two-phase discovery and RuleSpeak analysis method, developer and auditor outputs.",
+      "poc_coverage": "Used as analysis method; ARIS excluded.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": null,
+      "authoritative_uri": null,
+      "coverage_status": null,
+      "made_under": null,
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ]
+    },
+    {
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "title": "INZ Student Visa Business Rule.docx",
+      "instrument_type": "OriginalWork",
+      "jurisdiction": "NZ",
+      "hierarchy_level": "Original work",
+      "role": "Decision-oriented product graph, evidence, thresholds, work rights, change-of-study and family-support concepts.",
+      "poc_coverage": "Integrated as candidate domain content and design accelerator.",
+      "version_id": null,
+      "effective_from": null,
+      "effective_to": null,
+      "status": null,
+      "authoritative_uri": null,
+      "coverage_status": null,
+      "made_under": null,
+      "interpretation_flag_ids": [
+        "IF-08",
+        "IF-09"
+      ]
+    }
+  ],
+  "instrument_versions": [
+    {
+      "instrument_version_id": "NZ-IMM-ACT-2009@2026-07-10",
+      "source_id": "NZ-IMM-ACT-2009",
+      "version_id": "2026-07-10",
+      "version_basis": "Stated in spec v0.2 (12.1 source_version)",
+      "retrieved_at": null
+    },
+    {
+      "instrument_version_id": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "version_id": null,
+      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "retrieved_at": null
+    },
+    {
+      "instrument_version_id": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "version_id": null,
+      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "retrieved_at": null
+    },
+    {
+      "instrument_version_id": "NZ-EDU-TRAINING-ACT-2020@UNVERSIONED",
+      "source_id": "NZ-EDU-TRAINING-ACT-2020",
+      "version_id": null,
+      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "retrieved_at": null
+    },
+    {
+      "instrument_version_id": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "version_id": null,
+      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "retrieved_at": null
+    },
+    {
+      "instrument_version_id": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "version_id": null,
+      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "retrieved_at": null
+    },
+    {
+      "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@UNVERSIONED",
+      "source_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
+      "version_id": null,
+      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "retrieved_at": null
+    }
+  ]
+}

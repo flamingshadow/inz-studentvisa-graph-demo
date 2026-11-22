@@ -1,0 +1,415 @@
+{
+  "application_id": "POC-SV-APP-TC05",
+  "product_id": "STUDENT-VISA",
+  "synthetic": true,
+  "assessment_as_at": "2026-11-17",
+  "channel": "paper",
+  "applicant": {
+    "applicant_id": "APPLICANT-POC-TC05",
+    "synthetic_name": "Synthetic Applicant TC05"
+  },
+  "evidence_items": [
+    {
+      "evidence_item_id": "EVID-TC05-001",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "ApplicationForm",
+      "document_reference": "SYNTHETIC-APPLICATIONFORM-001",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-001",
+        "FACT-TC05-002",
+        "FACT-TC05-003",
+        "FACT-TC05-004",
+        "FACT-TC05-011",
+        "FACT-TC05-015"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-002",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "Passport",
+      "document_reference": "SYNTHETIC-PASSPORT-002",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-005",
+        "FACT-TC05-010"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-003",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "Photograph",
+      "document_reference": "SYNTHETIC-PHOTOGRAPH-003",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-006"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-004",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "PaymentRecord",
+      "document_reference": "SYNTHETIC-PAYMENTRECORD-004",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-007",
+        "FACT-TC05-008",
+        "FACT-TC05-009"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-005",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "OfferOfPlace",
+      "document_reference": "SYNTHETIC-OFFEROFPLACE-005",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-012",
+        "FACT-TC05-013"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-006",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "BankStatement",
+      "document_reference": "SYNTHETIC-BANKSTATEMENT-006",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-014"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-007",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "MedicalCertificate",
+      "document_reference": "SYNTHETIC-MEDICALCERTIFICATE-007",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-016"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-008",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "VisaConditionRecord",
+      "document_reference": "SYNTHETIC-VISACONDITIONRECORD-008",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-017",
+        "FACT-TC05-018"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-TC05-009",
+      "application_id": "POC-SV-APP-TC05",
+      "evidence_type": "Timesheet",
+      "document_reference": "SYNTHETIC-TIMESHEET-009",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-10T09:00:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-TC05-019",
+        "FACT-TC05-020"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "FACT-TC05-001",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "approved_form_used",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-002",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "persons_in_application",
+      "value": 1,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-TC05-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-003",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "completed_in_english",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-004",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "application_signed",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-005",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "identity_document_provided",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-002"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-006",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "photographs_provided",
+      "value": 2,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-TC05-003"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-007",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "prescribed_fee_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-008",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "immigration_levy_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-009",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "ivl_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-010",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "applicant_age",
+      "value": 22,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-TC05-002"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-011",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "applicant_marital_status",
+      "value": "unmarried",
+      "data_type": "string",
+      "evidence_item_ids": [
+        "EVID-TC05-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-012",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "student_type",
+      "value": "tertiary",
+      "data_type": "string",
+      "evidence_item_ids": [
+        "EVID-TC05-005"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-013",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "study_duration_months",
+      "value": 12,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-TC05-005"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-014",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "available_funds_nzd",
+      "value": 25000,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-TC05-006"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-015",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "material_change_occurred",
+      "value": false,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-016",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "medical_certificate_received",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-007"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-017",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "work_permitted_by_visa_conditions",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-TC05-008"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-018",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "visa_condition_max_work_hours_per_week",
+      "value": 25,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-TC05-008"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-019",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "recorded_work_hours_per_week",
+      "value": 20,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-TC05-009"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    },
+    {
+      "fact_id": "FACT-TC05-020",
+      "application_id": "POC-SV-APP-TC05",
+      "subject_id": "APPLICANT-POC-TC05",
+      "attribute": "activity_date",
+      "value": "2026-11-03",
+      "data_type": "date",
+      "evidence_item_ids": [
+        "EVID-TC05-009"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-12T10:00:00+13:00",
+      "verified_by": "SYNTHETIC-VERIFIER"
+    }
+  ],
+  "scenario": "Visa conditions permit work for 25 hours; recorded activity is 20 hours."
+}

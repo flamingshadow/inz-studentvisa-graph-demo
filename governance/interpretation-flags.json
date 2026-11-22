@@ -1,0 +1,314 @@
+{
+  "interpretation_flags": [
+    {
+      "flag_id": "IF-01",
+      "kind": "DEVIATION",
+      "title": "Candidate funds thresholds execute; TC-06 expectation adjusted",
+      "detail": "The document says SV-CHECK-FIN-001 should 'only execute after authoritative product threshold is reconciled' and TC-06 expects SOURCE_COVERAGE_GAP. By product-owner decision the candidate figures (tertiary NZD 20,000/yr or 1,667/month; school NZD 17,000/yr or 1,417/month; maternity NZD 9,000) are loaded and the check runs. Every such Threshold and evaluation carries the label 'CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED' and provenance_status RECONCILIATION_REQUIRED. TC-06 now expects that label instead of SOURCE_COVERAGE_GAP.",
+      "applies_to": [
+        "SV-CHECK-FIN-001",
+        "TC-06",
+        "SV-CAND-MAINT-TERTIARY",
+        "SV-CAND-MAINT-SCHOOL",
+        "SV-CAND-MATERNITY"
+      ],
+      "decision_reference": "Product owner decision 3 (build plan, 23 Nov 2026)",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-02",
+      "kind": "INTERPRETATION",
+      "title": "Published rule type codes not defined",
+      "detail": "Section 5 uses type codes OR, PERM, DR and SR without defining them. They are kept verbatim as classification.published_type; rule_type (Obligation/Prohibition/Permission/Definition) is derived from the MUST / MUST NOT / MAY / 'is defined as' wording of each statement.",
+      "applies_to": [
+        "rules/rules.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-03",
+      "kind": "INTERPRETATION",
+      "title": "Definitional rules have no deontic modality",
+      "detail": "Statements of the form 'is (not) defined as' (SV-DEC-001, SV-LIFE-001, SV-ENTRY-001, SV-FAM-004) carry none of MUST, MUST_NOT or MAY; modality is null and rule_type is Definition.",
+      "applies_to": [
+        "SV-DEC-001",
+        "SV-LIFE-001",
+        "SV-ENTRY-001",
+        "SV-FAM-004"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-04",
+      "kind": "INTERPRETATION",
+      "title": "Compound automation classes",
+      "detail": "Some rules publish two classes (A3/A4, A2/A3, A1/A3) or a gap marker ('A2 / gap', 'A2 / SOURCE_COVERAGE_GAP'). The engine uses the most restrictive class; a gap marker routes the rule to SOURCE_COVERAGE_GAP under GAP-01. The published value is kept in automation.class_as_published.",
+      "applies_to": [
+        "SV-INSTR-001",
+        "SV-ONLINE-007",
+        "SV-CHAR-001",
+        "SV-CHAR-002",
+        "SV-CHAR-004",
+        "SV-SCHOOL-003",
+        "SV-PRIV-004"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-05",
+      "kind": "INTERPRETATION",
+      "title": "Rule domain derived from rule-ID prefix",
+      "detail": "The document only shows a domain in the 12.1 example (Application). Each rule's domain is taken from its ID prefix using the Table 9 'typical rule domain' names where they exist.",
+      "applies_to": [
+        "rules/rules.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-06",
+      "kind": "INTERPRETATION",
+      "title": "Qualifiers derived from RuleSpeak wording",
+      "detail": "The document defines Condition/Exception/Threshold/TemporalConstraint/Discretion/Trigger node types but lists no instances. They are derived mechanically: 'unless ...' -> Exception; 'if / only if / where / that may affect ...' -> Condition; time phrases -> TemporalConstraint; numeric figures in the statement -> Threshold; every A4 rule -> Discretion. Each qualifier stores the exact text span; no wording is added.",
+      "applies_to": [
+        "rules/conditions.json",
+        "rules/exceptions.json",
+        "rules/thresholds.json",
+        "rules/temporal-constraints.json",
+        "rules/discretions.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-07",
+      "kind": "INTERPRETATION",
+      "title": "Provision sub-unit types",
+      "detail": "Section 3 lists Part, Section, Subsection, Regulation, Clause, Instruction and F.2 adds Paragraph. Sub-units of regulations and Code clauses reuse Subsection / Paragraph / Subparagraph; Privacy Act IPPs are modelled as Paragraph-level children of s 22. Parts are not modelled (the document never cites one).",
+      "applies_to": [
+        "regulatory/provisions.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-08",
+      "kind": "INTERPRETATION",
+      "title": "Instrument types for sources other than the Immigration Act",
+      "detail": "The document gives instrument_type only for the Immigration Act (PrincipalAct / 'Principal Act'). Regulations, CodeOfPractice, ImmigrationInstruction (from F.11), Method and OriginalWork are used for the other Table 1 sources.",
+      "applies_to": [
+        "regulatory/sources.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-09",
+      "kind": "INTERPRETATION",
+      "title": "Source versions not stated",
+      "detail": "Only the Immigration Act version (2026-07-10) is stated. Other version_id values are null until the legislation fetch (Phase 2) sets them from legislation.govt.nz.",
+      "applies_to": [
+        "regulatory/sources.json"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: add legislation sources later",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-10",
+      "kind": "INTERPRETATION",
+      "title": "Provision text not yet retrieved",
+      "detail": "Phase 2 (fetching exact provision wording from legislation.govt.nz) is deferred. Every provision has source_text null and source_text_status SOURCE_TEXT_NOT_RETRIEVED. The Education (Pastoral Care) Code is not published on legislation.govt.nz, so its clauses will stay SOURCE_TEXT_NOT_RETRIEVED under decision 8 even after Phase 2. Appendix G's 'every VERIFIED rule has ... source text' criterion is therefore not yet met.",
+      "applies_to": [
+        "regulatory/provisions.json"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: add legislation sources later",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-11",
+      "kind": "INTERPRETATION",
+      "title": "Rule-to-evidence mapping",
+      "detail": "Table 9 maps evidence items to a 'typical rule domain', not to rules. Evidence requirements are linked to the rules in that domain (e.g. Police certificate -> SV-CHAR-001..005).",
+      "applies_to": [
+        "evidence/evidence-requirements.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-12",
+      "kind": "INTERPRETATION",
+      "title": "Template ID inconsistency for SV-APP-005",
+      "detail": "12.1 lists evidence_requirement_ids [SV-EVID-CHANGE-001] for SV-APP-005; F.5 defines the same requirement as SV-EVID-REQ-001. The complete F.5 object is used. Condition IDs follow the 12.1 pattern SV-COND-<prefix>-NNN, so SV-APP-005's derived condition is SV-COND-APP-001.",
+      "applies_to": [
+        "SV-APP-005",
+        "SV-EVID-REQ-001"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-13",
+      "kind": "INTERPRETATION",
+      "title": "Decision checks implied by test cases",
+      "detail": "Table 11 defines six checks and F.8 one more. TC-03, TC-07 and TC-09 need checks the table does not list, so SV-CHECK-MIN-001, SV-CHECK-HEALTH-001 and SV-CHECK-EDU-009 are added. SV-CHECK-INSTR-001 reports the 'A2 / gap' rules as SOURCE_COVERAGE_GAP in every assessment.",
+      "applies_to": [
+        "SV-CHECK-MIN-001",
+        "SV-CHECK-HEALTH-001",
+        "SV-CHECK-EDU-009",
+        "SV-CHECK-INSTR-001"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-14",
+      "kind": "INTERPRETATION",
+      "title": "TC-09 expects NOT_SATISFIED for an A3 rule",
+      "detail": "SV-EDU-009 / SV-SCHOOL-009 are A3, yet TC-09 expects NOT_SATISFIED. The check returns NOT_SATISFIED only when verified facts show the provider knew of a breach and did not report it; any other case (suspected breach, unverified facts) is HUMAN_REVIEW_REQUIRED.",
+      "applies_to": [
+        "SV-CHECK-EDU-009",
+        "TC-09"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-15",
+      "kind": "INTERPRETATION",
+      "title": "Maintenance calculation by duration",
+      "detail": "Section 6 says 'calculations by study duration' with a yearly and monthly figure but no method. The check uses the monthly figure x months for study under 12 months, otherwise the yearly figure pro rata (months / 12). Maternity funds are added when the applicant is pregnant and publicly funded maternity care is unavailable. The 'prepaid accommodation adjustment' (Appendix E) has no figure, so when prepaid accommodation is declared it is listed as an unresolved requirement, not applied.",
+      "applies_to": [
+        "SV-CHECK-FIN-001"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-16",
+      "kind": "INTERPRETATION",
+      "title": "Overall status aggregation",
+      "detail": "12.2 shows overall_status but not how it is derived. Precedence used: AMBIGUOUS > NOT_SATISFIED > UNKNOWN > HUMAN_REVIEW_REQUIRED. Because the grant is always DISCRETION_REQUIRED, an assessment never reaches a better status than HUMAN_REVIEW_REQUIRED (matching the 12.2 example).",
+      "applies_to": [
+        "engine"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-17",
+      "kind": "INTERPRETATION",
+      "title": "Actors that are rule subjects but not 'Parties'",
+      "detail": "Decision-Maker, Agency and Individual are subjects of verified rules but not in Table 3's Parties group. They are modelled as actors marked derived_from 'rule subject'. Subjects that are objects (e.g. 'The Insurance', 'The Refund Policy') get no actor edge.",
+      "applies_to": [
+        "regulatory/actors.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-18",
+      "kind": "INTERPRETATION",
+      "title": "Health outcome for TC-07",
+      "detail": "TC-07 expects HUMAN_REVIEW_REQUIRED for health. Health is part of the candidate core-eligibility rule (Section 6), which has no published class; the agent contract forbids scoring health, so the check is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN.",
+      "applies_to": [
+        "SV-CHECK-HEALTH-001"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-19",
+      "kind": "INTERPRETATION",
+      "title": "Concept typing",
+      "detail": "concept_type and domain are set to the Table 3 concept group (F.3's 'Document' type cannot be derived for every term). Product concepts are Visa nodes; Temporary Entry Class Visa PARENT_OF Student Visa PARENT_OF each named Student Visa product. English Language and Foreign Government Supported Student Visa come only from Section 6 and are RECONCILIATION_REQUIRED.",
+      "applies_to": [
+        "regulatory/concepts.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-20",
+      "kind": "INTERPRETATION",
+      "title": "Online applications",
+      "detail": "Table 11 lists SV-CHECK-APP-001 inputs matching r 10 (paper form). For applications with channel 'online' the same check evaluates the D.1 online rules (r 23AA / r 23A) instead.",
+      "applies_to": [
+        "SV-CHECK-APP-001"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-21",
+      "kind": "INTERPRETATION",
+      "title": "Under-10 check is a provider obligation",
+      "detail": "SV-U10-001 binds the education provider (Code cl 51), not the visa decision (RISK-04). The check runs as Table 11 requires but its evaluation is marked as a provider obligation.",
+      "applies_to": [
+        "SV-CHECK-U10-001"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-22",
+      "kind": "INTERPRETATION",
+      "title": "Test types",
+      "detail": "F.12 has test_type 'PASS' only. Types are taken from Appendix G's testing list (PASS, FAIL, MISSING, BOUNDARY, EXCEPTION, DISCRETION, SOURCE_GAP) plus HUMAN_REVIEW for TC-07 and EXPLANATION for TC-10.",
+      "applies_to": [
+        "testing/test-cases.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-23",
+      "kind": "INTERPRETATION",
+      "title": "Lifecycle IDs and authorising rules",
+      "detail": "State IDs are the Table 12 state names in UPPER_SNAKE (matching F.10's DECISION_READY). Authorising rules are linked only where Table 12 or F.10 cites authority: s 62 -> SV-LIFE-001, s 63 -> SV-LIFE-003, ss 64/66 -> SV-LIFE-004/005, decision -> SV-DEC-002 (F.10), further information -> r 10(3)(a)-(c).",
+      "applies_to": [
+        "decisioning/state-transitions.json"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-24",
+      "kind": "INTERPRETATION",
+      "title": "Operational nodes outside the ontology",
+      "detail": "The loader writes one LoadLog node per run (build plan Phase 3). It is not part of the Section 3 ontology. Concepts, actors and fact types use the Domain layer label with a 'kind' property because Section 3 has no dedicated node type for them.",
+      "applies_to": [
+        "graph"
+      ],
+      "decision_reference": null,
+      "status": "OPEN",
+      "raised_on": "2026-11-23"
+    }
+  ]
+}

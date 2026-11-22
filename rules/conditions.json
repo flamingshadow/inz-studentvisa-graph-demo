@@ -1,0 +1,306 @@
+{
+  "conditions": [
+    {
+      "id": "SV-COND-APP-001",
+      "rule_id": "SV-APP-005",
+      "text": "that may affect the Visa Application decision",
+      "source_provision_id": "NZ-IMM-ACT-2009-S58-3-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-APP-002",
+      "rule_id": "SV-APP-006",
+      "text": "that may affect a later Entry Permission decision",
+      "source_provision_id": "NZ-IMM-ACT-2009-S58-3-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-APP-003",
+      "rule_id": "SV-APP-007",
+      "text": "if false or misleading Information was supplied or relevant Information was withheld",
+      "source_provision_id": "NZ-IMM-ACT-2009-S58-6-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-APP-004",
+      "rule_id": "SV-APP-008",
+      "text": "if a required Material Change was not disclosed",
+      "source_provision_id": "NZ-IMM-ACT-2009-S58-6-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-MIN-001",
+      "rule_id": "SV-MIN-001",
+      "text": "if parental or guardian consent is not established",
+      "source_provision_id": "NZ-IMM-ACT-2009-S59",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-BIO-001",
+      "rule_id": "SV-BIO-002",
+      "text": "if the Applicant fails to allow required Biometric Information to be collected",
+      "source_provision_id": "NZ-IMM-ACT-2009-S60-2",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-WORK-001",
+      "rule_id": "SV-WORK-001",
+      "text": "only if and to the extent that the Visa Conditions permit work",
+      "source_provision_id": "NZ-IMM-ACT-2009-S77-4-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-STUDY-001",
+      "rule_id": "SV-STUDY-001",
+      "text": "only if and to the extent that the Visa Conditions permit study",
+      "source_provision_id": "NZ-IMM-ACT-2009-S77-4-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-LIFE-001",
+      "rule_id": "SV-LIFE-005",
+      "text": "if sufficient reason exists",
+      "source_provision_id": "NZ-IMM-ACT-2009-S66-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-ENTRY-001",
+      "rule_id": "SV-ENTRY-006",
+      "text": "if it may affect the Entry Permission decision",
+      "source_provision_id": "NZ-IMM-ACT-2009-S112-3",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-FAM-001",
+      "rule_id": "SV-FAM-001",
+      "text": "where the regulatory conditions are met",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-FAM-002",
+      "rule_id": "SV-FAM-002",
+      "text": "only if the Child is under 20 years old",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2-B-I",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-FAM-003",
+      "rule_id": "SV-FAM-003",
+      "text": "where regulation 20 applies",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-IVL-001",
+      "rule_id": "SV-IVL-001",
+      "text": "if supported by an MFAT-administered scholarship",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5-C",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-ONLINE-001",
+      "rule_id": "SV-ONLINE-006",
+      "text": "where the electronic form requires one",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-E",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-SCHOOL-001",
+      "rule_id": "SV-SCHOOL-005",
+      "text": "where appropriate for an International School Learner under 18",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL66",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-PRIV-001",
+      "rule_id": "SV-PRIV-001",
+      "text": "where necessary for that purpose",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP1",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-PRIV-002",
+      "rule_id": "SV-PRIV-014",
+      "text": "where necessary to carry out one or more functions efficiently",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP13",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-COND-CARRIER-001",
+      "rule_id": "SV-CARRIER-004",
+      "text": "where required",
+      "source_provision_id": "NZ-IMM-CIO-REGS-2010-R5-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "id": "SV-TRIG-LIFE-001",
+      "rule_id": "SV-LIFE-004",
+      "text": "when an applicable section 64 cancellation event occurs",
+      "source_provision_id": "NZ-IMM-ACT-2009-S64-1",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-TRIG-LODGE",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-LODGE",
+      "text": "Submission meets channel requirements",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-ASSESS",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-ASSESS",
+      "text": "Assessment commences",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-FURTHER-INFO",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-FURTHER-INFO",
+      "text": "Interview/evidence/medical request",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-INFO-RECEIVED",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-INFO-RECEIVED",
+      "text": "Information received and verified",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-DECISION-READY",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-DECISION-READY",
+      "text": "Applicable checks completed",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-DECISION",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-DECISION",
+      "text": "Authorised discretionary decision",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-VISA-GRANT",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-VISA-GRANT",
+      "text": "Entered and retained in Department records",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-VISA-CURRENT",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-VISA-CURRENT",
+      "text": "Start condition/date reached",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-VISA-EXPIRE",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-VISA-EXPIRE",
+      "text": "Earliest statutory expiry event",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    },
+    {
+      "id": "SV-TRIG-VISA-CANCEL",
+      "rule_id": null,
+      "transition_id": "SV-TRANS-VISA-CANCEL",
+      "text": "Statutory cancellation trigger or authorised cancellation",
+      "source_provision_id": null,
+      "derivation": "Table 12 Trigger column"
+    }
+  ]
+}

@@ -1,0 +1,572 @@
+{
+  "evidence_types": [
+    {
+      "evidence_type_id": "EVTYPE-PASSPORT",
+      "evidence_item": "Passport / certificate of identity",
+      "supports_fact": "Identity and travel-document facts",
+      "verification_need": "Authenticity, ownership, validity",
+      "typical_rule_domain": "Application / identity"
+    },
+    {
+      "evidence_type_id": "EVTYPE-OFFER-OF-PLACE",
+      "evidence_item": "Offer of Place",
+      "supports_fact": "Acceptance for programme and provider facts",
+      "verification_need": "Provider, programme, dates and offer validity",
+      "typical_rule_domain": "Study"
+    },
+    {
+      "evidence_type_id": "EVTYPE-TUITION",
+      "evidence_item": "Tuition receipt / funding evidence",
+      "supports_fact": "Tuition paid or available",
+      "verification_need": "Amount, recipient, accessibility",
+      "typical_rule_domain": "Tuition"
+    },
+    {
+      "evidence_type_id": "EVTYPE-BANK-STATEMENT",
+      "evidence_item": "Bank statement",
+      "supports_fact": "Available funds",
+      "verification_need": "Genuineness, ownership, accessibility, currency and period",
+      "typical_rule_domain": "Maintenance"
+    },
+    {
+      "evidence_type_id": "EVTYPE-SPONSORSHIP",
+      "evidence_item": "Sponsorship form/evidence",
+      "supports_fact": "Sponsor relationship and undertaking",
+      "verification_need": "Sponsor eligibility, acceptability and obligations",
+      "typical_rule_domain": "Sponsorship"
+    },
+    {
+      "evidence_type_id": "EVTYPE-MEDICAL",
+      "evidence_item": "Medical certificate / chest X-ray",
+      "supports_fact": "Medical findings",
+      "verification_need": "Required type, currency and clinical assessment",
+      "typical_rule_domain": "Health"
+    },
+    {
+      "evidence_type_id": "EVTYPE-POLICE-CERTIFICATE",
+      "evidence_item": "Police certificate",
+      "supports_fact": "Character information",
+      "verification_need": "Authenticity, jurisdiction and relevance",
+      "typical_rule_domain": "Character"
+    },
+    {
+      "evidence_type_id": "EVTYPE-INSURANCE",
+      "evidence_item": "Insurance policy/declaration",
+      "supports_fact": "Insurance coverage",
+      "verification_need": "Required scope, duration and provider",
+      "typical_rule_domain": "Education/insurance"
+    },
+    {
+      "evidence_type_id": "EVTYPE-GUARDIAN",
+      "evidence_item": "Parent or guardian evidence",
+      "supports_fact": "Consent, relationship or living arrangement",
+      "verification_need": "Identity, relationship, authority and written agreement",
+      "typical_rule_domain": "Minor/guardian"
+    },
+    {
+      "evidence_type_id": "EVTYPE-CHANGE-NOTIFICATION",
+      "evidence_item": "ChangeNotification",
+      "supports_fact": "material_change_disclosed",
+      "verification_need": null,
+      "typical_rule_domain": "Application",
+      "source": "Appendix F.5/F.6 templates"
+    }
+  ],
+  "evidence_requirements": [
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-ID-001-PASSPORT",
+      "rule_id": "SV-ID-001",
+      "description": "Passport / certificate of identity supporting: Identity and travel-document facts",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-PASSPORT"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-I",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-ONLINE-005-PASSPORT",
+      "rule_id": "SV-ONLINE-005",
+      "description": "Passport / certificate of identity supporting: Identity and travel-document facts",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-PASSPORT"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-D",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CARRIER-003-PASSPORT",
+      "rule_id": "SV-CARRIER-003",
+      "description": "Passport / certificate of identity supporting: Identity and travel-document facts",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-PASSPORT"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-CIO-REGS-2010-R5-1-A",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CAND-ELIGIBILITY-OFFER-OF-PLACE",
+      "rule_id": "SV-CAND-ELIGIBILITY",
+      "description": "Offer of Place supporting: Acceptance for programme and provider facts",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-OFFER-OF-PLACE"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": null,
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CAND-ELIGIBILITY-TUITION",
+      "rule_id": "SV-CAND-ELIGIBILITY",
+      "description": "Tuition receipt / funding evidence supporting: Tuition paid or available",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-TUITION"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": null,
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-FIN-001-BANK-STATEMENT",
+      "rule_id": "SV-FIN-001",
+      "description": "Bank statement supporting: Available funds",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-BANK-STATEMENT"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-E",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CAND-MAINT-TERTIARY-BANK-STATEMENT",
+      "rule_id": "SV-CAND-MAINT-TERTIARY",
+      "description": "Bank statement supporting: Available funds",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-BANK-STATEMENT"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": null,
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CAND-MAINT-SCHOOL-BANK-STATEMENT",
+      "rule_id": "SV-CAND-MAINT-SCHOOL",
+      "description": "Bank statement supporting: Available funds",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-BANK-STATEMENT"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": null,
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CAND-MATERNITY-BANK-STATEMENT",
+      "rule_id": "SV-CAND-MATERNITY",
+      "description": "Bank statement supporting: Available funds",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-BANK-STATEMENT"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": null,
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-SPON-001-SPONSORSHIP",
+      "rule_id": "SV-SPON-001",
+      "description": "Sponsorship form/evidence supporting: Sponsor relationship and undertaking",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-SPONSORSHIP"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S48-1",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-SPON-003-SPONSORSHIP",
+      "rule_id": "SV-SPON-003",
+      "description": "Sponsorship form/evidence supporting: Sponsor relationship and undertaking",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-SPONSORSHIP"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S48-3",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-SPON-004-SPONSORSHIP",
+      "rule_id": "SV-SPON-004",
+      "description": "Sponsorship form/evidence supporting: Sponsor relationship and undertaking",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-SPONSORSHIP"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S48-4",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-SPON-006-SPONSORSHIP",
+      "rule_id": "SV-SPON-006",
+      "description": "Sponsorship form/evidence supporting: Sponsor relationship and undertaking",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-SPONSORSHIP"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S48-6",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-FIN-001-SPONSORSHIP",
+      "rule_id": "SV-FIN-001",
+      "description": "Sponsorship form/evidence supporting: Sponsor relationship and undertaking",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-SPONSORSHIP"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-E",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-HEALTH-001-MEDICAL",
+      "rule_id": "SV-HEALTH-001",
+      "description": "Medical certificate / chest X-ray supporting: Medical findings",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-MEDICAL"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-C",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CAND-ELIGIBILITY-MEDICAL",
+      "rule_id": "SV-CAND-ELIGIBILITY",
+      "description": "Medical certificate / chest X-ray supporting: Medical findings",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-MEDICAL"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": null,
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CHAR-001-POLICE-CERTIFICATE",
+      "rule_id": "SV-CHAR-001",
+      "description": "Police certificate supporting: Character information",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-POLICE-CERTIFICATE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-A",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CHAR-002-POLICE-CERTIFICATE",
+      "rule_id": "SV-CHAR-002",
+      "description": "Police certificate supporting: Character information",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-POLICE-CERTIFICATE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-B",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CHAR-003-POLICE-CERTIFICATE",
+      "rule_id": "SV-CHAR-003",
+      "description": "Police certificate supporting: Character information",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-POLICE-CERTIFICATE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-C",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CHAR-004-POLICE-CERTIFICATE",
+      "rule_id": "SV-CHAR-004",
+      "description": "Police certificate supporting: Character information",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-POLICE-CERTIFICATE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-D",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-CHAR-005-POLICE-CERTIFICATE",
+      "rule_id": "SV-CHAR-005",
+      "description": "Police certificate supporting: Character information",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-POLICE-CERTIFICATE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S16",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-INS-001-INSURANCE",
+      "rule_id": "SV-INS-001",
+      "description": "Insurance policy/declaration supporting: Insurance coverage",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-INSURANCE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44-1",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-INS-002-INSURANCE",
+      "rule_id": "SV-INS-002",
+      "description": "Insurance policy/declaration supporting: Insurance coverage",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-INSURANCE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-INS-003-INSURANCE",
+      "rule_id": "SV-INS-003",
+      "description": "Insurance policy/declaration supporting: Insurance coverage",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-INSURANCE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-INS-004-INSURANCE",
+      "rule_id": "SV-INS-004",
+      "description": "Insurance policy/declaration supporting: Insurance coverage",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-INSURANCE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-INS-005-INSURANCE",
+      "rule_id": "SV-INS-005",
+      "description": "Insurance policy/declaration supporting: Insurance coverage",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-INSURANCE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-SCHOOL-004-INSURANCE",
+      "rule_id": "SV-SCHOOL-004",
+      "description": "Insurance policy/declaration supporting: Insurance coverage",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-INSURANCE"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL65",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-MIN-001-GUARDIAN",
+      "rule_id": "SV-MIN-001",
+      "description": "Parent or guardian evidence supporting: Consent, relationship or living arrangement",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-GUARDIAN"
+      ],
+      "mandatory": false,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S59",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-U10-001-GUARDIAN",
+      "rule_id": "SV-U10-001",
+      "description": "Parent or guardian evidence supporting: Consent, relationship or living arrangement",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-GUARDIAN"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL51-1",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-U18-001-GUARDIAN",
+      "rule_id": "SV-U18-001",
+      "description": "Parent or guardian evidence supporting: Consent, relationship or living arrangement",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-GUARDIAN"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-U18-004-GUARDIAN",
+      "rule_id": "SV-U18-004",
+      "description": "Parent or guardian evidence supporting: Consent, relationship or living arrangement",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-GUARDIAN"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL52",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-SCHOOL-005-GUARDIAN",
+      "rule_id": "SV-SCHOOL-005",
+      "description": "Parent or guardian evidence supporting: Consent, relationship or living arrangement",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-GUARDIAN"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL66",
+      "interpretation_flag_ids": [
+        "IF-11"
+      ]
+    },
+    {
+      "evidence_requirement_id": "SV-EVID-REQ-001",
+      "rule_id": "SV-APP-005",
+      "description": "Evidence of the material change and notification",
+      "required_fact_type_id": null,
+      "acceptable_evidence_types": [
+        "EVTYPE-CHANGE-NOTIFICATION"
+      ],
+      "mandatory": true,
+      "verification_required": true,
+      "source_provision_id": "NZ-IMM-ACT-2009-S58-3-A",
+      "interpretation_flag_ids": [
+        "IF-12"
+      ]
+    }
+  ]
+}
