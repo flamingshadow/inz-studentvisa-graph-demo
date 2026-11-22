@@ -3,7 +3,7 @@ name = "svkg"
 version = "0.2.0"
 description = "Student Visa Knowledge Graph POC (spec v0.2, 17 Nov 2026). Synthetic data only; not a production decision tool."
 requires-python = ">=3.11"
-dependencies = ["neo4j>=5", "python-docx>=1.1", "pyyaml>=6", "pydantic>=2", "requests>=2", "mcp>=1.2", "python-dotenv>=1"]
+dependencies = ["neo4j>=5", "python-docx>=1.1", "pyyaml>=6", "pydantic>=2", "requests>=2", "mcp>=2.3,<3", "python-dotenv>=1"]
 
 [project.optional-dependencies]
 test = ["pytest>=8"]

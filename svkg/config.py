@@ -5,7 +5,7 @@ import os
 from dataclasses import dataclass
 
 from dotenv import load_dotenv
-from neo4j import Driver, GraphDatabase
+from neo4j import Driver, GraphDatabase, NotificationDisabledClassification
 
 from .docspec import ROOT
 
@@ -30,4 +30,6 @@ def driver(s: Settings | None = None) -> Driver:
     s = s or settings()
     if not s.password:
         raise RuntimeError("NEO4J_PASSWORD is not set; copy .env.example to .env and fill it in")
-    return GraphDatabase.driver(s.uri, auth=(s.user, s.password))
+    return GraphDatabase.driver(
+        s.uri, auth=(s.user, s.password),
+        notifications_disabled_classifications=[NotificationDisabledClassification.DEPRECATION])
