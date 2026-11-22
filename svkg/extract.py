@@ -226,7 +226,7 @@ THRESH_PATTERNS = [
     (r"\bat least (two) weeks", "GREATER_THAN_OR_EQUAL", "weeks", "enrolment_duration"),
     (r"\bfor (five|twelve) (?:years|months) or more", "GREATER_THAN_OR_EQUAL", None, "sentence_length"),
     (r"\bwithin the preceding (ten) years", "LESS_THAN_OR_EQUAL", "years", "time_since_sentence"),
-    (r"\bprovide (two) Passport-sized Photographs", "EQUALS", "count", "photographs"),
+    (r"\bprovide (two) Passport-sized Photographs", "GREATER_THAN_OR_EQUAL", "count", "photographs"),
 ]
 
 
@@ -651,6 +651,7 @@ class Builder:
                     "source_provision_id": rule["authority"]["provision_id"],
                     "interpretation_flag_ids": ["IF-11"]})
                 rule["evidence_requirement_ids"].append(erid)
+                self.edge("REFERENCES", erid, f"EVTYPE-{code}")
         # F.5 template instance (SV-APP-005), IF-12
         f5_name, f5 = self.spec.json_template("F.5")
         f5 = {**f5, "acceptable_evidence_types": ["EVTYPE-CHANGE-NOTIFICATION"],
@@ -660,6 +661,7 @@ class Builder:
         etypes.append({"evidence_type_id": "EVTYPE-CHANGE-NOTIFICATION", "evidence_item": "ChangeNotification",
                        "supports_fact": "material_change_disclosed", "verification_need": None,
                        "typical_rule_domain": "Application", "source": "Appendix F.5/F.6 templates"})
+        self.edge("REFERENCES", f5["evidence_requirement_id"], "EVTYPE-CHANGE-NOTIFICATION")
         self.files["evidence/evidence-requirements.json"] = {"evidence_types": etypes,
                                                              "evidence_requirements": reqs}
         self.files["evidence/verification-rules.json"] = {"verification_rules": vrules}
@@ -1056,7 +1058,7 @@ class Builder:
                          "InstrumentVersion|Provision|RuleEvaluation|EvidenceItem",
                          "Source contains version; version contains top-level provisions (FT-012)."),
             "PARENT_OF": ("Provision|Visa", "Provision|Visa", "Provision hierarchy; product hierarchy."),
-            "REFERENCES": ("Rule", "Domain", "Rule statement uses a regulatory concept."),
+            "REFERENCES": ("Rule|EvidenceRequirement", "Domain|Evidence", "Rule statement uses a regulatory concept; requirement accepts an evidence type."),
             "AMENDS": ("InstrumentVersion", "InstrumentVersion", "Declared; no instance in spec v0.2."),
             "SUPERSEDES": ("Rule|Threshold|InstrumentVersion", "Rule|Threshold|InstrumentVersion",
                            "Declared; no instance in spec v0.2."),

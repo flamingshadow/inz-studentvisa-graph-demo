@@ -21,7 +21,7 @@
       "text": "provide two Passport-sized Photographs",
       "value": 2,
       "unit": "count",
-      "comparator": "EQUALS",
+      "comparator": "GREATER_THAN_OR_EQUAL",
       "applies_to_attribute": "photographs",
       "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-II",
       "derivation": "Exact span of the RuleSpeak statement (IF-06)",

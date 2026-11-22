@@ -1181,6 +1181,171 @@
       "to": "NZ-EDU-PASTORAL-CODE-2021-CL64"
     },
     {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-ID-001-PASSPORT",
+      "to": "EVTYPE-PASSPORT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-ONLINE-005-PASSPORT",
+      "to": "EVTYPE-PASSPORT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CARRIER-003-PASSPORT",
+      "to": "EVTYPE-PASSPORT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-ELIGIBILITY-OFFER-OF-PLACE",
+      "to": "EVTYPE-OFFER-OF-PLACE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-ELIGIBILITY-TUITION",
+      "to": "EVTYPE-TUITION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-FIN-001-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-MAINT-TERTIARY-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-MAINT-SCHOOL-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-MATERNITY-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-001-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-003-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-004-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-006-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-FIN-001-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-HEALTH-001-MEDICAL",
+      "to": "EVTYPE-MEDICAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-ELIGIBILITY-MEDICAL",
+      "to": "EVTYPE-MEDICAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-001-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-002-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-003-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-004-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-005-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-001-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-002-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-003-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-004-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-005-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SCHOOL-004-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-MIN-001-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-U10-001-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-U18-001-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-U18-004-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SCHOOL-005-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-001",
+      "to": "EVTYPE-CHANGE-NOTIFICATION"
+    },
+    {
       "type": "EVALUATES",
       "from": "SV-CHECK-APP-001",
       "to": "SV-FEE-001"

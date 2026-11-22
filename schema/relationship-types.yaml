@@ -12,9 +12,9 @@ relationship_types:
   to: Provision|Visa
   description: Provision hierarchy; product hierarchy.
 - type: REFERENCES
-  from: Rule
-  to: Domain
-  description: Rule statement uses a regulatory concept.
+  from: Rule|EvidenceRequirement
+  to: Domain|Evidence
+  description: Rule statement uses a regulatory concept; requirement accepts an evidence type.
 - type: AMENDS
   from: InstrumentVersion
   to: InstrumentVersion

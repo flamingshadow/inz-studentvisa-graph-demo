@@ -212,6 +212,7 @@ def run_checks() -> Report:
         known |= {x[inner] for x in _load(f)[key]}
     known |= {v["instrument_version_id"] for v in _load("regulatory/sources.json")["instrument_versions"]}
     known |= {g["id"] for g in cov["coverage_gaps"]}
+    known |= {e["evidence_type_id"] for e in _load("evidence/evidence-requirements.json")["evidence_types"]}
     dangling = [(r["type"], r["from"], r["to"]) for r in rels if r["from"] not in known or r["to"] not in known]
     rep.check(not dangling, f"relationship endpoints resolve ({len(dangling)} dangling: {dangling[:5]})")
     flags = {f["flag_id"] for f in _load("governance/interpretation-flags.json")["interpretation_flags"]}
