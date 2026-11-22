@@ -1,0 +1,1348 @@
+{
+  "concepts": [
+    {
+      "concept_id": "STUDENT-VISA",
+      "preferred_term": "Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA",
+      "preferred_term": "Temporary Entry Class Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-FEE-PAYING-STUDENT-VISA",
+      "preferred_term": "Fee Paying Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-PATHWAY-STUDENT-VISA",
+      "preferred_term": "Pathway Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-EXCHANGE-STUDENT-VISA",
+      "preferred_term": "Exchange Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-SCHOLARSHIP-STUDENT-VISA",
+      "preferred_term": "Scholarship Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-DEPENDENT-CHILD-STUDENT-VISA",
+      "preferred_term": "Dependent Child Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-APPLICANT",
+      "preferred_term": "Applicant",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Applicant",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-STUDENT",
+      "preferred_term": "Student",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-VISA-HOLDER",
+      "preferred_term": "Visa Holder",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-IMMIGRATION-OFFICER",
+      "preferred_term": "Immigration Officer",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "ImmigrationOfficer",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-MINISTER",
+      "preferred_term": "Minister",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-SPONSOR",
+      "preferred_term": "Sponsor",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Sponsor",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-EDUCATION-PROVIDER",
+      "preferred_term": "Education Provider",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Provider",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-SIGNATORY",
+      "preferred_term": "Signatory",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-PARENT",
+      "preferred_term": "Parent",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-LEGAL-GUARDIAN",
+      "preferred_term": "Legal Guardian",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Guardian",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-RESIDENTIAL-CAREGIVER",
+      "preferred_term": "Residential Caregiver",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-CARRIER",
+      "preferred_term": "Carrier",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [
+        "Parties"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-VISA-APPLICATION",
+      "preferred_term": "Visa Application",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Application",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-ONLINE-APPLICATION",
+      "preferred_term": "Online Application",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Application",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-CONTACT-ADDRESS",
+      "preferred_term": "Contact Address",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-ADDRESS-FOR-SERVICE",
+      "preferred_term": "Address for Service",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-PASSPORT",
+      "preferred_term": "Passport",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-CERTIFICATE-OF-IDENTITY",
+      "preferred_term": "Certificate of Identity",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-PHOTOGRAPH",
+      "preferred_term": "Photograph",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-FEE",
+      "preferred_term": "Fee",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-IMMIGRATION-LEVY",
+      "preferred_term": "Immigration Levy",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-IVL",
+      "preferred_term": "IVL",
+      "concept_type": "Application",
+      "domain": "Application",
+      "concept_groups": [
+        "Application"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-PROGRAMME",
+      "preferred_term": "Programme",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Programme",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-QUALIFICATION",
+      "preferred_term": "Qualification",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-APPROVED-PROVIDER",
+      "preferred_term": "Approved Provider",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Provider",
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-OFFER-OF-PLACE",
+      "preferred_term": "Offer of Place",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study",
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-ENROLMENT",
+      "preferred_term": "Enrolment",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-STUDY-PERIOD",
+      "preferred_term": "Study Period",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-ATTENDANCE",
+      "preferred_term": "Attendance",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-ACADEMIC-PROGRESS",
+      "preferred_term": "Academic Progress",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-TUITION-FEE",
+      "preferred_term": "Tuition Fee",
+      "concept_type": "Study",
+      "domain": "Study",
+      "concept_groups": [
+        "Study"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-MAINTENANCE-FUNDS",
+      "preferred_term": "Maintenance Funds",
+      "concept_type": "Finance",
+      "domain": "Finance",
+      "concept_groups": [
+        "Finance"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-TUITION-FUNDING",
+      "preferred_term": "Tuition Funding",
+      "concept_type": "Finance",
+      "domain": "Finance",
+      "concept_groups": [
+        "Finance"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-SPONSORSHIP",
+      "preferred_term": "Sponsorship",
+      "concept_type": "Finance",
+      "domain": "Finance",
+      "concept_groups": [
+        "Finance"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-OUTWARD-TRAVEL-FUNDS",
+      "preferred_term": "Outward Travel Funds",
+      "concept_type": "Finance",
+      "domain": "Finance",
+      "concept_groups": [
+        "Finance"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-PREPAID-ACCOMMODATION",
+      "preferred_term": "Prepaid Accommodation",
+      "concept_type": "Finance",
+      "domain": "Finance",
+      "concept_groups": [
+        "Finance"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-MATERNITY-FUNDS",
+      "preferred_term": "Maternity Funds",
+      "concept_type": "Finance",
+      "domain": "Finance",
+      "concept_groups": [
+        "Finance"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-HEALTH",
+      "preferred_term": "Health",
+      "concept_type": "Assessment",
+      "domain": "Assessment",
+      "concept_groups": [
+        "Assessment"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-CHARACTER",
+      "preferred_term": "Character",
+      "concept_type": "Assessment",
+      "domain": "Assessment",
+      "concept_groups": [
+        "Assessment"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-GENUINE-INTENTIONS",
+      "preferred_term": "Genuine Intentions",
+      "concept_type": "Assessment",
+      "domain": "Assessment",
+      "concept_groups": [
+        "Assessment"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-IMMIGRATION-HISTORY",
+      "preferred_term": "Immigration History",
+      "concept_type": "Assessment",
+      "domain": "Assessment",
+      "concept_groups": [
+        "Assessment"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-COMPLIANCE",
+      "preferred_term": "Compliance",
+      "concept_type": "Assessment",
+      "domain": "Assessment",
+      "concept_groups": [
+        "Assessment"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-BIOMETRIC-INFORMATION",
+      "preferred_term": "Biometric Information",
+      "concept_type": "Assessment",
+      "domain": "Assessment",
+      "concept_groups": [
+        "Assessment"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-BANK-STATEMENT",
+      "preferred_term": "Bank Statement",
+      "concept_type": "Evidence",
+      "domain": "Evidence",
+      "concept_groups": [
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-SPONSORSHIP-EVIDENCE",
+      "preferred_term": "Sponsorship Evidence",
+      "concept_type": "Evidence",
+      "domain": "Evidence",
+      "concept_groups": [
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-POLICE-CERTIFICATE",
+      "preferred_term": "Police Certificate",
+      "concept_type": "Evidence",
+      "domain": "Evidence",
+      "concept_groups": [
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-MEDICAL-CERTIFICATE",
+      "preferred_term": "Medical Certificate",
+      "concept_type": "Evidence",
+      "domain": "Evidence",
+      "concept_groups": [
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-CHEST-X-RAY",
+      "preferred_term": "Chest X-ray",
+      "concept_type": "Evidence",
+      "domain": "Evidence",
+      "concept_groups": [
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-INSURANCE-EVIDENCE",
+      "preferred_term": "Insurance Evidence",
+      "concept_type": "Evidence",
+      "domain": "Evidence",
+      "concept_groups": [
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-GUARDIAN-EVIDENCE",
+      "preferred_term": "Guardian Evidence",
+      "concept_type": "Evidence",
+      "domain": "Evidence",
+      "concept_groups": [
+        "Evidence"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-GRANT",
+      "preferred_term": "Grant",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-DECLINE",
+      "preferred_term": "Decline",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-EVIDENCE-REQUIRED",
+      "preferred_term": "Evidence Required",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-HUMAN-REVIEW",
+      "preferred_term": "Human Review",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-DISCRETION-REQUIRED",
+      "preferred_term": "Discretion Required",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-VISA-CONDITION",
+      "preferred_term": "Visa Condition",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-EXPIRY",
+      "preferred_term": "Expiry",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-CANCELLATION",
+      "preferred_term": "Cancellation",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-DEPORTATION-LIABILITY",
+      "preferred_term": "Deportation Liability",
+      "concept_type": "Outcome",
+      "domain": "Outcome",
+      "concept_groups": [
+        "Outcome"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-DECISION-MAKER",
+      "preferred_term": "Decision-Maker",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-17"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-AGENCY",
+      "preferred_term": "Agency",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-17"
+      ]
+    },
+    {
+      "concept_id": "ACTOR-INDIVIDUAL",
+      "preferred_term": "Individual",
+      "concept_type": "Parties",
+      "domain": "Parties",
+      "concept_groups": [],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": null,
+      "provenance_status": "SPEC_VOCABULARY",
+      "interpretation_flag_ids": [
+        "IF-17"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-ENGLISH-LANGUAGE-STUDENT-VISA",
+      "preferred_term": "English Language Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    },
+    {
+      "concept_id": "CONCEPT-FOREIGN-GOVERNMENT-SUPPORTED-STUDENT-VISA",
+      "preferred_term": "Foreign Government Supported Student Visa",
+      "concept_type": "Product",
+      "domain": "Product",
+      "concept_groups": [
+        "Product"
+      ],
+      "statutory_definition": null,
+      "plain_english_definition": null,
+      "definition_type": "IMPLIED",
+      "source_provision_id": null,
+      "synonyms": [],
+      "type_label": "Visa",
+      "provenance_status": "RECONCILIATION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-19"
+      ]
+    }
+  ]
+}

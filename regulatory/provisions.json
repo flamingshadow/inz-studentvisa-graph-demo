@@ -1,0 +1,4344 @@
+{
+  "provisions": [
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S57",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 57",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S57-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S57",
+      "provision_type": "Subsection",
+      "reference": "s 57(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S57-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S57",
+      "provision_type": "Subsection",
+      "reference": "s 57(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 58",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58",
+      "provision_type": "Subsection",
+      "reference": "s 58(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58",
+      "provision_type": "Subsection",
+      "reference": "s 58(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-3",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58",
+      "provision_type": "Subsection",
+      "reference": "s 58(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-3-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58-3",
+      "provision_type": "Paragraph",
+      "reference": "s 58(3)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-3-B",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58-3",
+      "provision_type": "Paragraph",
+      "reference": "s 58(3)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-6",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58",
+      "provision_type": "Subsection",
+      "reference": "s 58(6)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-6-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58-6",
+      "provision_type": "Paragraph",
+      "reference": "s 58(6)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S58-6-B",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S58-6",
+      "provision_type": "Paragraph",
+      "reference": "s 58(6)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S59",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 59",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S60",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 60",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S60-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S60",
+      "provision_type": "Subsection",
+      "reference": "s 60(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S60-3",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S60",
+      "provision_type": "Subsection",
+      "reference": "s 60(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S60-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S60",
+      "provision_type": "Subsection",
+      "reference": "s 60(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S45",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 45",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S45-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S45",
+      "provision_type": "Subsection",
+      "reference": "s 45(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S45-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S45",
+      "provision_type": "Subsection",
+      "reference": "s 45(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S45-2-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S45-2",
+      "provision_type": "Paragraph",
+      "reference": "s 45(2)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S45-2-B",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S45-2",
+      "provision_type": "Paragraph",
+      "reference": "s 45(2)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S45-2-C",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S45-2",
+      "provision_type": "Paragraph",
+      "reference": "s 45(2)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S48",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 48",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S48-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S48",
+      "provision_type": "Subsection",
+      "reference": "s 48(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S48-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S48",
+      "provision_type": "Subsection",
+      "reference": "s 48(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S48-3",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S48",
+      "provision_type": "Subsection",
+      "reference": "s 48(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S48-4",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S48",
+      "provision_type": "Subsection",
+      "reference": "s 48(4)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S48-5",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S48",
+      "provision_type": "Subsection",
+      "reference": "s 48(5)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S48-6",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S48",
+      "provision_type": "Subsection",
+      "reference": "s 48(6)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S49",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 49",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S49-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S49",
+      "provision_type": "Subsection",
+      "reference": "s 49(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 52",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52",
+      "provision_type": "Subsection",
+      "reference": "s 52(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-1-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52-1",
+      "provision_type": "Paragraph",
+      "reference": "s 52(1)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-1-B",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52-1",
+      "provision_type": "Paragraph",
+      "reference": "s 52(1)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52",
+      "provision_type": "Subsection",
+      "reference": "s 52(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-2-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52-2",
+      "provision_type": "Paragraph",
+      "reference": "s 52(2)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-2-B",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52-2",
+      "provision_type": "Paragraph",
+      "reference": "s 52(2)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-4",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52",
+      "provision_type": "Subsection",
+      "reference": "s 52(4)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S52-4-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S52-4",
+      "provision_type": "Paragraph",
+      "reference": "s 52(4)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S56",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 56",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S77",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 77",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S77-4",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S77",
+      "provision_type": "Subsection",
+      "reference": "s 77(4)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S77-4-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S77-4",
+      "provision_type": "Paragraph",
+      "reference": "s 77(4)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S77-4-B",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S77-4",
+      "provision_type": "Paragraph",
+      "reference": "s 77(4)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S62",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 62",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S62-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S62",
+      "provision_type": "Subsection",
+      "reference": "s 62(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S62-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S62",
+      "provision_type": "Subsection",
+      "reference": "s 62(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S63",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 63",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S64",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 64",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S64-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S64",
+      "provision_type": "Subsection",
+      "reference": "s 64(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S66",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 66",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S66-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S66",
+      "provision_type": "Subsection",
+      "reference": "s 66(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S66-1-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S66-1",
+      "provision_type": "Paragraph",
+      "reference": "s 66(1)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S66-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S66",
+      "provision_type": "Subsection",
+      "reference": "s 66(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S46",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 46",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S46-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S46",
+      "provision_type": "Subsection",
+      "reference": "s 46(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S109",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 109",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S109-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S109",
+      "provision_type": "Subsection",
+      "reference": "s 109(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S109-2",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S109",
+      "provision_type": "Subsection",
+      "reference": "s 109(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S110",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 110",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S112",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 112",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S112-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S112",
+      "provision_type": "Subsection",
+      "reference": "s 112(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S112-3",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S112",
+      "provision_type": "Subsection",
+      "reference": "s 112(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 10",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10",
+      "provision_type": "Subsection",
+      "reference": "r 10(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-A",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "provision_type": "Paragraph",
+      "reference": "r 10(2)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-B",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "provision_type": "Paragraph",
+      "reference": "r 10(2)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-C",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "provision_type": "Paragraph",
+      "reference": "r 10(2)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-D",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "provision_type": "Paragraph",
+      "reference": "r 10(2)(d)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "provision_type": "Paragraph",
+      "reference": "r 10(2)(e)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-I",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E",
+      "provision_type": "Subparagraph",
+      "reference": "r 10(2)(e)(i)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-II",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E",
+      "provision_type": "Subparagraph",
+      "reference": "r 10(2)(e)(ii)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-III",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E",
+      "provision_type": "Subparagraph",
+      "reference": "r 10(2)(e)(iii)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "provision_type": "Paragraph",
+      "reference": "r 10(2)(f)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-I",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F",
+      "provision_type": "Subparagraph",
+      "reference": "r 10(2)(f)(i)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-II",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F",
+      "provision_type": "Subparagraph",
+      "reference": "r 10(2)(f)(ii)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-III",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F",
+      "provision_type": "Subparagraph",
+      "reference": "r 10(2)(f)(iii)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10",
+      "provision_type": "Subsection",
+      "reference": "r 10(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-A",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "provision_type": "Paragraph",
+      "reference": "r 10(3)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-B",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "provision_type": "Paragraph",
+      "reference": "r 10(3)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-C",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "provision_type": "Paragraph",
+      "reference": "r 10(3)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-D",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "provision_type": "Paragraph",
+      "reference": "r 10(3)(d)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-E",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "provision_type": "Paragraph",
+      "reference": "r 10(3)(e)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 20",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-1",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "provision_type": "Subsection",
+      "reference": "r 20(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-1-A",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-1",
+      "provision_type": "Paragraph",
+      "reference": "r 20(1)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "provision_type": "Subsection",
+      "reference": "r 20(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2-B",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2",
+      "provision_type": "Paragraph",
+      "reference": "r 20(2)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2-B-I",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2-B",
+      "provision_type": "Subparagraph",
+      "reference": "r 20(2)(b)(i)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-1-B",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-1",
+      "provision_type": "Paragraph",
+      "reference": "r 20(1)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-3",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "provision_type": "Subsection",
+      "reference": "r 20(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-3-B",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-3",
+      "provision_type": "Paragraph",
+      "reference": "r 20(3)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-5",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "provision_type": "Subsection",
+      "reference": "r 20(5)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-5-A",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-5",
+      "provision_type": "Paragraph",
+      "reference": "r 20(5)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-5-D",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-5",
+      "provision_type": "Paragraph",
+      "reference": "r 20(5)(d)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R26AAE",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 26AAE",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R26AAE",
+      "provision_type": "Subsection",
+      "reference": "r 26AAE(5)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5-C",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5",
+      "provision_type": "Paragraph",
+      "reference": "r 26AAE(5)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 23AA",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-4",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA",
+      "provision_type": "Subsection",
+      "reference": "r 23AA(4)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 23A",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-3",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A",
+      "provision_type": "Subsection",
+      "reference": "r 23A(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA",
+      "provision_type": "Subsection",
+      "reference": "r 23AA(5)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-A",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A",
+      "provision_type": "Subsection",
+      "reference": "r 23A(4)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-A",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-B",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-B",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-C",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-C",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-D",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(d)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-D",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(d)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-E",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(e)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-E",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(e)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-F",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(f)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-F",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(f)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-G",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(g)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-G",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(g)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-H",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(h)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-H",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(h)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-I",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(i)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-I",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(i)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-J",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(j)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-J",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(j)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-K",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "provision_type": "Paragraph",
+      "reference": "r 23AA(5)(k)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4-K",
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "parent_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "provision_type": "Paragraph",
+      "reference": "r 23A(4)(k)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 15",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S15",
+      "provision_type": "Subsection",
+      "reference": "s 15(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15-1-A",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S15-1",
+      "provision_type": "Paragraph",
+      "reference": "s 15(1)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S17",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 17",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15-1-B",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S15-1",
+      "provision_type": "Paragraph",
+      "reference": "s 15(1)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15-1-C",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S15-1",
+      "provision_type": "Paragraph",
+      "reference": "s 15(1)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15-1-D",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S15-1",
+      "provision_type": "Paragraph",
+      "reference": "s 15(1)(d)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15-1-E",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S15-1",
+      "provision_type": "Paragraph",
+      "reference": "s 15(1)(e)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S15-1-F",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S15-1",
+      "provision_type": "Paragraph",
+      "reference": "s 15(1)(f)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S16",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 16",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S17-1",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S17",
+      "provision_type": "Subsection",
+      "reference": "s 17(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-ACT-2009-S17-3",
+      "source_id": "NZ-IMM-ACT-2009",
+      "parent_provision_id": "NZ-IMM-ACT-2009-S17",
+      "provision_type": "Subsection",
+      "reference": "s 17(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": "2026-07-10",
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL40",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 40",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL41",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 41",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL41-1",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL41",
+      "provision_type": "Subsection",
+      "reference": "cl 41(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL41-1-G",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL41-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 41(1)(g)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL41-1-I",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL41-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 41(1)(i)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL42",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 42",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL42-1",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL42",
+      "provision_type": "Subsection",
+      "reference": "cl 42(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL42-2",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL42",
+      "provision_type": "Subsection",
+      "reference": "cl 42(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 44",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44-1",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "provision_type": "Subsection",
+      "reference": "cl 44(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 45",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45-A",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "provision_type": "Subsection",
+      "reference": "cl 45(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45-B",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "provision_type": "Subsection",
+      "reference": "cl 45(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45-C",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "provision_type": "Subsection",
+      "reference": "cl 45(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL46",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 46",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL46-2",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL46",
+      "provision_type": "Subsection",
+      "reference": "cl 46(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL46-2-A",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL46-2",
+      "provision_type": "Paragraph",
+      "reference": "cl 46(2)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 50",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50",
+      "provision_type": "Subsection",
+      "reference": "cl 50(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 50(1)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-B",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 50(1)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-C",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 50(1)(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL51",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 51",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL51-1",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL51",
+      "provision_type": "Subsection",
+      "reference": "cl 51(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL52",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 52",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 53",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53",
+      "provision_type": "Subsection",
+      "reference": "cl 53(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-A",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 53(1)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-B",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 53(1)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL54",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 54",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-J",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL53-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 53(1)(j)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL61",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 61",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL62",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 62",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL62-1",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL62",
+      "provision_type": "Subsection",
+      "reference": "cl 62(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL62-1-G",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL62-1",
+      "provision_type": "Paragraph",
+      "reference": "cl 62(1)(g)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL63",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 63",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL65",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 65",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL66",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 66",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL67",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 67",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL67-A",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL67",
+      "provision_type": "Subsection",
+      "reference": "cl 67(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL67-B",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL67",
+      "provision_type": "Subsection",
+      "reference": "cl 67(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL68",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 68",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL68-A",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL68",
+      "provision_type": "Subsection",
+      "reference": "cl 68(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL68-B",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL68",
+      "provision_type": "Subsection",
+      "reference": "cl 68(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL68-C",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL68",
+      "provision_type": "Subsection",
+      "reference": "cl 68(c)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL81",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 81",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL81-2",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL81",
+      "provision_type": "Subsection",
+      "reference": "cl 81(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL81-2-A",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL81-2",
+      "provision_type": "Paragraph",
+      "reference": "cl 81(2)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 22",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP1",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 1",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP2",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 2",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP3",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 3",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP3A",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 3A",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP4",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 4",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP5",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 5",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP6",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 6",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP7",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 7",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP8",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 8",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP9",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 9",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP10",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 10",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP11",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 11",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP12",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 12",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP13",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": "NZ-PRIVACY-ACT-2020-S22",
+      "provision_type": "Paragraph",
+      "reference": "s 22, IPP 13",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S114",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 114",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-PRIVACY-ACT-2020-S115",
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "parent_provision_id": null,
+      "provision_type": "Section",
+      "reference": "s 115",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R4",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 4",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R4-1",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": "NZ-IMM-CIO-REGS-2010-R4",
+      "provision_type": "Subsection",
+      "reference": "r 4(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R4-2",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": "NZ-IMM-CIO-REGS-2010-R4",
+      "provision_type": "Subsection",
+      "reference": "r 4(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R5",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 5",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R5-1",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": "NZ-IMM-CIO-REGS-2010-R5",
+      "provision_type": "Subsection",
+      "reference": "r 5(1)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R5-1-A",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": "NZ-IMM-CIO-REGS-2010-R5-1",
+      "provision_type": "Paragraph",
+      "reference": "r 5(1)(a)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R5-2",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": "NZ-IMM-CIO-REGS-2010-R5",
+      "provision_type": "Subsection",
+      "reference": "r 5(2)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R5-1-B",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": "NZ-IMM-CIO-REGS-2010-R5-1",
+      "provision_type": "Paragraph",
+      "reference": "r 5(1)(b)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R5-3",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": "NZ-IMM-CIO-REGS-2010-R5",
+      "provision_type": "Subsection",
+      "reference": "r 5(3)",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-IMM-CIO-REGS-2010-R6",
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "parent_provision_id": null,
+      "provision_type": "Regulation",
+      "reference": "r 6",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL43",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 43",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    },
+    {
+      "provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL64",
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "parent_provision_id": null,
+      "provision_type": "Clause",
+      "reference": "cl 64",
+      "heading": null,
+      "source_text": null,
+      "source_text_status": "SOURCE_TEXT_NOT_RETRIEVED",
+      "source_url": null,
+      "source_version": null,
+      "retrieved_at": null,
+      "effective_from": null,
+      "effective_to": null,
+      "interpretation_status": "CONSISTENT",
+      "interpretation_flag_ids": [
+        "IF-07",
+        "IF-10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+relationship_types:
+- type: MADE_UNDER
+  from: AuthoritySource
+  to: AuthoritySource
+  description: Subordinate instrument made under its parent Act.
+- type: CONTAINS
+  from: AuthoritySource|InstrumentVersion|DecisionOutcome|Application
+  to: InstrumentVersion|Provision|RuleEvaluation|EvidenceItem
+  description: Source contains version; version contains top-level provisions (FT-012).
+- type: PARENT_OF
+  from: Provision|Visa
+  to: Provision|Visa
+  description: Provision hierarchy; product hierarchy.
+- type: REFERENCES
+  from: Rule|EvidenceRequirement
+  to: Domain|Evidence
+  description: Rule statement uses a regulatory concept; requirement accepts an evidence type.
+- type: AMENDS
+  from: InstrumentVersion
+  to: InstrumentVersion
+  description: Declared; no instance in spec v0.2.
+- type: SUPERSEDES
+  from: Rule|Threshold|InstrumentVersion
+  to: Rule|Threshold|InstrumentVersion
+  description: Declared; no instance in spec v0.2.
+- type: DERIVED_FROM
+  from: Rule|StateTransition
+  to: Provision|Rule
+  description: Rule derives from provision (FT-011); transition authorised by rule.
+- type: APPLIES_TO
+  from: Rule|Application|StateTransition|CoverageGap|InterpretationFlag|RuleEvaluation
+  to: Visa|State|Rule|AuthoritySource|Application|*
+  description: Scope link (FT-002).
+- type: IMPOSES_OBLIGATION_ON
+  from: Rule
+  to: Domain(actor)
+  description: MUST rule binds an actor.
+- type: PROHIBITS
+  from: Rule
+  to: Domain(actor)
+  description: MUST NOT rule binds an actor (FT-018).
+- type: PERMITS
+  from: Rule
+  to: Domain(actor)
+  description: MAY rule empowers an actor (FT-017).
+- type: HAS_CONDITION
+  from: Rule
+  to: Condition
+  description: ''
+- type: HAS_EXCEPTION
+  from: Rule
+  to: Exception
+  description: ''
+- type: HAS_THRESHOLD
+  from: Rule
+  to: Threshold
+  description: ''
+- type: HAS_TIME_CONSTRAINT
+  from: Rule
+  to: TemporalConstraint
+  description: ''
+- type: HAS_DISCRETION
+  from: Rule
+  to: Discretion
+  description: ''
+- type: REQUIRES_EVIDENCE
+  from: Rule
+  to: EvidenceRequirement
+  description: ''
+- type: SUPPORTS_FACT
+  from: EvidenceItem
+  to: ObservedFact
+  description: FT-004
+- type: VERIFIED_AS
+  from: ObservedFact
+  to: VerifiedFact
+  description: FT-005
+- type: INPUT_TO
+  from: ObservedFact|VerifiedFact
+  to: DecisionCheck|RuleEvaluation
+  description: FT-006
+- type: EVALUATES
+  from: DecisionCheck|RuleEvaluation|TestCase
+  to: Rule|DecisionCheck
+  description: FT-010
+- type: PRODUCES_OUTCOME
+  from: DecisionCheck|RuleEvaluation|Application
+  to: RuleEvaluation|DecisionOutcome
+  description: ''
+- type: CAUSES_TRANSITION
+  from: Trigger
+  to: StateTransition
+  description: ''
+- type: EXPLAINED_BY
+  from: RuleEvaluation
+  to: Explanation
+  description: ''

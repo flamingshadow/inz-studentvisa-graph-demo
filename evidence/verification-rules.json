@@ -1,0 +1,118 @@
+{
+  "verification_rules": [
+    {
+      "verification_rule_id": "SV-VERIFY-PASSPORT",
+      "evidence_type_id": "EVTYPE-PASSPORT",
+      "evidence_item": "Passport / certificate of identity",
+      "verification_checks": [
+        "Authenticity",
+        "ownership",
+        "validity"
+      ],
+      "verification_need": "Authenticity, ownership, validity",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-OFFER-OF-PLACE",
+      "evidence_type_id": "EVTYPE-OFFER-OF-PLACE",
+      "evidence_item": "Offer of Place",
+      "verification_checks": [
+        "Provider",
+        "programme",
+        "dates and offer validity"
+      ],
+      "verification_need": "Provider, programme, dates and offer validity",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-TUITION",
+      "evidence_type_id": "EVTYPE-TUITION",
+      "evidence_item": "Tuition receipt / funding evidence",
+      "verification_checks": [
+        "Amount",
+        "recipient",
+        "accessibility"
+      ],
+      "verification_need": "Amount, recipient, accessibility",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-BANK-STATEMENT",
+      "evidence_type_id": "EVTYPE-BANK-STATEMENT",
+      "evidence_item": "Bank statement",
+      "verification_checks": [
+        "Genuineness",
+        "ownership",
+        "accessibility",
+        "currency and period"
+      ],
+      "verification_need": "Genuineness, ownership, accessibility, currency and period",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-SPONSORSHIP",
+      "evidence_type_id": "EVTYPE-SPONSORSHIP",
+      "evidence_item": "Sponsorship form/evidence",
+      "verification_checks": [
+        "Sponsor eligibility",
+        "acceptability and obligations"
+      ],
+      "verification_need": "Sponsor eligibility, acceptability and obligations",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-MEDICAL",
+      "evidence_type_id": "EVTYPE-MEDICAL",
+      "evidence_item": "Medical certificate / chest X-ray",
+      "verification_checks": [
+        "Required type",
+        "currency and clinical assessment"
+      ],
+      "verification_need": "Required type, currency and clinical assessment",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-POLICE-CERTIFICATE",
+      "evidence_type_id": "EVTYPE-POLICE-CERTIFICATE",
+      "evidence_item": "Police certificate",
+      "verification_checks": [
+        "Authenticity",
+        "jurisdiction and relevance"
+      ],
+      "verification_need": "Authenticity, jurisdiction and relevance",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-INSURANCE",
+      "evidence_type_id": "EVTYPE-INSURANCE",
+      "evidence_item": "Insurance policy/declaration",
+      "verification_checks": [
+        "Required scope",
+        "duration and provider"
+      ],
+      "verification_need": "Required scope, duration and provider",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    },
+    {
+      "verification_rule_id": "SV-VERIFY-GUARDIAN",
+      "evidence_type_id": "EVTYPE-GUARDIAN",
+      "evidence_item": "Parent or guardian evidence",
+      "verification_checks": [
+        "Identity",
+        "relationship",
+        "authority and written agreement"
+      ],
+      "verification_need": "Identity, relationship, authority and written agreement",
+      "result_when_unverified": "UNKNOWN",
+      "rule": "Evidence never directly sets a rule result; only facts verified against these checks may be used by A2 checks."
+    }
+  ]
+}

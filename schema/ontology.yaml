@@ -1,0 +1,266 @@
+ontology:
+  product_id: STUDENT-VISA
+  spec_version: '0.2'
+  spec_date: '2026-11-17'
+  layers:
+  - layer: Authority
+    node_types:
+    - AuthoritySource
+    - InstrumentVersion
+    purpose: Source authority, hierarchy and temporal validity.
+  - layer: Provision
+    node_types:
+    - Part
+    - Section
+    - Subsection
+    - Regulation
+    - Clause
+    - Instruction
+    purpose: Exact addressable source text and parent-child structure.
+  - layer: Rule
+    node_types:
+    - BusinessRule
+    - EligibilityRule
+    - Obligation
+    - Prohibition
+    - Permission
+    - Definition
+    - Calculation
+    purpose: Atomic regulatory or policy propositions.
+  - layer: Qualifier
+    node_types:
+    - Condition
+    - Exception
+    - Threshold
+    - TemporalConstraint
+    - Discretion
+    - Trigger
+    purpose: Independently queryable rule logic.
+  - layer: Domain
+    node_types:
+    - Visa
+    - Applicant
+    - Application
+    - Provider
+    - Programme
+    - Sponsor
+    - Guardian
+    - ImmigrationOfficer
+    purpose: Student Visa business concepts.
+  - layer: Evidence
+    node_types:
+    - EvidenceRequirement
+    - EvidenceItem
+    - ObservedFact
+    - VerifiedFact
+    purpose: Separates documents/data from accepted decision facts.
+  - layer: Decision
+    node_types:
+    - DecisionCheck
+    - RuleEvaluation
+    - DecisionOutcome
+    - Explanation
+    purpose: Controlled execution and auditable outcomes.
+  - layer: Lifecycle
+    node_types:
+    - State
+    - StateTransition
+    purpose: Application and visa state changes.
+  - layer: Governance
+    node_types:
+    - CoverageGap
+    - InterpretationFlag
+    - TestCase
+    purpose: Safe stopping, change control and assurance.
+  graph_path: EvidenceItem -> ObservedFact -> VerifiedFact -> DecisionCheck -> RuleEvaluation
+  explanation_chain: RuleEvaluation -> DecisionCheck -> Rule -> Provision -> Instrument
+templates:
+  business_rule_yaml_12_1:
+    business_rule:
+      rule_id: SV-APP-005
+      product_id: STUDENT-VISA
+      domain: Application
+      classification:
+        rule_type: Obligation
+        modality: MUST
+      rulespeak_statement: 'The Applicant must disclose each relevant Fact or Material Change that may affect the
+        Visa Application decision.
+
+        '
+      authority:
+        regulatory_instrument: Immigration Act 2009
+        instrument_type: Principal Act
+        provision: s 58(3)(a)
+        source_version: 2026-07-10
+      qualifiers:
+        condition_ids:
+        - SV-COND-APP-001
+        exception_ids: []
+      evidence_requirement_ids:
+      - SV-EVID-CHANGE-001
+      automation:
+        class: A2
+        machine_evaluable: true
+        missing_result: UNKNOWN
+      provenance_status: VERIFIED_PRIMARY_SOURCE
+  assessment_json_12_2:
+    assessment_id: ASSESS-POC-001
+    application_id: POC-SV-APP-001
+    product_id: STUDENT-VISA
+    assessment_as_at: '2026-11-17'
+    scope:
+      source_coverage: PARTIAL
+      production_decision: false
+    summary:
+      overall_status: HUMAN_REVIEW_REQUIRED
+      satisfied: 0
+      not_satisfied: 0
+      unknown: 0
+      human_review_required: 0
+      discretion_required: 1
+      source_coverage_gaps: 0
+    rule_evaluations: []
+    missing_information: []
+    human_review: []
+    source_coverage_gaps: []
+    provenance:
+      source_ids: []
+      provision_ids: []
+  authority_source:
+    source_id: NZ-IMM-ACT-2009
+    title: Immigration Act 2009
+    instrument_type: PrincipalAct
+    jurisdiction: NZ
+    version_id: '2026-07-10'
+    effective_from: null
+    effective_to: null
+    status: IN_FORCE
+    authoritative_uri: null
+    coverage_status: PARTIAL
+  provision:
+    provision_id: NZ-IMM-ACT-2009-S58-3-A
+    source_id: NZ-IMM-ACT-2009
+    parent_provision_id: NZ-IMM-ACT-2009-S58-3
+    provision_type: Paragraph
+    reference: s 58(3)(a)
+    heading: null
+    source_text: null
+    effective_from: null
+    effective_to: null
+    interpretation_status: CONSISTENT
+  regulatory_concept:
+    concept_id: CONCEPT-OFFER-OF-PLACE
+    preferred_term: OfferOfPlace
+    concept_type: Document
+    domain: Study
+    statutory_definition: null
+    plain_english_definition: null
+    definition_type: IMPLIED
+    source_provision_id: null
+    synonyms: []
+  business_rule:
+    rule_id: SV-APP-005
+    product_id: STUDENT-VISA
+    domain: Application
+    rule_type: Obligation
+    modality: MUST
+    rulespeak_statement: The Applicant must disclose each relevant Fact or Material Change that may affect the Visa
+      Application decision.
+    condition_ids: []
+    exception_ids: []
+    threshold_ids: []
+    discretion_ids: []
+    evidence_requirement_ids: []
+    source_id: NZ-IMM-ACT-2009
+    provision_id: NZ-IMM-ACT-2009-S58-3-A
+    automation_class: A2
+    provenance_status: VERIFIED_PRIMARY_SOURCE
+  evidence_requirement:
+    evidence_requirement_id: SV-EVID-REQ-001
+    rule_id: SV-APP-005
+    description: Evidence of the material change and notification
+    required_fact_type_id: null
+    acceptable_evidence_types: []
+    mandatory: true
+    verification_required: true
+    source_provision_id: NZ-IMM-ACT-2009-S58-3-A
+  evidence_item:
+    evidence_item_id: EVID-POC-001
+    application_id: POC-SV-APP-001
+    evidence_type: ChangeNotification
+    document_reference: null
+    supplied_by_actor_id: ACTOR-APPLICANT
+    received_at: null
+    verification_status: UNVERIFIED
+    supports_fact_ids: []
+  verified_fact:
+    fact_id: FACT-POC-001
+    application_id: POC-SV-APP-001
+    subject_id: APPLICANT-POC-001
+    attribute: material_change_disclosed
+    value: true
+    data_type: boolean
+    evidence_item_ids:
+    - EVID-POC-001
+    verification_status: VERIFIED
+    verified_at: null
+  decision_check:
+    check_id: SV-CHECK-APP-005
+    evaluates_rule_id: SV-APP-005
+    automation_class: A2
+    inputs:
+    - fact_path: application.material_change_disclosed
+      required: true
+    expression:
+      operator: EQUALS
+      operands:
+      - application.material_change_disclosed
+      - true
+    outcomes:
+      'true': SATISFIED
+      'false': NOT_SATISFIED
+      missing: UNKNOWN
+    source_provision_id: NZ-IMM-ACT-2009-S58-3-A
+  rule_evaluation:
+    evaluation_id: EVAL-POC-001
+    application_id: POC-SV-APP-001
+    rule_id: SV-APP-005
+    check_id: SV-CHECK-APP-005
+    result: SATISFIED
+    verified_fact_ids:
+    - FACT-POC-001
+    evidence_item_ids:
+    - EVID-POC-001
+    evaluated_by: RULE_ENGINE
+    explanation: null
+    source_id: NZ-IMM-ACT-2009
+    provision_id: NZ-IMM-ACT-2009-S58-3-A
+  state_transition:
+    transition_id: SV-TRANS-DECISION
+    entity_type: VisaApplication
+    from_state_id: DECISION_READY
+    to_state_id: GRANTED_OR_DECLINED
+    trigger: authorised discretionary decision
+    actor_id: ACTOR-IMMIGRATION-OFFICER
+    authorising_rule_ids:
+    - SV-DEC-002
+    required_fact_ids: []
+    audit_event_required: true
+  coverage_gap:
+    coverage_gap_id: GAP-SV-INSTRUCTIONS
+    subject: Detailed Student Visa product eligibility
+    reason_type: EXCLUDED_SOURCE
+    missing_source_type: ImmigrationInstruction
+    retrieval_impact: PARTIAL
+    automated_assessment_impact: BLOCKED
+    required_result: SOURCE_COVERAGE_GAP
+    must_not_infer: true
+  test_case:
+    test_case_id: TC-SV-001
+    test_type: PASS
+    rule_id: SV-APP-005
+    check_id: SV-CHECK-APP-005
+    input_facts: []
+    evidence_items: []
+    expected_status: SATISFIED
+    provenance_required: true

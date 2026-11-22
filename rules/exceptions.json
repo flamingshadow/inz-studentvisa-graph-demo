@@ -1,0 +1,213 @@
+{
+  "exceptions": [
+    {
+      "id": "SV-EXC-BIO-001",
+      "rule_id": "SV-BIO-001",
+      "text": "unless an exemption applies",
+      "source_provision_id": "NZ-IMM-ACT-2009-S60-1",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-FORM-001",
+      "rule_id": "SV-FORM-002",
+      "text": "unless regulation 20 applies",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-FORM-002",
+      "rule_id": "SV-FORM-004",
+      "text": "unless the applicable minor-signature rule applies",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-D",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-FEE-001",
+      "rule_id": "SV-FEE-003",
+      "text": "unless an exemption applies",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-III",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-ONLINE-001",
+      "rule_id": "SV-ONLINE-002",
+      "text": "unless another language is enabled",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-ONLINE-002",
+      "rule_id": "SV-ONLINE-012",
+      "text": "unless an exemption applies",
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-K",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-CHAR-001",
+      "rule_id": "SV-CHAR-001",
+      "text": "unless an applicable statutory exception is exercised",
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-CHAR-002",
+      "rule_id": "SV-CHAR-002",
+      "text": "unless an applicable statutory exception is exercised",
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-CHAR-003",
+      "rule_id": "SV-CHAR-004",
+      "text": "unless a statutory exception applies",
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-D",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-CHAR-004",
+      "rule_id": "SV-CHAR-005",
+      "text": "unless a statutory exception applies",
+      "source_provision_id": "NZ-IMM-ACT-2009-S16",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-U18-001",
+      "rule_id": "SV-U18-001",
+      "text": "unless an applicable exception is satisfied",
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-PRIV-001",
+      "rule_id": "SV-PRIV-002",
+      "text": "unless an exception applies",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP2",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-PRIV-002",
+      "rule_id": "SV-PRIV-004",
+      "text": "unless an exception applies",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP3A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-PRIV-003",
+      "rule_id": "SV-PRIV-011",
+      "text": "unless an applicable ground exists",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP10",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-PRIV-004",
+      "rule_id": "SV-PRIV-012",
+      "text": "unless an applicable ground exists",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP11",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-PRIV-005",
+      "rule_id": "SV-PRIV-013",
+      "text": "unless an applicable safeguard or exception is satisfied",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP12",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-PRIV-006",
+      "rule_id": "SV-PRIV-016",
+      "text": "unless a statutory exception applies",
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S115",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-CARRIER-001",
+      "rule_id": "SV-CARRIER-003",
+      "text": "unless exempt",
+      "source_provision_id": "NZ-IMM-CIO-REGS-2010-R5-1-A",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-EXC-CARRIER-002",
+      "rule_id": "SV-CARRIER-004",
+      "text": "unless an exception applies",
+      "source_provision_id": "NZ-IMM-CIO-REGS-2010-R5-1-B",
+      "derivation": "Exact span of the RuleSpeak statement (IF-06)",
+      "provenance_status": "VERIFIED_PRIMARY_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    }
+  ]
+}

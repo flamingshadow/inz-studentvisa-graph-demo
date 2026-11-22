@@ -1,0 +1,35 @@
+agent_contract:
+  poc_scope_notice: 'POC scope notice: This export consolidates the available statutory, regulatory, education-code,
+    privacy, carrier and candidate product-rule material. It is designed to demonstrate search, graph traversal,
+    provenance and controlled decision-support concepts. It is not a production visa-decision instrument. Detailed
+    Immigration Instructions / Operational Manual criteria must be reconciled before production use.'
+  rules:
+  - Resolve the user's language to canonical concept IDs before retrieving rules.
+  - Filter rules by Student Visa product, applicant context, effective date and source version.
+  - Retrieve conditions, exceptions, thresholds, evidence requirements and provisions with each rule.
+  - Execute A1 checks; execute A2 only after facts are verified; route A3 to human review; route A4 to the authorised
+    decision-maker; stop A5.
+  - Never treat missing evidence as failure. Return UNKNOWN.
+  - Never report that no rule exists when the relevant source is absent. Return SOURCE_COVERAGE_GAP.
+  - Never infer an Immigration Instruction threshold from the enabling Act or Regulations.
+  - Never reduce health, character or genuine-intentions assessments to an unsupported score.
+  - Always return the rule, facts used, evidence used, unresolved requirements, automation class, instrument, provision
+    and version.
+  - Never present the POC result as a production visa determination.
+  automation_actions:
+    A1: Execute automatically.
+    A2: Verify fact, then execute.
+    A3: Retrieve rules/evidence and refer to human.
+    A4: Present authority and constraints; decision-maker decides.
+    A5: Stop and escalate.
+  definition_of_done:
+  - The agent can answer what Student Visa rules apply and return the governing instrument and exact provision.
+  - The agent can traverse from a rule to required evidence and from evidence to the facts it may support.
+  - The agent can execute selected deterministic checks against synthetic applications.
+  - The agent distinguishes not satisfied, unknown, human review, discretion and source coverage gaps.
+  - The agent can explain every result through the complete provenance chain.
+  - All candidate product-level rules are reconciled to current Immigration Instructions before any production claim.
+  product_owner_decisions:
+  - 'No automated grant or decline: the final grant is always DISCRETION_REQUIRED (SV-CHECK-DISC-001).'
+  - Synthetic applications only.
+  - Candidate funds thresholds execute, labelled 'CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED' (IF-01).

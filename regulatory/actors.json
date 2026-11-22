@@ -1,0 +1,118 @@
+{
+  "actors": [
+    {
+      "actor_id": "ACTOR-APPLICANT",
+      "name": "Applicant",
+      "concept_id": "ACTOR-APPLICANT",
+      "type_label": "Applicant",
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-STUDENT",
+      "name": "Student",
+      "concept_id": "ACTOR-STUDENT",
+      "type_label": null,
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-VISA-HOLDER",
+      "name": "Visa Holder",
+      "concept_id": "ACTOR-VISA-HOLDER",
+      "type_label": null,
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-IMMIGRATION-OFFICER",
+      "name": "Immigration Officer",
+      "concept_id": "ACTOR-IMMIGRATION-OFFICER",
+      "type_label": "ImmigrationOfficer",
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-MINISTER",
+      "name": "Minister",
+      "concept_id": "ACTOR-MINISTER",
+      "type_label": null,
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-SPONSOR",
+      "name": "Sponsor",
+      "concept_id": "ACTOR-SPONSOR",
+      "type_label": "Sponsor",
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-EDUCATION-PROVIDER",
+      "name": "Education Provider",
+      "concept_id": "ACTOR-EDUCATION-PROVIDER",
+      "type_label": "Provider",
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-SIGNATORY",
+      "name": "Signatory",
+      "concept_id": "ACTOR-SIGNATORY",
+      "type_label": null,
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-PARENT",
+      "name": "Parent",
+      "concept_id": "ACTOR-PARENT",
+      "type_label": null,
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-LEGAL-GUARDIAN",
+      "name": "Legal Guardian",
+      "concept_id": "ACTOR-LEGAL-GUARDIAN",
+      "type_label": "Guardian",
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-RESIDENTIAL-CAREGIVER",
+      "name": "Residential Caregiver",
+      "concept_id": "ACTOR-RESIDENTIAL-CAREGIVER",
+      "type_label": null,
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-CARRIER",
+      "name": "Carrier",
+      "concept_id": "ACTOR-CARRIER",
+      "type_label": null,
+      "derived_from": "Table 3 Parties"
+    },
+    {
+      "actor_id": "ACTOR-DECISION-MAKER",
+      "name": "Decision-Maker",
+      "concept_id": "ACTOR-DECISION-MAKER",
+      "type_label": null,
+      "derived_from": "rule subject (not in Table 3 Parties)",
+      "interpretation_flag_ids": [
+        "IF-17"
+      ]
+    },
+    {
+      "actor_id": "ACTOR-AGENCY",
+      "name": "Agency",
+      "concept_id": "ACTOR-AGENCY",
+      "type_label": null,
+      "derived_from": "rule subject (not in Table 3 Parties)",
+      "interpretation_flag_ids": [
+        "IF-17"
+      ]
+    },
+    {
+      "actor_id": "ACTOR-INDIVIDUAL",
+      "name": "Individual",
+      "concept_id": "ACTOR-INDIVIDUAL",
+      "type_label": null,
+      "derived_from": "rule subject (not in Table 3 Parties)",
+      "interpretation_flag_ids": [
+        "IF-17"
+      ]
+    }
+  ]
+}

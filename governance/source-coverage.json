@@ -1,0 +1,306 @@
+{
+  "source_coverage": [
+    {
+      "source_id": "NZ-IMM-ACT-2009",
+      "title": "Immigration Act 2009",
+      "poc_coverage": "Verified baseline provisions included.",
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "source_id": "NZ-IMM-VEPRM-REGS-2010",
+      "title": "Immigration (Visa, Entry Permission, and Related Matters) Regulations 2010",
+      "poc_coverage": "Verified baseline provisions included.",
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "source_id": "NZ-IMM-CIO-REGS-2010",
+      "title": "Immigration (Carriers' Information Obligations) Regulations 2010",
+      "poc_coverage": "Relevant pre-arrival rules included.",
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "source_id": "NZ-EDU-TRAINING-ACT-2020",
+      "title": "Education and Training Act 2020",
+      "poc_coverage": "Source relationship included; detailed Act rules require separate extraction.",
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "source_id": "NZ-EDU-PASTORAL-CODE-2021",
+      "title": "Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021, amended April 2023",
+      "poc_coverage": "Relevant tertiary and school learner rules included.",
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "source_id": "NZ-PRIVACY-ACT-2020",
+      "title": "Privacy Act 2020",
+      "poc_coverage": "Cross-cutting rules included.",
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "source_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
+      "title": "Immigration Instructions / INZ Operational Manual",
+      "poc_coverage": "Not in authoritative verified corpus; candidate rules marked RECONCILIATION_REQUIRED or SOURCE_COVERAGE_GAP.",
+      "coverage_status": "NOT_COVERED"
+    },
+    {
+      "source_id": "DOC-BRA-AI-PROMPTS",
+      "title": "Business Rules Analysis AI Prompts Immigration.docx",
+      "poc_coverage": "Used as analysis method; ARIS excluded.",
+      "coverage_status": null
+    },
+    {
+      "source_id": "DOC-INZ-SV-BUSINESS-RULE",
+      "title": "INZ Student Visa Business Rule.docx",
+      "poc_coverage": "Integrated as candidate domain content and design accelerator.",
+      "coverage_status": null
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "id": "GAP-01",
+      "subject": "Immigration Instructions / Operational Manual not integrated as an authoritative corpus.",
+      "effect": "Product thresholds and detailed eligibility remain incomplete.",
+      "control": "Return SOURCE_COVERAGE_GAP and reconcile before production.",
+      "coverage_gap_id": "GAP-01",
+      "reason_type": "EXCLUDED_SOURCE",
+      "missing_source_type": "ImmigrationInstruction",
+      "retrieval_impact": "PARTIAL",
+      "automated_assessment_impact": "BLOCKED",
+      "required_result": "SOURCE_COVERAGE_GAP",
+      "must_not_infer": true,
+      "template_example_id": "GAP-SV-INSTRUCTIONS",
+      "applies_to": [
+        "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
+        "SV-INSTR-001",
+        "SV-ONLINE-007",
+        "SV-CAND-PRODUCTS",
+        "SV-CAND-ELIGIBILITY",
+        "SV-CAND-MAINT-TERTIARY",
+        "SV-CAND-MAINT-SCHOOL",
+        "SV-CAND-MATERNITY",
+        "SV-CAND-WORK",
+        "SV-CAND-CHANGE-STUDY",
+        "SV-CAND-GENUINE",
+        "SV-CAND-FAMILY",
+        "SV-CAND-GUARDIAN"
+      ]
+    },
+    {
+      "id": "GAP-02",
+      "subject": "Some original Student Visa rules are sourced to INZ webpages or change notices rather than provision-level authority.",
+      "effect": "Temporal policy may be useful but not fully governed.",
+      "control": "Attach source URL, effective dates, version and instruction lineage.",
+      "coverage_gap_id": "GAP-02",
+      "reason_type": null,
+      "missing_source_type": null,
+      "retrieval_impact": null,
+      "automated_assessment_impact": null,
+      "required_result": "SOURCE_COVERAGE_GAP",
+      "must_not_infer": true,
+      "template_example_id": null,
+      "applies_to": [
+        "DOC-INZ-SV-BUSINESS-RULE",
+        "SV-CAND-PRODUCTS",
+        "SV-CAND-ELIGIBILITY",
+        "SV-CAND-MAINT-TERTIARY",
+        "SV-CAND-MAINT-SCHOOL",
+        "SV-CAND-MATERNITY",
+        "SV-CAND-WORK",
+        "SV-CAND-CHANGE-STUDY",
+        "SV-CAND-GENUINE",
+        "SV-CAND-FAMILY",
+        "SV-CAND-GUARDIAN"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "RISK-01",
+      "subject": "Evidence presence mistaken for fact verification.",
+      "effect": "False positive eligibility result.",
+      "control": "Separate EvidenceItem, ObservedFact and VerifiedFact."
+    },
+    {
+      "id": "RISK-02",
+      "subject": "Statutory permission/discretion converted into mandatory system logic.",
+      "effect": "Unlawful or over-automated decision.",
+      "control": "Preserve MAY, use A4 and authorised human decision."
+    },
+    {
+      "id": "RISK-03",
+      "subject": "Out-of-date thresholds overwrite historic rules.",
+      "effect": "Incorrect as-at-date result.",
+      "control": "Version rules, thresholds and source instruments."
+    },
+    {
+      "id": "RISK-04",
+      "subject": "Education-provider obligations treated as visa-grant criteria.",
+      "effect": "Incorrect authority mapping.",
+      "control": "Keep parallel domains and explicit APPLIES_TO relationships."
+    },
+    {
+      "id": "RISK-05",
+      "subject": "POC answer presented as production outcome.",
+      "effect": "Governance and legal risk.",
+      "control": "Mark every assessment as POC and include source coverage."
+    }
+  ],
+  "assurance_checklist": [
+    {
+      "area": "Source traceability",
+      "required_output": "Rule-to-provision-to-instrument path",
+      "completion_criterion": "Every VERIFIED rule has source_id, provision_id, reference, version and source text."
+    },
+    {
+      "area": "Atomicity",
+      "required_output": "One proposition per rule",
+      "completion_criterion": "Conditions, exceptions and calculations are not hidden in compound statements."
+    },
+    {
+      "area": "Modality",
+      "required_output": "Mandatory, prohibition and permission semantics",
+      "completion_criterion": "MUST, MUST_NOT and MAY are preserved; discretion routes to A4."
+    },
+    {
+      "area": "Evidence",
+      "required_output": "Evidence and fact separation",
+      "completion_criterion": "EvidenceItem never directly sets a rule result; verified facts are required."
+    },
+    {
+      "area": "Testing",
+      "required_output": "Passing, failing, missing, boundary, exception, discretion and source-gap cases",
+      "completion_criterion": "Each executable rule has relevant test coverage."
+    },
+    {
+      "area": "Audit trail",
+      "required_output": "Application, evidence, verification, evaluation, human decision and source-version events",
+      "completion_criterion": "Each event records actor, timestamp, entity IDs, before/after state and authority."
+    },
+    {
+      "area": "Temporal control",
+      "required_output": "As-at-date evaluation",
+      "completion_criterion": "Rules, sources and thresholds have effective dates and supersession links."
+    },
+    {
+      "area": "Human review",
+      "required_output": "A3 and A4 routing",
+      "completion_criterion": "Human decision-maker, unresolved issues and material presented are recorded."
+    },
+    {
+      "area": "Coverage",
+      "required_output": "Missing authoritative sources",
+      "completion_criterion": "Agent returns SOURCE_COVERAGE_GAP and never infers the missing rule."
+    },
+    {
+      "area": "POC boundary",
+      "required_output": "No production decision claim",
+      "completion_criterion": "Every assessment records production_decision=false and source coverage."
+    }
+  ],
+  "audit_events": [
+    {
+      "event": "APPLICATION_SUBMITTED",
+      "minimum_data": "application ID, applicant ID, channel, timestamp, source rule version"
+    },
+    {
+      "event": "EVIDENCE_RECEIVED",
+      "minimum_data": "evidence ID/type, source, received timestamp, linked requirements"
+    },
+    {
+      "event": "FACT_VERIFIED",
+      "minimum_data": "fact ID/value, verifier, method, evidence IDs, timestamp"
+    },
+    {
+      "event": "RULE_EVALUATED",
+      "minimum_data": "rule/check/version IDs, inputs, result, timestamp, automated/human indicator"
+    },
+    {
+      "event": "HUMAN_REVIEW_REQUESTED",
+      "minimum_data": "reason, rules, evidence, unresolved facts, assigned role"
+    },
+    {
+      "event": "DISCRETION_EXERCISED",
+      "minimum_data": "decision-maker, authority, relevant considerations, outcome, timestamp"
+    },
+    {
+      "event": "STATE_CHANGED",
+      "minimum_data": "entity, from/to states, trigger, actor, authorising rule"
+    },
+    {
+      "event": "SOURCE_VERSION_CHANGED",
+      "minimum_data": "source/provision/rule versions, effective date, supersession and impacted checks"
+    }
+  ],
+  "incorporation_matrix": [
+    {
+      "component": "Source identification, hierarchy, version and coverage",
+      "status": "Included",
+      "treatment": "Sections 2 and 11; AuthoritySource and InstrumentVersion nodes."
+    },
+    {
+      "component": "Defined/implied vocabulary and legislative actors",
+      "status": "Included",
+      "treatment": "Sections 3-4; expanded object template in Appendix F."
+    },
+    {
+      "component": "Atomic fact types",
+      "status": "Included",
+      "treatment": "Section 4."
+    },
+    {
+      "component": "Atomic RuleSpeak rules with instrument and exact provision",
+      "status": "Included for retrieved Act, Regulations, Code, Privacy and carrier baseline",
+      "treatment": "Sections 5, 5.1, 5.2 and Appendix D."
+    },
+    {
+      "component": "Conditions, exceptions, thresholds, time constraints and discretions",
+      "status": "Included in ontology and templates",
+      "treatment": "Sections 3, 7, 9 and Appendix F."
+    },
+    {
+      "component": "Evidence requirements separated from verified facts",
+      "status": "Included",
+      "treatment": "Section 7 and Appendix F."
+    },
+    {
+      "component": "Decision checks separated from legal rules",
+      "status": "Included",
+      "treatment": "Section 7 and Appendix F."
+    },
+    {
+      "component": "Lifecycle states and transitions",
+      "status": "Included",
+      "treatment": "Section 8."
+    },
+    {
+      "component": "Source-coverage and interpretation flags",
+      "status": "Included",
+      "treatment": "Sections 6, 11 and Appendix F."
+    },
+    {
+      "component": "Developer implementation objects",
+      "status": "Included",
+      "treatment": "Sections 7, 12 and Appendix F."
+    },
+    {
+      "component": "Auditor assertions, evidence and test cases",
+      "status": "Included",
+      "treatment": "Section 10 and Appendix G."
+    },
+    {
+      "component": "Original Student Visa product graph content",
+      "status": "Included as candidate/reconciliation layer",
+      "treatment": "Section 6 and Appendix E."
+    },
+    {
+      "component": "ARIS outputs",
+      "status": "Intentionally excluded",
+      "treatment": "Not required for this POC."
+    },
+    {
+      "component": "Detailed Immigration Instructions / Operational Manual rules",
+      "status": "Not verified",
+      "treatment": "Represented as SOURCE_COVERAGE_GAP; authoritative corpus still required."
+    }
+  ]
+}

@@ -1,0 +1,6602 @@
+{
+  "relationships": [
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009",
+      "to": "NZ-IMM-ACT-2009@2026-07-10"
+    },
+    {
+      "type": "MADE_UNDER",
+      "from": "NZ-IMM-VEPRM-REGS-2010",
+      "to": "NZ-IMM-ACT-2009"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-VEPRM-REGS-2010",
+      "to": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED"
+    },
+    {
+      "type": "MADE_UNDER",
+      "from": "NZ-IMM-CIO-REGS-2010",
+      "to": "NZ-IMM-ACT-2009"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-CIO-REGS-2010",
+      "to": "NZ-IMM-CIO-REGS-2010@UNVERSIONED"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-TRAINING-ACT-2020",
+      "to": "NZ-EDU-TRAINING-ACT-2020@UNVERSIONED"
+    },
+    {
+      "type": "MADE_UNDER",
+      "from": "NZ-EDU-PASTORAL-CODE-2021",
+      "to": "NZ-EDU-TRAINING-ACT-2020"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021",
+      "to": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-PRIVACY-ACT-2020",
+      "to": "NZ-PRIVACY-ACT-2020@UNVERSIONED"
+    },
+    {
+      "type": "MADE_UNDER",
+      "from": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
+      "to": "NZ-IMM-ACT-2009"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
+      "to": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@UNVERSIONED"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "STUDENT-VISA",
+      "to": "CONCEPT-FEE-PAYING-STUDENT-VISA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "STUDENT-VISA",
+      "to": "CONCEPT-PATHWAY-STUDENT-VISA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "STUDENT-VISA",
+      "to": "CONCEPT-EXCHANGE-STUDENT-VISA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "STUDENT-VISA",
+      "to": "CONCEPT-SCHOLARSHIP-STUDENT-VISA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "STUDENT-VISA",
+      "to": "CONCEPT-DEPENDENT-CHILD-STUDENT-VISA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "STUDENT-VISA",
+      "to": "CONCEPT-ENGLISH-LANGUAGE-STUDENT-VISA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "STUDENT-VISA",
+      "to": "CONCEPT-FOREIGN-GOVERNMENT-SUPPORTED-STUDENT-VISA"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S57"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S57",
+      "to": "NZ-IMM-ACT-2009-S57-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S57",
+      "to": "NZ-IMM-ACT-2009-S57-2"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S58"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58",
+      "to": "NZ-IMM-ACT-2009-S58-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58",
+      "to": "NZ-IMM-ACT-2009-S58-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58",
+      "to": "NZ-IMM-ACT-2009-S58-3"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58-3",
+      "to": "NZ-IMM-ACT-2009-S58-3-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58-3",
+      "to": "NZ-IMM-ACT-2009-S58-3-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58",
+      "to": "NZ-IMM-ACT-2009-S58-6"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58-6",
+      "to": "NZ-IMM-ACT-2009-S58-6-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S58-6",
+      "to": "NZ-IMM-ACT-2009-S58-6-B"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S59"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S60"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S60",
+      "to": "NZ-IMM-ACT-2009-S60-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S60",
+      "to": "NZ-IMM-ACT-2009-S60-3"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S60",
+      "to": "NZ-IMM-ACT-2009-S60-2"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S45"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S45",
+      "to": "NZ-IMM-ACT-2009-S45-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S45",
+      "to": "NZ-IMM-ACT-2009-S45-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S45-2",
+      "to": "NZ-IMM-ACT-2009-S45-2-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S45-2",
+      "to": "NZ-IMM-ACT-2009-S45-2-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S45-2",
+      "to": "NZ-IMM-ACT-2009-S45-2-C"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S48"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S48",
+      "to": "NZ-IMM-ACT-2009-S48-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S48",
+      "to": "NZ-IMM-ACT-2009-S48-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S48",
+      "to": "NZ-IMM-ACT-2009-S48-3"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S48",
+      "to": "NZ-IMM-ACT-2009-S48-4"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S48",
+      "to": "NZ-IMM-ACT-2009-S48-5"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S48",
+      "to": "NZ-IMM-ACT-2009-S48-6"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S49"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S49",
+      "to": "NZ-IMM-ACT-2009-S49-1"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S52"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52",
+      "to": "NZ-IMM-ACT-2009-S52-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52-1",
+      "to": "NZ-IMM-ACT-2009-S52-1-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52-1",
+      "to": "NZ-IMM-ACT-2009-S52-1-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52",
+      "to": "NZ-IMM-ACT-2009-S52-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52-2",
+      "to": "NZ-IMM-ACT-2009-S52-2-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52-2",
+      "to": "NZ-IMM-ACT-2009-S52-2-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52",
+      "to": "NZ-IMM-ACT-2009-S52-4"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S52-4",
+      "to": "NZ-IMM-ACT-2009-S52-4-A"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S56"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S77"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S77",
+      "to": "NZ-IMM-ACT-2009-S77-4"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S77-4",
+      "to": "NZ-IMM-ACT-2009-S77-4-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S77-4",
+      "to": "NZ-IMM-ACT-2009-S77-4-B"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S62"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S62",
+      "to": "NZ-IMM-ACT-2009-S62-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S62",
+      "to": "NZ-IMM-ACT-2009-S62-2"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S63"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S64"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S64",
+      "to": "NZ-IMM-ACT-2009-S64-1"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S66"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S66",
+      "to": "NZ-IMM-ACT-2009-S66-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S66-1",
+      "to": "NZ-IMM-ACT-2009-S66-1-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S66",
+      "to": "NZ-IMM-ACT-2009-S66-2"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S46"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S46",
+      "to": "NZ-IMM-ACT-2009-S46-1"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S109"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S109",
+      "to": "NZ-IMM-ACT-2009-S109-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S109",
+      "to": "NZ-IMM-ACT-2009-S109-2"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S110"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S112"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S112",
+      "to": "NZ-IMM-ACT-2009-S112-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S112",
+      "to": "NZ-IMM-ACT-2009-S112-3"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-C"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-D"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-E"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2-E",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-I"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2-E",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-II"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2-E",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-III"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-F"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2-F",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-I"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2-F",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-II"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-2-F",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-III"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-C"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-D"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R10-3",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-E"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20-1",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-1-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20-2",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-2-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20-2-B",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-2-B-I"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20-1",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-1-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-3"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20-3",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-3-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-5"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-5-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R20-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-5-D"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R26AAE"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R26AAE",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5-C"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-4"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-3"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-C"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-C"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-D"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-D"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-E"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-E"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-F"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-F"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-G"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-G"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-H"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-H"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-I"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-I"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-J"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-J"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23AA-5",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-K"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-VEPRM-REGS-2010-R23A-4",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-K"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S15"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S15",
+      "to": "NZ-IMM-ACT-2009-S15-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S15-1",
+      "to": "NZ-IMM-ACT-2009-S15-1-A"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S17"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S15-1",
+      "to": "NZ-IMM-ACT-2009-S15-1-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S15-1",
+      "to": "NZ-IMM-ACT-2009-S15-1-C"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S15-1",
+      "to": "NZ-IMM-ACT-2009-S15-1-D"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S15-1",
+      "to": "NZ-IMM-ACT-2009-S15-1-E"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S15-1",
+      "to": "NZ-IMM-ACT-2009-S15-1-F"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-ACT-2009@2026-07-10",
+      "to": "NZ-IMM-ACT-2009-S16"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S17",
+      "to": "NZ-IMM-ACT-2009-S17-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-ACT-2009-S17",
+      "to": "NZ-IMM-ACT-2009-S17-3"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL40"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL41"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL41",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL41-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL41-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL41-1-G"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL41-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL41-1-I"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL42"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL42",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL42-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL42",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL42-2"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL44"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL44-1"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45-C"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL46"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL46",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL46-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL46-2",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL46-2-A"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL50",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL50-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL50-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL50-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-C"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL51"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL51",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL51-1"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL52"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL53",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL53-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL53-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-B"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL54"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL53-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-J"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL61"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL62"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL62",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL62-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL62-1",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL62-1-G"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL63"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL65"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL66"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL67"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL67",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL67-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL67",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL67-B"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL68"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL68",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL68-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL68",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL68-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL68",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL68-C"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL81"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL81",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL81-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-EDU-PASTORAL-CODE-2021-CL81-2",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL81-2-A"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "to": "NZ-PRIVACY-ACT-2020-S22"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP3"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP3A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP4"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP5"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP6"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP7"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP8"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP9"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP10"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP11"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP12"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-PRIVACY-ACT-2020-S22",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP13"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "to": "NZ-PRIVACY-ACT-2020-S114"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "to": "NZ-PRIVACY-ACT-2020-S115"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-CIO-REGS-2010-R4"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-CIO-REGS-2010-R4",
+      "to": "NZ-IMM-CIO-REGS-2010-R4-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-CIO-REGS-2010-R4",
+      "to": "NZ-IMM-CIO-REGS-2010-R4-2"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-CIO-REGS-2010-R5"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-CIO-REGS-2010-R5",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-1"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-CIO-REGS-2010-R5-1",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-1-A"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-CIO-REGS-2010-R5",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-2"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-CIO-REGS-2010-R5-1",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-1-B"
+    },
+    {
+      "type": "PARENT_OF",
+      "from": "NZ-IMM-CIO-REGS-2010-R5",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-3"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "to": "NZ-IMM-CIO-REGS-2010-R6"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL43"
+    },
+    {
+      "type": "CONTAINS",
+      "from": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL64"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-ID-001-PASSPORT",
+      "to": "EVTYPE-PASSPORT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-ONLINE-005-PASSPORT",
+      "to": "EVTYPE-PASSPORT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CARRIER-003-PASSPORT",
+      "to": "EVTYPE-PASSPORT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-ELIGIBILITY-OFFER-OF-PLACE",
+      "to": "EVTYPE-OFFER-OF-PLACE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-ELIGIBILITY-TUITION",
+      "to": "EVTYPE-TUITION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-FIN-001-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-MAINT-TERTIARY-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-MAINT-SCHOOL-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-MATERNITY-BANK-STATEMENT",
+      "to": "EVTYPE-BANK-STATEMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-001-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-003-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-004-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SPON-006-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-FIN-001-SPONSORSHIP",
+      "to": "EVTYPE-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-HEALTH-001-MEDICAL",
+      "to": "EVTYPE-MEDICAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CAND-ELIGIBILITY-MEDICAL",
+      "to": "EVTYPE-MEDICAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-001-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-002-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-003-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-004-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-CHAR-005-POLICE-CERTIFICATE",
+      "to": "EVTYPE-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-001-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-002-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-003-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-004-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-INS-005-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SCHOOL-004-INSURANCE",
+      "to": "EVTYPE-INSURANCE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-MIN-001-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-U10-001-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-U18-001-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-U18-004-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-SCHOOL-005-GUARDIAN",
+      "to": "EVTYPE-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-REQ-001",
+      "to": "EVTYPE-CHANGE-NOTIFICATION"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-FEE-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-FEE-002"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-FORM-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-FORM-002"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-FORM-003"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-FORM-004"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ID-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-002"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-003"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-004"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-005"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-006"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-008"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-009"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-010"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-ONLINE-011"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-001",
+      "to": "SV-PHOTO-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-IVL-001",
+      "to": "SV-FEE-003"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-IVL-001",
+      "to": "SV-IVL-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-IVL-001",
+      "to": "SV-ONLINE-012"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-U10-001",
+      "to": "SV-U10-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-WORK-001",
+      "to": "SV-WORK-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-FIN-001",
+      "to": "SV-CAND-MAINT-SCHOOL"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-FIN-001",
+      "to": "SV-CAND-MAINT-TERTIARY"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-FIN-001",
+      "to": "SV-CAND-MATERNITY"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-DISC-001",
+      "to": "SV-DEC-002"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-APP-005",
+      "to": "SV-APP-005"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-MIN-001",
+      "to": "SV-MIN-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-HEALTH-001",
+      "to": "SV-CAND-ELIGIBILITY"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-EDU-009",
+      "to": "SV-EDU-009"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-EDU-009",
+      "to": "SV-SCHOOL-009"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-INSTR-001",
+      "to": "SV-INSTR-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "SV-CHECK-INSTR-001",
+      "to": "SV-ONLINE-007"
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-LODGE",
+      "to": "SV-TRANS-LODGE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-LODGE",
+      "to": "CREATED",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-LODGE",
+      "to": "LODGED",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-ASSESS",
+      "to": "SV-TRANS-ASSESS"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-ASSESS",
+      "to": "LODGED",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-ASSESS",
+      "to": "UNDER_ASSESSMENT",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-FURTHER-INFO",
+      "to": "SV-TRANS-FURTHER-INFO"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-FURTHER-INFO",
+      "to": "UNDER_ASSESSMENT",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-FURTHER-INFO",
+      "to": "FURTHER_INFORMATION_REQUIRED",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-FURTHER-INFO",
+      "to": "SV-EVID-001"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-FURTHER-INFO",
+      "to": "SV-EVID-002"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-FURTHER-INFO",
+      "to": "SV-HEALTH-001"
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-INFO-RECEIVED",
+      "to": "SV-TRANS-INFO-RECEIVED"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-INFO-RECEIVED",
+      "to": "FURTHER_INFORMATION_REQUIRED",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-INFO-RECEIVED",
+      "to": "UNDER_ASSESSMENT",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-DECISION-READY",
+      "to": "SV-TRANS-DECISION-READY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-DECISION-READY",
+      "to": "UNDER_ASSESSMENT",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-DECISION-READY",
+      "to": "DECISION_READY",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-DECISION",
+      "to": "SV-TRANS-DECISION"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-DECISION",
+      "to": "DECISION_READY",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-DECISION",
+      "to": "GRANTED_OR_DECLINED",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-DECISION",
+      "to": "SV-DEC-002"
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-VISA-GRANT",
+      "to": "SV-TRANS-VISA-GRANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-GRANT",
+      "to": "NOT_GRANTED",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-GRANT",
+      "to": "GRANTED",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-VISA-GRANT",
+      "to": "SV-LIFE-001"
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-VISA-CURRENT",
+      "to": "SV-TRANS-VISA-CURRENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-CURRENT",
+      "to": "GRANTED",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-CURRENT",
+      "to": "CURRENT",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-VISA-EXPIRE",
+      "to": "SV-TRANS-VISA-EXPIRE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-EXPIRE",
+      "to": "CURRENT",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-EXPIRE",
+      "to": "EXPIRED",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-VISA-EXPIRE",
+      "to": "SV-LIFE-003"
+    },
+    {
+      "type": "CAUSES_TRANSITION",
+      "from": "SV-TRIG-VISA-CANCEL",
+      "to": "SV-TRANS-VISA-CANCEL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-CANCEL",
+      "to": "CURRENT",
+      "props": {
+        "role": "from"
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRANS-VISA-CANCEL",
+      "to": "CANCELLED",
+      "props": {
+        "role": "to"
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-VISA-CANCEL",
+      "to": "SV-LIFE-004"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRANS-VISA-CANCEL",
+      "to": "SV-LIFE-005"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "NZ-INZ-IMMIGRATION-INSTRUCTIONS"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-INSTR-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-ONLINE-007"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-PRODUCTS"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-ELIGIBILITY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-MAINT-TERTIARY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-MAINT-SCHOOL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-MATERNITY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-WORK"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-CHANGE-STUDY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-GENUINE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-FAMILY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-01",
+      "to": "SV-CAND-GUARDIAN"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "DOC-INZ-SV-BUSINESS-RULE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-PRODUCTS"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-ELIGIBILITY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-MAINT-TERTIARY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-MAINT-SCHOOL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-MATERNITY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-WORK"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-CHANGE-STUDY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-GENUINE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-FAMILY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "GAP-02",
+      "to": "SV-CAND-GUARDIAN"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-01",
+      "to": "SV-CHECK-APP-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-02",
+      "to": "SV-CHECK-APP-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-03",
+      "to": "SV-CHECK-MIN-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-04",
+      "to": "SV-CHECK-IVL-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-05",
+      "to": "SV-CHECK-WORK-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-06",
+      "to": "SV-CHECK-FIN-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-07",
+      "to": "SV-CHECK-HEALTH-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-08",
+      "to": "SV-CHECK-DISC-001"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-09",
+      "to": "SV-CHECK-EDU-009"
+    },
+    {
+      "type": "EVALUATES",
+      "from": "TC-10",
+      "to": "SV-CHECK-APP-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-001",
+      "to": "NZ-IMM-ACT-2009-S57-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-001",
+      "to": "CONCEPT-VISA-APPLICATION"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-002",
+      "to": "NZ-IMM-ACT-2009-S57-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-APP-002",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-002",
+      "to": "CONCEPT-ADDRESS-FOR-SERVICE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-002",
+      "to": "CONCEPT-CONTACT-ADDRESS"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-002",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-003",
+      "to": "NZ-IMM-ACT-2009-S58-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-APP-003",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-003",
+      "to": "CONCEPT-VISA-APPLICATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-003",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-APP-003",
+      "to": "SV-TIME-APP-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-004",
+      "to": "NZ-IMM-ACT-2009-S58-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-APP-004",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-004",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-004",
+      "to": "CONCEPT-VISA-APPLICATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-APP-004",
+      "to": "SV-DISC-APP-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-005",
+      "to": "NZ-IMM-ACT-2009-S58-3-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-APP-005",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-005",
+      "to": "CONCEPT-VISA-APPLICATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-005",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-APP-005",
+      "to": "SV-COND-APP-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-APP-005",
+      "to": "SV-EVID-REQ-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-006",
+      "to": "NZ-IMM-ACT-2009-S58-3-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-APP-006",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-006",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-APP-006",
+      "to": "SV-COND-APP-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-007",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-007",
+      "to": "NZ-IMM-ACT-2009-S58-6-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-APP-007",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-007",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-007",
+      "to": "CONCEPT-VISA-APPLICATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-007",
+      "to": "CONCEPT-DECLINE"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-APP-007",
+      "to": "SV-COND-APP-003"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-APP-007",
+      "to": "SV-DISC-APP-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-APP-008",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-APP-008",
+      "to": "NZ-IMM-ACT-2009-S58-6-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-APP-008",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-008",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-008",
+      "to": "CONCEPT-VISA-APPLICATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-APP-008",
+      "to": "CONCEPT-DECLINE"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-APP-008",
+      "to": "SV-COND-APP-004"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-APP-008",
+      "to": "SV-DISC-APP-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-MIN-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-MIN-001",
+      "to": "NZ-IMM-ACT-2009-S59",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-MIN-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-MIN-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-MIN-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-MIN-001",
+      "to": "CONCEPT-DECLINE"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-MIN-001",
+      "to": "SV-COND-MIN-001"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-MIN-001",
+      "to": "SV-TH-MIN-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-MIN-001",
+      "to": "SV-DISC-MIN-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-MIN-001",
+      "to": "SV-EVID-REQ-MIN-001-GUARDIAN"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-BIO-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-BIO-001",
+      "to": "NZ-IMM-ACT-2009-S60-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-BIO-001",
+      "to": "NZ-IMM-ACT-2009-S60-3",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-BIO-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-BIO-001",
+      "to": "CONCEPT-BIOMETRIC-INFORMATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-BIO-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-BIO-001",
+      "to": "SV-EXC-BIO-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-BIO-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-BIO-002",
+      "to": "NZ-IMM-ACT-2009-S60-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-BIO-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-BIO-002",
+      "to": "CONCEPT-BIOMETRIC-INFORMATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-BIO-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-BIO-002",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-BIO-002",
+      "to": "SV-COND-BIO-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-BIO-002",
+      "to": "SV-DISC-BIO-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-DEC-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-DEC-001",
+      "to": "NZ-IMM-ACT-2009-S45-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-DEC-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-DEC-002",
+      "to": "NZ-IMM-ACT-2009-S45-2-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-DEC-002",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-DEC-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-002",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-002",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-DEC-002",
+      "to": "SV-DISC-DEC-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-DEC-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-DEC-003",
+      "to": "NZ-IMM-ACT-2009-S45-2-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-DEC-003",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-DEC-003",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-003",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-003",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-003",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-DEC-003",
+      "to": "SV-DISC-DEC-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-DEC-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-DEC-004",
+      "to": "NZ-IMM-ACT-2009-S45-2-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-DEC-004",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-DEC-004",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-004",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-DEC-004",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-DEC-004",
+      "to": "SV-TIME-DEC-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-DEC-004",
+      "to": "SV-DISC-DEC-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SPON-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SPON-001",
+      "to": "NZ-IMM-ACT-2009-S48-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-SPON-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-001",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-SPON-001",
+      "to": "SV-DISC-SPON-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-SPON-001",
+      "to": "SV-EVID-REQ-SPON-001-SPONSORSHIP"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SPON-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SPON-002",
+      "to": "NZ-IMM-ACT-2009-S48-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-SPON-002",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-002",
+      "to": "CONCEPT-SPONSORSHIP"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-002",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-SPON-002",
+      "to": "SV-DISC-SPON-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SPON-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SPON-003",
+      "to": "NZ-IMM-ACT-2009-S48-3",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SPON-003",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-003",
+      "to": "CONCEPT-SPONSORSHIP"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-SPON-003",
+      "to": "SV-EVID-REQ-SPON-003-SPONSORSHIP"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SPON-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SPON-004",
+      "to": "NZ-IMM-ACT-2009-S48-4",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SPON-004",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-004",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-SPON-004",
+      "to": "SV-EVID-REQ-SPON-004-SPONSORSHIP"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SPON-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SPON-005",
+      "to": "NZ-IMM-ACT-2009-S48-5",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SPON-005",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-005",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SPON-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SPON-006",
+      "to": "NZ-IMM-ACT-2009-S48-6",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SPON-006",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-006",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-006",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SPON-006",
+      "to": "ACTOR-SPONSOR"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-SPON-006",
+      "to": "SV-EVID-REQ-SPON-006-SPONSORSHIP"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-COND-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-COND-001",
+      "to": "NZ-IMM-ACT-2009-S49-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-COND-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-COND-002",
+      "to": "NZ-IMM-ACT-2009-S52-1-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-002",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-002",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-002",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-COND-002",
+      "to": "SV-TIME-COND-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-COND-002",
+      "to": "SV-DISC-COND-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-COND-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-COND-003",
+      "to": "NZ-IMM-ACT-2009-S52-1-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-003",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-003",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-003",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-003",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-003",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-COND-003",
+      "to": "SV-TIME-COND-002"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-COND-003",
+      "to": "SV-DISC-COND-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-COND-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-COND-004",
+      "to": "NZ-IMM-ACT-2009-S52-2-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-004",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-004",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-004",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-004",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-COND-004",
+      "to": "SV-TIME-COND-003"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-COND-004",
+      "to": "SV-DISC-COND-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-COND-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-COND-005",
+      "to": "NZ-IMM-ACT-2009-S52-2-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-005",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-COND-005",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-005",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-005",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-COND-005",
+      "to": "SV-TIME-COND-004"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-COND-005",
+      "to": "SV-DISC-COND-004"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-COND-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-COND-006",
+      "to": "NZ-IMM-ACT-2009-S52-4-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-COND-006",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-006",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-006",
+      "to": "ACTOR-VISA-HOLDER"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-COND-007",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-COND-007",
+      "to": "NZ-IMM-ACT-2009-S56",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-COND-007",
+      "to": "ACTOR-VISA-HOLDER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-007",
+      "to": "CONCEPT-VISA-CONDITION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-COND-007",
+      "to": "ACTOR-VISA-HOLDER"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-WORK-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-WORK-001",
+      "to": "NZ-IMM-ACT-2009-S77-4-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-WORK-001",
+      "to": "ACTOR-VISA-HOLDER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-WORK-001",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-WORK-001",
+      "to": "SV-COND-WORK-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-STUDY-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-STUDY-001",
+      "to": "NZ-IMM-ACT-2009-S77-4-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-STUDY-001",
+      "to": "ACTOR-VISA-HOLDER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-STUDY-001",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-STUDY-001",
+      "to": "SV-COND-STUDY-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-LIFE-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-LIFE-001",
+      "to": "NZ-IMM-ACT-2009-S62-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-LIFE-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-LIFE-002",
+      "to": "NZ-IMM-ACT-2009-S62-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-LIFE-002",
+      "to": "CONCEPT-EXPIRY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-LIFE-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-LIFE-003",
+      "to": "NZ-IMM-ACT-2009-S63",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-LIFE-003",
+      "to": "CONCEPT-EXPIRY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-LIFE-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-LIFE-004",
+      "to": "NZ-IMM-ACT-2009-S64-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-LIFE-004",
+      "to": "CONCEPT-CANCELLATION"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-LIFE-004",
+      "to": "SV-TRIG-LIFE-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-LIFE-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-LIFE-005",
+      "to": "NZ-IMM-ACT-2009-S66-1-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-LIFE-005",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-LIFE-005",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-LIFE-005",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-LIFE-005",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-LIFE-005",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-LIFE-005",
+      "to": "SV-COND-LIFE-001"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-LIFE-005",
+      "to": "SV-TIME-LIFE-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-LIFE-005",
+      "to": "SV-DISC-LIFE-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-LIFE-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-LIFE-006",
+      "to": "NZ-IMM-ACT-2009-S66-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-LIFE-006",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-LIFE-006",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-LIFE-006",
+      "to": "SV-TIME-LIFE-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ENTRY-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ENTRY-001",
+      "to": "NZ-IMM-ACT-2009-S46-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-001",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ENTRY-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ENTRY-002",
+      "to": "NZ-IMM-ACT-2009-S109-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-ENTRY-002",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-ENTRY-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-002",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-002",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-002",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-ENTRY-002",
+      "to": "SV-DISC-ENTRY-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ENTRY-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ENTRY-003",
+      "to": "NZ-IMM-ACT-2009-S109-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-ENTRY-003",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-ENTRY-003",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-003",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-003",
+      "to": "ACTOR-MINISTER"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-ENTRY-003",
+      "to": "SV-TIME-ENTRY-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-ENTRY-003",
+      "to": "SV-DISC-ENTRY-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ENTRY-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ENTRY-004",
+      "to": "NZ-IMM-ACT-2009-S110",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ENTRY-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-004",
+      "to": "CONCEPT-ADDRESS-FOR-SERVICE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-004",
+      "to": "CONCEPT-CONTACT-ADDRESS"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ENTRY-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ENTRY-005",
+      "to": "NZ-IMM-ACT-2009-S112-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ENTRY-005",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-005",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ENTRY-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ENTRY-006",
+      "to": "NZ-IMM-ACT-2009-S112-3",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ENTRY-006",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-006",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ENTRY-006",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-ENTRY-006",
+      "to": "SV-COND-ENTRY-001"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-ENTRY-006",
+      "to": "SV-TIME-ENTRY-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FORM-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FORM-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-FORM-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FORM-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FORM-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FORM-002",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-FORM-002",
+      "to": "SV-EXC-FORM-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FORM-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FORM-003",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FORM-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FORM-004",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-D",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-FORM-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FORM-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-FORM-004",
+      "to": "SV-EXC-FORM-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ID-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ID-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-I",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ID-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ID-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-ID-001",
+      "to": "SV-EVID-REQ-ID-001-PASSPORT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PHOTO-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PHOTO-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-II",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PHOTO-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PHOTO-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PHOTO-001",
+      "to": "CONCEPT-PASSPORT"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-PHOTO-001",
+      "to": "SV-TH-PHOTO-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-INSTR-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-INSTR-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-III",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-INSTR-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-INSTR-001",
+      "to": "CONCEPT-EVIDENCE-REQUIRED"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-INSTR-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FEE-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FEE-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-I",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-FEE-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FEE-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FEE-001",
+      "to": "CONCEPT-FEE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FEE-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FEE-002",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-II",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-FEE-002",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FEE-002",
+      "to": "CONCEPT-IMMIGRATION-LEVY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FEE-002",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FEE-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FEE-003",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-III",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-FEE-003",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FEE-003",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FEE-003",
+      "to": "CONCEPT-IVL"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-FEE-003",
+      "to": "SV-EXC-FEE-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EVID-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EVID-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-EVID-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-EVID-001",
+      "to": "SV-DISC-EVID-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EVID-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EVID-002",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-EVID-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EVID-002",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-EVID-002",
+      "to": "SV-DISC-EVID-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-HEALTH-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-HEALTH-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-HEALTH-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-HEALTH-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-HEALTH-001",
+      "to": "SV-DISC-HEALTH-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-HEALTH-001",
+      "to": "SV-EVID-REQ-HEALTH-001-MEDICAL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-TRAVEL-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-TRAVEL-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-D",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-TRAVEL-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-TRAVEL-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-TRAVEL-001",
+      "to": "SV-DISC-TRAVEL-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FIN-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FIN-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R10-3-E",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-FIN-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FIN-001",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FIN-001",
+      "to": "CONCEPT-MAINTENANCE-FUNDS"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FIN-001",
+      "to": "CONCEPT-SPONSORSHIP"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-FIN-001",
+      "to": "SV-DISC-FIN-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-FIN-001",
+      "to": "SV-EVID-REQ-FIN-001-BANK-STATEMENT"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-FIN-001",
+      "to": "SV-EVID-REQ-FIN-001-SPONSORSHIP"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FAM-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FAM-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-1-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FAM-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-2",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-FAM-001",
+      "to": "SV-COND-FAM-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FAM-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FAM-002",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-2-B-I",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FAM-002",
+      "to": "CONCEPT-TEMPORARY-ENTRY-CLASS-VISA"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-FAM-002",
+      "to": "SV-COND-FAM-002"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-FAM-002",
+      "to": "SV-TH-FAM-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FAM-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FAM-003",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-1-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FAM-003",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-3-B",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-FAM-003",
+      "to": "SV-COND-FAM-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FAM-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FAM-004",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-5-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FAM-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-FAM-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-FAM-005",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R20-5-D",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-FAM-005",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-IVL-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-IVL-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R26AAE-5-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-IVL-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-IVL-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-IVL-001",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-IVL-001",
+      "to": "CONCEPT-IVL"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-IVL-001",
+      "to": "SV-COND-IVL-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-4",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-001",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-3",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-001",
+      "to": "CONCEPT-ONLINE-APPLICATION"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-002",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-002",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-A",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-002",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-002",
+      "to": "CONCEPT-ONLINE-APPLICATION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-002",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-ONLINE-002",
+      "to": "SV-EXC-ONLINE-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-003",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-003",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-B",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-003",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-003",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-004",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-004",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-C",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-004",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-005",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-D",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-005",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-D",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-005",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-005",
+      "to": "CONCEPT-CERTIFICATE-OF-IDENTITY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-005",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-005",
+      "to": "CONCEPT-PASSPORT"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-ONLINE-005",
+      "to": "SV-EVID-REQ-ONLINE-005-PASSPORT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-006",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-E",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-006",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-E",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-006",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-006",
+      "to": "CONCEPT-PHOTOGRAPH"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-006",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-ONLINE-006",
+      "to": "SV-COND-ONLINE-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-007",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-007",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-F",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-007",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-F",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-007",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-007",
+      "to": "CONCEPT-EVIDENCE-REQUIRED"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-007",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-008",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-008",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-G",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-008",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-G",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-008",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-008",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-009",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-009",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-H",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-009",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-H",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-009",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-009",
+      "to": "ACTOR-IMMIGRATION-OFFICER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-009",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-009",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-ONLINE-009",
+      "to": "SV-TIME-ONLINE-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-010",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-010",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-I",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-010",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-I",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-010",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-010",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-010",
+      "to": "CONCEPT-FEE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-011",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-011",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-J",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-011",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-J",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-011",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-011",
+      "to": "CONCEPT-IMMIGRATION-LEVY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-011",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ONLINE-012",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-012",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23AA-5-K",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ONLINE-012",
+      "to": "NZ-IMM-VEPRM-REGS-2010-R23A-4-K",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ONLINE-012",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-012",
+      "to": "ACTOR-APPLICANT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ONLINE-012",
+      "to": "CONCEPT-IVL"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-ONLINE-012",
+      "to": "SV-EXC-ONLINE-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CHAR-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-001",
+      "to": "NZ-IMM-ACT-2009-S15-1-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-001",
+      "to": "NZ-IMM-ACT-2009-S17",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-CHAR-001",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-001",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-001",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-CHAR-001",
+      "to": "SV-EXC-CHAR-001"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CHAR-001",
+      "to": "SV-TH-CHAR-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-CHAR-001",
+      "to": "SV-DISC-CHAR-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CHAR-001",
+      "to": "SV-EVID-REQ-CHAR-001-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CHAR-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-002",
+      "to": "NZ-IMM-ACT-2009-S15-1-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-002",
+      "to": "NZ-IMM-ACT-2009-S17",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-CHAR-002",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-002",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-002",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-CHAR-002",
+      "to": "SV-EXC-CHAR-002"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CHAR-002",
+      "to": "SV-TH-CHAR-002"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CHAR-002",
+      "to": "SV-TH-CHAR-003"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-CHAR-002",
+      "to": "SV-TIME-CHAR-001"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-CHAR-002",
+      "to": "SV-DISC-CHAR-002"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CHAR-002",
+      "to": "SV-EVID-REQ-CHAR-002-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CHAR-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-003",
+      "to": "NZ-IMM-ACT-2009-S15-1-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-CHAR-003",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-003",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-003",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CHAR-003",
+      "to": "SV-EVID-REQ-CHAR-003-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CHAR-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-004",
+      "to": "NZ-IMM-ACT-2009-S15-1-D",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-004",
+      "to": "NZ-IMM-ACT-2009-S15-1-E",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-004",
+      "to": "NZ-IMM-ACT-2009-S15-1-F",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-004",
+      "to": "NZ-IMM-ACT-2009-S17",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-CHAR-004",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-004",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-004",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-CHAR-004",
+      "to": "SV-EXC-CHAR-003"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-CHAR-004",
+      "to": "SV-DISC-CHAR-003"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CHAR-004",
+      "to": "SV-EVID-REQ-CHAR-004-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CHAR-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-005",
+      "to": "NZ-IMM-ACT-2009-S16",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-005",
+      "to": "NZ-IMM-ACT-2009-S17",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-CHAR-005",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-005",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-005",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-CHAR-005",
+      "to": "SV-EXC-CHAR-004"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-CHAR-005",
+      "to": "SV-DISC-CHAR-004"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CHAR-005",
+      "to": "SV-EVID-REQ-CHAR-005-POLICE-CERTIFICATE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CHAR-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-006",
+      "to": "NZ-IMM-ACT-2009-S17-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CHAR-006",
+      "to": "NZ-IMM-ACT-2009-S17-3",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-CHAR-006",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-006",
+      "to": "ACTOR-DECISION-MAKER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CHAR-006",
+      "to": "CONCEPT-GRANT"
+    },
+    {
+      "type": "HAS_DISCRETION",
+      "from": "SV-CHAR-006",
+      "to": "SV-DISC-CHAR-005"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-001",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL40",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-EDU-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-002",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL41-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-EDU-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-003",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL41-1-G",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-004",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL41-1-I",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-005",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL42-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-EDU-005",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-005",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-005",
+      "to": "CONCEPT-ENROLMENT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-005",
+      "to": "ACTOR-PARENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-006",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL42-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-006",
+      "to": "CONCEPT-ENROLMENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-INS-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-INS-001",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL44-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-INS-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-INS-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-INS-001",
+      "to": "SV-TH-INS-001"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-INS-001",
+      "to": "SV-TIME-INS-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-INS-001",
+      "to": "SV-EVID-REQ-INS-001-INSURANCE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-INS-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-INS-002",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-INS-002",
+      "to": "SV-EVID-REQ-INS-002-INSURANCE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-INS-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-INS-003",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-INS-003",
+      "to": "SV-EVID-REQ-INS-003-INSURANCE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-INS-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-INS-004",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-INS-004",
+      "to": "SV-EVID-REQ-INS-004-INSURANCE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-INS-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-INS-005",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL44",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-INS-005",
+      "to": "SV-EVID-REQ-INS-005-INSURANCE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-007",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-007",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-EDU-007",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-007",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-008",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-008",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-EDU-008",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-008",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-009",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-009",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-EDU-009",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-009",
+      "to": "CONCEPT-VISA-CONDITION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-009",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-010",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-010",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL45-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-EDU-010",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-010",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-EDU-010",
+      "to": "CONCEPT-ENROLMENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-EDU-011",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-EDU-011",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL46-2-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-U18-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-U18-001",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-U18-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-001",
+      "to": "ACTOR-PARENT"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-U18-001",
+      "to": "SV-EXC-U18-001"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-U18-001",
+      "to": "SV-TH-U18-001"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-U18-001",
+      "to": "SV-TH-U18-002"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-U18-001",
+      "to": "SV-EVID-REQ-U18-001-GUARDIAN"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-U18-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-U18-002",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-U18-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-002",
+      "to": "ACTOR-RESIDENTIAL-CAREGIVER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-002",
+      "to": "ACTOR-PARENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-U18-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-U18-003",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-U18-003",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-003",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-U18-003",
+      "to": "SV-TH-U18-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-U10-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-U10-001",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL51-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-U10-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U10-001",
+      "to": "ACTOR-LEGAL-GUARDIAN"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U10-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U10-001",
+      "to": "ACTOR-PARENT"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-U10-001",
+      "to": "SV-TH-U10-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-U10-001",
+      "to": "SV-EVID-REQ-U10-001-GUARDIAN"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-U18-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-U18-004",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL52",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-U18-004",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-004",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-U18-004",
+      "to": "ACTOR-PARENT"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-U18-004",
+      "to": "SV-TH-U18-004"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-U18-004",
+      "to": "SV-EVID-REQ-U18-004-GUARDIAN"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ACCOM-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ACCOM-001",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ACCOM-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ACCOM-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-ACCOM-001",
+      "to": "SV-TH-ACCOM-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ACCOM-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ACCOM-002",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ACCOM-002",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL54",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ACCOM-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ACCOM-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-ACCOM-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-ACCOM-003",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL53-1-J",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-ACCOM-003",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-ACCOM-003",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-ACCOM-003",
+      "to": "SV-TH-ACCOM-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-001",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL61",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-001",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-002",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL62-1-G",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-002",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-003",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL63",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-003",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-003",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-003",
+      "to": "CONCEPT-ENROLMENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-004",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL65",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-004",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-004",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-SCHOOL-004",
+      "to": "SV-TH-SCHOOL-001"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-SCHOOL-004",
+      "to": "SV-TIME-SCHOOL-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-SCHOOL-004",
+      "to": "SV-EVID-REQ-SCHOOL-004-INSURANCE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-005",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL66",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-005",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-005",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-SCHOOL-005",
+      "to": "SV-COND-SCHOOL-001"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-SCHOOL-005",
+      "to": "SV-TH-SCHOOL-002"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-SCHOOL-005",
+      "to": "SV-EVID-REQ-SCHOOL-005-GUARDIAN"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-006",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL67-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-SCHOOL-006",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-006",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-007",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-007",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL67-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-007",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-007",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-008",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-008",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL68-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-008",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-008",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-009",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-009",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL68-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-009",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-009",
+      "to": "CONCEPT-VISA-CONDITION"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-009",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-010",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-010",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL68-C",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-SCHOOL-010",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-010",
+      "to": "ACTOR-SIGNATORY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-SCHOOL-010",
+      "to": "CONCEPT-ENROLMENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-SCHOOL-011",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-SCHOOL-011",
+      "to": "NZ-EDU-PASTORAL-CODE-2021-CL81-2-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-001",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-001",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-001",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-PRIV-001",
+      "to": "SV-COND-PRIV-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-002",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-002",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-002",
+      "to": "ACTOR-INDIVIDUAL"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-PRIV-002",
+      "to": "SV-EXC-PRIV-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-003",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-003",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP3",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PRIV-003",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-003",
+      "to": "ACTOR-INDIVIDUAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-003",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-004",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-004",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP3A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PRIV-004",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-004",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-PRIV-004",
+      "to": "SV-EXC-PRIV-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-005",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-005",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP4",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PRIV-005",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-005",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-006",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-006",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-006",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP5",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PRIV-006",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-006",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-007",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-007",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-007",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP6",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-PRIV-007",
+      "to": "ACTOR-INDIVIDUAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-007",
+      "to": "ACTOR-INDIVIDUAL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-008",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-008",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-008",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP7",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-PRIV-008",
+      "to": "ACTOR-INDIVIDUAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-008",
+      "to": "ACTOR-INDIVIDUAL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-009",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-009",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-009",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP8",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PRIV-009",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-009",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-PRIV-009",
+      "to": "SV-TIME-PRIV-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-010",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-010",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-010",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP9",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-PRIV-010",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-010",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-PRIV-010",
+      "to": "SV-TIME-PRIV-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-011",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-011",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-011",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP10",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-PRIV-011",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-011",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-PRIV-011",
+      "to": "SV-EXC-PRIV-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-012",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-012",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-012",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP11",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-PRIV-012",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-012",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-PRIV-012",
+      "to": "SV-EXC-PRIV-004"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-013",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-013",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-013",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP12",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PROHIBITS",
+      "from": "SV-PRIV-013",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-013",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-PRIV-013",
+      "to": "SV-EXC-PRIV-005"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-014",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-014",
+      "to": "NZ-PRIVACY-ACT-2020-S22",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-014",
+      "to": "NZ-PRIVACY-ACT-2020-S22-IPP13",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "PERMITS",
+      "from": "SV-PRIV-014",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-014",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-PRIV-014",
+      "to": "SV-COND-PRIV-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-015",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-015",
+      "to": "NZ-PRIVACY-ACT-2020-S114",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PRIV-015",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-015",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-PRIV-015",
+      "to": "SV-TIME-PRIV-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-PRIV-016",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-PRIV-016",
+      "to": "NZ-PRIVACY-ACT-2020-S115",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-PRIV-016",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-016",
+      "to": "ACTOR-INDIVIDUAL"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-PRIV-016",
+      "to": "ACTOR-AGENCY"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-PRIV-016",
+      "to": "SV-EXC-PRIV-006"
+    },
+    {
+      "type": "HAS_TIME_CONSTRAINT",
+      "from": "SV-PRIV-016",
+      "to": "SV-TIME-PRIV-004"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CARRIER-001",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CARRIER-001",
+      "to": "NZ-IMM-CIO-REGS-2010-R4-1",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-CARRIER-001",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CARRIER-001",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CARRIER-002",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CARRIER-002",
+      "to": "NZ-IMM-CIO-REGS-2010-R4-2",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CARRIER-003",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CARRIER-003",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-1-A",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CARRIER-003",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-2",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-CARRIER-003",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CARRIER-003",
+      "to": "CONCEPT-CERTIFICATE-OF-IDENTITY"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CARRIER-003",
+      "to": "CONCEPT-PASSPORT"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CARRIER-003",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-CARRIER-003",
+      "to": "SV-EXC-CARRIER-001"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CARRIER-003",
+      "to": "SV-EVID-REQ-CARRIER-003-PASSPORT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CARRIER-004",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CARRIER-004",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-1-B",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CARRIER-004",
+      "to": "NZ-IMM-CIO-REGS-2010-R5-3",
+      "props": {
+        "primary": false
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-CARRIER-004",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CARRIER-004",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "HAS_CONDITION",
+      "from": "SV-CARRIER-004",
+      "to": "SV-COND-CARRIER-001"
+    },
+    {
+      "type": "HAS_EXCEPTION",
+      "from": "SV-CARRIER-004",
+      "to": "SV-EXC-CARRIER-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CARRIER-005",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "DERIVED_FROM",
+      "from": "SV-CARRIER-005",
+      "to": "NZ-IMM-CIO-REGS-2010-R6",
+      "props": {
+        "primary": true
+      }
+    },
+    {
+      "type": "IMPOSES_OBLIGATION_ON",
+      "from": "SV-CARRIER-005",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CARRIER-005",
+      "to": "ACTOR-CARRIER"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-PRODUCTS",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-PRODUCTS",
+      "to": "CONCEPT-DEPENDENT-CHILD-STUDENT-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-PRODUCTS",
+      "to": "CONCEPT-FEE"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CAND-PRODUCTS",
+      "to": "SV-TH-CAND-PATHWAY-PROGRAMMES"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "CONCEPT-GENUINE-INTENTIONS"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "CONCEPT-APPROVED-PROVIDER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "CONCEPT-OFFER-OF-PLACE"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "CONCEPT-PROGRAMME"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "CONCEPT-CHARACTER"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "CONCEPT-HEALTH"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "SV-EVID-REQ-CAND-ELIGIBILITY-OFFER-OF-PLACE"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "SV-EVID-REQ-CAND-ELIGIBILITY-TUITION"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CAND-ELIGIBILITY",
+      "to": "SV-EVID-REQ-CAND-ELIGIBILITY-MEDICAL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-MAINT-TERTIARY",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CAND-MAINT-TERTIARY",
+      "to": "SV-TH-CAND-TERTIARY-YEAR"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CAND-MAINT-TERTIARY",
+      "to": "SV-TH-CAND-TERTIARY-MONTH"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CAND-MAINT-TERTIARY",
+      "to": "SV-EVID-REQ-CAND-MAINT-TERTIARY-BANK-STATEMENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-MAINT-SCHOOL",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CAND-MAINT-SCHOOL",
+      "to": "SV-TH-CAND-SCHOOL-YEAR"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CAND-MAINT-SCHOOL",
+      "to": "SV-TH-CAND-SCHOOL-MONTH"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CAND-MAINT-SCHOOL",
+      "to": "SV-EVID-REQ-CAND-MAINT-SCHOOL-BANK-STATEMENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-MATERNITY",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CAND-MATERNITY",
+      "to": "SV-TH-CAND-MATERNITY-TOTAL"
+    },
+    {
+      "type": "REQUIRES_EVIDENCE",
+      "from": "SV-CAND-MATERNITY",
+      "to": "SV-EVID-REQ-CAND-MATERNITY-BANK-STATEMENT"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-WORK",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "HAS_THRESHOLD",
+      "from": "SV-CAND-WORK",
+      "to": "SV-TH-CAND-WORK-HOURS"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-CHANGE-STUDY",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-CHANGE-STUDY",
+      "to": "CONCEPT-PROGRAMME"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-GENUINE",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-GENUINE",
+      "to": "CONCEPT-ATTENDANCE"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-FAMILY",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "REFERENCES",
+      "from": "SV-CAND-FAMILY",
+      "to": "CONCEPT-QUALIFICATION"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "SV-CAND-GUARDIAN",
+      "to": "STUDENT-VISA"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-01",
+      "to": "SV-CHECK-FIN-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-01",
+      "to": "TC-06"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-01",
+      "to": "SV-CAND-MAINT-TERTIARY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-01",
+      "to": "SV-CAND-MAINT-SCHOOL"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-01",
+      "to": "SV-CAND-MATERNITY"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-03",
+      "to": "SV-DEC-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-03",
+      "to": "SV-LIFE-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-03",
+      "to": "SV-ENTRY-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-03",
+      "to": "SV-FAM-004"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-04",
+      "to": "SV-INSTR-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-04",
+      "to": "SV-ONLINE-007"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-04",
+      "to": "SV-CHAR-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-04",
+      "to": "SV-CHAR-002"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-04",
+      "to": "SV-CHAR-004"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-04",
+      "to": "SV-SCHOOL-003"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-04",
+      "to": "SV-PRIV-004"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-12",
+      "to": "SV-APP-005"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-13",
+      "to": "SV-CHECK-MIN-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-13",
+      "to": "SV-CHECK-HEALTH-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-13",
+      "to": "SV-CHECK-EDU-009"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-13",
+      "to": "SV-CHECK-INSTR-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-14",
+      "to": "SV-CHECK-EDU-009"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-14",
+      "to": "TC-09"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-15",
+      "to": "SV-CHECK-FIN-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-18",
+      "to": "SV-CHECK-HEALTH-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-20",
+      "to": "SV-CHECK-APP-001"
+    },
+    {
+      "type": "APPLIES_TO",
+      "from": "IF-21",
+      "to": "SV-CHECK-U10-001"
+    }
+  ]
+}

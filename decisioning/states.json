@@ -1,0 +1,59 @@
+{
+  "states": [
+    {
+      "state_id": "CREATED",
+      "name": "Created",
+      "entity_type": "VisaApplication"
+    },
+    {
+      "state_id": "LODGED",
+      "name": "Lodged",
+      "entity_type": "VisaApplication"
+    },
+    {
+      "state_id": "UNDER_ASSESSMENT",
+      "name": "Under Assessment",
+      "entity_type": "VisaApplication"
+    },
+    {
+      "state_id": "FURTHER_INFORMATION_REQUIRED",
+      "name": "Further Information Required",
+      "entity_type": "VisaApplication"
+    },
+    {
+      "state_id": "DECISION_READY",
+      "name": "Decision Ready",
+      "entity_type": "VisaApplication"
+    },
+    {
+      "state_id": "GRANTED_OR_DECLINED",
+      "name": "Granted or Declined",
+      "entity_type": "VisaApplication"
+    },
+    {
+      "state_id": "NOT_GRANTED",
+      "name": "Not granted",
+      "entity_type": "Visa"
+    },
+    {
+      "state_id": "GRANTED",
+      "name": "Granted",
+      "entity_type": "Visa"
+    },
+    {
+      "state_id": "CURRENT",
+      "name": "Current",
+      "entity_type": "Visa"
+    },
+    {
+      "state_id": "EXPIRED",
+      "name": "Expired",
+      "entity_type": "Visa"
+    },
+    {
+      "state_id": "CANCELLED",
+      "name": "Cancelled",
+      "entity_type": "Visa"
+    }
+  ]
+}

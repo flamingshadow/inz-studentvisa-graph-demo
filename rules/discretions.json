@@ -1,0 +1,545 @@
+{
+  "discretions": [
+    {
+      "id": "SV-DISC-APP-001",
+      "rule_id": "SV-APP-004",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may determine the Visa Application using the material provided by the Applicant.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 58(2)",
+        "provision_id": "NZ-IMM-ACT-2009-S58-2"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-APP-002",
+      "rule_id": "SV-APP-007",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may decline the Visa Application if false or misleading Information was supplied or relevant Information was withheld.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 58(6)(a)",
+        "provision_id": "NZ-IMM-ACT-2009-S58-6-A"
+      },
+      "constraints": [
+        "SV-COND-APP-003"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-APP-003",
+      "rule_id": "SV-APP-008",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may decline the Visa Application if a required Material Change was not disclosed.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 58(6)(b)",
+        "provision_id": "NZ-IMM-ACT-2009-S58-6-B"
+      },
+      "constraints": [
+        "SV-COND-APP-004"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-MIN-001",
+      "rule_id": "SV-MIN-001",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may decline an unmarried Applicant under 18 if parental or guardian consent is not established.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 59",
+        "provision_id": "NZ-IMM-ACT-2009-S59"
+      },
+      "constraints": [
+        "SV-COND-MIN-001"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-BIO-001",
+      "rule_id": "SV-BIO-002",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may refuse the Visa if the Applicant fails to allow required Biometric Information to be collected.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 60(2)",
+        "provision_id": "NZ-IMM-ACT-2009-S60-2"
+      },
+      "constraints": [
+        "SV-COND-BIO-001"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-DEC-001",
+      "rule_id": "SV-DEC-002",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may grant or refuse the Visa in the exercise of statutory discretion.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 45(2)(a)",
+        "provision_id": "NZ-IMM-ACT-2009-S45-2-A"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-DEC-002",
+      "rule_id": "SV-DEC-003",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may grant a different Class or Type of Visa from that applied for.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 45(2)(b)",
+        "provision_id": "NZ-IMM-ACT-2009-S45-2-B"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-DEC-003",
+      "rule_id": "SV-DEC-004",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may impose, vary or waive Visa Conditions when granting the Visa.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 45(2)(c)",
+        "provision_id": "NZ-IMM-ACT-2009-S45-2-C"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-SPON-001",
+      "rule_id": "SV-SPON-001",
+      "holder_actor_ids": [
+        "ACTOR-APPLICANT"
+      ],
+      "holder": "Applicant",
+      "power": "The Applicant may be required to provide a Written Undertaking from a Sponsor.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 48(1)",
+        "provision_id": "NZ-IMM-ACT-2009-S48-1"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-SPON-002",
+      "rule_id": "SV-SPON-002",
+      "holder_actor_ids": [
+        "ACTOR-SPONSOR"
+      ],
+      "holder": "Sponsorship Requirement",
+      "power": "The Sponsorship Requirement may be imposed by Immigration Instructions or by the Minister or Immigration Officer.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 48(2)",
+        "provision_id": "NZ-IMM-ACT-2009-S48-2"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-COND-001",
+      "rule_id": "SV-COND-002",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may impose additional Conditions when granting a Temporary Entry Class Visa.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 52(1)(a)",
+        "provision_id": "NZ-IMM-ACT-2009-S52-1-A"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-COND-002",
+      "rule_id": "SV-COND-003",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may vary or waive Conditions when granting a Temporary Entry Class Visa.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 52(1)(b)",
+        "provision_id": "NZ-IMM-ACT-2009-S52-1-B"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-COND-003",
+      "rule_id": "SV-COND-004",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may impose further Conditions after the Visa is granted.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 52(2)(a)",
+        "provision_id": "NZ-IMM-ACT-2009-S52-2-A"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-COND-004",
+      "rule_id": "SV-COND-005",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may vary or cancel Conditions after the Visa is granted.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 52(2)(b)",
+        "provision_id": "NZ-IMM-ACT-2009-S52-2-B"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-LIFE-001",
+      "rule_id": "SV-LIFE-005",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may cancel a Temporary Entry Class Visa while the Holder is outside New Zealand if sufficient reason exists.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 66(1)(a)",
+        "provision_id": "NZ-IMM-ACT-2009-S66-1-A"
+      },
+      "constraints": [
+        "SV-COND-LIFE-001"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-ENTRY-001",
+      "rule_id": "SV-ENTRY-002",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may grant or refuse Entry Permission to a Temporary Entry Class Visa Holder.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 109(1)",
+        "provision_id": "NZ-IMM-ACT-2009-S109-1"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-ENTRY-002",
+      "rule_id": "SV-ENTRY-003",
+      "holder_actor_ids": [
+        "ACTOR-MINISTER",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Minister or Immigration Officer",
+      "power": "The Minister or Immigration Officer may impose, vary or cancel Visa Conditions when granting Entry Permission.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 109(2)",
+        "provision_id": "NZ-IMM-ACT-2009-S109-2"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-EVID-001",
+      "rule_id": "SV-EVID-001",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may require the Applicant to attend an Interview.",
+      "authority": {
+        "regulatory_instrument": "Immigration (Visa, Entry Permission, and Related Matters) Regulations 2010",
+        "provision": "r 10(3)(a)",
+        "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-A"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-EVID-002",
+      "rule_id": "SV-EVID-002",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may require further Information or Evidence.",
+      "authority": {
+        "regulatory_instrument": "Immigration (Visa, Entry Permission, and Related Matters) Regulations 2010",
+        "provision": "r 10(3)(b)",
+        "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-B"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-HEALTH-001",
+      "rule_id": "SV-HEALTH-001",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may require a Medical Examination or another Medical Examination.",
+      "authority": {
+        "regulatory_instrument": "Immigration (Visa, Entry Permission, and Related Matters) Regulations 2010",
+        "provision": "r 10(3)(c)",
+        "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-C"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-TRAVEL-001",
+      "rule_id": "SV-TRAVEL-001",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may require Evidence of Onward Travel Arrangements.",
+      "authority": {
+        "regulatory_instrument": "Immigration (Visa, Entry Permission, and Related Matters) Regulations 2010",
+        "provision": "r 10(3)(d)",
+        "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-D"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-FIN-001",
+      "rule_id": "SV-FIN-001",
+      "holder_actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "holder": "Immigration Officer",
+      "power": "The Immigration Officer may require Evidence of Maintenance Funds or Sponsorship.",
+      "authority": {
+        "regulatory_instrument": "Immigration (Visa, Entry Permission, and Related Matters) Regulations 2010",
+        "provision": "r 10(3)(e)",
+        "provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-E"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-CHAR-001",
+      "rule_id": "SV-CHAR-001",
+      "holder_actor_ids": [
+        "ACTOR-DECISION-MAKER"
+      ],
+      "holder": "Decision-Maker",
+      "power": "The Decision-Maker must not grant a Visa to a Person sentenced to imprisonment for five years or more unless an applicable statutory exception is exercised.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 15(1)(a), s 17",
+        "provision_id": "NZ-IMM-ACT-2009-S15-1-A"
+      },
+      "constraints": [
+        "SV-EXC-CHAR-001"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-CHAR-002",
+      "rule_id": "SV-CHAR-002",
+      "holder_actor_ids": [
+        "ACTOR-DECISION-MAKER"
+      ],
+      "holder": "Decision-Maker",
+      "power": "The Decision-Maker must not grant a Visa to a Person sentenced within the preceding ten years to imprisonment for twelve months or more unless an applicable statutory exception is exercised.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 15(1)(b), s 17",
+        "provision_id": "NZ-IMM-ACT-2009-S15-1-B"
+      },
+      "constraints": [
+        "SV-EXC-CHAR-002"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-CHAR-003",
+      "rule_id": "SV-CHAR-004",
+      "holder_actor_ids": [
+        "ACTOR-DECISION-MAKER"
+      ],
+      "holder": "Decision-Maker",
+      "power": "The Decision-Maker must not grant a Visa to an applicable removed, excluded or deported Person unless a statutory exception applies.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 15(1)(d)-(f), s 17",
+        "provision_id": "NZ-IMM-ACT-2009-S15-1-D"
+      },
+      "constraints": [
+        "SV-EXC-CHAR-003"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-CHAR-004",
+      "rule_id": "SV-CHAR-005",
+      "holder_actor_ids": [
+        "ACTOR-DECISION-MAKER"
+      ],
+      "holder": "Decision-Maker",
+      "power": "The Decision-Maker must not grant a Visa to a Person believed to be a threat or risk to security, public order or the public interest unless a statutory exception applies.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 16, s 17",
+        "provision_id": "NZ-IMM-ACT-2009-S16"
+      },
+      "constraints": [
+        "SV-EXC-CHAR-004"
+      ],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    },
+    {
+      "id": "SV-DISC-CHAR-005",
+      "rule_id": "SV-CHAR-006",
+      "holder_actor_ids": [
+        "ACTOR-DECISION-MAKER"
+      ],
+      "holder": "Decision-Maker",
+      "power": "The Decision-Maker may grant a Visa as a statutory exception to sections 15 and 16 by special direction.",
+      "authority": {
+        "regulatory_instrument": "Immigration Act 2009",
+        "provision": "s 17(1), (3)",
+        "provision_id": "NZ-IMM-ACT-2009-S17-1"
+      },
+      "constraints": [],
+      "routing": "DISCRETION_REQUIRED",
+      "interpretation_flag_ids": [
+        "IF-06"
+      ]
+    }
+  ]
+}

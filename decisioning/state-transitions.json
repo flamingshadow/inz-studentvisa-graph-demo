@@ -1,0 +1,189 @@
+{
+  "state_transitions": [
+    {
+      "transition_id": "SV-TRANS-LODGE",
+      "entity_type": "VisaApplication",
+      "from_state_id": "CREATED",
+      "to_state_id": "LODGED",
+      "trigger": "Submission meets channel requirements",
+      "actor_authority": "Applicant / Regulations",
+      "actor_id": "ACTOR-APPLICANT",
+      "actor_ids": [
+        "ACTOR-APPLICANT"
+      ],
+      "authorising_rule_ids": [],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-ASSESS",
+      "entity_type": "VisaApplication",
+      "from_state_id": "LODGED",
+      "to_state_id": "UNDER_ASSESSMENT",
+      "trigger": "Assessment commences",
+      "actor_authority": "Immigration Officer",
+      "actor_id": "ACTOR-IMMIGRATION-OFFICER",
+      "actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "authorising_rule_ids": [],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-FURTHER-INFO",
+      "entity_type": "VisaApplication",
+      "from_state_id": "UNDER_ASSESSMENT",
+      "to_state_id": "FURTHER_INFORMATION_REQUIRED",
+      "trigger": "Interview/evidence/medical request",
+      "actor_authority": "Immigration Officer discretion",
+      "actor_id": "ACTOR-IMMIGRATION-OFFICER",
+      "actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "authorising_rule_ids": [
+        "SV-EVID-001",
+        "SV-EVID-002",
+        "SV-HEALTH-001"
+      ],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-INFO-RECEIVED",
+      "entity_type": "VisaApplication",
+      "from_state_id": "FURTHER_INFORMATION_REQUIRED",
+      "to_state_id": "UNDER_ASSESSMENT",
+      "trigger": "Information received and verified",
+      "actor_authority": "Applicant / Immigration Officer",
+      "actor_id": "ACTOR-APPLICANT",
+      "actor_ids": [
+        "ACTOR-APPLICANT",
+        "ACTOR-IMMIGRATION-OFFICER"
+      ],
+      "authorising_rule_ids": [],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-DECISION-READY",
+      "entity_type": "VisaApplication",
+      "from_state_id": "UNDER_ASSESSMENT",
+      "to_state_id": "DECISION_READY",
+      "trigger": "Applicable checks completed",
+      "actor_authority": "Decision support / officer",
+      "actor_id": null,
+      "actor_ids": [],
+      "authorising_rule_ids": [],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-DECISION",
+      "entity_type": "VisaApplication",
+      "from_state_id": "DECISION_READY",
+      "to_state_id": "GRANTED_OR_DECLINED",
+      "trigger": "Authorised discretionary decision",
+      "actor_authority": "Minister or Immigration Officer",
+      "actor_id": "ACTOR-IMMIGRATION-OFFICER",
+      "actor_ids": [
+        "ACTOR-IMMIGRATION-OFFICER",
+        "ACTOR-MINISTER"
+      ],
+      "authorising_rule_ids": [
+        "SV-DEC-002"
+      ],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-VISA-GRANT",
+      "entity_type": "Visa",
+      "from_state_id": "NOT_GRANTED",
+      "to_state_id": "GRANTED",
+      "trigger": "Entered and retained in Department records",
+      "actor_authority": "Immigration Act 2009 s 62",
+      "actor_id": null,
+      "actor_ids": [],
+      "authorising_rule_ids": [
+        "SV-LIFE-001"
+      ],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-VISA-CURRENT",
+      "entity_type": "Visa",
+      "from_state_id": "GRANTED",
+      "to_state_id": "CURRENT",
+      "trigger": "Start condition/date reached",
+      "actor_authority": "Visa record",
+      "actor_id": null,
+      "actor_ids": [],
+      "authorising_rule_ids": [],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-VISA-EXPIRE",
+      "entity_type": "Visa",
+      "from_state_id": "CURRENT",
+      "to_state_id": "EXPIRED",
+      "trigger": "Earliest statutory expiry event",
+      "actor_authority": "Immigration Act 2009 s 63",
+      "actor_id": null,
+      "actor_ids": [],
+      "authorising_rule_ids": [
+        "SV-LIFE-003"
+      ],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    },
+    {
+      "transition_id": "SV-TRANS-VISA-CANCEL",
+      "entity_type": "Visa",
+      "from_state_id": "CURRENT",
+      "to_state_id": "CANCELLED",
+      "trigger": "Statutory cancellation trigger or authorised cancellation",
+      "actor_authority": "Immigration Act 2009 ss 64 or 66",
+      "actor_id": null,
+      "actor_ids": [],
+      "authorising_rule_ids": [
+        "SV-LIFE-004",
+        "SV-LIFE-005"
+      ],
+      "required_fact_ids": [],
+      "audit_event_required": true,
+      "interpretation_flag_ids": [
+        "IF-23"
+      ]
+    }
+  ]
+}
