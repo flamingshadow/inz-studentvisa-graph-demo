@@ -67,14 +67,16 @@ def test_ambiguous_a5_stops():
 
 def test_source_coverage_gap():
     a = run(**COMPLETE)
-    assert res(a, "SV-INSTR-001") == ["SOURCE_COVERAGE_GAP"]
+    assert res(a, "SV-INSTR-001") == ["HUMAN_REVIEW_REQUIRED", "SOURCE_COVERAGE_GAP"]   # IF-33
+    hr = next(e for e in a["rule_evaluations"] if e["rule_id"] == "SV-INSTR-001" and e["result"] != "SOURCE_COVERAGE_GAP")
+    assert "SV-OM-U3.1-A-I" in hr["instruction_rules_presented"]
     gap = next(g for g in a["source_coverage_gaps"] if g["kind"] == "SOURCE_COVERAGE_GAP")
     assert gap["coverage_gap_id"] == "GAP-01" and gap["must_not_infer"] is True
 
 
 def test_online_gap_rule():
     a = E.assess({**base_app(**COMPLETE), "channel": "online"})
-    assert res(a, "SV-ONLINE-007") == ["SOURCE_COVERAGE_GAP"]
+    assert res(a, "SV-ONLINE-007") == ["HUMAN_REVIEW_REQUIRED", "SOURCE_COVERAGE_GAP"]
     assert "SV-ONLINE-001" in {e["rule_id"] for e in a["rule_evaluations"]}
 
 
@@ -145,18 +147,44 @@ def test_assessment_matches_12_2_shape():
 
 
 # ---- check-specific boundaries ------------------------------------------------------
-@pytest.mark.parametrize("funds,months,stype,expect", [
-    (20000, 12, "tertiary", "SATISFIED"),     # boundary: exactly the yearly figure
-    (19999, 12, "tertiary", "NOT_SATISFIED"),
-    (1667 * 6, 6, "tertiary", "SATISFIED"),   # monthly figure under 12 months
-    (17000, 12, "school", "SATISFIED"),
-    (1417 * 3 - 1, 3, "school", "NOT_SATISFIED"),
+@pytest.mark.parametrize("funds,months,stype,expect,rule", [
+    (20000, 12, "tertiary", "SATISFIED", "SV-OM-U3.20.30-A-I"),      # 52 weeks: yearly figure
+    (19999, 12, "tertiary", "NOT_SATISFIED", "SV-OM-U3.20.30-A-I"),
+    (1667 * 6, 6, "tertiary", "SATISFIED", "SV-OM-U3.20.25-A-I"),    # 26 weeks: monthly figure
+    (17000, 12, "school", "SATISFIED", "SV-OM-U3.20.30-A-II"),
+    (1417 * 3 - 1, 3, "school", "NOT_SATISFIED", "SV-OM-U3.20.25-A-II"),
+    (1667 * 8, 8, "tertiary", "SATISFIED", "SV-OM-U3.20.25-A-I"),    # 34.7 weeks: still under 36
+    (19999, 9, "tertiary", "NOT_SATISFIED", "SV-OM-U3.20.30-A-I"),   # 39 weeks: one full year required
+    (29999, 18, "tertiary", "NOT_SATISFIED", "SV-OM-U3.20.30-A-I"),  # pro rata beyond 12 months: 30,000
 ])
-def test_candidate_funds(funds, months, stype, expect):
+def test_funds_u3_20(funds, months, stype, expect, rule):
     a = run(**{**COMPLETE, "available_funds_nzd": funds, "study_duration_months": months, "student_type": stype})
     ev = next(e for e in a["rule_evaluations"] if e["check_id"] == "SV-CHECK-FIN-001")
-    assert ev["result"] == expect
-    assert ev["label"] == CANDIDATE_LABEL and ev["provenance_status"] == "RECONCILIATION_REQUIRED"
+    assert (ev["rule_id"], ev["result"]) == (rule, expect)
+    assert ev["provenance_status"] == "VERIFIED_INSTRUCTION_SOURCE" and "label" not in ev
+    assert ev["provision"].startswith(("U3.20.25", "U3.20.30")) and ev["source_version"] == "2022-09-26"
+
+
+def test_funds_36_week_boundary_in_weeks():
+    f = {k: v for k, v in COMPLETE.items() if k != "study_duration_months"}
+    a = run(**{**f, "programme_duration_weeks": 35, "available_funds_nzd": 1667 * 9})
+    assert next(e for e in a["rule_evaluations"] if e["check_id"] == "SV-CHECK-FIN-001")["rule_id"] == "SV-OM-U3.20.25-A-I"
+    a = run(**{**f, "programme_duration_weeks": 36, "available_funds_nzd": 19000})
+    ev = next(e for e in a["rule_evaluations"] if e["check_id"] == "SV-CHECK-FIN-001")
+    assert (ev["rule_id"], ev["result"]) == ("SV-OM-U3.20.30-A-I", "NOT_SATISFIED")
+
+
+def test_funds_less_prepaid_living_expenses():
+    a = run(**{**COMPLETE, "available_funds_nzd": 15000, "prepaid_living_expenses_nzd": 5000})
+    ev = next(e for e in a["rule_evaluations"] if e["check_id"] == "SV-CHECK-FIN-001")
+    assert ev["result"] == "SATISFIED" and ev["calculation"]["required_nzd"] == 15000
+
+
+def test_funds_samoa_tonga_guarantee():
+    a = run(**{**COMPLETE, "available_funds_nzd": 100, "citizenship": "Tonga",
+               "maintenance_guarantee_from_nz_relative": True})
+    ev = next(e for e in a["rule_evaluations"] if e["check_id"] == "SV-CHECK-FIN-001")
+    assert (ev["rule_id"], ev["result"]) == ("SV-OM-U3.20.30-A-III", "SATISFIED")
 
 
 def test_funds_unverified_is_unknown():
@@ -164,13 +192,13 @@ def test_funds_unverified_is_unknown():
     assert check_result(a, "SV-CHECK-FIN-001") == "UNKNOWN"
 
 
-def test_maternity_added_when_pregnant_without_public_care():
-    a = run(**{**COMPLETE, "available_funds_nzd": 28000, "pregnant": True,
-               "publicly_funded_maternity_care_available": False})
-    assert res(a, "SV-CAND-MATERNITY") == ["NOT_SATISFIED"]      # needs 20,000 + 9,000
-    a = run(**{**COMPLETE, "available_funds_nzd": 29000, "pregnant": True,
-               "publicly_funded_maternity_care_available": False})
-    assert res(a, "SV-CAND-MATERNITY") == ["SATISFIED"]
+def test_maternity_u3_20_35():
+    base = {**COMPLETE, "pregnant_due_to_give_birth_in_nz": True,
+            "eligible_for_publicly_funded_maternity_services": False}
+    assert res(run(**{**base, "available_funds_nzd": 28000}), "SV-OM-U3.20.35-P1-A") == ["NOT_SATISFIED"]
+    assert res(run(**{**base, "available_funds_nzd": 29000}), "SV-OM-U3.20.35-P1-A") == ["SATISFIED"]
+    assert res(run(**{**base, "eligible_for_publicly_funded_maternity_services": True}),
+               "SV-OM-U3.20.35-P1-A") == ["NOT_APPLICABLE"]
 
 
 @pytest.mark.parametrize("hours,expect", [(25, "SATISFIED"), (26, "NOT_SATISFIED")])
@@ -200,7 +228,3 @@ def test_provider_suspected_breach_routes_to_human():
     assert res(a, "SV-EDU-009") == ["HUMAN_REVIEW_REQUIRED"]
 
 
-def test_funds_pro_rata_over_12_months_per_if15():
-    a = run(**{**COMPLETE, "available_funds_nzd": 29999, "study_duration_months": 18})
-    ev = next(e for e in a["rule_evaluations"] if e["check_id"] == "SV-CHECK-FIN-001")
-    assert ev["calculation"]["required_nzd"] == 30000 and ev["result"] == "NOT_SATISFIED"

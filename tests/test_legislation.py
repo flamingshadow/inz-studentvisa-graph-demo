@@ -51,7 +51,7 @@ def test_code_clauses_not_retrieved():
 
 def test_every_other_provision_retrieved_with_provenance():
     for p in PROVS.values():
-        if p["source_id"] != CODE:
+        if p["source_id"] not in (CODE, "NZ-INZ-IMMIGRATION-INSTRUCTIONS"):
             assert p["source_text_status"] == "RETRIEVED", p["provision_id"]
             assert p["source_text"] and p["source_url"] and p["source_version"] and p["html_sha256"]
 
@@ -76,7 +76,7 @@ def test_rule_source_versions_follow_instrument():
 
 @pytest.mark.neo4j
 def test_provision_fulltext_search_finds_phrase(live):
-    hits = queries.search("material change in circumstances", 10)["provisions"]
+    hits = queries.search("material change in circumstances", 50)["provisions"]
     assert any(h["provision_id"].startswith("NZ-IMM-ACT-2009-S58") for h in hits)
     assert all(h["source_text_status"] == "RETRIEVED" for h in hits)
 

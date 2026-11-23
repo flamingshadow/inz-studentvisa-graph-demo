@@ -16,7 +16,8 @@ def batch(live, apps):
 
 def test_dod1_rules_with_instrument_and_exact_provision(live):
     """The agent can answer what Student Visa rules apply and return the governing instrument and exact provision."""
-    rules = {r["rule_id"]: r for r in json.loads((ROOT / "rules/rules.json").read_text())["rules"]}
+    data = json.loads((ROOT / "rules/rules.json").read_text())
+    rules = {r["rule_id"]: r for r in data["rules"] + data.get("instruction_rules", [])}
     seen = 0
     for d in {r["domain"] for r in rules.values()}:
         for row in queries.rules_by_domain(d, include_candidates=False):
@@ -54,8 +55,8 @@ def test_dod5_every_result_explainable(batch):
         x = queries.explain_evaluation(e["evaluation_id"])
         steps = [s["step"] for s in x["explanation_chain"]]
         assert steps[:3] == ["RuleEvaluation", "DecisionCheck", "Rule"]
-        if e["catalogue"] == "VERIFIED":
-            assert steps[3:] == ["Provision", "InstrumentVersion", "AuthoritySource"] and x["complete"]
+        if e["catalogue"] in ("VERIFIED", "INSTRUCTION"):
+            assert steps[3:] == ["Provision", "AuthoritySource"] and x["complete"]
         else:
             assert steps[3:] == ["CoverageGap"]          # candidate: says so, never invents a provision
 
@@ -63,7 +64,9 @@ def test_dod5_every_result_explainable(batch):
 def test_dod6_candidate_rules_not_presented_as_production(batch):
     """Reconciliation to Immigration Instructions is outstanding by design; the guard is that nothing claims production."""
     rules = json.loads((ROOT / "rules/rules.json").read_text())
-    assert all(c["provenance_status"] == "RECONCILIATION_REQUIRED" for c in rules["candidate_rules"])
+    assert all(c["provenance_status"] in ("RECONCILIATION_REQUIRED", "SUPERSEDED_BY_INSTRUCTION")
+               for c in rules["candidate_rules"])
+    assert not any(c["executable"] for c in rules["candidate_rules"])
     for a in batch:
         assert a["scope"]["production_decision"] is False
         for e in a["rule_evaluations"]:

@@ -40,7 +40,7 @@
       "source_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
       "title": "Immigration Instructions / INZ Operational Manual",
       "poc_coverage": "Not in authoritative verified corpus; candidate rules marked RECONCILIATION_REQUIRED or SOURCE_COVERAGE_GAP.",
-      "coverage_status": "NOT_COVERED"
+      "coverage_status": "PARTIAL"
     },
     {
       "source_id": "DOC-BRA-AI-PROMPTS",
@@ -65,24 +65,18 @@
       "reason_type": "EXCLUDED_SOURCE",
       "missing_source_type": "ImmigrationInstruction",
       "retrieval_impact": "PARTIAL",
-      "automated_assessment_impact": "BLOCKED",
+      "automated_assessment_impact": "PARTIAL",
       "required_result": "SOURCE_COVERAGE_GAP",
       "must_not_infer": true,
       "template_example_id": "GAP-SV-INSTRUCTIONS",
+      "status": "PARTLY_CLOSED",
+      "closed_by_flag": "IF-25",
+      "remaining_scope": "Immigration Instructions outside Student Visas (U1-U16) and the general sections they cite directly; historic versions of cited sections.",
       "applies_to": [
         "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
         "SV-INSTR-001",
         "SV-ONLINE-007",
-        "SV-CAND-PRODUCTS",
-        "SV-CAND-ELIGIBILITY",
-        "SV-CAND-MAINT-TERTIARY",
-        "SV-CAND-MAINT-SCHOOL",
-        "SV-CAND-MATERNITY",
-        "SV-CAND-WORK",
-        "SV-CAND-CHANGE-STUDY",
-        "SV-CAND-GENUINE",
-        "SV-CAND-FAMILY",
-        "SV-CAND-GUARDIAN"
+        "SV-CAND-FAMILY"
       ]
     },
     {

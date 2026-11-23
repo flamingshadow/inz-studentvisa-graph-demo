@@ -14,7 +14,8 @@
       ],
       "decision_reference": "Product owner decision 3 (build plan, 23 Nov 2026)",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
-      "raised_on": "2026-11-23"
+      "raised_on": "2026-11-23",
+      "superseded_by": "IF-30"
     },
     {
       "flag_id": "IF-02",
@@ -124,7 +125,7 @@
       "flag_id": "IF-09",
       "kind": "INTERPRETATION",
       "title": "Source versions taken from legislation.govt.nz",
-      "detail": "The spec states only the Immigration Act version (2026-07-10). Versions for the other instruments come from each page's version line: NZ-IMM-ACT-2009 2026-07-10 ('Version as at 10 July 2026'); NZ-IMM-VEPRM-REGS-2010 2026-10-20 ('Version as at 20 October 2026'); NZ-IMM-CIO-REGS-2010 2020-09-30 ('Reprint as at 30 September 2020'); NZ-PRIVACY-ACT-2020 2026-10-08 ('Version as at 8 October 2026'). The Carriers' Information Obligations Regulations print 'Reprint as at' rather than 'Version as at'. The Pastoral Care Code has no legislation.govt.nz version, so its version_id stays null; the Education and Training Act is cited by no rule and was not fetched.",
+      "detail": "The spec states only the Immigration Act version (2026-07-10). Versions for the other instruments come from each page's version line: NZ-IMM-ACT-2009 2026-07-10 ('Version as at 10 July 2026'); NZ-IMM-VEPRM-REGS-2010 2026-10-20 ('Version as at 20 October 2026'); NZ-IMM-CIO-REGS-2010 2020-09-30 ('Reprint as at 30 September 2020'); NZ-PRIVACY-ACT-2020 2026-10-08 ('Version as at 8 October 2026'); NZ-INZ-IMMIGRATION-INSTRUCTIONS 2026-11-23 ('Operational Manual retrieved 2026-11-23; each instruction carries its own effective date'). The Carriers' Information Obligations Regulations print 'Reprint as at' rather than 'Version as at'. The Pastoral Care Code has no legislation.govt.nz version, so its version_id stays null; the Education and Training Act is cited by no rule and was not fetched.",
       "applies_to": [
         "regulatory/sources.json"
       ],
@@ -136,7 +137,7 @@
       "flag_id": "IF-10",
       "kind": "INTERPRETATION",
       "title": "Provision text retrieved except the Pastoral Care Code",
-      "detail": "167 of 217 provisions carry the exact published wording from legislation.govt.nz (labels kept, whitespace normalised, history and compare notes excluded), with URL, version and retrieval date. The Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021 is not published on legislation.govt.nz, so its 50 clauses remain SOURCE_TEXT_NOT_RETRIEVED (decision 8); Appendix G's source-text criterion is met for every rule except the Code rules.",
+      "detail": "784 of 834 provisions carry the exact published wording from legislation.govt.nz (labels kept, whitespace normalised, history and compare notes excluded), with URL, version and retrieval date. The Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021 is not published on legislation.govt.nz, so its 50 clauses remain SOURCE_TEXT_NOT_RETRIEVED (decision 8); Appendix G's source-text criterion is met for every rule except the Code rules.",
       "applies_to": [
         "regulatory/provisions.json"
       ],
@@ -212,6 +213,7 @@
       "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23",
+      "superseded_by": "IF-30",
       "resolution": "Monthly figure x months under 12 months; yearly figure pro rata at 12 months or more (18 months tertiary = NZD 30,000). Prepaid accommodation stays an unresolved requirement."
     },
     {
@@ -244,7 +246,7 @@
       "flag_id": "IF-18",
       "kind": "INTERPRETATION",
       "title": "Health outcome for TC-07",
-      "detail": "TC-07 expects HUMAN_REVIEW_REQUIRED for health. Health is part of the candidate core-eligibility rule (Section 6), which has no published class; the agent contract forbids scoring health, so the check is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN.",
+      "detail": "TC-07 expects HUMAN_REVIEW_REQUIRED for health. Health is part of the candidate core-eligibility rule (Section 6), which has no published class; the agent contract forbids scoring health, so the check is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN. With the Operational Manual loaded the check evaluates U3.1(b)(iii) (health and character as set out at A4 and A5) instead of the candidate rule.",
       "applies_to": [
         "SV-CHECK-HEALTH-001"
       ],
@@ -330,6 +332,157 @@
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23",
       "resolution": "Accepted as implemented."
+    },
+    {
+      "flag_id": "IF-25",
+      "kind": "DEVIATION",
+      "title": "Operational Manual used as the Immigration Instructions source",
+      "detail": "The build plan's ground rule said not to use the INZ Operational Manual. The product owner reversed this to give staff field-level answers. Student instructions U1-U16 and the general sections they cite are loaded with their exact published text, URL and effective date. Rules derived from them are VERIFIED_INSTRUCTION_SOURCE, and GAP-01 is partly closed. The text is the manual's own wording; only whitespace is normalised.",
+      "applies_to": [
+        "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
+        "GAP-01"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: Operational Manual integration (provenance, scope, funds check, depth)",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-26",
+      "kind": "INTERPRETATION",
+      "title": "Automation class, evidence and actors for instruction rules are heuristic",
+      "detail": "The manual does not classify its rules. Automation class is set from wording: a power or discretion ('may grant', 'special direction') is A4; evaluative words ('satisfied', 'genuine', 'bona fide', 'consider', 'sufficient') are A3; definitions are A1; anything else is A2. Evidence types come from INZ form numbers and keywords. The actor is the role word nearest before the first modal verb (e.g. 'applicants must' -> Applicant). A rule that an executable check runs takes that check's class, e.g. U3.20.30(a)(i)/(ii) are A2 because SV-CHECK-FIN-001 executes them (the wording-based class is kept as class_as_derived). Each rule records class_basis so a reviewer can see why.",
+      "applies_to": [
+        "rules/rules.json"
+      ],
+      "decision_reference": "Product owner review of Operational Manual flags (one by one), 23 Nov 2026",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Fixed, then accepted: rules run by an executable check take that check's class (U3.20.30(a)(i)/(ii) are A2, set by SV-CHECK-FIN-001); actors come from the role word nearest the modal verb."
+    },
+    {
+      "flag_id": "IF-27",
+      "kind": "INTERPRETATION",
+      "title": "Atomic decomposition of instruction text",
+      "detail": "Every leaf paragraph of every current instruction unit becomes one rule. Its statement is the lead-in text of its parent items followed by the leaf text, joined verbatim with trailing 'and'/'or' removed. It is kept as instruction_statement and is not rewritten into RuleSpeak. Item labels follow the page's list styles ((a), (i)); unlabelled paragraphs are p1, p2 and notes are note1.",
+      "applies_to": [
+        "rules/rules.json"
+      ],
+      "decision_reference": "Product owner review of Operational Manual flags (one by one), 23 Nov 2026",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented: verbatim lead-in + paragraph, not rewritten into RuleSpeak."
+    },
+    {
+      "flag_id": "IF-28",
+      "kind": "INTERPRETATION",
+      "title": "Versions and history",
+      "detail": "103 current and 263 historic student instruction pages are loaded. Historic versions are stored as Instruction text at unit level with effective_from/effective_to and SUPERSEDES chains. Only current units get paragraph nodes and rules. Expired instructions (titles ending '(to ...)') keep their text but get no rules. effective_to of a version is the effective date of the next newer version.",
+      "applies_to": [
+        "regulatory/provisions.json"
+      ],
+      "decision_reference": "Product owner review of Operational Manual flags (one by one), 23 Nov 2026",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented: unit-level text for historic versions; rules for current versions only."
+    },
+    {
+      "flag_id": "IF-29",
+      "kind": "INTERPRETATION",
+      "title": "Scope of the Operational Manual load",
+      "detail": "All pages under Student Visas (U1-U16), every version, plus 32 general-section pages that current student pages link to directly (A4, A5, E2-E7, E11, H2, H5, S1, V2, V3, W2), current version only; a cited section index also brings in its current child pages. Anything those pages cite in turn is not loaded (GAP-01 remaining scope).",
+      "applies_to": [
+        "data/opsmanual"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: Operational Manual integration (provenance, scope, funds check, depth)",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-30",
+      "kind": "INTERPRETATION",
+      "title": "Funds check follows Operational Manual U3.20",
+      "detail": "SV-CHECK-FIN-001 now applies U3.20.25 / U3.20.30 / U3.20.35 instead of the candidate figures. Under 36 weeks: NZ$1,667 (tertiary or non-compulsory) or NZ$1,417 (compulsory, Years 1-13) per month of study. 36 weeks or longer: NZ$20,000 or NZ$17,000 per year, applied as one year minimum and pro rata beyond 12 months (the IF-15 pro rata decision is retained for multi-year study). Prepaid living expenses are deducted. Citizens of Samoa or Tonga may rely on a verified written guarantee from a New Zealand citizen or residence-class relative. Maternity: an extra NZ$9,000 for applicants due to give birth in New Zealand unless eligible for publicly funded services. The critical-purpose (H5) variants are listed for human review and not computed.",
+      "applies_to": [
+        "SV-CHECK-FIN-001",
+        "TC-06"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: Operational Manual integration (provenance, scope, funds check, depth)",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-31",
+      "kind": "INTERPRETATION",
+      "title": "Candidate rules reconciled to instructions",
+      "detail": "Each Section 6 candidate rule is linked to the instructions that cover it. Fully covered candidates become SUPERSEDED_BY_INSTRUCTION, with SUPERSEDES edges from the instruction. Family support stays RECONCILIATION_REQUIRED because partner pathways sit in the W and V sections, outside scope. Candidate figures no longer execute and lose the candidate label.",
+      "applies_to": [
+        "SV-CAND-PRODUCTS",
+        "SV-CAND-ELIGIBILITY",
+        "SV-CAND-MAINT-TERTIARY",
+        "SV-CAND-MAINT-SCHOOL",
+        "SV-CAND-MATERNITY",
+        "SV-CAND-WORK",
+        "SV-CAND-CHANGE-STUDY",
+        "SV-CAND-GENUINE",
+        "SV-CAND-FAMILY",
+        "SV-CAND-GUARDIAN"
+      ],
+      "decision_reference": "Product owner review of Operational Manual flags (one by one), 23 Nov 2026",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented: 9 candidates superseded; family support stays RECONCILIATION_REQUIRED."
+    },
+    {
+      "flag_id": "IF-32",
+      "kind": "INTERPRETATION",
+      "title": "Domains for instruction rules",
+      "detail": "Instruction rules take a domain from their instruction code (e.g. U3.20 -> Maintenance, U13 -> Work rights, A5 -> Character), so rules_by_domain returns spec and manual rules together. Atomic rules are created only for U1-U16 and the general requirements every student must meet (A4 health, A5 character, E4 lodgement, E5 bona fides, E6.5 sponsorship, E7 processing). The other cited sections (S1, V2, V3, W2, H2, H5, A6, E2, E3, E11) are loaded as quotable, searchable, linked text with no rules (minimal-graph principle, IF-34).",
+      "applies_to": [
+        "rules/rules.json"
+      ],
+      "decision_reference": "Product owner review of Operational Manual flags (one by one), 23 Nov 2026",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Changed, then accepted: atomic rules only for U1-U16 and A4, A5, E4, E5, E6.5, E7; the other cited sections are loaded as quotable, linked text with no rules."
+    },
+    {
+      "flag_id": "IF-33",
+      "kind": "INTERPRETATION",
+      "title": "SV-INSTR-001 with instructions loaded",
+      "detail": "SV-INSTR-001 / SV-ONLINE-007 ('information and evidence required by Immigration Instructions') no longer return SOURCE_COVERAGE_GAP for the student instructions. The check returns HUMAN_REVIEW_REQUIRED, listing the U3.1 requirements that have no executable check yet, and still returns SOURCE_COVERAGE_GAP for instructions outside the loaded scope.",
+      "applies_to": [
+        "SV-CHECK-INSTR-001"
+      ],
+      "decision_reference": "Product owner review of Operational Manual flags (one by one), 23 Nov 2026",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented: HUMAN_REVIEW_REQUIRED for loaded U3.1 requirements, SOURCE_COVERAGE_GAP for instructions outside scope."
+    },
+    {
+      "flag_id": "IF-34",
+      "kind": "INTERPRETATION",
+      "title": "Minimal graph: fewest node types and relationships",
+      "detail": "Product owner principle (23 Nov 2026): keep the graph to a minimal set of node types and relationships. Applied as: (1) a declared graph_profile in schema/ontology.yaml that the loader and checker enforce; Part and AMENDS are left unused; (2) instruction rules get Threshold nodes only, because their conditions and exceptions are already in the rule text; (3) spec objects with no relationship (fact types, risks, unreferenced concepts and method sources) stay in the JSON files and are not loaded; (4) each assessment writes one RuleEvaluation per rule, with result and explanation as properties, plus one DecisionOutcome and one Explanation for the whole assessment; facts link only to the DecisionCheck.",
+      "applies_to": [
+        "schema/ontology.yaml",
+        "graph"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: minimal node types and relationships",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-35",
+      "kind": "INTERPRETATION",
+      "title": "Duplicate nodes and relationships removed",
+      "detail": "Product owner (23 Nov 2026): remove nodes and relationships that represent the same information. Removed from the graph: Operational Manual paragraph nodes (their text is in the instruction unit and in the rule built from each paragraph); rule APPLIES_TO links to the single Student Visa product (product_id property); REFERENCES links to an actor the rule already binds with PERMITS / IMPOSES_OBLIGATION_ON / PROHIBITS; EvidenceRequirement nodes (now properties of REQUIRES_EVIDENCE from rule to evidence type); Condition, Exception, TemporalConstraint, Discretion and Trigger nodes (verbatim phrases of the rule or transition, now properties); InstrumentVersion nodes (one per source; version is a source property); superseded candidate thresholds (same figures as U3.20); historic instruction versions whose text is identical to the next version (merged into one node covering both periods); repeated fact INPUT_TO links (one per fact and check, listing evaluation_ids). Kept: ObservedFact and VerifiedFact pairs (different claims, required by RISK-01) and legislation parent sections (they hold sibling text found nowhere else). All removed objects remain in the Appendix A JSON files.",
+      "applies_to": [
+        "schema/ontology.yaml",
+        "graph"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: remove duplicate nodes and relationships",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
     }
   ]
 }

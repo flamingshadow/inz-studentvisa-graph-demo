@@ -163,17 +163,17 @@ def expected_results() -> dict[str, dict]:
                               "exception_rule_id": "SV-IVL-001"}]},
         "TC-05": {"check_id": "SV-CHECK-WORK-001", "rule_id": "SV-WORK-001", "expected_status": "SATISFIED",
                   "assert": [{"check_id": "SV-CHECK-WORK-001", "accepted": ["SATISFIED"]}]},
-        "TC-06": {"check_id": "SV-CHECK-FIN-001", "rule_id": "SV-CAND-MAINT-TERTIARY",
+        "TC-06": {"check_id": "SV-CHECK-FIN-001", "rule_id": "SV-OM-U3.20.30-A-I",
                   "expected_status": "SATISFIED",
-                  "expected_label": CANDIDATE_LABEL,
-                  "deviation": "Document expects SOURCE_COVERAGE_GAP. Decision 3: the check runs with the "
-                               "candidate figure and every result carries the candidate label and "
-                               "provenance_status RECONCILIATION_REQUIRED (IF-01).",
-                  "interpretation_flag_ids": ["IF-01"],
+                  "deviation": "Document expects SOURCE_COVERAGE_GAP because Immigration Instruction provenance was "
+                               "absent. The Operational Manual is now loaded (IF-25), so the check applies U3.20.30 "
+                               "with VERIFIED_INSTRUCTION_SOURCE provenance and no candidate label (IF-30, "
+                               "superseding decision 3 / IF-01).",
+                  "interpretation_flag_ids": ["IF-30"],
                   "assert": [{"check_id": "SV-CHECK-FIN-001", "accepted": ["SATISFIED"],
-                              "label": CANDIDATE_LABEL, "provenance_status": "RECONCILIATION_REQUIRED"},
+                              "rule_id": "SV-OM-U3.20.30-A-I", "provenance_status": "VERIFIED_INSTRUCTION_SOURCE"},
                              {"production_decision": False}]},
-        "TC-07": {"check_id": "SV-CHECK-HEALTH-001", "rule_id": "SV-CAND-ELIGIBILITY",
+        "TC-07": {"check_id": "SV-CHECK-HEALTH-001", "rule_id": "SV-OM-U3.1-B-III",
                   "expected_status": "HUMAN_REVIEW_REQUIRED",
                   "assert": [{"check_id": "SV-CHECK-HEALTH-001", "accepted": ["HUMAN_REVIEW_REQUIRED"]},
                              {"evidence_used_type": "MedicalCertificate", "check_id": "SV-CHECK-HEALTH-001"}]},
@@ -187,5 +187,5 @@ def expected_results() -> dict[str, dict]:
                   "expected_status": "EXPLANATION_CHAIN_COMPLETE",
                   "assert": [{"explanation_chain_for_rule": "SV-ID-001",
                               "chain": ["RuleEvaluation", "DecisionCheck", "Rule", "Provision",
-                                        "InstrumentVersion", "AuthoritySource"]}]},
+                                        "AuthoritySource"]}]},
     }

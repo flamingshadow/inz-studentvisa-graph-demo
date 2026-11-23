@@ -74,6 +74,98 @@ ontology:
     purpose: Safe stopping, change control and assurance.
   graph_path: EvidenceItem -> ObservedFact -> VerifiedFact -> DecisionCheck -> RuleEvaluation
   explanation_chain: RuleEvaluation -> DecisionCheck -> Rule -> Provision -> Instrument
+graph_profile:
+  principle: Use the smallest set of node types and relationships that answers staff questions. Do not create nodes
+    that only restate text or a single value held elsewhere; store it as a property. Keep nodes with no relationships
+    in the JSON files only.
+  node_labels:
+  - Authority
+  - AuthoritySource
+  - Provision
+  - Section
+  - Subsection
+  - Paragraph
+  - Regulation
+  - Clause
+  - Instruction
+  - Rule
+  - Obligation
+  - Prohibition
+  - Permission
+  - Definition
+  - BusinessRule
+  - EligibilityRule
+  - Calculation
+  - Qualifier
+  - Threshold
+  - Domain
+  - Visa
+  - Applicant
+  - Application
+  - Provider
+  - Programme
+  - Sponsor
+  - Guardian
+  - ImmigrationOfficer
+  - Evidence
+  - EvidenceItem
+  - ObservedFact
+  - VerifiedFact
+  - Decision
+  - DecisionCheck
+  - RuleEvaluation
+  - DecisionOutcome
+  - Explanation
+  - Lifecycle
+  - State
+  - StateTransition
+  - Governance
+  - CoverageGap
+  - InterpretationFlag
+  - TestCase
+  - LoadLog
+  relationship_types:
+  - MADE_UNDER
+  - CONTAINS
+  - PARENT_OF
+  - REFERENCES
+  - SUPERSEDES
+  - DERIVED_FROM
+  - APPLIES_TO
+  - IMPOSES_OBLIGATION_ON
+  - PROHIBITS
+  - PERMITS
+  - HAS_THRESHOLD
+  - REQUIRES_EVIDENCE
+  - SUPPORTS_FACT
+  - VERIFIED_AS
+  - INPUT_TO
+  - EVALUATES
+  - PRODUCES_OUTCOME
+  - EXPLAINED_BY
+  not_used:
+    node_labels:
+    - Part
+    - InstrumentVersion
+    - Condition
+    - Exception
+    - TemporalConstraint
+    - Discretion
+    - Trigger
+    - EvidenceRequirement
+    relationship_types:
+    - AMENDS
+    - HAS_CONDITION
+    - HAS_EXCEPTION
+    - HAS_TIME_CONSTRAINT
+    - HAS_DISCRETION
+    - CAUSES_TRANSITION
+    reason: 'Part and AMENDS: nothing in the corpus needs them. The others duplicated information already held elsewhere
+      (IF-35): the source''s version property, the rule''s own text (condition/exception/time phrases are rule properties),
+      the rule''s A4 class and actor link (discretion), the transition''s trigger property, and the REQUIRES_EVIDENCE
+      relationship (evidence requirement). They stay in the Appendix A JSON files.'
+  assessment_pattern: One RuleEvaluation per evaluated rule (result and explanation as properties); one DecisionOutcome
+    and one Explanation per assessment; facts link to the DecisionCheck with the evaluation_id on the relationship.
 templates:
   business_rule_yaml_12_1:
     business_rule:

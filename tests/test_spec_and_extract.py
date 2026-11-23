@@ -23,7 +23,7 @@ def test_appendix_a_layout_complete():
 @pytest.mark.parametrize("mutate,expect", [
     (lambda d: d["rules"][0].__setitem__("rulespeak_statement", "changed"), "statement"),
     (lambda d: d["rules"].pop(), "verified rule ID set"),
-    (lambda d: d["candidate_rules"][5].__setitem__("executable", True), "only decision-3 candidates execute"),
+    (lambda d: d["candidate_rules"][5].__setitem__("executable", True), "no candidate executes"),
 ])
 def test_checker_detects_drift(monkeypatch, mutate, expect):
     real = check._load
@@ -48,7 +48,11 @@ def test_rule_12_1_fields_and_provenance():
         assert set(r["automation"]) >= {"class", "machine_evaluable", "missing_result"}
         assert r["automation"]["missing_result"] == "UNKNOWN"
     for c in rules["candidate_rules"]:
-        assert c["provenance_status"] == "RECONCILIATION_REQUIRED"
+        assert c["provenance_status"] in ("RECONCILIATION_REQUIRED", "SUPERSEDED_BY_INSTRUCTION")
+        assert c["reconciliation"]["status"] in ("RECONCILED", "PARTLY_RECONCILED")
+    for r in rules["instruction_rules"]:
+        assert r["provenance_status"] == "VERIFIED_INSTRUCTION_SOURCE" and r["instruction_statement"]
+        assert r["automation"]["class"] in ("A1", "A2", "A3", "A4") and r["automation"]["class_basis"]
 
 
 def test_12_1_example_rule_lines_up():
@@ -60,16 +64,18 @@ def test_12_1_example_rule_lines_up():
     assert r["automation"]["class"] == "A2"
 
 
-def test_decision3_thresholds_labelled():
+def test_funds_thresholds_from_instructions():
+    """Decision 3's candidate figures are kept but superseded; U3.20 figures now execute (IF-30, IF-31)."""
     ths = {t["id"]: t for t in json.loads((ROOT / "rules/thresholds.json").read_text())["thresholds"]}
-    expect = {"SV-TH-CAND-TERTIARY-YEAR": 20000, "SV-TH-CAND-TERTIARY-MONTH": 1667,
-              "SV-TH-CAND-SCHOOL-YEAR": 17000, "SV-TH-CAND-SCHOOL-MONTH": 1417, "SV-TH-CAND-MATERNITY-TOTAL": 9000}
-    for tid, v in expect.items():
-        assert ths[tid]["value"] == v
-        assert ths[tid]["label"] == CANDIDATE_LABEL
-        assert ths[tid]["provenance_status"] == "RECONCILIATION_REQUIRED"
-        assert ths[tid]["executable"] is True
-    assert ths["SV-TH-CAND-WORK-HOURS"]["executable"] is False
+    for tid, v in {"SV-TH-CAND-TERTIARY-YEAR": 20000, "SV-TH-CAND-TERTIARY-MONTH": 1667,
+                   "SV-TH-CAND-SCHOOL-YEAR": 17000, "SV-TH-CAND-SCHOOL-MONTH": 1417,
+                   "SV-TH-CAND-MATERNITY-TOTAL": 9000}.items():
+        assert ths[tid]["value"] == v and not ths[tid]["executable"]
+        assert ths[tid]["provenance_status"] == "SUPERSEDED_BY_INSTRUCTION" and ths[tid]["label"] is None
+    execd = {(t["rule_id"], t["value"]) for t in ths.values() if t.get("executable")}
+    assert execd == {("SV-OM-U3.20.25-A-I", 1667), ("SV-OM-U3.20.25-A-II", 1417), ("SV-OM-U3.20.30-A-I", 20000),
+                     ("SV-OM-U3.20.30-A-II", 17000), ("SV-OM-U3.20.35-P1-A", 9000)}
+    assert all(ths[t]["provenance_status"] == "VERIFIED_INSTRUCTION_SOURCE" for t in ths if ths[t].get("executable"))
 
 
 def test_deviation_recorded():
@@ -98,8 +104,20 @@ def test_provision_parent_chain():
 
 def test_flag_review_recorded():
     flags = json.loads((ROOT / "governance/interpretation-flags.json").read_text())["interpretation_flags"]
-    assert flags and all(f["status"] == "ACCEPTED_BY_PRODUCT_OWNER" for f in flags), \
-        [f["flag_id"] for f in flags if f["status"] != "ACCEPTED_BY_PRODUCT_OWNER"]
+    open_ = {f["flag_id"] for f in flags if f["status"] != "ACCEPTED_BY_PRODUCT_OWNER"}
+    assert not open_, open_   # Operational Manual flags reviewed one by one on 23 Nov 2026
     by_id = {f["flag_id"]: f for f in flags}
+    assert by_id["IF-25"]["kind"] == "DEVIATION" and by_id["IF-25"]["status"] == "ACCEPTED_BY_PRODUCT_OWNER"
+    assert by_id["IF-01"]["superseded_by"] == "IF-30" and by_id["IF-15"]["superseded_by"] == "IF-30"
     assert "NZD 30,000" in by_id["IF-15"]["resolution"]
     assert by_id["IF-01"]["kind"] == "DEVIATION"
+
+
+def test_if26_if32_decisions_applied():
+    ir = {r["rule_id"]: r for r in json.loads((ROOT / "rules/rules.json").read_text())["instruction_rules"]}
+    for rid in ("SV-OM-U3.20.30-A-I", "SV-OM-U3.20.30-A-II", "SV-OM-U3.20.25-A-I"):
+        assert ir[rid]["automation"]["class"] == "A2"
+    assert ir["SV-OM-U3.20.30-A-I"]["automation"]["class_basis"].startswith("set by SV-CHECK-FIN-001")
+    sections = {r["instruction_code"].split(".")[0] for r in ir.values()}
+    assert not sections & {"S1", "V2", "V3", "W2", "H2", "H5", "A6", "E2", "E3", "E11"}
+    assert sum(1 for r in ir.values() if r["actor_ids"]) / len(ir) > 0.6

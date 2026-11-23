@@ -35,6 +35,7 @@ def test_tools_carry_contract_and_only_one_writes(live):
     tools = run(lambda s: s.list_tools()).tools
     names = {t.name for t in tools}
     assert "assess_application" in names and len(names) >= 15
+    assert {"instruction_text", "instruction_history", "rules_by_instruction", "list_instructions"} <= names
     for t in tools:
         assert "POC NOTICE" in t.description and "Return SOURCE_COVERAGE_GAP" in t.description
         props = set((t.input_schema or {}).get("properties", {}))

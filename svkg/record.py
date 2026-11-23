@@ -4,12 +4,13 @@ Graph pattern written per assessment (3.1 vocabulary only):
   (Application)-[:APPLIES_TO]->(Visa STUDENT-VISA)                         FT-002
   (Application)-[:CONTAINS]->(EvidenceItem)-[:SUPPORTS_FACT]->(ObservedFact) FT-004
   (ObservedFact)-[:VERIFIED_AS]->(VerifiedFact)                            FT-005
-  (ObservedFact|VerifiedFact)-[:INPUT_TO]->(DecisionCheck)                 FT-006
-  (ObservedFact|VerifiedFact)-[:INPUT_TO]->(RuleEvaluation)
+  (ObservedFact|VerifiedFact)-[:INPUT_TO {evaluation_ids}]->(DecisionCheck)  FT-006, one per pair
   (DecisionCheck)-[:PRODUCES_OUTCOME]->(RuleEvaluation)-[:EVALUATES]->(Rule)
-  (RuleEvaluation)-[:PRODUCES_OUTCOME]->(DecisionOutcome)
-  (RuleEvaluation)-[:EXPLAINED_BY]->(Explanation)
   (Application)-[:PRODUCES_OUTCOME]->(DecisionOutcome {kind:'ASSESSMENT'})-[:CONTAINS]->(RuleEvaluation)
+  (DecisionOutcome)-[:EXPLAINED_BY]->(Explanation)
+
+Minimal-graph principle (IF-34): an evaluation's result and explanation are properties of the RuleEvaluation;
+there is one DecisionOutcome and one Explanation per assessment, not per evaluation.
 """
 from __future__ import annotations
 
@@ -90,9 +91,8 @@ def write_assessment(session, app: Application, a: dict) -> dict:
                                    "name": f"{e['rule_id']}: {e['result']}"},
                          "id": e["evaluation_id"], "rule_id": e["rule_id"], "check_id": e["check_id"],
                          "result": e["result"],
-                         "fact_obs": [f"OBS-{x['fact_id']}" for x in e["facts_used"]],
-                         "fact_ver": e["verified_fact_ids"],
-                         "explanation": e["explanation"]})
+                         "facts": [x["fact_id"] if x["verification_status"] == "VERIFIED" else f"OBS-{x['fact_id']}"
+                                   for x in e["facts_used"]]})
         t.run("""UNWIND $rows AS r
                  MATCH (asmt:DecisionOutcome {id:$aid})
                  MATCH (rule:Rule {id:r.rule_id}) MATCH (chk:DecisionCheck {id:r.check_id})
@@ -100,22 +100,27 @@ def write_assessment(session, app: Application, a: dict) -> dict:
                  CREATE (ev)-[:EVALUATES]->(rule)
                  CREATE (chk)-[:PRODUCES_OUTCOME]->(ev)
                  CREATE (asmt)-[:CONTAINS]->(ev)
-                 CREATE (out:Decision:DecisionOutcome {id: r.id + '-OUT', name: r.result, result: r.result,
-                         kind: 'EVALUATION', origin:'ASSESSMENT', assessment_id:$aid, production_decision:false})
-                 CREATE (ev)-[:PRODUCES_OUTCOME]->(out)
-                 CREATE (x:Decision:Explanation {id: r.id + '-EXPL', name: 'Explanation ' + r.id, text: r.explanation,
-                         origin:'ASSESSMENT', assessment_id:$aid})
-                 CREATE (ev)-[:EXPLAINED_BY]->(x)
                  WITH ev, chk, r
-                 CALL (ev, chk, r) {
-                   UNWIND r.fact_obs AS oid MATCH (o:ObservedFact {id:oid})
-                   CREATE (o)-[:INPUT_TO {evaluation_id: r.id}]->(ev)
-                   MERGE (o)-[:INPUT_TO {evaluation_id: r.id}]->(chk)
-                 }
-                 CALL (ev, chk, r) {
-                   UNWIND r.fact_ver AS fid MATCH (v:VerifiedFact {id:fid})
-                   CREATE (v)-[:INPUT_TO {evaluation_id: r.id}]->(ev)
-                   MERGE (v)-[:INPUT_TO {evaluation_id: r.id}]->(chk)
+                 CALL (chk, r) {
+                   UNWIND r.facts AS fid MATCH (f:Evidence {id:fid}) WHERE f:ObservedFact OR f:VerifiedFact
+                   MERGE (f)-[i:INPUT_TO]->(chk)
+                   ON CREATE SET i.evaluation_ids = [r.id]
+                   ON MATCH SET i.evaluation_ids = coalesce(i.evaluation_ids, []) + r.id
                  }""", rows=rows, aid=aid)
+        t.run("""MATCH (o:DecisionOutcome {id:$aid})
+                 CREATE (x:Decision:Explanation {id: $aid + '-EXPL', name: 'Explanation ' + $aid, text: $text,
+                         origin:'ASSESSMENT', assessment_id:$aid})
+                 CREATE (o)-[:EXPLAINED_BY]->(x)""", aid=aid, text=summary_text(a))
     session.execute_write(tx)
     return {"assessment_id": aid, "evaluations_written": len(a["rule_evaluations"])}
+
+
+def summary_text(a: dict) -> str:
+    sm = a["summary"]
+    lines = [f"Assessment {a['assessment_id']} of {a['application_id']} (POC, synthetic, production_decision=false): "
+             f"overall {sm['overall_status']}; {sm['satisfied']} satisfied, {sm['not_satisfied']} not satisfied, "
+             f"{sm['unknown']} unknown, {sm['human_review_required']} for human review, "
+             f"{sm['discretion_required']} for the decision-maker, {sm['source_coverage_gaps']} source coverage gaps."]
+    for e in a["rule_evaluations"]:
+        lines.append(f"{e['rule_id']} ({e['provision'] or 'no provision'}): {e['result']}. {e['explanation']}")
+    return "\n".join(lines)

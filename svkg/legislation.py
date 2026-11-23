@@ -209,6 +209,7 @@ def fetch(download: bool = True) -> dict:
     retrieved_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     if not download and TEXT_CACHE.exists():
         retrieved_at = json.loads(TEXT_CACHE.read_text()).get("retrieved_at", retrieved_at)
+    provisions = [p for p in provisions if p["source_id"] in INSTRUMENTS or p["source_id"] in NOT_PUBLISHED]
     texts = extract_texts(provisions, retrieved_at)
     versions = {}
     for sid in INSTRUMENTS:

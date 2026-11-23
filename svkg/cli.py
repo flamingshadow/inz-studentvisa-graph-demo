@@ -1,6 +1,7 @@
 """svkg command line.
 
   svkg fetch-legislation       download provision wording from legislation.govt.nz (then re-extract)
+  svkg fetch-opsmanual         crawl the Operational Manual student instructions U1-U16 (+ cited sections)
   svkg extract                 parse the spec .docx into the Appendix A files
   svkg check                   diff the files against the document (non-zero exit on mismatch)
   svkg load                    (re)load the studentvisa graph; idempotent
@@ -26,6 +27,8 @@ def main(argv=None) -> int:
     sub = p.add_subparsers(dest="cmd", required=True)
     f = sub.add_parser("fetch-legislation")
     f.add_argument("--offline", action="store_true", help="re-parse the cached HTML without downloading")
+    o = sub.add_parser("fetch-opsmanual")
+    o.add_argument("--offline", action="store_true", help="re-parse the cached pages without downloading")
     sub.add_parser("extract")
     sub.add_parser("check")
     sub.add_parser("load")
@@ -48,6 +51,10 @@ def main(argv=None) -> int:
         extract.run()
         _print(res)
         print("Next: svkg check && svkg load")
+    if args.cmd == "fetch-opsmanual":
+        from . import opsmanual
+        _print(opsmanual.fetch(download=not args.offline))
+        print("Next: svkg build")
     if args.cmd in ("extract", "build"):
         from . import extract
         _print(extract.run())

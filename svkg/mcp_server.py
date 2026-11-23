@@ -37,8 +37,8 @@ Agent contract (follow every point):
 Product-owner rules for this POC:
 - There is no automated grant or decline. The final grant is always DISCRETION_REQUIRED (SV-CHECK-DISC-001).
   Never say an application should be granted or declined.
-- Funds checks use candidate figures labelled "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED".
-  Always repeat that label when you mention a funds result.
+- Funds checks follow Operational Manual U3.20 (IF-30). Candidate figures from the spec are superseded; if a
+  result still carries the label "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED", repeat it.
 - Provision wording: when a provision's source_text_status is RETRIEVED, quote its source_text exactly
   (it is the published wording from legislation.govt.nz) and give its source_url and source_version.
   When it is SOURCE_TEXT_NOT_RETRIEVED (all Education (Pastoral Care) Code clauses, which are not published
@@ -110,9 +110,10 @@ def rules_by_concept(term: str) -> dict:
             "rules": {m["concept_id"]: q.rules_by_concept(m["concept_id"]) for m in matches[:3]}}
 
 
-@tool("Full-text search over rule statements and provision references. Returns rule and provision hits.")
-def search_rules(text: str, limit: int = 15) -> dict:
-    return q.search(text, max(1, min(limit, 50)))
+@tool("""Full-text search over rule statements and provision/instruction text. Historic instruction versions are
+excluded unless include_history is true.""")
+def search_rules(text: str, limit: int = 15, include_history: bool = False) -> dict:
+    return q.search(text, max(1, min(limit, 50)), include_history)
 
 
 @tool("""Full detail for one rule ID (e.g. SV-APP-005): statement, classification, automation class,
@@ -164,7 +165,7 @@ def list_test_cases() -> dict:
 
 
 @tool("""Explain one rule evaluation through the complete provenance chain:
-RuleEvaluation -> DecisionCheck -> Rule -> Provision -> InstrumentVersion -> AuthoritySource,
+RuleEvaluation -> DecisionCheck -> Rule -> Provision -> AuthoritySource (with its version),
 plus the facts and evidence used. Use the evaluation_id from an assessment.""")
 def explain_evaluation(evaluation_id: str) -> dict:
     r = q.explain_evaluation(evaluation_id.strip())
@@ -189,6 +190,33 @@ def application_template() -> dict:
     return {"template": app, "fact_attributes_used_by_checks": sorted(
         {i["fact_path"] for c in json.loads((ROOT / "decisioning/decision-checks.json").read_text())["decision_checks"]
          for i in c.get("inputs", [])})}
+
+
+@tool("""List current Operational Manual instructions whose code starts with a prefix (e.g. 'U3', 'U13', 'A5').""")
+def list_instructions(prefix: str = "U") -> dict:
+    return q.list_instructions(prefix.strip().upper())
+
+
+@tool("""Exact text of one Operational Manual instruction (e.g. 'U3.20.30', 'U3.1', 'E6.5') with its URL, the
+page's published effective date and the date this exact text has been in force from (identical versions are
+merged), its sub-instructions, cross-references and the rules derived from each paragraph. Give as_at
+(YYYY-MM-DD) to get the version in force on that date; historic versions are text only.""")
+def instruction_text(code: str, as_at: str | None = None) -> dict:
+    r = q.instruction_text(code.strip().upper(), as_at)
+    return r if r is not None else {"not_found": code, "as_at": as_at,
+                                    "note": "Not in the loaded Operational Manual scope (SOURCE_COVERAGE_GAP). "
+                                            "Do not infer the instruction."}
+
+
+@tool("Every loaded version of one Operational Manual instruction, newest first, with effective dates and URLs.")
+def instruction_history(code: str) -> dict:
+    return q.instruction_history(code.strip().upper())
+
+
+@tool("""Atomic rules derived from one Operational Manual instruction and its sub-instructions (e.g. 'U3.20'),
+with automation class, modality and exact provision.""")
+def rules_by_instruction(code: str) -> dict:
+    return q.rules_by_instruction(code.strip().upper())
 
 
 # --------------------------------------------------------------------------- the only writing tool

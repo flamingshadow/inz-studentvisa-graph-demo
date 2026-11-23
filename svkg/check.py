@@ -84,25 +84,37 @@ def run_checks() -> Report:
     for s in sorted(set(per_section_doc) | set(per_section_ext)):
         rep.eq(per_section_doc[s], per_section_ext[s], f"rule count in section {s}")
 
-    # 3. Candidate layer (Section 6) separate, RECONCILIATION_REQUIRED, only decision-3 items execute
+    # 3. Candidate layer (Section 6) separate from the verified catalogue; reconciled to the manual (IF-31)
     t8 = spec.table_by_header("Domain", "6.")
     cands = rules_file["candidate_rules"]
+    om_rules = {r["rule_id"]: r for r in rules_file.get("instruction_rules", [])}
     rep.eq(len(t8.rows) - 1, len(cands), "Section 6 candidate row count")
+    allowed = {"RECONCILIATION_REQUIRED"} | ({"SUPERSEDED_BY_INSTRUCTION"} if om_rules else set())
     for row, c in zip(t8.rows[1:], cands):
         rep.eq(row[0], c["domain"], f"candidate {c['rule_id']} domain")
         rep.eq(row[3], c["provenance_status_as_published"], f"candidate {c['rule_id']} status")
-        rep.check(c["provenance_status"] == "RECONCILIATION_REQUIRED", f"candidate {c['rule_id']} RECONCILIATION_REQUIRED")
+        rep.check(c["provenance_status"] in allowed, f"candidate {c['rule_id']} provenance {c['provenance_status']}")
         rep.check(c["rule_id"] not in rules, f"candidate {c['rule_id']} kept out of verified catalogue")
-    rep.eq({"SV-CAND-MAINT-TERTIARY", "SV-CAND-MAINT-SCHOOL", "SV-CAND-MATERNITY"},
-           {c["rule_id"] for c in cands if c["executable"]}, "only decision-3 candidates execute")
+        if om_rules:
+            rep.check(bool(c.get("reconciliation")), f"candidate {c['rule_id']} has a reconciliation record")
     ths = _load("rules/thresholds.json")["thresholds"]
     label = "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED"
-    money = {t["value"] for t in ths if t.get("unit") == "NZD"}
-    rep.eq({20000, 1667, 17000, 1417, 9000}, money, "decision-3 funds figures loaded")
-    for t in ths:
-        if t.get("unit") == "NZD":
-            rep.check(t["label"] == label and t["provenance_status"] == "RECONCILIATION_REQUIRED",
-                      f"threshold {t['id']} labelled candidate")
+    cand_money = {t["value"] for t in ths if t.get("unit") == "NZD" and t["id"].startswith("SV-TH-CAND-")}
+    rep.eq({20000, 1667, 17000, 1417, 9000}, cand_money, "decision-3 candidate funds figures loaded")
+    if om_rules:
+        rep.eq(set(), {c["rule_id"] for c in cands if c["executable"]}, "no candidate executes once the manual is loaded")
+        execd = {t["value"] for t in ths if t.get("executable") and t.get("unit") == "NZD"}
+        rep.eq({20000, 1667, 17000, 1417, 9000}, execd, "executable funds figures come from U3.20")
+        for t in ths:
+            if t.get("executable"):
+                rep.check(t["provenance_status"] == "VERIFIED_INSTRUCTION_SOURCE", f"threshold {t['id']} from instructions")
+    else:
+        rep.eq({"SV-CAND-MAINT-TERTIARY", "SV-CAND-MAINT-SCHOOL", "SV-CAND-MATERNITY"},
+               {c["rule_id"] for c in cands if c["executable"]}, "only decision-3 candidates execute")
+        for t in ths:
+            if t.get("unit") == "NZD":
+                rep.check(t["label"] == label and t["provenance_status"] == "RECONCILIATION_REQUIRED",
+                          f"threshold {t['id']} labelled candidate")
     tE = spec.table_by_header("Candidate area", "Appendix E")
     rep.eq(len(tE.rows) - 1, len(rules_file["candidate_inventory_appendix_e"]), "Appendix E row count")
 
@@ -179,7 +191,7 @@ def run_checks() -> Report:
             rep.check(t["application_id"] in apps, f"{row[0]} synthetic application")
             rep.check(row[0] in exp, f"{row[0]} expected results")
             rep.check((ROOT / "testing" / "applications" / f"{row[0]}.json").exists(), f"{row[0]} fixture file")
-    rep.check("label" in str(exp["TC-06"]) and exp["TC-06"].get("deviation"), "TC-06 adjusted per decision 3")
+    rep.check(bool(exp["TC-06"].get("deviation")), "TC-06 deviation recorded")
 
     # 13. Agent contract (Section 9) & definition of done (13)
     ac = _load("schema/agent-contract.yaml")["agent_contract"]
@@ -198,7 +210,7 @@ def run_checks() -> Report:
     for r in list(rules.values()):
         for pid in r["authority"]["provision_ids"]:
             rep.check(pid in provs, f"{r['rule_id']} provision {pid} exists")
-    known = set(provs) | set(rules) | {c["rule_id"] for c in cands} | set(checks) | set(tcs)
+    known = set(provs) | set(rules) | {c["rule_id"] for c in cands} | set(om_rules) | set(checks) | set(tcs)
     for f, key, inner in (("regulatory/sources.json", "sources", "source_id"),
                           ("regulatory/concepts.json", "concepts", "concept_id"),
                           ("rules/conditions.json", "conditions", "id"), ("rules/conditions.json", "triggers", "id"),
@@ -216,7 +228,22 @@ def run_checks() -> Report:
     dangling = [(r["type"], r["from"], r["to"]) for r in rels if r["from"] not in known or r["to"] not in known]
     rep.check(not dangling, f"relationship endpoints resolve ({len(dangling)} dangling: {dangling[:5]})")
     flags = {f["flag_id"] for f in _load("governance/interpretation-flags.json")["interpretation_flags"]}
-    for r in list(rules.values()) + cands:
+    # 15b. Operational Manual integrity (IF-25..IF-33)
+    undated = set()
+    if om_rules:
+        for r in om_rules.values():
+            p = provs.get(r["authority"]["provision_id"])
+            ok = p is not None and p["source_text_status"] == "RETRIEVED" and p["source_text"] and \
+                p["source_url"] and r["instruction_statement"]
+            rep.check(bool(ok), f"{r['rule_id']} has instruction text and URL")
+            if not r["effective_from"]:
+                undated.add(r["instruction_code"])
+        om_provs = [p for p in provs.values() if p["source_id"] == "NZ-INZ-IMMIGRATION-INSTRUCTIONS"]
+        rep.check(all(p["source_url"] for p in om_provs), "every instruction provision has a URL")
+        hist = [p for p in om_provs if p.get("version_kind") == "HISTORIC" and "@" in p["provision_id"]]
+        rep.check(all(p["effective_from"] for p in hist), "historic instruction versions carry an effective date")
+        rep.check(any(r["rule_id"] == "SV-OM-U3.20.30-A-I" for r in om_rules.values()), "U3.20.30(a)(i) rule present")
+    for r in list(rules.values()) + cands + list(om_rules.values()):
         for fl in r.get("interpretation_flag_ids", []):
             rep.check(fl in flags, f"{r['rule_id']} flag {fl} defined")
 
@@ -226,10 +253,12 @@ def run_checks() -> Report:
     for p in provs.values():
         pid = p["provision_id"]
         rep.check(p["source_text_status"] in enums["source_text_status"], f"{pid} source_text_status valid")
+        om_prov = p["source_id"] == "NZ-INZ-IMMIGRATION-INSTRUCTIONS"
         if p["source_text_status"] == "RETRIEVED":
-            rep.check(bool(p["source_text"]) and bool(p["source_url"]) and bool(p["source_version"])
+            rep.check(bool(p["source_text"]) and bool(p["source_url"]) and (om_prov or bool(p["source_version"]))
                       and bool(p["retrieved_at"]), f"{pid} retrieved text has text, URL, version and retrieved_at")
-            rep.check(p["source_url"].startswith("https://www.legislation.govt.nz/"), f"{pid} URL is legislation.govt.nz")
+            host = "https://www.immigration.govt.nz/opsmanual/" if om_prov else "https://www.legislation.govt.nz/"
+            rep.check(p["source_url"].startswith(host), f"{pid} URL is {host}")
         else:
             rep.check(p["source_text"] is None, f"{pid} has no text unless RETRIEVED (never paraphrased)")
             if cache.exists() and p["source_id"] != code:
@@ -248,6 +277,19 @@ def run_checks() -> Report:
         rep.warn(f"{len(missing_text)}/{len(provs)} provisions have no source text. Pastoral Care Code "
                  f"({len(codes)}; not published on legislation.govt.nz, decision 8): {', '.join(codes)}"
                  + (f". Others: {', '.join(others)}" if others else ""))
+    if undated:
+        rep.warn(f"Instructions with no published effective date: {', '.join(sorted(undated))}")
+
+    # Minimal-graph principle (IF-34): declared profile, no isolated nodes loaded
+    from . import graph as _graph
+    gnodes = _graph.graph_nodes(rels)
+    for e in _graph.check_profile(gnodes, rels):
+        rep.check(False, e)
+    rep.check(True, "graph_profile respected")
+    om_q = [q for f, k in (("rules/conditions.json", "conditions"), ("rules/exceptions.json", "exceptions"),
+                           ("rules/discretions.json", "discretions"))
+            for q in _load(f).get(k, []) if str(q.get("rule_id") or "").startswith("SV-OM-")]
+    rep.check(not om_q, f"no derived condition/exception/discretion nodes for instruction rules ({len(om_q)})")
     return rep
 
 

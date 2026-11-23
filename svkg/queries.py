@@ -36,7 +36,9 @@ def _props(p: dict | None, drop=("origin", "load_id")) -> dict | None:
 
 RULE_SUMMARY = """
 RETURN r.id AS rule_id, r.catalogue AS catalogue, r.domain AS domain, r.rule_type AS rule_type,
-       r.modality AS modality, coalesce(r.rulespeak_statement, r.candidate_content) AS statement,
+       r.modality AS modality,
+       coalesce(r.rulespeak_statement, r.instruction_statement, r.candidate_content) AS statement,
+       r.instruction_code AS instruction_code, r.effective_from AS effective_from,
        r.regulatory_instrument AS instrument, r.provision AS provision, r.source_version AS source_version,
        r.automation_class AS automation_class, r.automation_class_as_published AS automation_class_as_published,
        r.provenance_status AS provenance_status, r.label AS label
@@ -55,7 +57,8 @@ def list_domains():
 
 
 def rules_by_domain(domain: str, include_candidates: bool):
-    return read("MATCH (r:Rule) WHERE toLower(r.domain) = toLower($d) AND ($c OR r.catalogue = 'VERIFIED') "
+    return read("MATCH (r:Rule) WHERE toLower(r.domain) = toLower($d) "
+                "AND ($c OR r.catalogue IN ['VERIFIED', 'INSTRUCTION']) "
                 + RULE_SUMMARY, d=domain, c=include_candidates)
 
 
@@ -78,18 +81,22 @@ def _ft(text: str) -> str:
     return " ".join("".join("\\" + ch if ch in special else ch for ch in w) for w in text.split())
 
 
-def search(text: str, limit: int):
+def search(text: str, limit: int, include_history: bool = False):
     rules = read("CALL db.index.fulltext.queryNodes('rule_text', $q) YIELD node AS r, score "
                  "WITH r, score ORDER BY score DESC LIMIT $n "
-                 "RETURN r.id AS rule_id, coalesce(r.rulespeak_statement, r.candidate_content) AS statement, "
+                 "RETURN r.id AS rule_id, coalesce(r.rulespeak_statement, r.instruction_statement, "
+                 "r.candidate_content) AS statement, r.instruction_code AS instruction_code, "
                  "r.regulatory_instrument AS instrument, r.provision AS provision, r.automation_class AS "
                  "automation_class, r.catalogue AS catalogue, r.provenance_status AS provenance_status, score",
                  q=_ft(text), n=limit)
     provs = read("CALL db.index.fulltext.queryNodes('provision_text', $q) YIELD node AS p, score "
+                 "WHERE $h OR coalesce(p.version_kind, 'CURRENT') <> 'HISTORIC' "
                  "WITH p, score ORDER BY score DESC LIMIT $n "
                  "RETURN p.id AS provision_id, p.reference AS reference, p.source_id AS source_id, "
                  "p.heading AS heading, p.source_text_status AS source_text_status, p.source_url AS source_url, "
-                 "p.source_version AS source_version, p.source_text AS source_text, score", q=_ft(text), n=limit)
+                 "p.source_version AS source_version, p.version_kind AS version_kind, "
+                 "p.effective_from AS effective_from, p.effective_to AS effective_to, "
+                 "p.source_text AS source_text, score", q=_ft(text), n=limit, h=include_history)
     return {"rules": rules, "provisions": provs}
 
 
@@ -100,19 +107,20 @@ def rule_detail(rule_id: str):
     rule = _props(r[0]["p"])
     rule["provisions"] = read("""
         MATCH (r:Rule {id:$id})-[d:DERIVED_FROM]->(p:Provision)
-        OPTIONAL MATCH (src:AuthoritySource)-[:CONTAINS]->(iv:InstrumentVersion)-[:CONTAINS]->(top:Provision)
+        OPTIONAL MATCH (src:AuthoritySource)-[:CONTAINS]->(top:Provision)
                        -[:PARENT_OF*0..]->(p)
         RETURN p.id AS provision_id, p.reference AS reference, p.provision_type AS provision_type,
                d.primary AS primary, p.source_text AS source_text, p.source_text_status AS source_text_status,
                p.source_url AS source_url, p.source_version AS source_version, p.retrieved_at AS retrieved_at,
-               src.id AS source_id, src.name AS instrument, iv.id AS instrument_version
+               src.id AS source_id, src.name AS instrument, src.version_id AS source_version_id
         ORDER BY d.primary DESC, p.id""", id=rule_id)
     rule["qualifiers"] = read("""
-        MATCH (r:Rule {id:$id})-[rel:HAS_CONDITION|HAS_EXCEPTION|HAS_THRESHOLD|HAS_TIME_CONSTRAINT|HAS_DISCRETION]->(q)
-        RETURN type(rel) AS relationship, [l IN labels(q) WHERE l <> 'Qualifier'][0] AS type, q.id AS id,
-               coalesce(q.text, q.power) AS text, q.value AS value, q.unit AS unit, q.per AS per, q.comparator AS comparator,
-               q.label AS label, q.provenance_status AS provenance_status, q.executable AS executable,
-               q.holder AS holder ORDER BY relationship, id""", id=rule_id)
+        MATCH (r:Rule {id:$id})-[rel:HAS_THRESHOLD]->(q:Threshold)
+        RETURN 'Threshold' AS type, q.id AS id, q.text AS text, q.value AS value, q.unit AS unit, q.per AS per,
+               q.comparator AS comparator, q.label AS label, q.provenance_status AS provenance_status,
+               q.executable AS executable ORDER BY id""", id=rule_id)
+    rule["qualifier_phrases"] = {k: rule.get(k) or [] for k in ("conditions", "exceptions", "time_constraints",
+                                                                   "triggers")}
     rule["actors"] = read("""MATCH (r:Rule {id:$id})-[rel:IMPOSES_OBLIGATION_ON|PERMITS|PROHIBITS]->(a)
                              RETURN type(rel) AS relationship, a.id AS actor_id, a.name AS actor""", id=rule_id)
     rule["concepts"] = read("MATCH (r:Rule {id:$id})-[:REFERENCES]->(c) RETURN c.id AS concept_id, c.name AS term",
@@ -134,20 +142,18 @@ def rule_detail(rule_id: str):
 
 
 def evidence_for_rule(rule_id: str):
-    return read("""MATCH (r:Rule {id:$id})-[:REQUIRES_EVIDENCE]->(er:EvidenceRequirement)
-                   OPTIONAL MATCH (er)-[:REFERENCES]->(et:Evidence)
-                   RETURN er.id AS evidence_requirement_id, er.description AS description,
-                          er.mandatory AS mandatory, er.verification_required AS verification_required,
+    return read("""MATCH (r:Rule {id:$id})-[q:REQUIRES_EVIDENCE]->(et:Evidence)
+                   RETURN q.requirement_id AS evidence_requirement_id, q.description AS description,
+                          q.mandatory AS mandatory, q.verification_required AS verification_required,
                           et.id AS evidence_type_id, et.name AS evidence_item, et.supports_fact AS supports_fact,
-                          et.verification_checks AS verification_checks ORDER BY er.id""", id=rule_id)
+                          et.verification_checks AS verification_checks ORDER BY et.id""", id=rule_id)
 
 
 def facts_supported_by_evidence(evidence: str):
     types = read("""MATCH (et:Evidence) WHERE et.kind='EvidenceType' AND
                       (toLower(et.id) = toLower($e) OR toLower(et.name) CONTAINS toLower($e)
                        OR toLower($e) CONTAINS toLower(et.name))
-                    OPTIONAL MATCH (er:EvidenceRequirement)-[:REFERENCES]->(et)
-                    OPTIONAL MATCH (r:Rule)-[:REQUIRES_EVIDENCE]->(er)
+                    OPTIONAL MATCH (r:Rule)-[:REQUIRES_EVIDENCE]->(et)
                     RETURN et.id AS evidence_type_id, et.name AS evidence_item, et.supports_fact AS supports_fact,
                            et.verification_need AS verification_need, et.verification_checks AS verification_checks,
                            et.typical_rule_domain AS typical_rule_domain, collect(DISTINCT r.id) AS rules""", e=evidence)
@@ -201,22 +207,23 @@ def explain_evaluation(evaluation_id: str):
     rows = read("""
         MATCH (ev:RuleEvaluation {id:$id})-[:EVALUATES]->(r:Rule)
         MATCH (c:DecisionCheck)-[:PRODUCES_OUTCOME]->(ev)
-        OPTIONAL MATCH (ev)-[:EXPLAINED_BY]->(x:Explanation)
-        OPTIONAL MATCH (ev)-[:PRODUCES_OUTCOME]->(o:DecisionOutcome)
+        OPTIONAL MATCH (o:DecisionOutcome {kind:'ASSESSMENT'})-[:CONTAINS]->(ev)
         OPTIONAL MATCH (r)-[:DERIVED_FROM {primary:true}]->(p:Provision)
-        OPTIONAL MATCH (src:AuthoritySource)-[:CONTAINS]->(iv:InstrumentVersion)-[:CONTAINS]->(top:Provision)
+        OPTIONAL MATCH (src:AuthoritySource)-[:CONTAINS]->(top:Provision)
                        -[:PARENT_OF*0..]->(p)
         RETURN properties(ev) AS ev, c.id AS check_id, c.purpose AS check_purpose, c.defined_in AS check_defined_in,
-               r.id AS rule_id, coalesce(r.rulespeak_statement, r.candidate_content) AS statement,
+               r.id AS rule_id, coalesce(r.rulespeak_statement, r.instruction_statement, r.candidate_content)
+               AS statement,
                r.catalogue AS catalogue, r.provenance_status AS provenance_status,
                p.id AS provision_id, p.reference AS provision, p.source_text AS source_text,
-               p.source_text_status AS source_text_status, iv.id AS instrument_version, src.id AS source_id,
-               src.name AS instrument, x.text AS explanation, o.result AS outcome""", id=evaluation_id)
+               p.source_text_status AS source_text_status, src.version_id AS source_version_id, src.id AS source_id,
+               src.name AS instrument, ev.explanation AS explanation, ev.result AS outcome,
+               o.id AS assessment_id""", id=evaluation_id)
     if not rows:
         return None
     r = rows[0]
     ev = _props(r["ev"])
-    facts = read("""MATCH (f)-[:INPUT_TO {evaluation_id:$id}]->(ev:RuleEvaluation {id:$id})
+    facts = read("""MATCH (f)-[i:INPUT_TO]->(:DecisionCheck) WHERE $id IN i.evaluation_ids
                     OPTIONAL MATCH (e:EvidenceItem)-[:SUPPORTS_FACT]->(o:ObservedFact)
                     WHERE o = f OR (o)-[:VERIFIED_AS]->(f)
                     RETURN DISTINCT [l IN labels(f) WHERE l <> 'Evidence'][0] AS fact_kind, f.id AS fact_id,
@@ -232,8 +239,8 @@ def explain_evaluation(evaluation_id: str):
         chain += [
             {"step": "Provision", "id": r["provision_id"], "reference": r["provision"],
              "source_text": r["source_text"], "source_text_status": r["source_text_status"]},
-            {"step": "InstrumentVersion", "id": r["instrument_version"]},
-            {"step": "AuthoritySource", "id": r["source_id"], "instrument": r["instrument"]},
+            {"step": "AuthoritySource", "id": r["source_id"], "instrument": r["instrument"],
+             "version": r["source_version_id"]},
         ]
     else:
         chain.append({"step": "CoverageGap", "id": "GAP-01",
@@ -269,3 +276,53 @@ def test_cases():
                 "RETURN t.id AS test_case_id, t.scenario AS scenario, t.expected_outcome_as_published AS "
                 "expected_as_published, t.expected_status AS expected_status, t.deviation AS deviation, "
                 "c.id AS check_id ORDER BY t.id")
+
+
+# --------------------------------------------------------------------------- Operational Manual
+INSTR = """RETURN p.id AS provision_id, p.instruction_code AS code, p.heading AS heading,
+       p.version_kind AS version_kind, p.effective_from AS text_in_force_from, p.effective_to AS effective_to,
+       p.published_effective_from AS page_effective_date, p.effective_from AS effective_from,
+       p.source_text AS text, p.source_url AS url, p.retrieved_at AS retrieved_at"""
+
+
+def list_instructions(prefix: str):
+    return read("MATCH (p:Provision:Instruction) WHERE p.version_kind IN ['CURRENT','EXPIRED'] "
+                "AND p.instruction_code STARTS WITH $x RETURN p.instruction_code AS code, p.heading AS heading, "
+                "p.version_kind AS version_kind, p.effective_from AS effective_from ORDER BY code", x=prefix)
+
+
+def instruction_text(code: str, as_at: str | None):
+    if as_at:
+        rows = read("MATCH (p:Provision:Instruction {instruction_code:$c}) "
+                    "WHERE p.effective_from IS NULL OR p.effective_from <= $d "
+                    "WITH p WHERE p.effective_to IS NULL OR p.effective_to > $d " + INSTR +
+                    " ORDER BY p.effective_from DESC LIMIT 1", c=code, d=as_at)
+    else:
+        rows = read("MATCH (p:Provision:Instruction {instruction_code:$c}) "
+                    "WHERE p.version_kind IN ['CURRENT','EXPIRED'] " + INSTR, c=code)
+    if not rows:
+        return None
+    r = rows[0]
+    r["sub_instructions"] = read("MATCH (:Provision {id:$id})-[:PARENT_OF]->(c:Instruction) "
+                                 "RETURN c.instruction_code AS code, c.heading AS heading ORDER BY c.id",
+                                 id=r["provision_id"])
+    r["references"] = read("""MATCH (:Provision {id:$id})-[:PARENT_OF*0..4]->(x)-[:REFERENCES]->(t:Provision)
+                              RETURN DISTINCT t.id AS provision_id, coalesce(t.instruction_code, t.reference) AS ref,
+                                     t.heading AS heading ORDER BY ref""", id=r["provision_id"])
+    r["rules"] = read("""MATCH (:Provision {id:$id})-[:PARENT_OF*0..4]->(x)<-[:DERIVED_FROM]-(rule:Rule)
+                         RETURN rule.provision AS paragraph, rule.id AS rule_id,
+                                rule.instruction_statement AS statement, rule.automation_class AS automation_class,
+                                rule.modality AS modality ORDER BY rule.id""",
+                      id=r["provision_id"])
+    r["as_at"] = as_at
+    return r
+
+
+def instruction_history(code: str):
+    return read("MATCH (p:Provision:Instruction {instruction_code:$c}) " + INSTR.replace(
+        "p.source_text AS text", "size(p.source_text) AS text_length") + " ORDER BY p.effective_from DESC", c=code)
+
+
+def rules_by_instruction(code: str):
+    return read("MATCH (r:Rule) WHERE r.instruction_code = $c OR r.instruction_code STARTS WITH $c + '.' "
+                + RULE_SUMMARY.replace("ORDER BY r.catalogue DESC, r.id", "ORDER BY r.id"), c=code)
