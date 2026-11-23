@@ -155,7 +155,7 @@ def run_checks() -> Report:
     _, f8 = spec.json_template("F.8")
     rep.check(f8["check_id"] in checks, f"F.8 check {f8['check_id']}")
     for cid, c in checks.items():
-        if c.get("origin", "").startswith("Implied") or c.get("origin", "").startswith("Rules marked"):
+        if c.get("defined_in", "").startswith("Implied") or c.get("defined_in", "").startswith("Rules marked"):
             rep.check(bool(c.get("interpretation_flag_ids")), f"added check {cid} carries an interpretation flag")
 
     # 11. Lifecycle

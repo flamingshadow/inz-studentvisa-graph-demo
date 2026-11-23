@@ -93,7 +93,7 @@
       "purpose": "Required application fields",
       "doc_inputs": "form, language, signature, identity document, photos, fees",
       "doc_routing_logic": "Complete -> SATISFIED; missing -> UNKNOWN.",
-      "origin": "Table 11 (Section 7)",
+      "defined_in": "Table 11 (Section 7)",
       "source_provision_id": null
     },
     {
@@ -121,7 +121,7 @@
       "purpose": "MFAT scholarship IVL exemption",
       "doc_inputs": "visa type, scholarship administrator",
       "doc_routing_logic": "MFAT scholarship -> NOT_APPLICABLE for IVL payment.",
-      "origin": "Table 11 (Section 7)",
+      "defined_in": "Table 11 (Section 7)",
       "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-F-III",
       "interpretation_flag_ids": []
     },
@@ -152,7 +152,7 @@
       "purpose": "Under-10 living requirement",
       "doc_inputs": "age, living arrangement, parent/guardian record",
       "doc_routing_logic": "Meets clause 51 -> SATISFIED; evidence missing -> UNKNOWN.",
-      "origin": "Table 11 (Section 7)",
+      "defined_in": "Table 11 (Section 7)",
       "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL51-1"
     },
     {
@@ -188,7 +188,7 @@
       "purpose": "Work permission",
       "doc_inputs": "visa conditions, activity, hours, date",
       "doc_routing_logic": "Within verified conditions -> SATISFIED; otherwise NOT_SATISFIED.",
-      "origin": "Table 11 (Section 7)",
+      "defined_in": "Table 11 (Section 7)",
       "source_provision_id": "NZ-IMM-ACT-2009-S77-4-A",
       "interpretation_flag_ids": []
     },
@@ -247,7 +247,7 @@
       "purpose": "Candidate maintenance threshold",
       "doc_inputs": "student type, duration, verified funds, threshold version",
       "doc_routing_logic": "Only execute after authoritative product threshold is reconciled.",
-      "origin": "Table 11 (Section 7)",
+      "defined_in": "Table 11 (Section 7)",
       "source_provision_id": null
     },
     {
@@ -277,7 +277,7 @@
       "purpose": "Visa grant discretion",
       "doc_inputs": "all applicable evaluations",
       "doc_routing_logic": "Always route final grant decision to DISCRETION_REQUIRED.",
-      "origin": "Table 11 (Section 7)",
+      "defined_in": "Table 11 (Section 7)",
       "source_provision_id": "NZ-IMM-ACT-2009-S45-2-A",
       "interpretation_flag_ids": []
     },
@@ -308,7 +308,7 @@
         "missing": "UNKNOWN"
       },
       "source_provision_id": "NZ-IMM-ACT-2009-S58-3-A",
-      "origin": "Appendix F.8 template",
+      "defined_in": "Appendix F.8 template",
       "trigger_fact_paths": [],
       "note": "material_change_occurred=false -> NOT_APPLICABLE (nothing to disclose).",
       "purpose": null,
@@ -318,7 +318,7 @@
       "check_id": "SV-CHECK-MIN-001",
       "evaluates_rule_id": "SV-MIN-001",
       "automation_class": "A4",
-      "origin": "Implied by TC-03 (not in Table 11)",
+      "defined_in": "Implied by TC-03 (not in Table 11)",
       "inputs": [
         {
           "fact_path": "application.applicant_age",
@@ -352,7 +352,7 @@
         "SV-HEALTH-001"
       ],
       "automation_class": "A3",
-      "origin": "Implied by TC-07 (not in Table 11)",
+      "defined_in": "Implied by TC-07 (not in Table 11)",
       "inputs": [
         {
           "fact_path": "evidence.MedicalCertificate|ChestXray",
@@ -375,7 +375,7 @@
       "evaluates_rule_id": "SV-EDU-009",
       "evaluates_rule_id_school": "SV-SCHOOL-009",
       "automation_class": "A3",
-      "origin": "Implied by TC-09 (not in Table 11)",
+      "defined_in": "Implied by TC-09 (not in Table 11)",
       "trigger_fact_paths": [
         "application.provider_known_visa_condition_breach",
         "application.provider_suspected_visa_condition_breach"
@@ -407,7 +407,7 @@
       "evaluates_rule_id": "SV-INSTR-001",
       "evaluates_rule_id_online": "SV-ONLINE-007",
       "automation_class": "A2",
-      "origin": "Rules marked 'A2 / gap' in 5.1 and D.1",
+      "defined_in": "Rules marked 'A2 / gap' in 5.1 and D.1",
       "inputs": [],
       "outcomes": {
         "always": "SOURCE_COVERAGE_GAP"

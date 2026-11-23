@@ -109,7 +109,7 @@ def rule_detail(rule_id: str):
     rule["qualifiers"] = read("""
         MATCH (r:Rule {id:$id})-[rel:HAS_CONDITION|HAS_EXCEPTION|HAS_THRESHOLD|HAS_TIME_CONSTRAINT|HAS_DISCRETION]->(q)
         RETURN type(rel) AS relationship, [l IN labels(q) WHERE l <> 'Qualifier'][0] AS type, q.id AS id,
-               q.text AS text, q.value AS value, q.unit AS unit, q.per AS per, q.comparator AS comparator,
+               coalesce(q.text, q.power) AS text, q.value AS value, q.unit AS unit, q.per AS per, q.comparator AS comparator,
                q.label AS label, q.provenance_status AS provenance_status, q.executable AS executable,
                q.holder AS holder ORDER BY relationship, id""", id=rule_id)
     rule["actors"] = read("""MATCH (r:Rule {id:$id})-[rel:IMPOSES_OBLIGATION_ON|PERMITS|PROHIBITS]->(a)
@@ -119,7 +119,7 @@ def rule_detail(rule_id: str):
     rule["evidence_requirements"] = evidence_for_rule(rule_id)
     rule["decision_checks"] = read("MATCH (c:DecisionCheck)-[:EVALUATES]->(r:Rule {id:$id}) "
                                    "RETURN c.id AS check_id, c.purpose AS purpose, c.automation_class AS "
-                                   "automation_class, c.origin AS origin", id=rule_id)
+                                   "automation_class, c.defined_in AS defined_in", id=rule_id)
     rule["coverage_gaps"] = read("MATCH (g:CoverageGap)-[:APPLIES_TO]->(r:Rule {id:$id}) "
                                  "RETURN g.id AS id, g.subject AS subject, g.control AS control", id=rule_id)
     rule["interpretation_flags"] = read("MATCH (f:InterpretationFlag) WHERE $id IN f.applies_to OR "
@@ -162,7 +162,7 @@ def facts_supported_by_evidence(evidence: str):
 def decision_checks():
     rows = read("""MATCH (c:DecisionCheck) OPTIONAL MATCH (c)-[:EVALUATES]->(r:Rule)
                    RETURN c.id AS check_id, c.purpose AS purpose, c.automation_class AS automation_class,
-                          c.doc_routing_logic AS routing_logic_as_published, c.origin AS origin,
+                          c.doc_routing_logic AS routing_logic_as_published, c.defined_in AS defined_in,
                           c.label AS label, c.deviation AS deviation, c.interpretation_flag_ids AS flags,
                           collect(r.id) AS evaluates ORDER BY c.id""")
     return rows
@@ -205,7 +205,7 @@ def explain_evaluation(evaluation_id: str):
         OPTIONAL MATCH (r)-[:DERIVED_FROM {primary:true}]->(p:Provision)
         OPTIONAL MATCH (src:AuthoritySource)-[:CONTAINS]->(iv:InstrumentVersion)-[:CONTAINS]->(top:Provision)
                        -[:PARENT_OF*0..]->(p)
-        RETURN properties(ev) AS ev, c.id AS check_id, c.purpose AS check_purpose, c.origin AS check_origin,
+        RETURN properties(ev) AS ev, c.id AS check_id, c.purpose AS check_purpose, c.defined_in AS check_defined_in,
                r.id AS rule_id, coalesce(r.rulespeak_statement, r.candidate_content) AS statement,
                r.catalogue AS catalogue, r.provenance_status AS provenance_status,
                p.id AS provision_id, p.reference AS provision, p.source_text AS source_text,
@@ -223,7 +223,7 @@ def explain_evaluation(evaluation_id: str):
                            collect(DISTINCT e.id + ' (' + e.evidence_type + ')') AS evidence""", id=evaluation_id)
     chain = [
         {"step": "RuleEvaluation", "id": evaluation_id, "result": ev["result"], "explanation": r["explanation"]},
-        {"step": "DecisionCheck", "id": r["check_id"], "purpose": r["check_purpose"], "origin": r["check_origin"]},
+        {"step": "DecisionCheck", "id": r["check_id"], "purpose": r["check_purpose"], "defined_in": r["check_defined_in"]},
         {"step": "Rule", "id": r["rule_id"], "statement": r["statement"], "catalogue": r["catalogue"],
          "provenance_status": r["provenance_status"]},
     ]
