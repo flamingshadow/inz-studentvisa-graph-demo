@@ -220,7 +220,7 @@
       "test_type": "SOURCE_GAP",
       "scenario": "Candidate maintenance amount supplied, but Immigration Instruction provenance is absent.",
       "expected_outcome_as_published": "SOURCE_COVERAGE_GAP; do not calculate production eligibility.",
-      "rule_id": "SV-CAND-MAINT-TERTIARY",
+      "rule_id": "SV-OM-U3.20.30-A-I",
       "check_id": "SV-CHECK-FIN-001",
       "application_id": "POC-SV-APP-TC06",
       "input_facts": [
@@ -252,10 +252,10 @@
       ],
       "expected_status": "SATISFIED",
       "provenance_required": true,
-      "deviation": "Document expects SOURCE_COVERAGE_GAP. Decision 3: the check runs with the candidate figure and every result carries the candidate label and provenance_status RECONCILIATION_REQUIRED (IF-01).",
+      "deviation": "Document expects SOURCE_COVERAGE_GAP because Immigration Instruction provenance was absent. The Operational Manual is now loaded (IF-25), so the check applies U3.20.30 with VERIFIED_INSTRUCTION_SOURCE provenance and no candidate label (IF-30, superseding decision 3 / IF-01).",
       "interpretation_flag_ids": [
         "IF-22",
-        "IF-01"
+        "IF-30"
       ]
     },
     {
@@ -263,7 +263,7 @@
       "test_type": "HUMAN_REVIEW",
       "scenario": "Medical certificate supplied.",
       "expected_outcome_as_published": "Evidence received; health outcome HUMAN_REVIEW_REQUIRED.",
-      "rule_id": "SV-CAND-ELIGIBILITY",
+      "rule_id": "SV-OM-U3.1-B-III",
       "check_id": "SV-CHECK-HEALTH-001",
       "application_id": "POC-SV-APP-TC07",
       "input_facts": [

@@ -85,7 +85,8 @@ class FileStore:
     def __init__(self):
         j = lambda rel: json.loads((ROOT / rel).read_text())
         rules = j("rules/rules.json")
-        self.rules = {r["rule_id"]: r for r in rules["rules"] + rules["candidate_rules"]}
+        self.rules = {r["rule_id"]: r for r in rules["rules"] + rules["candidate_rules"]
+                      + rules.get("instruction_rules", [])}
         self.checks = {c["check_id"]: c for c in j("decisioning/decision-checks.json")["decision_checks"]}
         self.thresholds = {t["id"]: t for t in j("rules/thresholds.json")["thresholds"]}
         self.sources = {s["source_id"]: s for s in j("regulatory/sources.json")["sources"]}
@@ -214,7 +215,8 @@ class Engine:
             "unresolved_requirements": ev.unresolved,
             "automation_class": ev.cls,
             "automation_class_as_published": rule["automation"].get("class_as_published"),
-            "rulespeak_statement": rule.get("rulespeak_statement") or rule.get("candidate_content"),
+            "rulespeak_statement": rule.get("rulespeak_statement") or rule.get("instruction_statement")
+                                   or rule.get("candidate_content"),
             "regulatory_instrument": a.get("regulatory_instrument") or (src or {}).get("title"),
             "provision": a.get("provision"), "provision_ids": a.get("provision_ids", []),
             "source_version": a.get("source_version"),
@@ -405,6 +407,121 @@ class Engine:
                                            f"of {limit} h/week -> {res}.")]
 
     def check_fin_001(self, aid, ctx, check):
+        if str(check.get("evaluates_rule_id", "")).startswith("SV-OM-"):
+            return self._check_fin_opsmanual(aid, ctx, check)
+        return self._check_fin_candidate(aid, ctx, check)
+
+    def _nzd(self, rule_id):
+        rule = self.store.rule(rule_id)
+        for tid in rule["qualifiers"].get("threshold_ids", []):
+            t = self.store.thresholds.get(tid)
+            if t and t.get("unit") == "NZD":
+                return t
+        raise ValueError(f"{rule_id} has no NZD threshold")
+
+    def _check_fin_opsmanual(self, aid, ctx, check):
+        """Operational Manual U3.20.25 / U3.20.30 / U3.20.35 (IF-30)."""
+        import math
+        lab = {"provenance_status": "VERIFIED_INSTRUCTION_SOURCE", "interpretation_flag_ids": ["IF-30"],
+               "related_verified_rule_ids": check.get("related_verified_rule_ids", [])}
+        probe = Eval(ctx, self.store.rule("SV-OM-U3.20.30-A-I"), check, "A2")
+        try:
+            stype = str(probe.get("student_type")).lower()
+            weeks_f = probe.get("programme_duration_weeks", required=False)
+            months_f = probe.get("study_duration_months", required=weeks_f is None)
+        except Missing as m:
+            return [{**self._missing(aid, probe, str(m)), **lab}]
+        level = ("compulsory" if stype in ("school", "compulsory", "primary", "secondary", "intermediate") else
+                 "tertiary" if stype in ("tertiary", "non-compulsory", "tertiary or non-compulsory") else None)
+        if level is None:
+            probe.unresolved.append(f"student_type {stype!r} is neither tertiary/non-compulsory nor compulsory")
+            return [self._record(aid, probe, "UNKNOWN", f"U3.20 sets figures for tertiary or non-compulsory and "
+                                                        f"for compulsory study; {stype!r} is neither.", **lab)]
+        weeks = float(weeks_f) if weeks_f is not None else float(months_f) * 52 / 12
+        months = float(months_f) if months_f is not None else weeks * 12 / 52
+        long = weeks >= 36
+        idx = "I" if level == "tertiary" else "II"
+        rid = f"SV-OM-U3.20.30-A-{idx}" if long else f"SV-OM-U3.20.25-A-{idx}"
+        out = []
+        # Samoa / Tonga written guarantee (U3.20.30(a)(iii))
+        cit = ctx.facts.get("citizenship")
+        if long and cit and str(cit.value).strip().lower() in ("samoa", "tonga", "samoan", "tongan") and \
+                "maintenance_guarantee_from_nz_relative" in ctx.facts:
+            gev = Eval(ctx, self.store.rule("SV-OM-U3.20.30-A-III"), check, "A2")
+            try:
+                gev.get("citizenship")
+                g = gev.get("maintenance_guarantee_from_nz_relative")
+                if g is True:
+                    return [self._record(aid, gev, "SATISFIED", "Citizen of Samoa or Tonga with a verified written "
+                                                                "guarantee of maintenance from a relative in New "
+                                                                "Zealand (U3.20.30(a)(iii)).", **lab)]
+            except Missing as m:
+                out.append({**self._missing(aid, gev, str(m)), **lab})
+        ev = Eval(ctx, self.store.rule(rid), check, "A2")
+        try:
+            ev.get("student_type")
+            ev.get("programme_duration_weeks" if weeks_f is not None else "study_duration_months")
+            funds = ev.get("available_funds_nzd")
+            prepaid = ev.get("prepaid_living_expenses_nzd", required=False) or 0
+        except Missing as m:
+            return out + [{**self._missing(aid, ev, str(m)), **lab}]
+        th = self._nzd(rid)
+        if long:
+            years = max(1.0, months / 12)
+            required = round(th["value"] * years)
+            calc = f"NZ${th['value']:,.0f} per year x {years:g} year(s)"
+        else:
+            n = math.ceil(round(months, 2))
+            required = round(th["value"] * n)
+            calc = f"NZ${th['value']:,.0f} per month x {n} month(s)"
+        net = max(0, required - prepaid)
+        if prepaid:
+            calc += f", less prepaid living expenses NZ${prepaid:,.0f}"
+        ev.notes.append("Other ways to show funds under U3.20(b): full scholarship, sponsorship (INZ 1025, "
+                        "U3.20.5) or financial undertaking (INZ 1014, U3.20.10).")
+        res = "SATISFIED" if funds >= net else "NOT_SATISFIED"
+        if res == "NOT_SATISFIED":
+            ev.unresolved.append("Funds held by the student fall short; check whether a scholarship, sponsorship "
+                                 "or financial undertaking is offered instead (U3.20(b))")
+        out.append(self._record(aid, ev, res,
+                                f"Programme of {weeks:.0f} weeks ({'36 weeks or longer' if long else 'under 36 weeks'})"
+                                f", {level} study: verified funds NZ${funds:,.0f} against NZ${net:,.0f} required "
+                                f"({calc}) -> {res}. Source: {ev.rule['authority']['provision']}, effective "
+                                f"{ev.rule['authority']['source_version']}.",
+                                threshold_ids=[th["id"]], instruction_code=ev.rule.get("instruction_code"),
+                                calculation={"required_nzd": net, "gross_required_nzd": required, "method": calc,
+                                             "available_nzd": funds, "programme_weeks": round(weeks, 1)}, **lab))
+        # maternity (U3.20.35), only when recorded
+        key = "pregnant_due_to_give_birth_in_nz" if "pregnant_due_to_give_birth_in_nz" in ctx.facts else \
+            ("pregnant" if "pregnant" in ctx.facts else None)
+        if key:
+            mev = Eval(ctx, self.store.rule("SV-OM-U3.20.35-P1-A"), check, "A2")
+            try:
+                if not mev.get(key):
+                    out.append(self._record(aid, mev, "NOT_APPLICABLE",
+                                            "Applicant is not due to give birth in New Zealand.", **lab))
+                    return out
+                pub_key = "eligible_for_publicly_funded_maternity_services" \
+                    if "eligible_for_publicly_funded_maternity_services" in ctx.facts else \
+                    "publicly_funded_maternity_care_available"
+                if mev.get(pub_key, required=False):
+                    out.append(self._record(aid, mev, "NOT_APPLICABLE",
+                                            "Eligible for publicly funded maternity health services "
+                                            "(U3.20.35(d)), so the funds limb (a) is not needed.", **lab))
+                    return out
+                mth = self._nzd("SV-OM-U3.20.35-P1-A")
+                need = net + mth["value"]
+                r = "SATISFIED" if funds >= need else "NOT_SATISFIED"
+                if r == "NOT_SATISFIED":
+                    mev.unresolved.append("Alternatives U3.20.35(b)-(d) not evidenced")
+                out.append(self._record(aid, mev, r, f"Funds NZ${funds:,.0f} against maintenance NZ${net:,.0f} plus "
+                                                     f"maternity NZ${mth['value']:,.0f} (U3.20.35(a)) -> {r}.",
+                                        threshold_ids=[mth["id"]], **lab))
+            except Missing as m:
+                out.append({**self._missing(aid, mev, str(m)), **lab})
+        return out
+
+    def _check_fin_candidate(self, aid, ctx, check):
         out = []
         T = self.store.thresholds
         stype_rule = {"tertiary": "SV-CAND-MAINT-TERTIARY", "school": "SV-CAND-MAINT-SCHOOL"}
@@ -539,7 +656,7 @@ class Engine:
                            verified_fact_ids=[f.fact_id for f in ev.used if f.verification_status == "VERIFIED"])]
 
     def check_health_001(self, aid, ctx, check):
-        rule = self.store.rule("SV-CAND-ELIGIBILITY")
+        rule = self.store.rule(check.get("evaluates_rule_id") or "SV-CAND-ELIGIBILITY")
         ev = Eval(ctx, rule, check, "A3")
         med = [e for e in ctx.evidence.values() if e.evidence_type in ("MedicalCertificate", "ChestXray", "ChestXRay")]
         for f in ctx.facts.values():
@@ -547,7 +664,7 @@ class Engine:
                 ev.used.append(f)
         ev.evidence_ids.update(e.evidence_item_id for e in med)
         ev.notes.append("Health is never scored (Section 9). Related verified rule SV-HEALTH-001 (r 10(3)(c)) "
-                        "lets the officer require a medical examination.")
+                        "lets the officer require a medical examination; health requirements are in A4.")
         extra = {"related_verified_rule_ids": ["SV-HEALTH-001"], "interpretation_flag_ids": ["IF-18"]}
         if not med:
             ev.unresolved.append("No medical certificate or chest X-ray received")
@@ -583,7 +700,22 @@ class Engine:
     def check_instr_001(self, aid, ctx, check):
         rid = check["evaluates_rule_id_online"] if ctx.app.channel == "online" else check["evaluates_rule_id"]
         rule = self.store.rule(rid)
-        return [self._gap(aid, Eval(ctx, rule, check, rule["automation"]["class"]))]
+        codes = check.get("instruction_codes") or []
+        if not codes:
+            return [self._gap(aid, Eval(ctx, rule, check, rule["automation"]["class"]))]
+        listed = sorted(r["rule_id"] for r in self.store.rules.values()
+                        if r.get("catalogue") == "INSTRUCTION" and r.get("instruction_code") in codes)
+        hev = Eval(ctx, rule, check, "A3")
+        hev.unresolved += [f"Verify {r}" for r in listed]
+        out = [self._record(aid, hev, "HUMAN_REVIEW_REQUIRED",
+                            f"Immigration Instructions {', '.join(codes)} are in the corpus. Their requirements "
+                            f"without an executable check are listed for the officer to verify (IF-33).",
+                            instruction_rules_presented=listed)]
+        gev = Eval(ctx, rule, check, rule["automation"]["class"])
+        out.append({**self._gap(aid, gev), "explanation":
+                    "Immigration Instructions outside the loaded scope (Student Visas U1-U16 and the sections they "
+                    "cite directly) are not in the corpus. No rule is inferred for them."})
+        return out
 
     HANDLERS = {
         "SV-CHECK-APP-001": "check_app_001", "SV-CHECK-IVL-001": "check_ivl_001",

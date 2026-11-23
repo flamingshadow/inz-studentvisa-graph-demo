@@ -67,7 +67,7 @@ def spec_nodes() -> list[tuple[str, str | None, dict]]:
         label = "Paragraph" if p["provision_type"] == "Subparagraph" else p["provision_type"]
         n.append(("Provision", label, flatten(p, id=p["provision_id"], name=p["reference"])))
     rules = _j("rules/rules.json")
-    for r in rules["rules"] + rules["candidate_rules"]:
+    for r in rules["rules"] + rules["candidate_rules"] + rules.get("instruction_rules", []):
         a, c = r["authority"], r["classification"]
         n.append(("Rule", c["rule_type"], flatten(
             r, id=r["rule_id"], name=r["rule_id"], rule_type=c["rule_type"], modality=c["modality"],
@@ -126,11 +126,43 @@ def spec_nodes() -> list[tuple[str, str | None, dict]]:
     return n
 
 
+KEEP_ISOLATED = {"InterpretationFlag"}   # flags may apply to files rather than nodes
+
+
+def graph_nodes(rels: list[dict]) -> list[tuple[str, str | None, dict]]:
+    """Minimal-graph principle (IF-34): spec nodes with no relationship stay in the JSON files only."""
+    linked = {r["from"] for r in rels} | {r["to"] for r in rels}
+    return [x for x in spec_nodes() if x[2]["id"] in linked or x[1] in KEEP_ISOLATED]
+
+
+def profile() -> dict:
+    return __import__("yaml").safe_load((ROOT / "schema/ontology.yaml").read_text())["graph_profile"]
+
+
+def check_profile(nodes, rels) -> list[str]:
+    prof = profile()
+    allowed_labels = set(prof["node_labels"])
+    allowed_rels = set(prof["relationship_types"])
+    errs = []
+    for layer, label, p in nodes:
+        for l in (layer, label):
+            if l and l not in allowed_labels:
+                errs.append(f"label {l} ({p['id']}) not in graph_profile")
+    for r in rels:
+        if r["type"] not in allowed_rels:
+            errs.append(f"relationship {r['type']} not in graph_profile")
+    return sorted(set(errs))
+
+
 def ensure_schema(session):
     for layer in LAYERS + ["LoadLog"]:
         session.run(f"CREATE CONSTRAINT {layer.lower()}_id IF NOT EXISTS FOR (n:{layer}) REQUIRE n.id IS UNIQUE")
+    existing = {r["name"]: r["props"] for r in session.run(
+        "SHOW FULLTEXT INDEXES YIELD name, properties AS props").data()}
+    if "rule_text" in existing and "instruction_statement" not in existing["rule_text"]:
+        session.run("DROP INDEX rule_text")
     session.run("CREATE FULLTEXT INDEX rule_text IF NOT EXISTS FOR (n:Rule) "
-                "ON EACH [n.rulespeak_statement, n.candidate_content, n.illustrative_logic]")
+                "ON EACH [n.rulespeak_statement, n.instruction_statement, n.candidate_content, n.illustrative_logic]")
     session.run("CREATE FULLTEXT INDEX provision_text IF NOT EXISTS FOR (n:Provision) "
                 "ON EACH [n.source_text, n.reference, n.heading]")
     session.run("CREATE FULLTEXT INDEX concept_terms IF NOT EXISTS FOR (n:Domain) ON EACH [n.preferred_term, n.name]")
@@ -146,8 +178,11 @@ def _git_commit():
 
 def load(verbose=True) -> dict:
     s = settings()
-    nodes = spec_nodes()
     rels = _j("regulatory/relationships.json")["relationships"]
+    nodes = graph_nodes(rels)
+    bad = check_profile(nodes, rels)
+    if bad:
+        raise ValueError("graph_profile violation (minimal-graph principle): " + "; ".join(bad[:10]))
     vocab = {r["type"] for r in __import__("yaml").safe_load(
         (ROOT / "schema/relationship-types.yaml").read_text())["relationship_types"]}
     layer_of = {}

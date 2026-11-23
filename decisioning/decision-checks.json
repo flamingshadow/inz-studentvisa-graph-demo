@@ -194,11 +194,14 @@
     },
     {
       "check_id": "SV-CHECK-FIN-001",
-      "evaluates_rule_id": "SV-CAND-MAINT-TERTIARY",
+      "evaluates_rule_id": "SV-OM-U3.20.30-A-I",
       "evaluates_rule_ids": [
-        "SV-CAND-MAINT-TERTIARY",
-        "SV-CAND-MAINT-SCHOOL",
-        "SV-CAND-MATERNITY"
+        "SV-OM-U3.20.25-A-I",
+        "SV-OM-U3.20.25-A-II",
+        "SV-OM-U3.20.30-A-I",
+        "SV-OM-U3.20.30-A-II",
+        "SV-OM-U3.20.35-P1-A",
+        "SV-OM-U3.20.30-A-III"
       ],
       "related_verified_rule_ids": [
         "SV-FIN-001"
@@ -211,44 +214,53 @@
         },
         {
           "fact_path": "application.study_duration_months",
-          "required": true
+          "required": false
+        },
+        {
+          "fact_path": "application.programme_duration_weeks",
+          "required": false
         },
         {
           "fact_path": "application.available_funds_nzd",
           "required": true
         },
         {
-          "fact_path": "application.pregnant",
+          "fact_path": "application.prepaid_living_expenses_nzd",
           "required": false
         },
         {
-          "fact_path": "application.publicly_funded_maternity_care_available",
+          "fact_path": "application.citizenship",
           "required": false
         },
         {
-          "fact_path": "application.prepaid_accommodation",
+          "fact_path": "application.maintenance_guarantee_from_nz_relative",
+          "required": false
+        },
+        {
+          "fact_path": "application.pregnant_due_to_give_birth_in_nz",
+          "required": false
+        },
+        {
+          "fact_path": "application.eligible_for_publicly_funded_maternity_services",
           "required": false
         }
       ],
-      "threshold_ids": [
-        "SV-TH-CAND-TERTIARY-YEAR",
-        "SV-TH-CAND-TERTIARY-MONTH",
-        "SV-TH-CAND-SCHOOL-YEAR",
-        "SV-TH-CAND-SCHOOL-MONTH",
-        "SV-TH-CAND-MATERNITY-TOTAL"
+      "instruction_codes": [
+        "U3.20",
+        "U3.20.25",
+        "U3.20.30",
+        "U3.20.35"
       ],
-      "label": "CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED",
-      "provenance_status": "RECONCILIATION_REQUIRED",
-      "deviation": "Decision 3: executes with candidate figures although the document says 'Only execute after authoritative product threshold is reconciled'.",
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "deviation": "Product owner, 23 Nov 2026: the check follows Operational Manual U3.20 instead of the spec's candidate figures (IF-30). Supersedes decision 3 (IF-01).",
       "interpretation_flag_ids": [
-        "IF-01",
-        "IF-15"
+        "IF-30"
       ],
       "purpose": "Candidate maintenance threshold",
       "doc_inputs": "student type, duration, verified funds, threshold version",
       "doc_routing_logic": "Only execute after authoritative product threshold is reconciled.",
       "defined_in": "Table 11 (Section 7)",
-      "source_provision_id": null
+      "source_provision_id": "NZ-INZ-OM-U3.20.30-A-I"
     },
     {
       "check_id": "SV-CHECK-DISC-001",
@@ -347,7 +359,7 @@
     },
     {
       "check_id": "SV-CHECK-HEALTH-001",
-      "evaluates_rule_id": "SV-CAND-ELIGIBILITY",
+      "evaluates_rule_id": "SV-OM-U3.1-B-III",
       "related_verified_rule_ids": [
         "SV-HEALTH-001"
       ],
@@ -368,7 +380,7 @@
         "IF-18"
       ],
       "purpose": null,
-      "source_provision_id": null
+      "source_provision_id": "NZ-INZ-OM-U3.1-B-III"
     },
     {
       "check_id": "SV-CHECK-EDU-009",
@@ -409,15 +421,20 @@
       "automation_class": "A2",
       "defined_in": "Rules marked 'A2 / gap' in 5.1 and D.1",
       "inputs": [],
-      "outcomes": {
-        "always": "SOURCE_COVERAGE_GAP"
-      },
       "coverage_gap_ids": [
         "GAP-01"
       ],
+      "outcomes": {
+        "loaded_instructions": "HUMAN_REVIEW_REQUIRED",
+        "instructions_outside_scope": "SOURCE_COVERAGE_GAP"
+      },
+      "instruction_codes": [
+        "U3.1"
+      ],
       "interpretation_flag_ids": [
         "IF-04",
-        "IF-13"
+        "IF-13",
+        "IF-33"
       ],
       "purpose": null,
       "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-III"

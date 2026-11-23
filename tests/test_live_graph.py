@@ -72,8 +72,8 @@ def test_synthetic_case(tc, assessed, expected, live):
 
 
 def test_tc06_deviation_documented(expected):
-    assert "SOURCE_COVERAGE_GAP" in expected["TC-06"]["deviation"]
-    assert expected["TC-06"]["expected_label"].startswith("CANDIDATE_FIGURE")
+    assert "SOURCE_COVERAGE_GAP" in expected["TC-06"]["deviation"] and "IF-30" in expected["TC-06"]["deviation"]
+    assert expected["TC-06"]["rule_id"] == "SV-OM-U3.20.30-A-I"
 
 
 # ---- graph invariants ---------------------------------------------------------------
@@ -98,7 +98,7 @@ def test_constraints_and_fulltext(live):
 def test_graph_counts_match_files(live):
     rules = json.loads((ROOT / "rules/rules.json").read_text())
     n = q(live, "MATCH (r:Rule) WHERE r.origin='SPEC' RETURN count(r) AS n")[0]["n"]
-    assert n == len(rules["rules"]) + len(rules["candidate_rules"])
+    assert n == len(rules["rules"]) + len(rules["candidate_rules"]) + len(rules.get("instruction_rules", []))
     rels = json.loads((ROOT / "regulatory/relationships.json").read_text())["relationships"]
     assert live["load"]["spec_relationships"] == len(rels)
 
@@ -115,8 +115,8 @@ def test_load_is_idempotent(live):
 def test_evidence_to_evaluation_path(live, assessed):
     aid = assessed["TC-01"]["assessment_id"]
     rows = q(live, """MATCH p=(:EvidenceItem)-[:SUPPORTS_FACT]->(:ObservedFact)-[:VERIFIED_AS]->(v:VerifiedFact)
-                      -[:INPUT_TO]->(:DecisionCheck)-[:PRODUCES_OUTCOME]->(ev:RuleEvaluation {assessment_id:$a})
-                      WHERE (v)-[:INPUT_TO]->(ev) RETURN count(p) AS n""", a=aid)
+                      -[i:INPUT_TO]->(:DecisionCheck)-[:PRODUCES_OUTCOME]->(ev:RuleEvaluation {assessment_id:$a})
+                      WHERE i.evaluation_id = ev.id RETURN count(p) AS n""", a=aid)
     assert rows[0]["n"] > 0
 
 
@@ -130,11 +130,29 @@ def test_rule_to_instrument_path(live):
 
 
 def test_assessment_nodes_written(live, assessed):
+    """IF-34: one RuleEvaluation per rule; one DecisionOutcome and one Explanation per assessment."""
     aid = assessed["TC-09"]["assessment_id"]
     r = q(live, """MATCH (:Application)-[:PRODUCES_OUTCOME]->(o:DecisionOutcome {id:$a})-[:CONTAINS]->(ev:RuleEvaluation)
-                   MATCH (ev)-[:EXPLAINED_BY]->(:Explanation) MATCH (ev)-[:PRODUCES_OUTCOME]->(:DecisionOutcome)
-                   RETURN o.production_decision AS pd, count(ev) AS n""", a=aid)[0]
-    assert r["pd"] is False and r["n"] == len(assessed["TC-09"]["rule_evaluations"])
+                   MATCH (o)-[:EXPLAINED_BY]->(x:Explanation)
+                   RETURN o.production_decision AS pd, count(DISTINCT ev) AS n, count(DISTINCT x) AS nx,
+                          collect(DISTINCT ev.result) AS results""", a=aid)[0]
+    assert r["pd"] is False and r["n"] == len(assessed["TC-09"]["rule_evaluations"]) and r["nx"] == 1
+    assert "NOT_SATISFIED" in r["results"]
+    extra = q(live, "MATCH (ev:RuleEvaluation {assessment_id:$a})-[:PRODUCES_OUTCOME|EXPLAINED_BY]->() "
+                    "RETURN count(*) AS n", a=aid)[0]["n"]
+    assert extra == 0
+
+
+def test_graph_is_minimal(live):
+    """IF-34: only profile labels/relationships, and no isolated spec nodes except interpretation flags."""
+    from svkg.graph import profile
+    prof = profile()
+    labels = {l for r in q(live, "MATCH (n) RETURN DISTINCT labels(n) AS l") for l in r["l"]}
+    assert labels <= set(prof["node_labels"])
+    types = {r["t"] for r in q(live, "MATCH ()-[r]->() RETURN DISTINCT type(r) AS t")}
+    assert types <= set(prof["relationship_types"])
+    iso = q(live, "MATCH (n) WHERE n.origin='SPEC' AND NOT (n)--() AND NOT n:InterpretationFlag RETURN count(n) AS n")
+    assert iso[0]["n"] == 0
 
 
 def test_audit_log_appended(assessed):

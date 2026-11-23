@@ -140,19 +140,19 @@
       "hierarchy_level": "3 / gap",
       "role": "Detailed Student Visa product criteria and thresholds.",
       "poc_coverage": "Not in authoritative verified corpus; candidate rules marked RECONCILIATION_REQUIRED or SOURCE_COVERAGE_GAP.",
-      "version_id": null,
+      "version_id": "2026-11-23",
       "effective_from": null,
       "effective_to": null,
-      "status": null,
-      "authoritative_uri": null,
-      "version_as_published": null,
+      "status": "IN_FORCE",
+      "authoritative_uri": "https://www.immigration.govt.nz/opsmanual/",
+      "version_as_published": "Operational Manual retrieved 2026-11-23; each instruction carries its own effective date",
       "spec_stated_version": null,
-      "coverage_status": "NOT_COVERED",
+      "coverage_status": "PARTIAL",
       "made_under": "NZ-IMM-ACT-2009",
       "interpretation_flag_ids": [
         "IF-08"
       ],
-      "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@UNVERSIONED"
+      "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@2026-11-23"
     },
     {
       "source_id": "DOC-BRA-AI-PROMPTS",
@@ -247,12 +247,12 @@
       "retrieved_at": "2026-11-23T01:04:39+00:00"
     },
     {
-      "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@UNVERSIONED",
+      "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@2026-11-23",
       "source_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
-      "version_id": null,
-      "version_basis": "Not stated in spec; not fetched",
+      "version_id": "2026-11-23",
+      "version_basis": "immigration.govt.nz/opsmanual: Operational Manual retrieved 2026-11-23; each instruction carries its own effective date",
       "spec_stated_version": null,
-      "retrieved_at": null
+      "retrieved_at": "2026-11-23"
     }
   ]
 }

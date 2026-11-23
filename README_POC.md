@@ -5,9 +5,16 @@
 > There is no automated grant or decline: the final grant is always `DISCRETION_REQUIRED`.
 
 The build follows *Student Visa Knowledge Graph — POC Consolidated Export v0.2* (17 November 2026,
-`docs/`) and the build plan's product-owner decisions. It does not use the INZ Operational Manual or any
-earlier project. Where the document is silent, the build records an interpretation flag (listed below)
-rather than inventing content.
+`docs/`) and the build plan's product-owner decisions. Since 23 Nov 2026 it also loads the **INZ
+Operational Manual** student instructions as the Immigration Instructions source (IF-25, a product-owner
+reversal of the build plan's original ground rule). Where a source is silent, the build records an
+interpretation flag (listed below) rather than inventing content.
+
+**Design principle: minimal graph (IF-34).** The graph uses the smallest set of node types and relationships
+that answers staff questions. The allowed labels and relationship types are declared in `graph_profile`
+(`schema/ontology.yaml`), and `svkg load` and `svkg check` reject anything outside it. A node is never created
+just to restate text or one value that lives elsewhere; that goes in a property. Objects with no relationships
+stay in the JSON files and are not loaded. Changing the profile is a deliberate edit, recorded with a flag.
 
 ## What is here
 
@@ -16,7 +23,8 @@ rather than inventing content.
 | `schema/` | Ontology (Section 3 layers + Appendix F templates), enumerations, the 24 relationship types (3.1), agent contract (Section 9) |
 | `regulatory/` | 9 sources, 217 provisions (parent chain from section to paragraph, exact wording from legislation.govt.nz), concepts, actors, FT-001..FT-018, and every static relationship |
 | `data/legislation/` | Cached legislation.govt.nz pages for the four published instruments, plus `provision-text.json` (wording, URL, version, retrieval date and page SHA-256 per provision) |
-| `rules/` | 137 verified rules (12.1 fields), 10 candidate rules (Section 6, `RECONCILIATION_REQUIRED`), 11 rule groups (5.2), and derived qualifiers |
+| `data/opsmanual/` | Cached Operational Manual pages (Student Visas U1-U16, all versions, plus the general sections they cite) and `instructions.json` (parsed units, paragraphs, effective dates, version chains) |
+| `rules/` | 137 verified spec rules (12.1 fields), ~1,200 instruction rules (one per paragraph of each current instruction), 10 candidate rules (Section 6, now reconciled to the manual), 11 rule groups (5.2), and qualifiers |
 | `evidence/` | Table 9 evidence types, evidence requirements per rule, verification rules |
 | `decisioning/` | 11 decision checks, 11 lifecycle states, 10 transitions |
 | `testing/` | TC-01..TC-10 test cases, synthetic applications (`testing/applications/*.json`), expected results |
@@ -46,6 +54,10 @@ CREATE DATABASE studentvisa IF NOT EXISTS;
 ```
 
 ```bash
+.venv/bin/svkg fetch-opsmanual                         # optional: refresh the Operational Manual pages (~2 min)
+```
+
+```bash
 .venv/bin/svkg build                                   # extract + check + load
 ```
 
@@ -62,13 +74,14 @@ CREATE DATABASE studentvisa IF NOT EXISTS;
 ```
 
 ```bash
-.venv/bin/python -m pytest -q                          # 76 tests; needs the live studentvisa database
+.venv/bin/python -m pytest -q                          # 106 tests; needs the live studentvisa database
 ```
 
 - `svkg load` is idempotent. It MERGEs spec nodes (`origin:'SPEC'`), removes stale ones, never touches
   assessment nodes, and writes one `LoadLog` node per run.
-- `svkg assess` writes `Application`, `EvidenceItem`, `ObservedFact`, `VerifiedFact`, `RuleEvaluation`,
-  `DecisionOutcome` and `Explanation` nodes (`origin:'ASSESSMENT'`). It also appends G.1 audit events to
+- `svkg assess` writes `Application`, `EvidenceItem`, `ObservedFact` and `VerifiedFact` nodes, one
+  `RuleEvaluation` per rule evaluated (result and explanation as properties), and one `DecisionOutcome` plus
+  one `Explanation` for the whole assessment (`origin:'ASSESSMENT'`). It also appends G.1 audit events to
   `logs/audit-log.jsonl`. Use `--no-write` for a dry run.
 
 ### Application JSON
@@ -96,6 +109,18 @@ An application has a header, F.6 evidence items and F.7 facts. Each fact says wh
 | A4 | `DISCRETION_REQUIRED`, with power, decision-maker, provision and constraints |
 | A5 | `AMBIGUOUS`: the engine stops |
 | gap | `SOURCE_COVERAGE_GAP` (GAP-01). Nothing is inferred from the Act or Regulations |
+
+**Funds (SV-CHECK-FIN-001)** follows Operational Manual U3.20 (IF-30):
+- **Under 36 weeks:** NZ$1,667 per month (tertiary or non-compulsory study) or NZ$1,417 per month
+  (compulsory study, Years 1–13).
+- **36 weeks or longer:** NZ$20,000 or NZ$17,000 per year. One year is the minimum, and the amount is pro
+  rata beyond 12 months.
+- **Deductions and alternatives:** prepaid living expenses are deducted. The Samoa/Tonga written guarantee
+  is accepted.
+- **Maternity:** NZ$9,000 is added when the applicant is due to give birth in New Zealand and isn't eligible
+  for publicly funded care.
+
+The study length can be given as `programme_duration_weeks` or `study_duration_months`.
 
 Checks: SV-CHECK-APP-001, IVL-001, U10-001, WORK-001, FIN-001 and DISC-001 come from Table 11;
 SV-CHECK-APP-005 comes from F.8. MIN-001, HEALTH-001, EDU-009 and INSTR-001 were added for test cases (IF-13).
@@ -133,10 +158,13 @@ The server reads the Neo4j credentials from the repo's `.env`, so no secret goes
 | `decision_checks`, `lifecycle_transitions`, `coverage_gaps`, `interpretation_flags`, `list_test_cases` | Model and governance |
 | `explain_evaluation` | RuleEvaluation → DecisionCheck → Rule → Provision → InstrumentVersion → AuthoritySource |
 | `list_assessments`, `get_assessment`, `application_template` | Assessment records |
+| `list_instructions`, `instruction_text`, `instruction_history`, `rules_by_instruction` | Operational Manual: exact instruction text with URL and effective date, the version in force on a date (`as_at`), every version, and the rules derived from an instruction |
 | `assess_application` | The only writing tool |
 
 Example prompts: *"Which Student Visa rules cover sponsorship, and under which provisions?"*,
-*"Assess this synthetic application"* (paste JSON), *"Why did SV-FEE-003 come out NOT_APPLICABLE?"*
+*"Assess this synthetic application"* (paste JSON), *"Why did SV-FEE-003 come out NOT_APPLICABLE?"*,
+*"What does U3.20.30 say, and what applied on 1 June 2015?"*, *"What are the work conditions for tertiary
+students?"*
 
 ## Bloom tips
 
@@ -144,7 +172,9 @@ Example prompts: *"Which Student Visa rules cover sponsorship, and under which p
   Every node has a `name` property; use it as the caption.
 - Useful categories: `Rule`, `Provision`, `AuthoritySource`, `DecisionCheck`, `RuleEvaluation`,
   `EvidenceItem`, `VerifiedFact`, `CoverageGap`.
-- Colour `Rule` by `catalogue` (VERIFIED vs CANDIDATE) and `RuleEvaluation` by `result`.
+- Colour `Rule` by `catalogue` (VERIFIED, INSTRUCTION, CANDIDATE) and `RuleEvaluation` by `result`.
+- For one instruction: search `Provision` with `instruction_code = U3.20`, then expand `PARENT_OF`,
+  `REFERENCES` and `SUPERSEDES`.
 - Search phrase ideas: `Rule DERIVED_FROM Provision`; `DecisionCheck PRODUCES_OUTCOME RuleEvaluation`;
   `EvidenceItem SUPPORTS_FACT ObservedFact VERIFIED_AS VerifiedFact`.
 - To hide assessment data, filter on `origin = 'SPEC'`.
@@ -160,8 +190,13 @@ Example prompts: *"Which Student Visa rules cover sponsorship, and under which p
   Carriers' Information Obligations Regulations "Reprint as at 30 September 2020". Re-run
   `svkg fetch-legislation` to pick up new versions; `svkg check` fails if the Act's version moves away from
   the spec's 2026-07-10 without a flag.
-- **Definition of done item 6.** Candidate rules are not reconciled to Immigration Instructions. That is
-  outside this POC by design; the guard is that every assessment says `production_decision: false`.
+- **Operational Manual scope (GAP-01, partly closed).** Only Student Visas (U1–U16, every version) and the
+  general sections they link to directly are loaded (current versions only). Anything beyond that still returns
+  `SOURCE_COVERAGE_GAP`. Six manual-related flags (IF-26, 27, 28, 31, 32, 33) are `OPEN` for your review. The
+  automation classes on instruction rules are set from their wording (IF-26).
+- **Definition of done item 6.** Nine of the ten candidate rules are now reconciled to instructions and marked
+  `SUPERSEDED_BY_INSTRUCTION`. Family support is only partly covered, because partner pathways sit in the W and
+  V sections. Every assessment still says `production_decision: false`.
 
 ## Deviations and interpretation flags
 
@@ -197,8 +232,19 @@ raised with the spec authors for v0.3.
 | IF-22 | Interpretation | Test types |
 | IF-23 | Interpretation | Lifecycle IDs and authorising rules |
 | IF-24 | Interpretation | Operational nodes (LoadLog, `kind` property) outside the ontology |
+| IF-25 | **Deviation (accepted)** | Operational Manual used as the Immigration Instructions source |
+| IF-26 | Interpretation (open) | Automation class, evidence and actors for instruction rules are heuristic |
+| IF-27 | Interpretation (open) | Atomic decomposition of instruction text |
+| IF-28 | Interpretation (open) | Versions and history |
+| IF-29 | Decision (accepted) | Scope of the Operational Manual load |
+| IF-30 | Decision (accepted) | Funds check follows U3.20 (supersedes IF-01 and the IF-15 boundary) |
+| IF-31 | Interpretation (open) | Candidate rules reconciled to instructions |
+| IF-32 | Interpretation (open) | Domains for instruction rules |
+| IF-33 | Interpretation (open) | SV-INSTR-001 with instructions loaded |
+| IF-34 | Principle (accepted) | Minimal graph: fewest node types and relationships |
 
-**Decision 3, in short.** The candidate figures run: tertiary NZD 20,000/yr or 1,667/month, school
+**Decision 3, in short (superseded by IF-30 on 23 Nov 2026).** The candidate figures ran: tertiary NZD 20,000/yr or 1,667/month, school
 NZD 17,000/yr or 1,417/month, maternity NZD 9,000. Every Threshold node and every funds evaluation carries
 `CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED` and `provenance_status: RECONCILIATION_REQUIRED`.
-TC-06 now expects that label instead of `SOURCE_COVERAGE_GAP`.
+The figures are still held as candidate thresholds, but they no longer execute. TC-06 now expects the U3.20.30
+result with `VERIFIED_INSTRUCTION_SOURCE` provenance.

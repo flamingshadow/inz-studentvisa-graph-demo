@@ -16,7 +16,7 @@ from pathlib import Path
 
 import yaml
 
-from . import legislation, provref
+from . import legislation, om_extract, opsmanual, provref
 from .docspec import ROOT, Spec, sha256
 
 PRODUCT_ID = "STUDENT-VISA"
@@ -156,6 +156,38 @@ CLASS_ORDER = ["A1", "A2", "A3", "A4", "A5"]
 FLAG_REVIEW_DECISION = "Product owner flag review, 23 Nov 2026: recommendation accepted"
 _AS_IS = "Accepted as implemented."
 _V03 = "Accepted as implemented; raise with the spec authors for v0.3."
+# Minimal-graph principle (IF-34, product owner 23 Nov 2026): the only labels and relationship types the graph
+# may use. Adding one is a deliberate change here, recorded with a flag; the loader and checker reject anything else.
+GRAPH_PROFILE = {
+    "principle": "Use the smallest set of node types and relationships that answers staff questions. Do not "
+                 "create nodes that only restate text or a single value held elsewhere; store it as a property. "
+                 "Keep nodes with no relationships in the JSON files only.",
+    "node_labels": [
+        "Authority", "AuthoritySource", "InstrumentVersion",
+        "Provision", "Section", "Subsection", "Paragraph", "Regulation", "Clause", "Instruction",
+        "Rule", "Obligation", "Prohibition", "Permission", "Definition", "BusinessRule", "EligibilityRule",
+        "Calculation",
+        "Qualifier", "Condition", "Exception", "Threshold", "TemporalConstraint", "Discretion", "Trigger",
+        "Domain", "Visa", "Applicant", "Application", "Provider", "Programme", "Sponsor", "Guardian",
+        "ImmigrationOfficer",
+        "Evidence", "EvidenceRequirement", "EvidenceItem", "ObservedFact", "VerifiedFact",
+        "Decision", "DecisionCheck", "RuleEvaluation", "DecisionOutcome", "Explanation",
+        "Lifecycle", "State", "StateTransition",
+        "Governance", "CoverageGap", "InterpretationFlag", "TestCase",
+        "LoadLog"],
+    "relationship_types": [
+        "MADE_UNDER", "CONTAINS", "PARENT_OF", "REFERENCES", "SUPERSEDES", "DERIVED_FROM", "APPLIES_TO",
+        "IMPOSES_OBLIGATION_ON", "PROHIBITS", "PERMITS", "HAS_CONDITION", "HAS_EXCEPTION", "HAS_THRESHOLD",
+        "HAS_TIME_CONSTRAINT", "HAS_DISCRETION", "REQUIRES_EVIDENCE", "SUPPORTS_FACT", "VERIFIED_AS", "INPUT_TO",
+        "EVALUATES", "PRODUCES_OUTCOME", "CAUSES_TRANSITION", "EXPLAINED_BY"],
+    "not_used": {"node_labels": ["Part"], "relationship_types": ["AMENDS"],
+                 "reason": "In the spec vocabulary but nothing in the corpus needs them; add only when a source does."},
+    "assessment_pattern": "One RuleEvaluation per evaluated rule (result and explanation as properties); one "
+                          "DecisionOutcome and one Explanation per assessment; facts link to the DecisionCheck "
+                          "with the evaluation_id on the relationship.",
+}
+
+SUPERSEDED_FLAGS = {"IF-01": "IF-30", "IF-15": "IF-30"}
 FLAG_REVIEW = {
     "IF-02": _V03, "IF-03": _AS_IS,
     "IF-04": "Most restrictive class used; character rules published A3/A4 route to DISCRETION_REQUIRED.",
@@ -291,6 +323,10 @@ class Builder:
         self.provisions: dict[str, dict] = {}
         self.qual_seq: dict[tuple[str, str], int] = defaultdict(int)
         self.leg = legislation.load_cache()
+        self.om = opsmanual.load()
+        self.om_rules: dict[str, dict] = {}
+        self.om_evidence_types: dict[str, dict] = {}
+        self.om_reqs: list[dict] = []
         self.version_mismatches: list[tuple[str, str, str]] = []
 
     def edge(self, typ, frm, to, **props):
@@ -310,7 +346,13 @@ class Builder:
         t1 = self.spec.table_by_header("Level", "2.")
         rows = {norm(r[1]): r for r in t1.rows[1:]}
         out = []
-        fetched = (self.leg or {}).get("instruments", {})
+        fetched = dict((self.leg or {}).get("instruments", {}))
+        if self.om:
+            om_dates = sorted(p["retrieved_at"][:10] for p in self.om["pages"] if p.get("retrieved_at"))
+            fetched[opsmanual.SOURCE_ID] = {
+                "version_id": om_dates[-1] if om_dates else self.om["parsed_on"], "url": opsmanual.BASE,
+                "version_as_published": f"Operational Manual retrieved {om_dates[-1] if om_dates else '?'}; "
+                                        "each instruction carries its own effective date"}
         for match, sid, itype, made_under in SOURCES:
             r = rows[norm(match)]
             f = fetched.get(sid, {})
@@ -322,7 +364,8 @@ class Builder:
                 "hierarchy_level": r[0], "role": r[2], "poc_coverage": r[3],
                 "version_id": f.get("version_id") or doc_v, "effective_from": None,
                 "effective_to": None,
-                "status": "IN_FORCE" if itype in ("PrincipalAct", "Regulations", "CodeOfPractice") else None,
+                "status": "IN_FORCE" if itype in ("PrincipalAct", "Regulations", "CodeOfPractice") or
+                          (itype == "ImmigrationInstruction" and self.om) else None,
                 "authoritative_uri": f.get("url"),
                 "version_as_published": f.get("version_as_published"),
                 "spec_stated_version": doc_v,
@@ -344,17 +387,19 @@ class Builder:
         self.files["regulatory/sources.json"] = {"sources": out, "instrument_versions": [
             {"instrument_version_id": s["instrument_version_id"], "source_id": s["source_id"],
              "version_id": s["version_id"], "version_basis":
+                 f"immigration.govt.nz/opsmanual: {s['version_as_published']}"
+                 if s.get("version_as_published") and s["source_id"] == opsmanual.SOURCE_ID else
                  f"legislation.govt.nz: {s['version_as_published']}" if s.get("version_as_published") else
                  "Stated in spec v0.2 (12.1 source_version)" if s["version_id"] else
                  legislation.NOT_PUBLISHED.get(s["source_id"], "Not stated in spec; not fetched"),
              "spec_stated_version": s.get("spec_stated_version"),
-             "retrieved_at": (self.leg or {}).get("retrieved_at") if s.get("version_as_published") else None}
+             "retrieved_at": (s["version_id"] if s["source_id"] == opsmanual.SOURCE_ID else
+                              (self.leg or {}).get("retrieved_at")) if s.get("version_as_published") else None}
             for s in out if "instrument_version_id" in s]}
 
-    @staticmethod
-    def _coverage_status(sid, text):
+    def _coverage_status(self, sid, text):
         if sid == "NZ-INZ-IMMIGRATION-INSTRUCTIONS":
-            return "NOT_COVERED"
+            return "PARTIAL" if self.om else "NOT_COVERED"
         if sid.startswith("DOC-"):
             return None
         return "PARTIAL"
@@ -707,6 +752,8 @@ class Builder:
                        "supports_fact": "material_change_disclosed", "verification_need": None,
                        "typical_rule_domain": "Application", "source": "Appendix F.5/F.6 templates"})
         self.edge("REFERENCES", f5["evidence_requirement_id"], "EVTYPE-CHANGE-NOTIFICATION")
+        etypes += list(self.om_evidence_types.values())
+        reqs += self.om_reqs
         self.files["evidence/evidence-requirements.json"] = {"evidence_types": etypes,
                                                              "evidence_requirements": reqs}
         self.files["evidence/verification-rules.json"] = {"verification_rules": vrules}
@@ -753,20 +800,33 @@ class Builder:
                  "work_permitted_by_visa_conditions", "visa_condition_max_work_hours_per_week",
                  "recorded_work_hours_per_week", "activity_date")],
              "outcomes": {"within": "SATISFIED", "outside": "NOT_SATISFIED", "missing": "UNKNOWN"}},
-            {"check_id": "SV-CHECK-FIN-001", "evaluates_rule_id": "SV-CAND-MAINT-TERTIARY",
-             "evaluates_rule_ids": ["SV-CAND-MAINT-TERTIARY", "SV-CAND-MAINT-SCHOOL", "SV-CAND-MATERNITY"],
-             "related_verified_rule_ids": ["SV-FIN-001"], "automation_class": "A2",
-             "inputs": [{"fact_path": P + a, "required": r} for a, r in (
-                 ("student_type", True), ("study_duration_months", True), ("available_funds_nzd", True),
-                 ("pregnant", False), ("publicly_funded_maternity_care_available", False),
-                 ("prepaid_accommodation", False))],
-             "threshold_ids": ["SV-TH-CAND-TERTIARY-YEAR", "SV-TH-CAND-TERTIARY-MONTH",
-                               "SV-TH-CAND-SCHOOL-YEAR", "SV-TH-CAND-SCHOOL-MONTH",
-                               "SV-TH-CAND-MATERNITY-TOTAL"],
-             "label": CANDIDATE_LABEL, "provenance_status": "RECONCILIATION_REQUIRED",
-             "deviation": "Decision 3: executes with candidate figures although the document says "
-                          "'Only execute after authoritative product threshold is reconciled'.",
-             "interpretation_flag_ids": ["IF-01", "IF-15"]},
+            ({"check_id": "SV-CHECK-FIN-001", "evaluates_rule_id": "SV-OM-U3.20.30-A-I",
+              "evaluates_rule_ids": sorted(om_extract.FUNDS_RULES) + [om_extract.SAMOA_TONGA_RULE],
+              "related_verified_rule_ids": ["SV-FIN-001"], "automation_class": "A2",
+              "inputs": [{"fact_path": P + a, "required": r} for a, r in (
+                  ("student_type", True), ("study_duration_months", False), ("programme_duration_weeks", False),
+                  ("available_funds_nzd", True), ("prepaid_living_expenses_nzd", False), ("citizenship", False),
+                  ("maintenance_guarantee_from_nz_relative", False), ("pregnant_due_to_give_birth_in_nz", False),
+                  ("eligible_for_publicly_funded_maternity_services", False))],
+              "instruction_codes": ["U3.20", "U3.20.25", "U3.20.30", "U3.20.35"],
+              "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+              "deviation": "Product owner, 23 Nov 2026: the check follows Operational Manual U3.20 instead of the "
+                           "spec's candidate figures (IF-30). Supersedes decision 3 (IF-01).",
+              "interpretation_flag_ids": ["IF-30"]} if self.om_rules else
+             {"check_id": "SV-CHECK-FIN-001", "evaluates_rule_id": "SV-CAND-MAINT-TERTIARY",
+              "evaluates_rule_ids": ["SV-CAND-MAINT-TERTIARY", "SV-CAND-MAINT-SCHOOL", "SV-CAND-MATERNITY"],
+              "related_verified_rule_ids": ["SV-FIN-001"], "automation_class": "A2",
+              "inputs": [{"fact_path": P + a, "required": r} for a, r in (
+                  ("student_type", True), ("study_duration_months", True), ("available_funds_nzd", True),
+                  ("pregnant", False), ("publicly_funded_maternity_care_available", False),
+                  ("prepaid_accommodation", False))],
+              "threshold_ids": ["SV-TH-CAND-TERTIARY-YEAR", "SV-TH-CAND-TERTIARY-MONTH",
+                                "SV-TH-CAND-SCHOOL-YEAR", "SV-TH-CAND-SCHOOL-MONTH",
+                                "SV-TH-CAND-MATERNITY-TOTAL"],
+              "label": CANDIDATE_LABEL, "provenance_status": "RECONCILIATION_REQUIRED",
+              "deviation": "Decision 3: executes with candidate figures although the document says "
+                           "'Only execute after authoritative product threshold is reconciled'.",
+              "interpretation_flag_ids": ["IF-01", "IF-15"]}),
             {"check_id": "SV-CHECK-DISC-001", "evaluates_rule_id": "SV-DEC-002", "automation_class": "A4",
              "inputs": [{"fact_path": "assessment.rule_evaluations", "required": False}],
              "context_rule_ids": ["SV-DEC-001", "SV-DEC-003", "SV-DEC-004", "SV-CHAR-001", "SV-CHAR-002",
@@ -783,7 +843,8 @@ class Builder:
              "outcomes": {"adult_or_married": "NOT_APPLICABLE", "consent_verified": "NOT_APPLICABLE",
                           "consent_not_established": "DISCRETION_REQUIRED", "missing_age": "UNKNOWN"},
              "interpretation_flag_ids": ["IF-13"]},
-            {"check_id": "SV-CHECK-HEALTH-001", "evaluates_rule_id": "SV-CAND-ELIGIBILITY",
+            {"check_id": "SV-CHECK-HEALTH-001",
+             "evaluates_rule_id": "SV-OM-U3.1-B-III" if self.om_rules else "SV-CAND-ELIGIBILITY",
              "related_verified_rule_ids": ["SV-HEALTH-001"], "automation_class": "A3",
              "defined_in": "Implied by TC-07 (not in Table 11)",
              "inputs": [{"fact_path": "evidence.MedicalCertificate|ChestXray", "required": True}],
@@ -802,8 +863,11 @@ class Builder:
             {"check_id": "SV-CHECK-INSTR-001", "evaluates_rule_id": "SV-INSTR-001",
              "evaluates_rule_id_online": "SV-ONLINE-007", "automation_class": "A2",
              "defined_in": "Rules marked 'A2 / gap' in 5.1 and D.1",
-             "inputs": [], "outcomes": {"always": "SOURCE_COVERAGE_GAP"}, "coverage_gap_ids": ["GAP-01"],
-             "interpretation_flag_ids": ["IF-04", "IF-13"]},
+             "inputs": [], "coverage_gap_ids": ["GAP-01"],
+             "outcomes": ({"loaded_instructions": "HUMAN_REVIEW_REQUIRED", "instructions_outside_scope":
+                           "SOURCE_COVERAGE_GAP"} if self.om_rules else {"always": "SOURCE_COVERAGE_GAP"}),
+             "instruction_codes": ["U3.1"] if self.om_rules else [],
+             "interpretation_flag_ids": ["IF-04", "IF-13"] + (["IF-33"] if self.om_rules else [])},
         ]
         for c in checks:
             row = doc_rows.get(c["check_id"])
@@ -814,7 +878,7 @@ class Builder:
                 c.setdefault("defined_in", "Table 11 (Section 7)")
             c.setdefault("purpose", None)
             rid = c.get("evaluates_rule_id")
-            rule = self.rules.get(rid) or self.candidates.get(rid)
+            rule = self.rules.get(rid) or self.candidates.get(rid) or self.om_rules.get(rid)
             c.setdefault("source_provision_id", rule["authority"]["provision_id"] if rule else None)
             c.setdefault("interpretation_flag_ids", [])
             for target in sorted({x for k in ("evaluates_rule_id", "evaluates_rule_id_online",
@@ -888,7 +952,16 @@ class Builder:
         gap_targets = {"GAP-01": ["NZ-INZ-IMMIGRATION-INSTRUCTIONS", "SV-INSTR-001", "SV-ONLINE-007",
                                   *self.candidates.keys()],
                        "GAP-02": ["DOC-INZ-SV-BUSINESS-RULE", *self.candidates.keys()]}
+        if self.om_rules:
+            gap_targets["GAP-01"] = ["NZ-INZ-IMMIGRATION-INSTRUCTIONS", "SV-INSTR-001", "SV-ONLINE-007",
+                                     *[c for c, r in self.candidates.items()
+                                       if r.get("provenance_status") != "SUPERSEDED_BY_INSTRUCTION"]]
         for g in gaps:
+            if g["id"] == "GAP-01" and self.om_rules:
+                g.update(status="PARTLY_CLOSED", closed_by_flag="IF-25",
+                         remaining_scope="Immigration Instructions outside Student Visas (U1-U16) and the general "
+                                         "sections they cite directly; historic versions of cited sections.",
+                         retrieval_impact="PARTIAL", automated_assessment_impact="PARTIAL")
             g["applies_to"] = gap_targets[g["id"]]
             for t in g["applies_to"]:
                 self.edge("APPLIES_TO", g["id"], t)
@@ -989,7 +1062,9 @@ class Builder:
         F("IF-18", "Health outcome for TC-07",
           "TC-07 expects HUMAN_REVIEW_REQUIRED for health. Health is part of the candidate core-eligibility rule "
           "(Section 6), which has no published class; the agent contract forbids scoring health, so the check "
-          "is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN.", ["SV-CHECK-HEALTH-001"])
+          "is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN. With the Operational Manual "
+          "loaded the check evaluates U3.1(b)(iii) (health and character as set out at A4 and A5) instead of the "
+          "candidate rule.", ["SV-CHECK-HEALTH-001"])
         F("IF-19", "Concept typing",
           "concept_type and domain are set to the Table 3 concept group (F.3's 'Document' type cannot be derived "
           "for every term). Product concepts are Visa nodes; Temporary Entry Class Visa PARENT_OF Student Visa "
@@ -1015,12 +1090,82 @@ class Builder:
           "The loader writes one LoadLog node per run (build plan Phase 3). It is not part of the Section 3 "
           "ontology. Concepts, actors and fact types use the Domain layer label with a 'kind' property because "
           "Section 3 has no dedicated node type for them.", ["graph"])
+        if self.om:
+            self._opsmanual_flags(F)
         for f in self.flags:
+            if f["flag_id"] in SUPERSEDED_FLAGS and self.om_rules:
+                f["superseded_by"] = SUPERSEDED_FLAGS[f["flag_id"]]
             res = FLAG_REVIEW.get(f["flag_id"])
             if res and f["status"] == "OPEN":
                 f.update(status="ACCEPTED_BY_PRODUCT_OWNER", decision_reference=FLAG_REVIEW_DECISION,
                          resolution=res)
         self.files["governance/interpretation-flags.json"] = {"interpretation_flags": self.flags}
+
+    def _opsmanual_flags(self, F):
+        pages = self.om["pages"]
+        n_cur = sum(1 for p in pages if p["version_kind"] == "CURRENT")
+        n_hist = sum(1 for p in pages if p["version_kind"] == "HISTORIC")
+        n_ref = sum(1 for p in pages if p["kind"] == "REFERENCE")
+        OMD = "Product owner, 23 Nov 2026: Operational Manual integration (provenance, scope, funds check, depth)"
+        F("IF-25", "Operational Manual used as the Immigration Instructions source",
+          "The build plan's ground rule said not to use the INZ Operational Manual. The product owner reversed this "
+          "to give staff field-level answers. Student instructions U1-U16 and the general sections they cite are "
+          "loaded with their exact published text, URL and effective date. Rules derived from them are "
+          "VERIFIED_INSTRUCTION_SOURCE, and GAP-01 is partly closed. The text is the manual's own wording; only "
+          "whitespace is normalised.", ["NZ-INZ-IMMIGRATION-INSTRUCTIONS", "GAP-01"], kind="DEVIATION", decision=OMD)
+        F("IF-26", "Automation class, evidence and actors for instruction rules are heuristic",
+          "The manual does not classify its rules. Automation class is set from wording: a power or discretion "
+          "('may grant', 'special direction') is A4; evaluative words ('satisfied', 'genuine', 'bona fide', "
+          "'consider', 'sufficient') are A3; definitions are A1; anything else is A2. Evidence types come from INZ "
+          "form numbers and keywords, and actors from the sentence subject. Each rule records class_basis so a "
+          "reviewer can see why.", ["rules/rules.json"])
+        F("IF-27", "Atomic decomposition of instruction text",
+          "Every leaf paragraph of every current instruction unit becomes one rule. Its statement is the lead-in "
+          "text of its parent items followed by the leaf text, joined verbatim with trailing 'and'/'or' removed. "
+          "It is kept as instruction_statement and is not rewritten into RuleSpeak. Item labels follow the page's "
+          "list styles ((a), (i)); unlabelled paragraphs are p1, p2 and notes are note1.", ["rules/rules.json"])
+        F("IF-28", "Versions and history",
+          f"{n_cur} current and {n_hist} historic student instruction pages are loaded. Historic versions are stored "
+          "as Instruction text at unit level with effective_from/effective_to and SUPERSEDES chains. Only current "
+          "units get paragraph nodes and rules. Expired instructions (titles ending '(to ...)') keep their text "
+          "but get no rules. effective_to of a version is the effective date of the next newer version.",
+          ["regulatory/provisions.json"])
+        F("IF-29", "Scope of the Operational Manual load",
+          f"All pages under Student Visas (U1-U16), every version, plus {n_ref} general-section pages that current "
+          "student pages link to directly (A4, A5, E2-E7, E11, H2, H5, S1, V2, V3, W2), current version only; a "
+          "cited section index also brings in its current child pages. Anything those pages cite in turn is not "
+          "loaded (GAP-01 remaining scope).", ["data/opsmanual"], decision=OMD)
+        F("IF-30", "Funds check follows Operational Manual U3.20",
+          "SV-CHECK-FIN-001 now applies U3.20.25 / U3.20.30 / U3.20.35 instead of the candidate figures. Under 36 "
+          "weeks: NZ$1,667 (tertiary or non-compulsory) or NZ$1,417 (compulsory, Years 1-13) per month of study. "
+          "36 weeks or longer: NZ$20,000 or NZ$17,000 per year, applied as one year minimum and pro rata beyond 12 "
+          "months (the IF-15 pro rata decision is retained for multi-year study). Prepaid living expenses are "
+          "deducted. Citizens of Samoa or Tonga may rely on a verified written guarantee from a New Zealand "
+          "citizen or residence-class relative. Maternity: an extra NZ$9,000 for applicants due to give birth in "
+          "New Zealand unless eligible for publicly funded services. The critical-purpose (H5) variants are listed "
+          "for human review and not computed.", ["SV-CHECK-FIN-001", "TC-06"], decision=OMD)
+        F("IF-31", "Candidate rules reconciled to instructions",
+          "Each Section 6 candidate rule is linked to the instructions that cover it. Fully covered candidates become "
+          "SUPERSEDED_BY_INSTRUCTION, with SUPERSEDES edges from the instruction. Family support stays "
+          "RECONCILIATION_REQUIRED because partner pathways sit in the W and V sections, outside scope. Candidate "
+          "figures no longer execute and lose the candidate label.", [c for c in self.candidates])
+        F("IF-32", "Domains for instruction rules",
+          "Instruction rules take a domain from their instruction code (e.g. U3.20 -> Maintenance, U13 -> Work "
+          "rights, A5 -> Character), so rules_by_domain returns spec and manual rules together.", ["rules/rules.json"])
+        F("IF-33", "SV-INSTR-001 with instructions loaded",
+          "SV-INSTR-001 / SV-ONLINE-007 ('information and evidence required by Immigration Instructions') no longer "
+          "return SOURCE_COVERAGE_GAP for the student instructions. The check returns HUMAN_REVIEW_REQUIRED, "
+          "listing the U3.1 requirements that have no executable check yet, and still returns SOURCE_COVERAGE_GAP "
+          "for instructions outside the loaded scope.", ["SV-CHECK-INSTR-001"])
+        F("IF-34", "Minimal graph: fewest node types and relationships",
+          "Product owner principle (23 Nov 2026): keep the graph to a minimal set of node types and relationships. "
+          "Applied as: (1) a declared graph_profile in schema/ontology.yaml that the loader and checker enforce; "
+          "Part and AMENDS are left unused; (2) instruction rules get Threshold nodes only, because their conditions "
+          "and exceptions are already in the rule text; (3) spec objects with no relationship (fact types, risks, "
+          "unreferenced concepts and method sources) stay in the JSON files and are not loaded; (4) each assessment "
+          "writes one RuleEvaluation per rule, with result and explanation as properties, plus one DecisionOutcome "
+          "and one Explanation for the whole assessment; facts link only to the DecisionCheck.",
+          ["schema/ontology.yaml", "graph"], decision="Product owner, 23 Nov 2026: minimal node types and relationships")
 
     def _version_and_text_flags(self, F):
         fetched = bool(self.leg)
@@ -1102,6 +1247,7 @@ class Builder:
                                      "purpose": r[2]} for r in t2.rows[1:]],
                          "graph_path": "EvidenceItem -> ObservedFact -> VerifiedFact -> DecisionCheck -> RuleEvaluation",
                          "explanation_chain": "RuleEvaluation -> DecisionCheck -> Rule -> Provision -> Instrument"},
+            "graph_profile": GRAPH_PROFILE,
             "templates": {"business_rule_yaml_12_1": yaml.safe_load(rule_yaml),
                           "assessment_json_12_2": json.loads(assess), **templates},
         }
@@ -1174,7 +1320,7 @@ class Builder:
 
     # ---- edges for rules etc -----------------------------------------------
     def build_rule_edges(self):
-        all_rules = {**self.rules, **self.candidates}
+        all_rules = {**self.rules, **self.candidates, **self.om_rules}
         for r in all_rules.values():
             rid = r["rule_id"]
             self.edge("APPLIES_TO", rid, PRODUCT_ID)
@@ -1207,6 +1353,7 @@ class Builder:
         self.build_rules()
         self.build_rule_groups()
         self.build_candidates()
+        om_extract.build(self)
         self.build_evidence()
         self.build_checks()
         self.build_lifecycle()
@@ -1219,6 +1366,7 @@ class Builder:
         self.files["rules/rules.json"] = {
             "product_id": PRODUCT_ID, "rules": list(self.rules.values()),
             "candidate_rules": list(self.candidates.values()),
+            "instruction_rules": list(self.om_rules.values()),
             "candidate_inventory_appendix_e": self.appendix_e,
             "rule_groups": self.rule_groups}
         self.files["rules/conditions.json"] = {"conditions": q["conditions"], "triggers": q["triggers"]}
@@ -1237,7 +1385,7 @@ class Builder:
                 "source_version": r["authority"]["source_version"],
                 "source_text_status": self.provisions[r["authority"]["provision_id"]]["source_text_status"]
                 if r["authority"]["provision_ids"] else None,
-                "extracted_from": r["extracted_from"]} for r in {**self.rules, **self.candidates}.values()]}
+                "extracted_from": r["extracted_from"]} for r in {**self.rules, **self.candidates, **self.om_rules}.values()]}
         return self.files
 
 
