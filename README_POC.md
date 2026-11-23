@@ -14,7 +14,8 @@ rather than inventing content.
 | Path | Contents |
 |---|---|
 | `schema/` | Ontology (Section 3 layers + Appendix F templates), enumerations, the 24 relationship types (3.1), agent contract (Section 9) |
-| `regulatory/` | 9 sources, 217 provisions (parent chain from section to paragraph), concepts, actors, FT-001..FT-018, and every static relationship |
+| `regulatory/` | 9 sources, 217 provisions (parent chain from section to paragraph, exact wording from legislation.govt.nz), concepts, actors, FT-001..FT-018, and every static relationship |
+| `data/legislation/` | Cached legislation.govt.nz pages for the four published instruments, plus `provision-text.json` (wording, URL, version, retrieval date and page SHA-256 per provision) |
 | `rules/` | 137 verified rules (12.1 fields), 10 candidate rules (Section 6, `RECONCILIATION_REQUIRED`), 11 rule groups (5.2), and derived qualifiers |
 | `evidence/` | Table 9 evidence types, evidence requirements per rule, verification rules |
 | `decisioning/` | 11 decision checks, 11 lifecycle states, 10 transitions |
@@ -39,6 +40,10 @@ CREATE DATABASE studentvisa IF NOT EXISTS;
 `.env` keys: `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD`, `NEO4J_DATABASE=studentvisa`.
 
 ## Build, load, assess
+
+```bash
+.venv/bin/svkg fetch-legislation                       # optional: refresh provision wording from legislation.govt.nz
+```
 
 ```bash
 .venv/bin/svkg build                                   # extract + check + load
@@ -146,10 +151,15 @@ Example prompts: *"Which Student Visa rules cover sponsorship, and under which p
 
 ## Known gaps
 
-- **Provision text (Phase 2) is deferred.** The product owner chose to add legislation sources later, so all
-  217 provisions show `SOURCE_TEXT_NOT_RETRIEVED` and `svkg check` warns about it. legislation.govt.nz is
-  reachable and its pages parse cleanly. The Pastoral Care Code is not published there, so its clauses will
-  stay `SOURCE_TEXT_NOT_RETRIEVED` (decision 8).
+- **Pastoral Care Code wording.** 167 of 217 provisions carry the exact published wording from
+  legislation.govt.nz, with URL, version and retrieval date. The 50 clauses of the Education (Pastoral Care
+  of Tertiary and International Learners) Code of Practice 2021 stay `SOURCE_TEXT_NOT_RETRIEVED`, because the
+  Code is not published on legislation.govt.nz (decision 8). `svkg check` lists them as its one warning.
+- **Instrument versions.** The page version lines are: Immigration Act 10 July 2026 (matches the spec),
+  Visa, Entry Permission, and Related Matters Regulations 20 October 2026, Privacy Act 8 October 2026,
+  Carriers' Information Obligations Regulations "Reprint as at 30 September 2020". Re-run
+  `svkg fetch-legislation` to pick up new versions; `svkg check` fails if the Act's version moves away from
+  the spec's 2026-07-10 without a flag.
 - **Definition of done item 6.** Candidate rules are not reconciled to Immigration Instructions. That is
   outside this POC by design; the guard is that every assessment says `production_decision: false`.
 
@@ -165,10 +175,10 @@ The full text of each flag is in `governance/interpretation-flags.json` and on `
 | IF-04 | Interpretation | Compound automation classes: the most restrictive is used, and a gap marker gives SOURCE_COVERAGE_GAP |
 | IF-05 | Interpretation | Rule domain derived from rule-ID prefix |
 | IF-06 | Interpretation | Qualifiers derived from RuleSpeak wording (exact spans only) |
-| IF-07 | Interpretation | Provision sub-unit types |
+| IF-07 | Interpretation | Provision sub-unit types; IPPs taken from the s 22 table |
 | IF-08 | Interpretation | Instrument types for sources other than the Immigration Act |
-| IF-09 | Interpretation | Source versions not stated (only the Act: 2026-07-10) |
-| IF-10 | Interpretation | Provision text not yet retrieved |
+| IF-09 | Interpretation (accepted) | Source versions taken from legislation.govt.nz |
+| IF-10 | Interpretation (accepted) | Provision text retrieved except the Pastoral Care Code |
 | IF-11 | Interpretation | Rule-to-evidence mapping via Table 9 "typical rule domain" |
 | IF-12 | Interpretation | 12.1 vs F.5 ID inconsistency for SV-APP-005 |
 | IF-13 | Interpretation | Decision checks implied by test cases |

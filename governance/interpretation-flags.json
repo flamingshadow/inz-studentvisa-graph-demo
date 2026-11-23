@@ -93,7 +93,7 @@
       "flag_id": "IF-07",
       "kind": "INTERPRETATION",
       "title": "Provision sub-unit types",
-      "detail": "Section 3 lists Part, Section, Subsection, Regulation, Clause, Instruction and F.2 adds Paragraph. Sub-units of regulations and Code clauses reuse Subsection / Paragraph / Subparagraph; Privacy Act IPPs are modelled as Paragraph-level children of s 22. Parts are not modelled (the document never cites one).",
+      "detail": "Section 3 lists Part, Section, Subsection, Regulation, Clause, Instruction and F.2 adds Paragraph. Sub-units of regulations and Code clauses reuse Subsection / Paragraph / Subparagraph; Privacy Act IPPs are modelled as Paragraph-level children of s 22. Parts are not modelled (the document never cites one). The IPPs are published as a table inside s 22, not as sub-units: the text of each NZ-PRIVACY-ACT-2020-S22-IPPn provision is the table block that starts at the row 'Information privacy principle n' and runs to the next principle (IPP 3A included).",
       "applies_to": [
         "regulatory/provisions.json"
       ],
@@ -116,24 +116,24 @@
     {
       "flag_id": "IF-09",
       "kind": "INTERPRETATION",
-      "title": "Source versions not stated",
-      "detail": "Only the Immigration Act version (2026-07-10) is stated. Other version_id values are null until the legislation fetch (Phase 2) sets them from legislation.govt.nz.",
+      "title": "Source versions taken from legislation.govt.nz",
+      "detail": "The spec states only the Immigration Act version (2026-07-10). Versions for the other instruments come from each page's version line: NZ-IMM-ACT-2009 2026-07-10 ('Version as at 10 July 2026'); NZ-IMM-VEPRM-REGS-2010 2026-10-20 ('Version as at 20 October 2026'); NZ-IMM-CIO-REGS-2010 2020-09-30 ('Reprint as at 30 September 2020'); NZ-PRIVACY-ACT-2020 2026-10-08 ('Version as at 8 October 2026'). The Carriers' Information Obligations Regulations print 'Reprint as at' rather than 'Version as at'. The Pastoral Care Code has no legislation.govt.nz version, so its version_id stays null; the Education and Training Act is cited by no rule and was not fetched.",
       "applies_to": [
         "regulatory/sources.json"
       ],
-      "decision_reference": "Product owner, 23 Nov 2026: add legislation sources later",
+      "decision_reference": "Build plan decision 8; product owner, 23 Nov 2026: Phase 2 run",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23"
     },
     {
       "flag_id": "IF-10",
       "kind": "INTERPRETATION",
-      "title": "Provision text not yet retrieved",
-      "detail": "Phase 2 (fetching exact provision wording from legislation.govt.nz) is deferred. Every provision has source_text null and source_text_status SOURCE_TEXT_NOT_RETRIEVED. The Education (Pastoral Care) Code is not published on legislation.govt.nz, so its clauses will stay SOURCE_TEXT_NOT_RETRIEVED under decision 8 even after Phase 2. Appendix G's 'every VERIFIED rule has ... source text' criterion is therefore not yet met.",
+      "title": "Provision text retrieved except the Pastoral Care Code",
+      "detail": "167 of 217 provisions carry the exact published wording from legislation.govt.nz (labels kept, whitespace normalised, history and compare notes excluded), with URL, version and retrieval date. The Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021 is not published on legislation.govt.nz, so its 50 clauses remain SOURCE_TEXT_NOT_RETRIEVED (decision 8); Appendix G's source-text criterion is met for every rule except the Code rules.",
       "applies_to": [
         "regulatory/provisions.json"
       ],
-      "decision_reference": "Product owner, 23 Nov 2026: add legislation sources later",
+      "decision_reference": "Build plan decision 8; product owner, 23 Nov 2026: Phase 2 run",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23"
     },

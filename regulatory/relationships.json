@@ -13,7 +13,7 @@
     {
       "type": "CONTAINS",
       "from": "NZ-IMM-VEPRM-REGS-2010",
-      "to": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED"
+      "to": "NZ-IMM-VEPRM-REGS-2010@2026-10-20"
     },
     {
       "type": "MADE_UNDER",
@@ -23,7 +23,7 @@
     {
       "type": "CONTAINS",
       "from": "NZ-IMM-CIO-REGS-2010",
-      "to": "NZ-IMM-CIO-REGS-2010@UNVERSIONED"
+      "to": "NZ-IMM-CIO-REGS-2010@2020-09-30"
     },
     {
       "type": "CONTAINS",
@@ -43,7 +43,7 @@
     {
       "type": "CONTAINS",
       "from": "NZ-PRIVACY-ACT-2020",
-      "to": "NZ-PRIVACY-ACT-2020@UNVERSIONED"
+      "to": "NZ-PRIVACY-ACT-2020@2026-10-08"
     },
     {
       "type": "MADE_UNDER",
@@ -422,7 +422,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-VEPRM-REGS-2010@2026-10-20",
       "to": "NZ-IMM-VEPRM-REGS-2010-R10"
     },
     {
@@ -522,7 +522,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-VEPRM-REGS-2010@2026-10-20",
       "to": "NZ-IMM-VEPRM-REGS-2010-R20"
     },
     {
@@ -582,7 +582,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-VEPRM-REGS-2010@2026-10-20",
       "to": "NZ-IMM-VEPRM-REGS-2010-R26AAE"
     },
     {
@@ -597,7 +597,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-VEPRM-REGS-2010@2026-10-20",
       "to": "NZ-IMM-VEPRM-REGS-2010-R23AA"
     },
     {
@@ -607,7 +607,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-VEPRM-REGS-2010@2026-10-20",
       "to": "NZ-IMM-VEPRM-REGS-2010-R23A"
     },
     {
@@ -1037,7 +1037,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "from": "NZ-PRIVACY-ACT-2020@2026-10-08",
       "to": "NZ-PRIVACY-ACT-2020-S22"
     },
     {
@@ -1112,17 +1112,17 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "from": "NZ-PRIVACY-ACT-2020@2026-10-08",
       "to": "NZ-PRIVACY-ACT-2020-S114"
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "from": "NZ-PRIVACY-ACT-2020@2026-10-08",
       "to": "NZ-PRIVACY-ACT-2020-S115"
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-CIO-REGS-2010@2020-09-30",
       "to": "NZ-IMM-CIO-REGS-2010-R4"
     },
     {
@@ -1137,7 +1137,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-CIO-REGS-2010@2020-09-30",
       "to": "NZ-IMM-CIO-REGS-2010-R5"
     },
     {
@@ -1167,7 +1167,7 @@
     },
     {
       "type": "CONTAINS",
-      "from": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "from": "NZ-IMM-CIO-REGS-2010@2020-09-30",
       "to": "NZ-IMM-CIO-REGS-2010-R6"
     },
     {
