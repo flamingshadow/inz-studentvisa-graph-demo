@@ -201,7 +201,7 @@ FLAG_REVIEW = {
     "IF-04": "Most restrictive class used; character rules published A3/A4 route to DISCRETION_REQUIRED.",
     "IF-05": _AS_IS, "IF-06": _AS_IS, "IF-07": _AS_IS, "IF-08": _AS_IS, "IF-11": _AS_IS, "IF-12": _V03,
     "IF-13": "All four added checks accepted; propose adding them to Table 11 in spec v0.3.",
-    "IF-14": "TC-09 keeps NOT_SATISFIED only for a verified known breach that was not reported; any other "
+    "IF-14": "The provider breach check keeps NOT_SATISFIED only for a verified known breach that was not reported; any other "
              "case is HUMAN_REVIEW_REQUIRED.",
     "IF-15": "Monthly figure x months under 12 months; yearly figure pro rata at 12 months or more "
              "(18 months tertiary = NZD 30,000). Prepaid accommodation stays an unresolved requirement.",
@@ -852,7 +852,7 @@ class Builder:
              "note": "material_change_occurred=false -> NOT_APPLICABLE (nothing to disclose)."},
             # ---- checks implied by test cases (IF-13) ----
             {"check_id": "SV-CHECK-MIN-001", "evaluates_rule_id": "SV-MIN-001", "automation_class": "A4",
-             "defined_in": "Implied by TC-03 (not in Table 11)",
+             "defined_in": "Implied by the spec's under-18 consent scenario (not in Table 11)",
              "inputs": [{"fact_path": P + a, "required": True} for a in (
                  "applicant_age", "applicant_marital_status", "parental_consent_established")],
              "outcomes": {"adult_or_married": "NOT_APPLICABLE", "consent_verified": "NOT_APPLICABLE",
@@ -861,13 +861,13 @@ class Builder:
             {"check_id": "SV-CHECK-HEALTH-001",
              "evaluates_rule_id": "SV-OM-U3.1-B-III" if self.om_rules else "SV-CAND-ELIGIBILITY",
              "related_verified_rule_ids": ["SV-HEALTH-001"], "automation_class": "A3",
-             "defined_in": "Implied by TC-07 (not in Table 11)",
+             "defined_in": "Implied by the spec's medical evidence scenario (not in Table 11)",
              "inputs": [{"fact_path": "evidence.MedicalCertificate|ChestXray", "required": True}],
              "outcomes": {"evidence_received": "HUMAN_REVIEW_REQUIRED", "missing": "UNKNOWN"},
              "interpretation_flag_ids": ["IF-13", "IF-18"]},
             {"check_id": "SV-CHECK-EDU-009", "evaluates_rule_id": "SV-EDU-009",
              "evaluates_rule_id_school": "SV-SCHOOL-009", "automation_class": "A3",
-             "defined_in": "Implied by TC-09 (not in Table 11)",
+             "defined_in": "Implied by the spec's provider breach scenario (not in Table 11)",
              "trigger_fact_paths": [P + "provider_known_visa_condition_breach",
                                     P + "provider_suspected_visa_condition_breach"],
              "inputs": [{"fact_path": P + a, "required": True} for a in (
@@ -875,6 +875,26 @@ class Builder:
              "outcomes": {"known_verified_not_reported": "NOT_SATISFIED",
                           "known_verified_reported": "SATISFIED", "otherwise": "HUMAN_REVIEW_REQUIRED"},
              "interpretation_flag_ids": ["IF-13", "IF-14"]},
+            *([{"check_id": "SV-CHECK-LODG-001", "evaluates_rule_id": "SV-OM-E4.50.1-P1-A",
+                "evaluates_rule_ids": sorted({r for rs in om_extract.LODGEMENT_RULES.values() for r in rs}),
+                "automation_class": "PER_RULE",
+                "defined_in": "Implied by IF-36 (not in Table 11)",
+                "trigger_fact_paths": [P + "lodgement_route"],
+                "inputs": [{"fact_path": P + a, "required": r} for a, r in (
+                    ("lodgement_route", True), ("approved_form_used", False), ("completed_in_english", False),
+                    ("identity_document_provided", False), ("photographs_provided", False),
+                    ("application_signed", False), ("applicant_age", False),
+                    ("signed_by_parent_or_guardian", False), ("accompanied_by_parent_or_guardian", False),
+                    ("persons_in_application", False), ("full_name_stated", False),
+                    ("date_and_place_of_birth_stated", False), ("passport_details_stated", False),
+                    ("form_requires_photograph", False), ("photograph_uploaded", False),
+                    ("declaration_acknowledged", False), ("change_notification_agreed", False))],
+                "instruction_codes": ["E4.50.1", "E4.50.2", "E4.50.35"],
+                "outcomes": {"requirement_met": "SATISFIED", "requirement_not_met": "NOT_SATISFIED",
+                             "not_required_for_applicant": "NOT_APPLICABLE", "missing": "UNKNOWN"},
+                "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+                "interpretation_flag_ids": ["IF-36"]}] if self.om_rules else []),
+            *self._domain_checks(),
             {"check_id": "SV-CHECK-INSTR-001", "evaluates_rule_id": "SV-INSTR-001",
              "evaluates_rule_id_online": "SV-ONLINE-007", "automation_class": "A2",
              "defined_in": "Rules marked 'A2 / gap' in 5.1 and D.1",
@@ -884,6 +904,7 @@ class Builder:
              "instruction_codes": ["U3.1"] if self.om_rules else [],
              "interpretation_flag_ids": ["IF-04", "IF-13"] + (["IF-33"] if self.om_rules else [])},
         ]
+        checks += self._residual_checks(checks)
         for c in checks:
             row = doc_rows.get(c["check_id"])
             if row:
@@ -917,6 +938,61 @@ class Builder:
             "automation_classes": [{"class": r[0], "meaning": r[1], "agent_action": r[2]}
                                    for r in self.spec.table_by_header("Automation class", "7.").rows[1:]],
             "decision_checks": checks}
+
+    def _domain_checks(self):
+        """One decision check per Operational Manual domain (IF-37)."""
+        P = "application."
+        out = []
+        for cid, spec in om_extract.DOMAIN_CHECKS.items():
+            ids = sorted(r["rule_id"] for r in self.om_rules.values() if r.get("domain") == spec["domain"])
+            if not ids:
+                continue
+            ex = [r for r in sorted(spec["executes"]) if r in self.om_rules]
+            facts = sorted({a for r in ex for a in spec["executes"][r]})
+            out.append({
+                "check_id": cid, "domain": spec["domain"], "evaluates_rule_id": ex[0],
+                "evaluates_rule_ids": ids, "executable_rule_ids": ex, "automation_class": "PER_RULE",
+                "defined_in": "Implied by IF-37 (not in Table 11)",
+                "trigger_fact_paths": [P + a for a in spec["trigger_facts"]],
+                "inputs": [{"fact_path": P + a, "required": False} for a in facts],
+                "outcomes": {"requirement_met": "SATISFIED", "requirement_not_met": "NOT_SATISFIED",
+                             "not_applicable": "NOT_APPLICABLE", "missing": "UNKNOWN",
+                             "a3_or_untested": "HUMAN_REVIEW_REQUIRED", "a4": "DISCRETION_REQUIRED"},
+                "provenance_status": "VERIFIED_INSTRUCTION_SOURCE", "interpretation_flag_ids": ["IF-37"]})
+        return out
+
+    def _residual_checks(self, checks):
+        """IF-38: one residual check per domain for every rule that no other check evaluates."""
+        import re
+        covered = set()
+        for c in checks:
+            for k in ("evaluates_rule_id", "evaluates_rule_id_online", "evaluates_rule_id_school", "exception_rule_id"):
+                if c.get(k):
+                    covered.add(c[k])
+            covered |= set(c.get("evaluates_rule_ids", [])) | set(c.get("evaluates_rule_ids_online", []))
+        by_dom: dict[str, list[str]] = {}
+        for rid, r in {**self.rules, **self.candidates, **self.om_rules}.items():
+            if rid not in covered and r.get("domain"):
+                by_dom.setdefault(r["domain"], []).append(rid)
+        P = "application."
+        out = []
+        for dom, ids in sorted(by_dom.items()):
+            slug = re.sub(r"[^A-Z0-9]+", "-", dom.upper()).strip("-")
+            ids = sorted(ids)
+            ex = [r for r in ids if r in om_extract.RESIDUAL_EXECUTES]
+            facts = sorted({a for r in ex for a in om_extract.RESIDUAL_EXECUTES[r]})
+            out.append({
+                "check_id": f"SV-CHECK-{slug}-RES", "domain": dom, "residual": True,
+                "evaluates_rule_id": (ex or ids)[0], "evaluates_rule_ids": ids, "executable_rule_ids": ex,
+                "automation_class": "PER_RULE", "defined_in": "Implied by IF-38 (not in Table 11)",
+                "trigger_fact_paths": [P + "review_" + slug.lower().replace("-", "_"), P + "review_all_domains"],
+                "inputs": [{"fact_path": P + a, "required": False} for a in facts],
+                "outcomes": {"requirement_met": "SATISFIED", "requirement_not_met": "NOT_SATISFIED",
+                             "not_applicable": "NOT_APPLICABLE", "missing": "UNKNOWN",
+                             "a3_or_untested": "HUMAN_REVIEW_REQUIRED", "a4": "DISCRETION_REQUIRED",
+                             "a5": "AMBIGUOUS", "candidate": "SOURCE_COVERAGE_GAP"},
+                "provenance_status": "VERIFIED_INSTRUCTION_SOURCE", "interpretation_flag_ids": ["IF-38"]})
+        return out
 
     # ---- lifecycle ---------------------------------------------------------
     def build_lifecycle(self):
@@ -1006,13 +1082,12 @@ class Builder:
     def build_flags(self):
         D3 = "Product owner decision 3 (build plan, 23 Nov 2026)"
         F = self.flag
-        F("IF-01", "Candidate funds thresholds execute; TC-06 expectation adjusted",
+        F("IF-01", "Candidate funds thresholds execute",
           "The document says SV-CHECK-FIN-001 should 'only execute after authoritative product threshold is "
-          "reconciled' and TC-06 expects SOURCE_COVERAGE_GAP. By product-owner decision the candidate figures "
+          "reconciled'. By product-owner decision the candidate figures "
           "(tertiary NZD 20,000/yr or 1,667/month; school NZD 17,000/yr or 1,417/month; maternity NZD 9,000) are "
           f"loaded and the check runs. Every such Threshold and evaluation carries the label '{CANDIDATE_LABEL}' "
-          "and provenance_status RECONCILIATION_REQUIRED. TC-06 now expects that label instead of "
-          "SOURCE_COVERAGE_GAP.", ["SV-CHECK-FIN-001", "TC-06", "SV-CAND-MAINT-TERTIARY",
+          "and provenance_status RECONCILIATION_REQUIRED.", ["SV-CHECK-FIN-001", "SV-CAND-MAINT-TERTIARY",
                                    "SV-CAND-MAINT-SCHOOL", "SV-CAND-MATERNITY"], kind="DEVIATION", decision=D3)
         F("IF-02", "Published rule type codes not defined",
           "Section 5 uses type codes OR, PERM, DR and SR without defining them. They are kept verbatim as "
@@ -1060,14 +1135,15 @@ class Builder:
           "pattern SV-COND-<prefix>-NNN, so SV-APP-005's derived condition is SV-COND-APP-001.",
           ["SV-APP-005", "SV-EVID-REQ-001"])
         F("IF-13", "Decision checks implied by test cases",
-          "Table 11 defines six checks and F.8 one more. TC-03, TC-07 and TC-09 need checks the table does not "
+          "Table 11 defines six checks and F.8 one more. The under-18 consent, medical evidence and provider breach "
+          "scenarios need checks the table does not "
           "list, so SV-CHECK-MIN-001, SV-CHECK-HEALTH-001 and SV-CHECK-EDU-009 are added. SV-CHECK-INSTR-001 "
           "reports the 'A2 / gap' rules as SOURCE_COVERAGE_GAP in every assessment.",
           ["SV-CHECK-MIN-001", "SV-CHECK-HEALTH-001", "SV-CHECK-EDU-009", "SV-CHECK-INSTR-001"])
-        F("IF-14", "TC-09 expects NOT_SATISFIED for an A3 rule",
-          "SV-EDU-009 / SV-SCHOOL-009 are A3, yet TC-09 expects NOT_SATISFIED. The check returns NOT_SATISFIED "
+        F("IF-14", "Provider breach check returns NOT_SATISFIED for an A3 rule",
+          "SV-EDU-009 / SV-SCHOOL-009 are A3, yet the provider breach scenario expects NOT_SATISFIED. The check returns NOT_SATISFIED "
           "only when verified facts show the provider knew of a breach and did not report it; any other case "
-          "(suspected breach, unverified facts) is HUMAN_REVIEW_REQUIRED.", ["SV-CHECK-EDU-009", "TC-09"])
+          "(suspected breach, unverified facts) is HUMAN_REVIEW_REQUIRED.", ["SV-CHECK-EDU-009"])
         F("IF-15", "Maintenance calculation by duration",
           "Section 6 says 'calculations by study duration' with a yearly and monthly figure but no method. The "
           "check uses the monthly figure x months for study under 12 months, otherwise the yearly figure pro rata "
@@ -1083,8 +1159,8 @@ class Builder:
           "Decision-Maker, Agency and Individual are subjects of verified rules but not in Table 3's Parties "
           "group. They are modelled as actors marked derived_from 'rule subject'. Subjects that are objects "
           "(e.g. 'The Insurance', 'The Refund Policy') get no actor edge.", ["regulatory/actors.json"])
-        F("IF-18", "Health outcome for TC-07",
-          "TC-07 expects HUMAN_REVIEW_REQUIRED for health. Health is part of the candidate core-eligibility rule "
+        F("IF-18", "Health outcome",
+          "Health is expected to give HUMAN_REVIEW_REQUIRED. Health is part of the candidate core-eligibility rule "
           "(Section 6), which has no published class; the agent contract forbids scoring health, so the check "
           "is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN. With the Operational Manual "
           "loaded the check evaluates U3.1(b)(iii) (health and character as set out at A4 and A5) instead of the "
@@ -1103,7 +1179,7 @@ class Builder:
           "as Table 11 requires but its evaluation is marked as a provider obligation.", ["SV-CHECK-U10-001"])
         F("IF-22", "Test types",
           "F.12 has test_type 'PASS' only. Types are taken from Appendix G's testing list (PASS, FAIL, MISSING, "
-          "BOUNDARY, EXCEPTION, DISCRETION, SOURCE_GAP) plus HUMAN_REVIEW for TC-07 and EXPLANATION for TC-10.",
+          "BOUNDARY, EXCEPTION, DISCRETION, SOURCE_GAP) plus HUMAN_REVIEW and EXPLANATION.",
           ["testing/test-cases.json"])
         F("IF-23", "Lifecycle IDs and authorising rules",
           "State IDs are the Table 12 state names in UPPER_SNAKE (matching F.10's DECISION_READY). Authorising "
@@ -1170,7 +1246,7 @@ class Builder:
           "deducted. Citizens of Samoa or Tonga may rely on a verified written guarantee from a New Zealand "
           "citizen or residence-class relative. Maternity: an extra NZ$9,000 for applicants due to give birth in "
           "New Zealand unless eligible for publicly funded services. The critical-purpose (H5) variants are listed "
-          "for human review and not computed.", ["SV-CHECK-FIN-001", "TC-06"], decision=OMD)
+          "for human review and not computed.", ["SV-CHECK-FIN-001"], decision=OMD)
         F("IF-31", "Candidate rules reconciled to instructions",
           "Each Section 6 candidate rule is linked to the instructions that cover it. Fully covered candidates become "
           "SUPERSEDED_BY_INSTRUCTION, with SUPERSEDES edges from the instruction. Family support stays "
@@ -1211,6 +1287,35 @@ class Builder:
           "(different claims, required by RISK-01) and legislation parent sections (they hold sibling text found "
           "nowhere else). All removed objects remain in the Appendix A JSON files.",
           ["schema/ontology.yaml", "graph"], decision="Product owner, 23 Nov 2026: remove duplicate nodes and relationships")
+        F("IF-36", "Lodgement check executes the E4 lodgement requirements",
+          "SV-CHECK-LODG-001 is a POC addition, not in Table 11. It executes the mandatory-form and signature "
+          "requirements of Operational Manual E4.50.1 (approved paper form), E4.50.2 (electronic form) and E4.50.35 "
+          "(immigration control area), chosen by the application's lodgement_route (paper, online or ica). Each "
+          "rule keeps its own automation class (PER_RULE); A1 rules accept unverified structured facts and A2 rules "
+          "need verified ones. Missing facts return UNKNOWN. The mapping from rule wording to application facts is "
+          "interpretive. E4 rules that are A3 or A4 are not executed. They stay with the officer.",
+          ["SV-CHECK-LODG-001"],
+          decision="Product owner, 23 Nov 2026: Lodgement check SV-CHECK-LODG-001 and its fact mapping")
+        F("IF-37", "Domain checks for Family, Pathway, Sponsorship, Providers and Work rights",
+          "SV-CHECK-FAM-001, -PATH-001, -SPON-001, -PROV-001 and -WRK-001 are POC additions, not in Table 11, one "
+          "per Operational Manual domain (Family 89 rules, Pathway student visas 69, Sponsorship 44, Providers and "
+          "programmes 40, Work rights 38). Every rule of the domain is linked to its check. Rules with a clear "
+          "numeric or yes/no test are executed against application facts (om_extract.DOMAIN_CHECKS lists them). "
+          "The remaining A1, A2 and A3 rules are presented in one HUMAN_REVIEW_REQUIRED result because they have "
+          "no executable test here (many A2 classes are heuristic, IF-26), and the A4 rules in one "
+          "DISCRETION_REQUIRED result. Each check runs only when a trigger fact for its domain is present.",
+          [c for c in om_extract.DOMAIN_CHECKS],
+          decision="Product owner, 23 Nov 2026: domain checks for Family, Pathway, Sponsorship, Providers and Work rights")
+        F("IF-38", "Residual checks: every remaining rule belongs to a domain check",
+          "Every rule that no other check evaluates is linked to a residual check named SV-CHECK-<DOMAIN>-RES, one "
+          "per domain, so that no rule is left without a check. A residual check runs only when the application "
+          "carries review_<domain> or review_all_domains. Rules with a clear test are executed "
+          "(om_extract.RESIDUAL_EXECUTES). Candidate rules return one SOURCE_COVERAGE_GAP result, A4 rules one "
+          "DISCRETION_REQUIRED result, A5 rules one AMBIGUOUS result, and the other rules (A3, and A1/A2 with no "
+          "executable test) one HUMAN_REVIEW_REQUIRED result listing them, as in IF-37. The check names and the "
+          "review_* trigger facts are POC conventions.",
+          [],
+          decision="Product owner, 23 Nov 2026: residual domain checks so that every rule has a check")
 
     def _version_and_text_flags(self, F):
         fetched = bool(self.leg)
@@ -1250,18 +1355,14 @@ class Builder:
 
     # ---- testing -----------------------------------------------------------
     def build_testing(self):
+        """Synthetic persona test cases SVP-001.."""
         from .synthetic import synthetic_applications, expected_results
-        t13 = self.spec.table_by_header("Test", "10.")
-        types = {"TC-01": "PASS", "TC-02": "MISSING", "TC-03": "DISCRETION", "TC-04": "EXCEPTION",
-                 "TC-05": "BOUNDARY", "TC-06": "SOURCE_GAP", "TC-07": "HUMAN_REVIEW", "TC-08": "DISCRETION",
-                 "TC-09": "FAIL", "TC-10": "EXPLANATION"}
         exp = expected_results()
         apps = synthetic_applications()
         tcs = []
-        for tc, scenario, expected in t13.rows[1:]:
-            e = exp[tc]
-            tcs.append({"test_case_id": tc, "test_type": types[tc], "scenario": scenario,
-                        "expected_outcome_as_published": expected,
+        for tc, e in exp.items():
+            tcs.append({"test_case_id": tc, "test_type": e["test_type"], "scenario": e["scenario"],
+                        "expected_outcome": e["expected"],
                         "rule_id": e["rule_id"], "check_id": e["check_id"],
                         "application_id": apps[tc]["application_id"],
                         "input_facts": [f["fact_id"] for f in apps[tc]["facts"]],
@@ -1397,7 +1498,7 @@ class Builder:
                               description=e.get("description") or "")
         for f in self.flags:
             for t in f["applies_to"]:
-                if t in all_rules or t.startswith(("SV-CHECK", "TC-")):
+                if t in all_rules or t.startswith(("SV-CHECK", "SVP-")):
                     self.edge("APPLIES_TO", f["flag_id"], t)
 
     # ---- assemble ----------------------------------------------------------
@@ -1462,6 +1563,8 @@ def write_files(files: dict, root: Path = ROOT) -> list[Path]:
 def write_application_files(apps: dict, root: Path = ROOT):
     d = root / "testing" / "applications"
     d.mkdir(parents=True, exist_ok=True)
+    for old in d.glob("*.json"):
+        old.unlink()
     for tc, app in apps.items():
         (d / f"{tc}.json").write_text(json.dumps(app, indent=2, ensure_ascii=False) + "\n")
 

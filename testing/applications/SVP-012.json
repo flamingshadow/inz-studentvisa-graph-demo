@@ -1,0 +1,392 @@
+{
+  "application_id": "POC-SV-APP-SVP012",
+  "product_id": "STUDENT-VISA",
+  "synthetic": true,
+  "assessment_as_at": "2026-11-23",
+  "channel": "paper",
+  "applicant": {
+    "applicant_id": "APPLICANT-POC-SVP012",
+    "given_name": "Yuki",
+    "family_name": "Nakamura",
+    "sex": "F",
+    "date_of_birth": "2009-10-25",
+    "nationality": "Japan",
+    "country_of_residence": "Japan",
+    "city_of_residence": "Sapporo",
+    "passport_number": "TK4408129",
+    "passport_expiry": "2034-05-20",
+    "email": "yuki.nakamura@mail.example",
+    "occupation": "Student",
+    "provider": "Otago Heights Secondary College",
+    "programme": "Secondary school exchange year"
+  },
+  "evidence_items": [
+    {
+      "evidence_item_id": "EVID-SVP012-001",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "ApplicationForm",
+      "document_reference": "INZ 1012 student visa application form (SVP012-01)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-21T10:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-001",
+        "FACT-SVP012-002",
+        "FACT-SVP012-003",
+        "FACT-SVP012-004",
+        "FACT-SVP012-011",
+        "FACT-SVP012-015",
+        "FACT-SVP012-017"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP012-002",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "Passport",
+      "document_reference": "Japan passport TK4408129",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-22T11:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-005",
+        "FACT-SVP012-010"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP012-003",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "Photograph",
+      "document_reference": "Passport-size photographs (SVP012-03)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-23T12:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-006"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP012-004",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "PaymentRecord",
+      "document_reference": "Application fee and levy receipt (SVP012-04)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-24T13:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-007",
+        "FACT-SVP012-008",
+        "FACT-SVP012-009"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP012-005",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "OfferOfPlace",
+      "document_reference": "Otago Heights Secondary College, offer ref OP-2026-1492",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-25T14:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-012",
+        "FACT-SVP012-013"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP012-006",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "BankStatement",
+      "document_reference": "Statements Aug to Oct 2026, account ending 5644",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-26T15:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-014"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP012-007",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "MedicalCertificate",
+      "document_reference": "INZ 1007 medical certificate (SVP012-07)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-27T16:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-016"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP012-008",
+      "application_id": "POC-SV-APP-SVP012",
+      "evidence_type": "ConsentLetter",
+      "document_reference": "Parental consent letter (SVP012-08)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-28T09:24:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP012-018"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "FACT-SVP012-001",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "approved_form_used",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-002",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "persons_in_application",
+      "value": 1,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP012-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-003",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "completed_in_english",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-004",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "application_signed",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-005",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "identity_document_provided",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-002"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-006",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "photographs_provided",
+      "value": 2,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP012-003"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-007",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "prescribed_fee_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-008",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "immigration_levy_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-009",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "ivl_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-010",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "applicant_age",
+      "value": 17,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP012-002"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-011",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "applicant_marital_status",
+      "value": "unmarried",
+      "data_type": "string",
+      "evidence_item_ids": [
+        "EVID-SVP012-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-012",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "student_type",
+      "value": "school",
+      "data_type": "string",
+      "evidence_item_ids": [
+        "EVID-SVP012-005"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-013",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "study_duration_months",
+      "value": 12,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP012-005"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-014",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "available_funds_nzd",
+      "value": 19000,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP012-006"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-015",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "material_change_occurred",
+      "value": false,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-016",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "medical_certificate_received",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-007"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-017",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "lodgement_route",
+      "value": "paper",
+      "data_type": "string",
+      "evidence_item_ids": [
+        "EVID-SVP012-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP012-018",
+      "application_id": "POC-SV-APP-SVP012",
+      "subject_id": "APPLICANT-POC-SVP012",
+      "attribute": "parental_consent_established",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP012-008"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-13T10:12:00+13:00",
+      "verified_by": "INZ-VO-1066 (synthetic verifier)"
+    }
+  ],
+  "scenario": "Under-18 applicant for whom no parent or guardian signature fact is recorded.",
+  "persona": {
+    "persona_id": "SVP-012",
+    "title": "Minor paper application with no parental signature recorded",
+    "backstory": "Yuki is a 17-year-old exchange student. Her host organisation supplied the form, but the section for the parent signature was never returned.",
+    "synthetic_notice": "Fictional person created for the POC. Any resemblance to a real person is coincidental."
+  }
+}

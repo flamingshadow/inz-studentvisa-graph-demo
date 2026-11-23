@@ -159,7 +159,7 @@ def interpretation_flags() -> dict:
     return q.interpretation_flags()
 
 
-@tool("The ten synthetic POC test cases (TC-01..TC-10) with the published and implemented expectations.")
+@tool("The synthetic persona test cases (SVP-001..SVP-050) with scenario, expected status and the check each exercises.")
 def list_test_cases() -> dict:
     return q.test_cases()
 
@@ -183,10 +183,10 @@ def get_assessment(assessment_id: str) -> dict:
     return r if r is not None else {"not_found": assessment_id}
 
 
-@tool("""Return an example synthetic application JSON (TC-01 shape) to copy and edit before calling
+@tool("""Return an example synthetic application JSON (SVP-001 shape) to copy and edit before calling
 assess_application. Facts carry verification_status VERIFIED or UNVERIFIED.""")
 def application_template() -> dict:
-    app = json.loads((ROOT / "testing/applications/TC-01.json").read_text())
+    app = json.loads((ROOT / "testing/applications/SVP-001.json").read_text())
     return {"template": app, "fact_attributes_used_by_checks": sorted(
         {i["fact_path"] for c in json.loads((ROOT / "decisioning/decision-checks.json").read_text())["decision_checks"]
          for i in c.get("inputs", [])})}

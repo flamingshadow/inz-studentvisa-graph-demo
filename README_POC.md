@@ -39,7 +39,7 @@ The Appendix A JSON files still hold every object.
 | `rules/` | 137 verified spec rules (12.1 fields), 731 instruction rules (one per paragraph of each current U1–U16, A4, A5, E4, E5, E6.5 and E7 instruction), 10 candidate rules (Section 6, now reconciled to the manual), 11 rule groups (5.2), and qualifiers (in the graph only thresholds are nodes) |
 | `evidence/` | Table 9 evidence types, evidence requirements per rule, verification rules |
 | `decisioning/` | 11 decision checks, 11 lifecycle states, 10 transitions |
-| `testing/` | TC-01..TC-10 test cases, synthetic applications (`testing/applications/*.json`), expected results |
+| `testing/` | 50 synthetic persona test cases (SVP-001..SVP-050), synthetic applications (`testing/applications/*.json`), expected results |
 | `governance/` | Source coverage, GAP-01/02, RISK-01..05, provenance (document SHA-256), interpretation flags |
 | `svkg/` | Extractor, checker, loader, decision engine, MCP server, CLI |
 
@@ -78,7 +78,7 @@ CREATE DATABASE studentvisa IF NOT EXISTS;
 ```
 
 ```bash
-.venv/bin/svkg assess testing/applications/TC-03.json --summary
+.venv/bin/svkg assess testing/applications/SVP-023.json --summary
 ```
 
 ```bash
@@ -86,7 +86,7 @@ CREATE DATABASE studentvisa IF NOT EXISTS;
 ```
 
 ```bash
-.venv/bin/python -m pytest -q                          # 109 tests; needs the live studentvisa database
+.venv/bin/python -m pytest -q                          # 174 tests; needs the live studentvisa database
 ```
 
 - `svkg load` is idempotent. It MERGEs spec nodes (`origin:'SPEC'`), removes stale ones, never touches
@@ -108,7 +108,7 @@ An application has a header, F.6 evidence items and F.7 facts. Each fact says wh
             "evidence_item_ids": ["EVID-X-1"], "verification_status": "VERIFIED"}]}
 ```
 
-`synthetic: true` is mandatory. See `testing/applications/TC-01.json` for a complete example, or call the
+`synthetic: true` is mandatory. See `testing/applications/SVP-001.json` for a complete example, or call the
 `application_template` tool.
 
 ### Engine behaviour
@@ -220,7 +220,7 @@ raised with the spec authors for v0.3.
 
 | ID | Kind | Title |
 |---|---|---|
-| IF-01 | **Deviation (decision 3)** | Candidate funds thresholds execute; TC-06 expectation adjusted |
+| IF-01 | **Deviation (decision 3)** | Candidate funds thresholds execute |
 | IF-02 | Interpretation | Published rule type codes (OR/PERM/DR/SR) not defined |
 | IF-03 | Interpretation | Definitional rules have no deontic modality |
 | IF-04 | Interpretation | Compound automation classes: the most restrictive is used, and a gap marker gives SOURCE_COVERAGE_GAP |
@@ -233,11 +233,11 @@ raised with the spec authors for v0.3.
 | IF-11 | Interpretation | Rule-to-evidence mapping via Table 9 "typical rule domain" |
 | IF-12 | Interpretation | 12.1 vs F.5 ID inconsistency for SV-APP-005 |
 | IF-13 | Interpretation | Decision checks implied by test cases |
-| IF-14 | Interpretation | TC-09 expects NOT_SATISFIED for an A3 rule |
+| IF-14 | Interpretation | Provider breach check returns NOT_SATISFIED for an A3 rule |
 | IF-15 | Interpretation | Maintenance calculation by duration; prepaid accommodation not applied |
 | IF-16 | Interpretation | Overall status aggregation |
 | IF-17 | Interpretation | Actors that are rule subjects but not "Parties" |
-| IF-18 | Interpretation | Health outcome for TC-07 (A3) |
+| IF-18 | Interpretation | Health outcome (A3) |
 | IF-19 | Interpretation | Concept typing and product hierarchy |
 | IF-20 | Interpretation | Online applications use the D.1 rules |
 | IF-21 | Interpretation | The under-10 check is a provider obligation |
@@ -259,5 +259,4 @@ raised with the spec authors for v0.3.
 **Decision 3, in short (superseded by IF-30 on 23 Nov 2026).** The candidate figures ran: tertiary NZD 20,000/yr or 1,667/month, school
 NZD 17,000/yr or 1,417/month, maternity NZD 9,000. Every Threshold node and every funds evaluation carries
 `CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED` and `provenance_status: RECONCILIATION_REQUIRED`.
-The figures are still held as candidate thresholds, but they no longer execute. TC-06 now expects the U3.20.30
-result with `VERIFIED_INSTRUCTION_SOURCE` provenance.
+The figures are still held as candidate thresholds, but they no longer execute.

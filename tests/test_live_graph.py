@@ -1,4 +1,4 @@
-"""Phase 3 + 6: TC-01..TC-10 and graph invariants against the live `studentvisa` database."""
+"""Phase 3 + 6: the 50 SVP personas and graph invariants against the live `studentvisa` database."""
 import json
 
 import pytest
@@ -12,7 +12,7 @@ from svkg.engine import check_result
 from svkg.graph import LAYERS, SECTION3_TYPES
 
 pytestmark = pytest.mark.neo4j
-TCS = [f"TC-{i:02d}" for i in range(1, 11)]
+TCS = [f"SVP-{i:03d}" for i in range(1, 51)]
 VOCAB = [r["type"] for r in yaml.safe_load((ROOT / "schema/relationship-types.yaml").read_text())["relationship_types"]]
 
 
@@ -26,7 +26,7 @@ def assessed(live, apps):
     return {tc: service.assess(apps[tc], write=True, channel="pytest") for tc in TCS}
 
 
-# ---- the ten synthetic test cases -------------------------------------------------
+# ---- the synthetic persona test cases -------------------------------------------------
 def _check(a, rule):
     if "check_id" in rule and "accepted" in rule:
         got = check_result(a, rule["check_id"], rule.get("rule_id"))
@@ -71,9 +71,9 @@ def test_synthetic_case(tc, assessed, expected, live):
             _check(a, rule)
 
 
-def test_tc06_deviation_documented(expected):
-    assert "SOURCE_COVERAGE_GAP" in expected["TC-06"]["deviation"] and "IF-30" in expected["TC-06"]["deviation"]
-    assert expected["TC-06"]["rule_id"] == "SV-OM-U3.20.30-A-I"
+def test_funds_deviation_documented(expected):
+    assert "SOURCE_COVERAGE_GAP" in expected["SVP-016"]["deviation"] and "IF-30" in expected["SVP-016"]["deviation"]
+    assert expected["SVP-016"]["rule_id"] == "SV-OM-U3.20.30-A-I"
 
 
 # ---- graph invariants ---------------------------------------------------------------
@@ -113,7 +113,7 @@ def test_load_is_idempotent(live):
 
 
 def test_evidence_to_evaluation_path(live, assessed):
-    aid = assessed["TC-01"]["assessment_id"]
+    aid = assessed["SVP-001"]["assessment_id"]
     rows = q(live, """MATCH p=(:EvidenceItem)-[:SUPPORTS_FACT]->(:ObservedFact)-[:VERIFIED_AS]->(v:VerifiedFact)
                       -[i:INPUT_TO]->(:DecisionCheck)-[:PRODUCES_OUTCOME]->(ev:RuleEvaluation {assessment_id:$a})
                       WHERE ev.id IN i.evaluation_ids RETURN count(p) AS n""", a=aid)
@@ -130,12 +130,12 @@ def test_rule_to_instrument_path(live):
 
 def test_assessment_nodes_written(live, assessed):
     """IF-34: one RuleEvaluation per rule; one DecisionOutcome and one Explanation per assessment."""
-    aid = assessed["TC-09"]["assessment_id"]
+    aid = assessed["SVP-035"]["assessment_id"]
     r = q(live, """MATCH (:Application)-[:PRODUCES_OUTCOME]->(o:DecisionOutcome {id:$a})-[:CONTAINS]->(ev:RuleEvaluation)
                    MATCH (o)-[:EXPLAINED_BY]->(x:Explanation)
                    RETURN o.production_decision AS pd, count(DISTINCT ev) AS n, count(DISTINCT x) AS nx,
                           collect(DISTINCT ev.result) AS results""", a=aid)[0]
-    assert r["pd"] is False and r["n"] == len(assessed["TC-09"]["rule_evaluations"]) and r["nx"] == 1
+    assert r["pd"] is False and r["n"] == len(assessed["SVP-035"]["rule_evaluations"]) and r["nx"] == 1
     assert "NOT_SATISFIED" in r["results"]
     extra = q(live, "MATCH (ev:RuleEvaluation {assessment_id:$a})-[:PRODUCES_OUTCOME|EXPLAINED_BY]->() "
                     "RETURN count(*) AS n", a=aid)[0]["n"]
@@ -156,7 +156,7 @@ def test_graph_is_minimal(live):
 
 def test_audit_log_appended(assessed):
     lines = (ROOT / "logs/audit-log.jsonl").read_text().splitlines()
-    aid = assessed["TC-05"]["assessment_id"]
+    aid = assessed["SVP-032"]["assessment_id"]
     events = {json.loads(l)["event"] for l in lines if aid in l}
     assert {"APPLICATION_SUBMITTED", "EVIDENCE_RECEIVED", "FACT_VERIFIED", "RULE_EVALUATED",
             "HUMAN_REVIEW_REQUESTED"} <= events
@@ -172,7 +172,7 @@ def test_read_session_rejects_writes(live):
 def test_check_provenance_survives_load(live):
     rows = {r["id"]: r["d"] for r in q(live, "MATCH (c:DecisionCheck) RETURN c.id AS id, c.defined_in AS d")}
     assert rows["SV-CHECK-APP-001"] == "Table 11 (Section 7)"
-    assert rows["SV-CHECK-MIN-001"].startswith("Implied by TC-03")
+    assert rows["SV-CHECK-MIN-001"].startswith("Implied by the spec")
     assert all(rows.values())
 
 

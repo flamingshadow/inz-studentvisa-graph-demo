@@ -330,7 +330,7 @@
       "check_id": "SV-CHECK-MIN-001",
       "evaluates_rule_id": "SV-MIN-001",
       "automation_class": "A4",
-      "defined_in": "Implied by TC-03 (not in Table 11)",
+      "defined_in": "Implied by the spec's under-18 consent scenario (not in Table 11)",
       "inputs": [
         {
           "fact_path": "application.applicant_age",
@@ -364,7 +364,7 @@
         "SV-HEALTH-001"
       ],
       "automation_class": "A3",
-      "defined_in": "Implied by TC-07 (not in Table 11)",
+      "defined_in": "Implied by the spec's medical evidence scenario (not in Table 11)",
       "inputs": [
         {
           "fact_path": "evidence.MedicalCertificate|ChestXray",
@@ -387,7 +387,7 @@
       "evaluates_rule_id": "SV-EDU-009",
       "evaluates_rule_id_school": "SV-SCHOOL-009",
       "automation_class": "A3",
-      "defined_in": "Implied by TC-09 (not in Table 11)",
+      "defined_in": "Implied by the spec's provider breach scenario (not in Table 11)",
       "trigger_fact_paths": [
         "application.provider_known_visa_condition_breach",
         "application.provider_suspected_visa_condition_breach"
@@ -415,6 +415,648 @@
       "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL45-B"
     },
     {
+      "check_id": "SV-CHECK-LODG-001",
+      "evaluates_rule_id": "SV-OM-E4.50.1-P1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-E4.50.1-P1-A",
+        "SV-OM-E4.50.1-P1-B",
+        "SV-OM-E4.50.1-P2",
+        "SV-OM-E4.50.2-B-I",
+        "SV-OM-E4.50.2-B-II",
+        "SV-OM-E4.50.2-B-III",
+        "SV-OM-E4.50.2-B-IV",
+        "SV-OM-E4.50.2-B-VI",
+        "SV-OM-E4.50.2-B-VII",
+        "SV-OM-E4.50.35-A-I",
+        "SV-OM-E4.50.35-A-II",
+        "SV-OM-E4.50.35-A-III",
+        "SV-OM-E4.50.35-A-IV",
+        "SV-OM-E4.50.35-B-I",
+        "SV-OM-E4.50.35-B-II"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-36 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.lodgement_route"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.lodgement_route",
+          "required": true
+        },
+        {
+          "fact_path": "application.approved_form_used",
+          "required": false
+        },
+        {
+          "fact_path": "application.completed_in_english",
+          "required": false
+        },
+        {
+          "fact_path": "application.identity_document_provided",
+          "required": false
+        },
+        {
+          "fact_path": "application.photographs_provided",
+          "required": false
+        },
+        {
+          "fact_path": "application.application_signed",
+          "required": false
+        },
+        {
+          "fact_path": "application.applicant_age",
+          "required": false
+        },
+        {
+          "fact_path": "application.signed_by_parent_or_guardian",
+          "required": false
+        },
+        {
+          "fact_path": "application.accompanied_by_parent_or_guardian",
+          "required": false
+        },
+        {
+          "fact_path": "application.persons_in_application",
+          "required": false
+        },
+        {
+          "fact_path": "application.full_name_stated",
+          "required": false
+        },
+        {
+          "fact_path": "application.date_and_place_of_birth_stated",
+          "required": false
+        },
+        {
+          "fact_path": "application.passport_details_stated",
+          "required": false
+        },
+        {
+          "fact_path": "application.form_requires_photograph",
+          "required": false
+        },
+        {
+          "fact_path": "application.photograph_uploaded",
+          "required": false
+        },
+        {
+          "fact_path": "application.declaration_acknowledged",
+          "required": false
+        },
+        {
+          "fact_path": "application.change_notification_agreed",
+          "required": false
+        }
+      ],
+      "instruction_codes": [
+        "E4.50.1",
+        "E4.50.2",
+        "E4.50.35"
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_required_for_applicant": "NOT_APPLICABLE",
+        "missing": "UNKNOWN"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-36"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-E4.50.1"
+    },
+    {
+      "check_id": "SV-CHECK-FAM-001",
+      "domain": "Family",
+      "evaluates_rule_id": "SV-OM-U8.20.10-B-I",
+      "evaluates_rule_ids": [
+        "SV-OM-U8.10-A",
+        "SV-OM-U8.10-B",
+        "SV-OM-U8.10-C",
+        "SV-OM-U8.15-A",
+        "SV-OM-U8.15-B-I",
+        "SV-OM-U8.15-B-II",
+        "SV-OM-U8.15-B-III",
+        "SV-OM-U8.15-C-I",
+        "SV-OM-U8.15-C-II",
+        "SV-OM-U8.15-D",
+        "SV-OM-U8.15-E",
+        "SV-OM-U8.15-F-I",
+        "SV-OM-U8.15-F-II",
+        "SV-OM-U8.15-F-III",
+        "SV-OM-U8.20-A-I",
+        "SV-OM-U8.20-A-II",
+        "SV-OM-U8.20-A-III",
+        "SV-OM-U8.20-A-IV",
+        "SV-OM-U8.20-A-IX",
+        "SV-OM-U8.20-A-V",
+        "SV-OM-U8.20-A-VI",
+        "SV-OM-U8.20-A-VII",
+        "SV-OM-U8.20-A-VIII",
+        "SV-OM-U8.20-A-X",
+        "SV-OM-U8.20-A-XI",
+        "SV-OM-U8.20-A-XII",
+        "SV-OM-U8.20-B",
+        "SV-OM-U8.20-C",
+        "SV-OM-U8.20-D",
+        "SV-OM-U8.20-E",
+        "SV-OM-U8.20-F",
+        "SV-OM-U8.20-G",
+        "SV-OM-U8.20.10-A-I",
+        "SV-OM-U8.20.10-A-II",
+        "SV-OM-U8.20.10-B-I",
+        "SV-OM-U8.20.10-B-II",
+        "SV-OM-U8.20.10-B-III",
+        "SV-OM-U8.20.10-B-IV",
+        "SV-OM-U8.20.10-B-V",
+        "SV-OM-U8.20.10-C-I",
+        "SV-OM-U8.20.10-C-II",
+        "SV-OM-U8.20.10-NOTE1",
+        "SV-OM-U8.20.2-A-I",
+        "SV-OM-U8.20.2-A-II",
+        "SV-OM-U8.20.2-A-III",
+        "SV-OM-U8.20.2-A-IV",
+        "SV-OM-U8.20.2-A-V",
+        "SV-OM-U8.20.2-B",
+        "SV-OM-U8.20.2-C-I",
+        "SV-OM-U8.20.2-C-II",
+        "SV-OM-U8.20.2-C-III",
+        "SV-OM-U8.20.2-D",
+        "SV-OM-U8.20.2-E-I",
+        "SV-OM-U8.20.2-E-II",
+        "SV-OM-U8.20.2-E-III",
+        "SV-OM-U8.20.5-A",
+        "SV-OM-U8.20.5-B",
+        "SV-OM-U8.20.5-C-I",
+        "SV-OM-U8.20.5-C-II",
+        "SV-OM-U8.20.6-A",
+        "SV-OM-U8.20.6-B",
+        "SV-OM-U8.20.6-C",
+        "SV-OM-U8.20.6-D",
+        "SV-OM-U8.20.6-E",
+        "SV-OM-U8.20.6-NOTE1",
+        "SV-OM-U8.25-A-I",
+        "SV-OM-U8.25-A-II",
+        "SV-OM-U8.25-A-III",
+        "SV-OM-U8.25-B",
+        "SV-OM-U8.25-C",
+        "SV-OM-U8.25-D",
+        "SV-OM-U8.30-A-I",
+        "SV-OM-U8.30-A-II",
+        "SV-OM-U8.30-A-III",
+        "SV-OM-U8.30-B-I",
+        "SV-OM-U8.30-B-II",
+        "SV-OM-U8.30-C",
+        "SV-OM-U8.30-D",
+        "SV-OM-U8.30-E",
+        "SV-OM-U8.30-F",
+        "SV-OM-U8.30-NOTE1",
+        "SV-OM-U8.30.1-A-I",
+        "SV-OM-U8.30.1-A-II",
+        "SV-OM-U8.30.1-A-III",
+        "SV-OM-U8.30.1-A-IV",
+        "SV-OM-U8.30.1-A-V",
+        "SV-OM-U8.30.1-B",
+        "SV-OM-U8.30.1-NOTE1",
+        "SV-OM-U8.5-P1"
+      ],
+      "executable_rule_ids": [
+        "SV-OM-U8.20.10-B-I",
+        "SV-OM-U8.20.6-A",
+        "SV-OM-U8.30-B-I",
+        "SV-OM-U8.30-B-II"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-37 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.family_basis"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.applicant_in_new_zealand",
+          "required": false
+        },
+        {
+          "fact_path": "application.supporting_parent_gross_income_nzd",
+          "required": false
+        },
+        {
+          "fact_path": "application.supporting_work_visa_type",
+          "required": false
+        },
+        {
+          "fact_path": "application.visa_duration_months",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-37"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U8.20.10"
+    },
+    {
+      "check_id": "SV-CHECK-PATH-001",
+      "domain": "Pathway student visas",
+      "evaluates_rule_id": "SV-OM-U14-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U14-A",
+        "SV-OM-U14-B",
+        "SV-OM-U14.10-A",
+        "SV-OM-U14.10-B",
+        "SV-OM-U14.10-C",
+        "SV-OM-U14.10-D",
+        "SV-OM-U14.10-E",
+        "SV-OM-U14.10-F-I",
+        "SV-OM-U14.10-F-II",
+        "SV-OM-U14.10-G",
+        "SV-OM-U14.15-A",
+        "SV-OM-U14.15-B-I",
+        "SV-OM-U14.15-B-II",
+        "SV-OM-U14.15-B-III",
+        "SV-OM-U14.15-B-IV",
+        "SV-OM-U14.15-B-V",
+        "SV-OM-U14.15-C-I",
+        "SV-OM-U14.15-C-II",
+        "SV-OM-U14.15-C-III",
+        "SV-OM-U14.15-D",
+        "SV-OM-U14.15-E",
+        "SV-OM-U14.15.5-A-I",
+        "SV-OM-U14.15.5-A-II",
+        "SV-OM-U14.15.5-A-III",
+        "SV-OM-U14.15.5-B",
+        "SV-OM-U14.20.1-P1-A",
+        "SV-OM-U14.20.1-P1-B",
+        "SV-OM-U14.20.1-P1-C",
+        "SV-OM-U14.20.1-P1-D",
+        "SV-OM-U14.20.1-P1-E",
+        "SV-OM-U14.20.1-P1-F",
+        "SV-OM-U14.20.10-A",
+        "SV-OM-U14.20.10-B-I",
+        "SV-OM-U14.20.10-B-II",
+        "SV-OM-U14.20.10-B-III",
+        "SV-OM-U14.20.10-B-IV",
+        "SV-OM-U14.20.10-B-V",
+        "SV-OM-U14.20.10-B-VI",
+        "SV-OM-U14.20.10-B-VII",
+        "SV-OM-U14.20.10-B-VIII-B1",
+        "SV-OM-U14.20.10-B-VIII-B2",
+        "SV-OM-U14.20.10-B-VIII-B3",
+        "SV-OM-U14.20.10-B-VIII-B4",
+        "SV-OM-U14.20.10-B-VIII-B5",
+        "SV-OM-U14.20.10-C",
+        "SV-OM-U14.20.15-NOTE1",
+        "SV-OM-U14.20.15-P1-A",
+        "SV-OM-U14.20.15-P1-B",
+        "SV-OM-U14.20.15-P1-C",
+        "SV-OM-U14.20.15-P1-D",
+        "SV-OM-U14.20.15-P1-E",
+        "SV-OM-U14.20.15-P1-F",
+        "SV-OM-U14.20.5-A",
+        "SV-OM-U14.20.5-B",
+        "SV-OM-U14.20.5-C",
+        "SV-OM-U14.20.5-D",
+        "SV-OM-U14.20.5-E",
+        "SV-OM-U14.5-P1-A",
+        "SV-OM-U14.5-P1-B",
+        "SV-OM-U14.5-P1-C",
+        "SV-OM-U14.5.1-A-I",
+        "SV-OM-U14.5.1-A-II",
+        "SV-OM-U14.5.1-A-III",
+        "SV-OM-U14.5.1-A-IV",
+        "SV-OM-U14.5.1-B-I",
+        "SV-OM-U14.5.1-B-II",
+        "SV-OM-U14.5.1-C-I",
+        "SV-OM-U14.5.1-C-II",
+        "SV-OM-U14.5.1-NOTE1"
+      ],
+      "executable_rule_ids": [
+        "SV-OM-U14-A",
+        "SV-OM-U14.10-A",
+        "SV-OM-U14.20.1-P1-D",
+        "SV-OM-U14.20.5-C",
+        "SV-OM-U14.20.5-D"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-37 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.pathway_programme_count"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.english_language_study_weeks",
+          "required": false
+        },
+        {
+          "fact_path": "application.max_break_between_programmes_weeks",
+          "required": false
+        },
+        {
+          "fact_path": "application.pathway_programme_count",
+          "required": false
+        },
+        {
+          "fact_path": "application.pathway_visa_duration_months",
+          "required": false
+        },
+        {
+          "fact_path": "application.provider_visa_approval_rate_percent",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-37"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U14"
+    },
+    {
+      "check_id": "SV-CHECK-SPON-001",
+      "domain": "Sponsorship",
+      "evaluates_rule_id": "SV-OM-E6.5-E",
+      "evaluates_rule_ids": [
+        "SV-OM-E6.5-A",
+        "SV-OM-E6.5-B",
+        "SV-OM-E6.5-C-I",
+        "SV-OM-E6.5-C-II",
+        "SV-OM-E6.5-C-III",
+        "SV-OM-E6.5-D",
+        "SV-OM-E6.5-E",
+        "SV-OM-E6.5-F-I",
+        "SV-OM-E6.5-F-II",
+        "SV-OM-E6.5-G",
+        "SV-OM-E6.5-NOTE1",
+        "SV-OM-E6.5.1-A-I",
+        "SV-OM-E6.5.1-A-II",
+        "SV-OM-E6.5.1-A-III",
+        "SV-OM-E6.5.1-A-IV",
+        "SV-OM-E6.5.1-A-IX",
+        "SV-OM-E6.5.1-A-V",
+        "SV-OM-E6.5.1-A-VI",
+        "SV-OM-E6.5.1-A-VII",
+        "SV-OM-E6.5.1-A-VIII",
+        "SV-OM-E6.5.5-A-I",
+        "SV-OM-E6.5.5-A-II",
+        "SV-OM-E6.5.5-A-III",
+        "SV-OM-E6.5.5-A-IV",
+        "SV-OM-E6.5.5-A-V",
+        "SV-OM-E6.5.5-A-VI",
+        "SV-OM-E6.5.5-A-VII",
+        "SV-OM-E6.5.5-NOTE1",
+        "SV-OM-U3.20.10-A",
+        "SV-OM-U3.20.10-B",
+        "SV-OM-U3.20.10-C",
+        "SV-OM-U3.20.10-D-I",
+        "SV-OM-U3.20.10-D-II",
+        "SV-OM-U3.20.10-E",
+        "SV-OM-U3.20.15-P1-A",
+        "SV-OM-U3.20.15-P1-B",
+        "SV-OM-U3.20.15-P1-C",
+        "SV-OM-U3.20.15-P1-D",
+        "SV-OM-U3.20.15-P1-E",
+        "SV-OM-U3.20.5-A-I",
+        "SV-OM-U3.20.5-A-II",
+        "SV-OM-U3.20.5-B",
+        "SV-OM-U3.20.5-C-I",
+        "SV-OM-U3.20.5-C-II"
+      ],
+      "executable_rule_ids": [
+        "SV-OM-E6.5-E",
+        "SV-OM-U3.20.10-B",
+        "SV-OM-U3.20.10-C"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-37 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.third_party_type",
+        "application.sponsor_is_natural_person"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.authorised_contact_nominated",
+          "required": false
+        },
+        {
+          "fact_path": "application.sponsor_is_natural_person",
+          "required": false
+        },
+        {
+          "fact_path": "application.third_party_relationship",
+          "required": false
+        },
+        {
+          "fact_path": "application.third_party_type",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-37"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-E6.5"
+    },
+    {
+      "check_id": "SV-CHECK-PROV-001",
+      "domain": "Providers and programmes",
+      "evaluates_rule_id": "SV-OM-U5.1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U5.1-A",
+        "SV-OM-U5.1-B",
+        "SV-OM-U5.1-C",
+        "SV-OM-U5.1-D",
+        "SV-OM-U5.1-E-I",
+        "SV-OM-U5.1-E-II",
+        "SV-OM-U5.1-E-III",
+        "SV-OM-U5.1-E-IV-B1",
+        "SV-OM-U5.1-E-IV-B2",
+        "SV-OM-U5.1-F-I",
+        "SV-OM-U5.1-F-II",
+        "SV-OM-U5.1-G-I",
+        "SV-OM-U5.1-G-II",
+        "SV-OM-U5.1-G-III",
+        "SV-OM-U5.1-H-I",
+        "SV-OM-U5.1-H-II",
+        "SV-OM-U5.1-H-III",
+        "SV-OM-U5.1-I",
+        "SV-OM-U5.1.5-A",
+        "SV-OM-U5.1.5-B",
+        "SV-OM-U5.1.5-C-I",
+        "SV-OM-U5.1.5-C-II",
+        "SV-OM-U5.1.5-C-III",
+        "SV-OM-U5.10-A",
+        "SV-OM-U5.10-B",
+        "SV-OM-U5.15-A",
+        "SV-OM-U5.15-B",
+        "SV-OM-U5.15-C-I",
+        "SV-OM-U5.15-C-II",
+        "SV-OM-U5.15-C-III",
+        "SV-OM-U5.15-NOTE1",
+        "SV-OM-U5.20-A",
+        "SV-OM-U5.20-B",
+        "SV-OM-U5.20-C-I",
+        "SV-OM-U5.20-C-II",
+        "SV-OM-U5.20-C-III-B1",
+        "SV-OM-U5.20-C-III-B2",
+        "SV-OM-U5.20-NOTE1",
+        "SV-OM-U5.5-A",
+        "SV-OM-U5.5-B"
+      ],
+      "executable_rule_ids": [
+        "SV-OM-U5.1-A",
+        "SV-OM-U5.1-B",
+        "SV-OM-U5.1-D"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-37 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.provider_eer_category",
+        "application.provider_signatory_to_code",
+        "application.provider_certified_programme_compliance"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.provider_certified_programme_compliance",
+          "required": false
+        },
+        {
+          "fact_path": "application.provider_eer_category",
+          "required": false
+        },
+        {
+          "fact_path": "application.provider_signatory_to_code",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-37"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U5.1"
+    },
+    {
+      "check_id": "SV-CHECK-WRK-001",
+      "domain": "Work rights",
+      "evaluates_rule_id": "SV-OM-U13.15-B",
+      "evaluates_rule_ids": [
+        "SV-OM-U13.1-A-I",
+        "SV-OM-U13.1-A-II",
+        "SV-OM-U13.1-B",
+        "SV-OM-U13.1-C-I",
+        "SV-OM-U13.1-C-II",
+        "SV-OM-U13.1-C-III",
+        "SV-OM-U13.1-C-IV",
+        "SV-OM-U13.1-NOTE1",
+        "SV-OM-U13.10-A-I",
+        "SV-OM-U13.10-A-II",
+        "SV-OM-U13.10-A-III",
+        "SV-OM-U13.10-B",
+        "SV-OM-U13.10-C",
+        "SV-OM-U13.10-D",
+        "SV-OM-U13.15-A",
+        "SV-OM-U13.15-B",
+        "SV-OM-U13.15.1-A-I",
+        "SV-OM-U13.15.1-A-II",
+        "SV-OM-U13.15.1-A-III",
+        "SV-OM-U13.15.1-A-IV-B1",
+        "SV-OM-U13.15.1-A-IV-B2",
+        "SV-OM-U13.15.1-A-V-B1",
+        "SV-OM-U13.15.1-A-V-B2",
+        "SV-OM-U13.15.1-A-VI",
+        "SV-OM-U13.15.1-B",
+        "SV-OM-U13.15.10-A",
+        "SV-OM-U13.15.10-B",
+        "SV-OM-U13.15.10-NOTE1",
+        "SV-OM-U13.15.15-P1-A",
+        "SV-OM-U13.15.15-P1-B",
+        "SV-OM-U13.15.20-NOTE1",
+        "SV-OM-U13.15.20-P1",
+        "SV-OM-U13.15.20-TABLE1",
+        "SV-OM-U13.15.5-P1-A",
+        "SV-OM-U13.15.5-P1-B",
+        "SV-OM-U13.5-A",
+        "SV-OM-U13.5-B",
+        "SV-OM-U13.5-C"
+      ],
+      "executable_rule_ids": [
+        "SV-OM-U13.15-B"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-37 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.work_conditions_requested"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.applicant_age",
+          "required": false
+        },
+        {
+          "fact_path": "application.enrolled_at_tertiary_or_pte",
+          "required": false
+        },
+        {
+          "fact_path": "application.parental_written_consent",
+          "required": false
+        },
+        {
+          "fact_path": "application.provider_written_permission",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-37"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U13.15"
+    },
+    {
       "check_id": "SV-CHECK-INSTR-001",
       "evaluates_rule_id": "SV-INSTR-001",
       "evaluates_rule_id_online": "SV-ONLINE-007",
@@ -438,6 +1080,2054 @@
       ],
       "purpose": null,
       "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-2-E-III"
+    },
+    {
+      "check_id": "SV-CHECK-ACCOMMODATION-RES",
+      "domain": "Accommodation",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U3.15-P1",
+      "evaluates_rule_ids": [
+        "SV-OM-U3.15-P1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_accommodation",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U3.15"
+    },
+    {
+      "check_id": "SV-CHECK-AFTER-GRANT-RES",
+      "domain": "After grant",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U7.1-A-I",
+      "evaluates_rule_ids": [
+        "SV-OM-U7.1-A-I",
+        "SV-OM-U7.1-A-II",
+        "SV-OM-U7.10-A",
+        "SV-OM-U7.10-B",
+        "SV-OM-U7.5-P1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_after_grant",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U7.1"
+    },
+    {
+      "check_id": "SV-CHECK-APPLICATION-RES",
+      "domain": "Application",
+      "residual": true,
+      "evaluates_rule_id": "SV-APP-001",
+      "evaluates_rule_ids": [
+        "SV-APP-001",
+        "SV-APP-002",
+        "SV-APP-003",
+        "SV-APP-004",
+        "SV-APP-006",
+        "SV-APP-007",
+        "SV-APP-008",
+        "SV-BIO-001",
+        "SV-BIO-002"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_application",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-ACT-2009-S57-1"
+    },
+    {
+      "check_id": "SV-CHECK-BONA-FIDE-APPLICANTS-RES",
+      "domain": "Bona fide applicants",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-E5.1-P1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-E5.1-P1-A",
+        "SV-OM-E5.1-P1-B-I",
+        "SV-OM-E5.1-P1-B-II",
+        "SV-OM-E5.1-P1-B-III"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_bona_fide_applicants",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-E5.1"
+    },
+    {
+      "check_id": "SV-CHECK-CARRIER-RES",
+      "domain": "Carrier",
+      "residual": true,
+      "evaluates_rule_id": "SV-CARRIER-001",
+      "evaluates_rule_ids": [
+        "SV-CARRIER-001",
+        "SV-CARRIER-002",
+        "SV-CARRIER-003",
+        "SV-CARRIER-004",
+        "SV-CARRIER-005"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_carrier",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-CIO-REGS-2010-R4-1"
+    },
+    {
+      "check_id": "SV-CHECK-CHANGE-OF-STUDY-RES",
+      "domain": "Change of study",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U7.20.1-A",
+      "evaluates_rule_ids": [
+        "SV-CAND-CHANGE-STUDY",
+        "SV-OM-U3.40-A-I",
+        "SV-OM-U3.40-A-II",
+        "SV-OM-U3.40-A-III",
+        "SV-OM-U3.40-A-IV",
+        "SV-OM-U3.40-A-V",
+        "SV-OM-U3.40-B-I",
+        "SV-OM-U3.40-B-II",
+        "SV-OM-U3.40-B-III",
+        "SV-OM-U3.40-C",
+        "SV-OM-U3.40-D",
+        "SV-OM-U7.20-P1",
+        "SV-OM-U7.20.1-A",
+        "SV-OM-U7.20.1-B",
+        "SV-OM-U7.20.1-C-I",
+        "SV-OM-U7.20.1-C-II",
+        "SV-OM-U7.20.1-D-I",
+        "SV-OM-U7.20.1-D-II",
+        "SV-OM-U7.20.5-A-I",
+        "SV-OM-U7.20.5-A-II",
+        "SV-OM-U7.20.5-B"
+      ],
+      "executable_rule_ids": [
+        "SV-OM-U7.20.1-A",
+        "SV-OM-U7.20.1-B"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_change_of_study",
+        "application.review_all_domains"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.part_time_study_months",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U7.20.1"
+    },
+    {
+      "check_id": "SV-CHECK-CHARACTER-RES",
+      "domain": "Character",
+      "residual": true,
+      "evaluates_rule_id": "SV-CHAR-001",
+      "evaluates_rule_ids": [
+        "SV-CHAR-001",
+        "SV-CHAR-002",
+        "SV-CHAR-003",
+        "SV-CHAR-004",
+        "SV-CHAR-005",
+        "SV-CHAR-006",
+        "SV-OM-A5.5-A-I",
+        "SV-OM-A5.5-A-II",
+        "SV-OM-A5.5-A-III",
+        "SV-OM-A5.5-A-IV",
+        "SV-OM-A5.5-B-I",
+        "SV-OM-A5.5-B-II",
+        "SV-OM-A5.5-C-I",
+        "SV-OM-A5.5-C-II",
+        "SV-OM-A5.5-D-I",
+        "SV-OM-A5.5-D-II",
+        "SV-OM-A5.5-D-III",
+        "SV-OM-A5.5-E-I",
+        "SV-OM-A5.5-E-II",
+        "SV-OM-A5.5-E-III",
+        "SV-OM-A5.5-F",
+        "SV-OM-A5.5-G",
+        "SV-OM-A5.5.1-A",
+        "SV-OM-A5.5.1-B",
+        "SV-OM-A5.5.1-C",
+        "SV-OM-A5.5.1-D"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_character",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-ACT-2009-S15-1-A"
+    },
+    {
+      "check_id": "SV-CHECK-CORE-ELIGIBILITY-RES",
+      "domain": "Core eligibility",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-ELIGIBILITY",
+      "evaluates_rule_ids": [
+        "SV-CAND-ELIGIBILITY"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_core_eligibility",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-DECISION-RES",
+      "domain": "Decision",
+      "residual": true,
+      "evaluates_rule_id": "SV-DEC-001",
+      "evaluates_rule_ids": [
+        "SV-DEC-001",
+        "SV-DEC-003",
+        "SV-DEC-004"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_decision",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-ACT-2009-S45-1"
+    },
+    {
+      "check_id": "SV-CHECK-DEFINITIONS-RES",
+      "domain": "Definitions",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U3.35-P1",
+      "evaluates_rule_ids": [
+        "SV-OM-U3.35-P1",
+        "SV-OM-U3.35.1-P1-A",
+        "SV-OM-U3.35.1-P1-B",
+        "SV-OM-U3.35.1-P1-C",
+        "SV-OM-U3.35.1-P1-D",
+        "SV-OM-U3.35.1-P1-E-I",
+        "SV-OM-U3.35.1-P1-E-II",
+        "SV-OM-U3.35.10-P1-A",
+        "SV-OM-U3.35.10-P1-B",
+        "SV-OM-U3.35.10-P1-C",
+        "SV-OM-U3.35.10-P1-D",
+        "SV-OM-U3.35.10-P1-E",
+        "SV-OM-U3.35.10-P1-F",
+        "SV-OM-U3.35.10-P1-G",
+        "SV-OM-U3.35.15-P1-A",
+        "SV-OM-U3.35.15-P1-B",
+        "SV-OM-U3.35.5-P1-A",
+        "SV-OM-U3.35.5-P1-B",
+        "SV-OM-U3.35.5-P1-C",
+        "SV-OM-U3.35.5-P1-D",
+        "SV-OM-U3.35.5-P1-E",
+        "SV-OM-U3.35.5-P1-F",
+        "SV-OM-U3.35.5-P1-G",
+        "SV-OM-U3.35.5-P1-H-I",
+        "SV-OM-U3.35.5-P1-H-II",
+        "SV-OM-U3.35.5-P1-H-III-B1",
+        "SV-OM-U3.35.5-P1-H-III-B2",
+        "SV-OM-U3.35.5-P1-I-I",
+        "SV-OM-U3.35.5-P1-I-II",
+        "SV-OM-U3.35.5-P1-I-III",
+        "SV-OM-U3.35.5-P1-J",
+        "SV-OM-U3.35.5-P1-K",
+        "SV-OM-U3.35.5-P1-L",
+        "SV-OM-U3.35.5-P1-M",
+        "SV-OM-U3.35.5-P1-N"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_definitions",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U3.35"
+    },
+    {
+      "check_id": "SV-CHECK-EDUCATION-PROVIDER-RES",
+      "domain": "Education provider",
+      "residual": true,
+      "evaluates_rule_id": "SV-EDU-001",
+      "evaluates_rule_ids": [
+        "SV-EDU-001",
+        "SV-EDU-002",
+        "SV-EDU-003",
+        "SV-EDU-004",
+        "SV-EDU-005",
+        "SV-EDU-006",
+        "SV-EDU-007",
+        "SV-EDU-008",
+        "SV-EDU-010",
+        "SV-EDU-011",
+        "SV-SCHOOL-001",
+        "SV-SCHOOL-002",
+        "SV-SCHOOL-003",
+        "SV-SCHOOL-004",
+        "SV-SCHOOL-005",
+        "SV-SCHOOL-006",
+        "SV-SCHOOL-007",
+        "SV-SCHOOL-008",
+        "SV-SCHOOL-010",
+        "SV-SCHOOL-011"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_education_provider",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL40"
+    },
+    {
+      "check_id": "SV-CHECK-EDUCATION-INSURANCE-RES",
+      "domain": "Education/insurance",
+      "residual": true,
+      "evaluates_rule_id": "SV-INS-001",
+      "evaluates_rule_ids": [
+        "SV-INS-001",
+        "SV-INS-002",
+        "SV-INS-003",
+        "SV-INS-004",
+        "SV-INS-005",
+        "SV-OM-U3.45-A",
+        "SV-OM-U3.45-B",
+        "SV-OM-U3.45-C",
+        "SV-OM-U3.45-D"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_education_insurance",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL44-1"
+    },
+    {
+      "check_id": "SV-CHECK-ELIGIBILITY-SUMMARY-RES",
+      "domain": "Eligibility summary",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U3.1-A-I",
+      "evaluates_rule_ids": [
+        "SV-OM-U3.1-A-I",
+        "SV-OM-U3.1-A-II",
+        "SV-OM-U3.1-A-III",
+        "SV-OM-U3.1-A-IV",
+        "SV-OM-U3.1-A-V",
+        "SV-OM-U3.1-A-VI",
+        "SV-OM-U3.1-A-VII",
+        "SV-OM-U3.1-B-I",
+        "SV-OM-U3.1-B-II",
+        "SV-OM-U3.1-C-I",
+        "SV-OM-U3.1-C-II",
+        "SV-OM-U3.1-D",
+        "SV-OM-U3.1-E-I",
+        "SV-OM-U3.1-E-II",
+        "SV-OM-U3.1-F-I",
+        "SV-OM-U3.1-F-II",
+        "SV-OM-U3.1-F-III",
+        "SV-OM-U3.1-NOTE1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_eligibility_summary",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U3.1"
+    },
+    {
+      "check_id": "SV-CHECK-ENGLISH-LANGUAGE-PROGRAMMES-RES",
+      "domain": "English language programmes",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U15-A-I",
+      "evaluates_rule_ids": [
+        "SV-OM-U15-A-I",
+        "SV-OM-U15-A-II",
+        "SV-OM-U15-A-III",
+        "SV-OM-U15-A-IV",
+        "SV-OM-U15-A-V",
+        "SV-OM-U15-B"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_english_language_programmes",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U15"
+    },
+    {
+      "check_id": "SV-CHECK-ENTRY-PERMISSION-RES",
+      "domain": "Entry permission",
+      "residual": true,
+      "evaluates_rule_id": "SV-ENTRY-001",
+      "evaluates_rule_ids": [
+        "SV-ENTRY-001",
+        "SV-ENTRY-002",
+        "SV-ENTRY-003",
+        "SV-ENTRY-004",
+        "SV-ENTRY-005",
+        "SV-ENTRY-006"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_entry_permission",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-ACT-2009-S46-1"
+    },
+    {
+      "check_id": "SV-CHECK-EVIDENCE-RES",
+      "domain": "Evidence",
+      "residual": true,
+      "evaluates_rule_id": "SV-EVID-001",
+      "evaluates_rule_ids": [
+        "SV-EVID-001",
+        "SV-EVID-002"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_evidence",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-A"
+    },
+    {
+      "check_id": "SV-CHECK-FAMILY-RES",
+      "domain": "Family",
+      "residual": true,
+      "evaluates_rule_id": "SV-FAM-002",
+      "evaluates_rule_ids": [
+        "SV-FAM-001",
+        "SV-FAM-002",
+        "SV-FAM-003",
+        "SV-FAM-004",
+        "SV-FAM-005"
+      ],
+      "executable_rule_ids": [
+        "SV-FAM-002"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_family",
+        "application.review_all_domains"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.child_age",
+          "required": false
+        },
+        {
+          "fact_path": "application.dependent_child_included",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R20-2-B-I"
+    },
+    {
+      "check_id": "SV-CHECK-FAMILY-SUPPORT-RES",
+      "domain": "Family support",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-FAMILY",
+      "evaluates_rule_ids": [
+        "SV-CAND-FAMILY"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_family_support",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-FOREIGN-GOVERNMENT-SUPPORTED-STUDENTS-RES",
+      "domain": "Foreign government-supported students",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U12-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U12-A",
+        "SV-OM-U12-B",
+        "SV-OM-U12-C-I",
+        "SV-OM-U12-C-II",
+        "SV-OM-U12.1-P1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_foreign_government_supported_students",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U12"
+    },
+    {
+      "check_id": "SV-CHECK-GENUINE-INTENTIONS-RES",
+      "domain": "Genuine intentions",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-GENUINE",
+      "evaluates_rule_ids": [
+        "SV-CAND-GENUINE"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_genuine_intentions",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-GUARDIAN-RES",
+      "domain": "Guardian",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-GUARDIAN",
+      "evaluates_rule_ids": [
+        "SV-CAND-GUARDIAN"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_guardian",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-HEALTH-RES",
+      "domain": "Health",
+      "residual": true,
+      "evaluates_rule_id": "SV-HEALTH-001",
+      "evaluates_rule_ids": [
+        "SV-HEALTH-001",
+        "SV-OM-A4.5-A-I",
+        "SV-OM-A4.5-A-II",
+        "SV-OM-A4.5-B-I",
+        "SV-OM-A4.5-B-II",
+        "SV-OM-A4.5-B-III",
+        "SV-OM-A4.5-C",
+        "SV-OM-A4.5-D",
+        "SV-OM-A4.5-E-I",
+        "SV-OM-A4.5-E-II",
+        "SV-OM-A4.5-E-III",
+        "SV-OM-A4.5-F-I",
+        "SV-OM-A4.5-F-II",
+        "SV-OM-A4.5-F-III",
+        "SV-OM-A4.5-G-I",
+        "SV-OM-A4.5-G-II",
+        "SV-OM-A4.5-G-III",
+        "SV-OM-A4.5-I",
+        "SV-OM-A4.5-J",
+        "SV-OM-A4.5-K"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_health",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-C"
+    },
+    {
+      "check_id": "SV-CHECK-HEALTH-AND-CHARACTER-RES",
+      "domain": "Health and character",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-E7.1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-E7.1-A",
+        "SV-OM-E7.1-B",
+        "SV-OM-E7.1-C",
+        "SV-OM-E7.1-D-I",
+        "SV-OM-E7.1-D-II",
+        "SV-OM-E7.1-E",
+        "SV-OM-E7.1.1-P1",
+        "SV-OM-E7.1.5-P1",
+        "SV-OM-E7.10-A-I",
+        "SV-OM-E7.10-A-II",
+        "SV-OM-E7.10-A-III",
+        "SV-OM-E7.10-B",
+        "SV-OM-E7.10-C",
+        "SV-OM-E7.10-D",
+        "SV-OM-E7.10.1-A-I",
+        "SV-OM-E7.10.1-A-II",
+        "SV-OM-E7.10.1-A-III",
+        "SV-OM-E7.10.1-B",
+        "SV-OM-E7.10.1-C",
+        "SV-OM-E7.40-P1-A-I",
+        "SV-OM-E7.40-P1-A-II",
+        "SV-OM-E7.40-P1-A-III",
+        "SV-OM-E7.40-P1-B-I",
+        "SV-OM-E7.40-P1-B-II",
+        "SV-OM-E7.40-P1-B-III",
+        "SV-OM-E7.40-P1-C",
+        "SV-OM-E7.40-P2"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_health_and_character",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-E7.1"
+    },
+    {
+      "check_id": "SV-CHECK-LIFECYCLE-RES",
+      "domain": "Lifecycle",
+      "residual": true,
+      "evaluates_rule_id": "SV-LIFE-001",
+      "evaluates_rule_ids": [
+        "SV-LIFE-001",
+        "SV-LIFE-002",
+        "SV-LIFE-003",
+        "SV-LIFE-004",
+        "SV-LIFE-005",
+        "SV-LIFE-006"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_lifecycle",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-ACT-2009-S62-1"
+    },
+    {
+      "check_id": "SV-CHECK-LODGEMENT-RES",
+      "domain": "Lodgement",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-E4.1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-E4.1-A",
+        "SV-OM-E4.1-B-I",
+        "SV-OM-E4.1-B-II",
+        "SV-OM-E4.1-B-III",
+        "SV-OM-E4.1-C",
+        "SV-OM-E4.1-D",
+        "SV-OM-E4.1-E",
+        "SV-OM-E4.1-F",
+        "SV-OM-E4.1-G",
+        "SV-OM-E4.1.1-P1-A",
+        "SV-OM-E4.1.1-P1-B",
+        "SV-OM-E4.1.10-A-I-B1",
+        "SV-OM-E4.1.10-A-I-B2",
+        "SV-OM-E4.1.10-A-I-B3",
+        "SV-OM-E4.1.10-A-II-B1",
+        "SV-OM-E4.1.10-A-II-B2",
+        "SV-OM-E4.1.10-A-II-B3",
+        "SV-OM-E4.1.10-B",
+        "SV-OM-E4.1.10-C",
+        "SV-OM-E4.1.10-D",
+        "SV-OM-E4.1.15-A-I",
+        "SV-OM-E4.1.15-A-II",
+        "SV-OM-E4.1.15-A-III",
+        "SV-OM-E4.1.15-B",
+        "SV-OM-E4.1.20-A-I",
+        "SV-OM-E4.1.20-A-II",
+        "SV-OM-E4.1.20-A-III-B1",
+        "SV-OM-E4.1.20-A-III-B2",
+        "SV-OM-E4.1.20-A-III-B3",
+        "SV-OM-E4.1.20-A-IV",
+        "SV-OM-E4.1.20-B",
+        "SV-OM-E4.1.25-P1",
+        "SV-OM-E4.1.5-A",
+        "SV-OM-E4.1.5-B",
+        "SV-OM-E4.1.5-C-I",
+        "SV-OM-E4.1.5-C-II",
+        "SV-OM-E4.1.5-C-III",
+        "SV-OM-E4.1.5-C-IV",
+        "SV-OM-E4.1.5-D",
+        "SV-OM-E4.50-A-I",
+        "SV-OM-E4.50-A-II",
+        "SV-OM-E4.50-A-III",
+        "SV-OM-E4.50-A-IV",
+        "SV-OM-E4.50-A-V",
+        "SV-OM-E4.50-B",
+        "SV-OM-E4.50-C",
+        "SV-OM-E4.50.1-P1-C",
+        "SV-OM-E4.50.1-P1-D",
+        "SV-OM-E4.50.1-P1-E",
+        "SV-OM-E4.50.1-P1-F",
+        "SV-OM-E4.50.10-A-I",
+        "SV-OM-E4.50.10-A-II",
+        "SV-OM-E4.50.10-B-I",
+        "SV-OM-E4.50.10-B-II",
+        "SV-OM-E4.50.10-B-III",
+        "SV-OM-E4.50.10-B-IV",
+        "SV-OM-E4.50.10-C-I",
+        "SV-OM-E4.50.10-C-II",
+        "SV-OM-E4.50.15-P1-A",
+        "SV-OM-E4.50.15-P1-B",
+        "SV-OM-E4.50.15-P1-C",
+        "SV-OM-E4.50.15-P1-D",
+        "SV-OM-E4.50.15-P1-E",
+        "SV-OM-E4.50.15-P1-F",
+        "SV-OM-E4.50.2-A",
+        "SV-OM-E4.50.2-B-IX",
+        "SV-OM-E4.50.2-B-V",
+        "SV-OM-E4.50.2-B-VIII",
+        "SV-OM-E4.50.2-B-X",
+        "SV-OM-E4.50.2-NOTE1",
+        "SV-OM-E4.50.20-P1",
+        "SV-OM-E4.50.25-A",
+        "SV-OM-E4.50.25-B",
+        "SV-OM-E4.50.30-P1-A",
+        "SV-OM-E4.50.30-P1-B",
+        "SV-OM-E4.50.30-P1-C",
+        "SV-OM-E4.50.30-P1-D",
+        "SV-OM-E4.50.30-P1-E",
+        "SV-OM-E4.50.30-P1-F",
+        "SV-OM-E4.50.30-P1-G",
+        "SV-OM-E4.50.30-P1-I",
+        "SV-OM-E4.50.35-C",
+        "SV-OM-E4.50.35-D",
+        "SV-OM-E4.50.40-P1-A",
+        "SV-OM-E4.50.40-P1-B",
+        "SV-OM-E4.50.40-P1-C",
+        "SV-OM-E4.50.40-P1-D",
+        "SV-OM-E4.50.40-P1-E",
+        "SV-OM-E4.50.45-A",
+        "SV-OM-E4.50.45-B",
+        "SV-OM-E4.50.45-C",
+        "SV-OM-E4.50.5-A",
+        "SV-OM-E4.50.5-B-I",
+        "SV-OM-E4.50.5-B-II",
+        "SV-OM-E4.50.5-B-III",
+        "SV-OM-E4.50.5-B-IV",
+        "SV-OM-E4.50.5-B-V",
+        "SV-OM-E4.50.5-B-VI",
+        "SV-OM-E4.50.5-B-VII",
+        "SV-OM-E4.50.5-C-I",
+        "SV-OM-E4.50.5-C-II",
+        "SV-OM-E4.50.5-C-III",
+        "SV-OM-E4.50.5-C-IV",
+        "SV-OM-E4.50.5-C-V",
+        "SV-OM-E4.50.5-D"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_lodgement",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-E4.1"
+    },
+    {
+      "check_id": "SV-CHECK-MAINTENANCE-RES",
+      "domain": "Maintenance",
+      "residual": true,
+      "evaluates_rule_id": "SV-FIN-001",
+      "evaluates_rule_ids": [
+        "SV-FIN-001",
+        "SV-OM-U3.20-A",
+        "SV-OM-U3.20-B-I",
+        "SV-OM-U3.20-B-II",
+        "SV-OM-U3.20-B-III",
+        "SV-OM-U3.20-B-IV",
+        "SV-OM-U3.20.20-A",
+        "SV-OM-U3.20.20-B",
+        "SV-OM-U3.20.25-B",
+        "SV-OM-U3.20.25-C",
+        "SV-OM-U3.20.25-NOTE1",
+        "SV-OM-U3.20.30-B",
+        "SV-OM-U3.20.30-C",
+        "SV-OM-U3.20.35-P1-B",
+        "SV-OM-U3.20.35-P1-C",
+        "SV-OM-U3.20.35-P1-D"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_maintenance",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-VEPRM-REGS-2010-R10-3-E"
+    },
+    {
+      "check_id": "SV-CHECK-MINOR-GUARDIAN-RES",
+      "domain": "Minor/guardian",
+      "residual": true,
+      "evaluates_rule_id": "SV-U18-003",
+      "evaluates_rule_ids": [
+        "SV-ACCOM-001",
+        "SV-ACCOM-002",
+        "SV-ACCOM-003",
+        "SV-OM-U3.30-A-I",
+        "SV-OM-U3.30-A-II",
+        "SV-OM-U3.30-B",
+        "SV-OM-U3.30-NOTE1",
+        "SV-OM-U3.30.1-P1",
+        "SV-OM-U3.30.10-P1-A",
+        "SV-OM-U3.30.10-P1-B",
+        "SV-OM-U7.25-A",
+        "SV-OM-U7.25-B",
+        "SV-OM-U7.25-C-I",
+        "SV-OM-U7.25-C-II",
+        "SV-OM-U7.25-C-III",
+        "SV-OM-U7.25-D",
+        "SV-OM-U7.25-E",
+        "SV-U18-001",
+        "SV-U18-002",
+        "SV-U18-003",
+        "SV-U18-004"
+      ],
+      "executable_rule_ids": [
+        "SV-U18-003"
+      ],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_minor_guardian",
+        "application.review_all_domains"
+      ],
+      "inputs": [
+        {
+          "fact_path": "application.applicant_age",
+          "required": false
+        },
+        {
+          "fact_path": "application.provider_designated_staff_for_under_18s",
+          "required": false
+        }
+      ],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-EDU-PASTORAL-CODE-2021-CL50-1-C"
+    },
+    {
+      "check_id": "SV-CHECK-NZQA-COMPLIANCE-RES",
+      "domain": "NZQA compliance",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U16-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U16-A",
+        "SV-OM-U16-B-I",
+        "SV-OM-U16-B-II",
+        "SV-OM-U16-B-III",
+        "SV-OM-U16-B-IV",
+        "SV-OM-U16.1-A-I",
+        "SV-OM-U16.1-A-II",
+        "SV-OM-U16.1-A-III",
+        "SV-OM-U16.1-B",
+        "SV-OM-U16.5-A",
+        "SV-OM-U16.5-B",
+        "SV-OM-U16.5-C",
+        "SV-OM-U16.5-D"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_nzqa_compliance",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U16"
+    },
+    {
+      "check_id": "SV-CHECK-NEED-FOR-A-STUDENT-VISA-RES",
+      "domain": "Need for a student visa",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U2.1-P1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U2.1-P1-A",
+        "SV-OM-U2.1-P1-B",
+        "SV-OM-U2.1-P1-C",
+        "SV-OM-U2.1-P1-D",
+        "SV-OM-U2.1-P1-E",
+        "SV-OM-U2.1-P1-F",
+        "SV-OM-U2.5-P1-A",
+        "SV-OM-U2.5-P1-B",
+        "SV-OM-U2.5-P1-C"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_need_for_a_student_visa",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U2.1"
+    },
+    {
+      "check_id": "SV-CHECK-OBJECTIVES-RES",
+      "domain": "Objectives",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U1-P1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U1-P1-A",
+        "SV-OM-U1-P1-B",
+        "SV-OM-U1-P1-C",
+        "SV-OM-U1-P1-D",
+        "SV-OM-U1-P1-E"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_objectives",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U1"
+    },
+    {
+      "check_id": "SV-CHECK-OBTAINING-STUDENT-VISAS-RES",
+      "domain": "Obtaining student visas",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U6.1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U6.1-A",
+        "SV-OM-U6.1-B",
+        "SV-OM-U6.1.1-A-I",
+        "SV-OM-U6.1.1-A-II",
+        "SV-OM-U6.1.1-B",
+        "SV-OM-U6.1.1-C",
+        "SV-OM-U6.1.1-D",
+        "SV-OM-U6.10-A",
+        "SV-OM-U6.10-B",
+        "SV-OM-U6.15-A",
+        "SV-OM-U6.15-B",
+        "SV-OM-U6.25-P1-A-I",
+        "SV-OM-U6.25-P1-A-II",
+        "SV-OM-U6.25-P1-B",
+        "SV-OM-U6.25-P1-C-I",
+        "SV-OM-U6.25-P1-C-II",
+        "SV-OM-U6.5-A",
+        "SV-OM-U6.5-B",
+        "SV-OM-U6.5-C",
+        "SV-OM-U6.5-D-I",
+        "SV-OM-U6.5-D-II",
+        "SV-OM-U6.5-D-III"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_obtaining_student_visas",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U6.1"
+    },
+    {
+      "check_id": "SV-CHECK-PREGNANCY-RES",
+      "domain": "Pregnancy",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-MATERNITY",
+      "evaluates_rule_ids": [
+        "SV-CAND-MATERNITY"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_pregnancy",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-PRIVACY-RES",
+      "domain": "Privacy",
+      "residual": true,
+      "evaluates_rule_id": "SV-PRIV-001",
+      "evaluates_rule_ids": [
+        "SV-PRIV-001",
+        "SV-PRIV-002",
+        "SV-PRIV-003",
+        "SV-PRIV-004",
+        "SV-PRIV-005",
+        "SV-PRIV-006",
+        "SV-PRIV-007",
+        "SV-PRIV-008",
+        "SV-PRIV-009",
+        "SV-PRIV-010",
+        "SV-PRIV-011",
+        "SV-PRIV-012",
+        "SV-PRIV-013",
+        "SV-PRIV-014",
+        "SV-PRIV-015",
+        "SV-PRIV-016"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_privacy",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-PRIVACY-ACT-2020-S22-IPP1"
+    },
+    {
+      "check_id": "SV-CHECK-SCHOLARSHIP-STUDENTS-RES",
+      "domain": "Scholarship students",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U11-A-I",
+      "evaluates_rule_ids": [
+        "SV-OM-U11-A-I",
+        "SV-OM-U11-A-II",
+        "SV-OM-U11-A-III",
+        "SV-OM-U11-A-IV",
+        "SV-OM-U11-B",
+        "SV-OM-U11-C",
+        "SV-OM-U11-D",
+        "SV-OM-U11.1-A-I",
+        "SV-OM-U11.1-A-II",
+        "SV-OM-U11.1-B",
+        "SV-OM-U11.1-C-I",
+        "SV-OM-U11.1-C-II",
+        "SV-OM-U11.1-C-III",
+        "SV-OM-U11.1-C-IV",
+        "SV-OM-U11.1-D",
+        "SV-OM-U11.1-E",
+        "SV-OM-U11.1-NOTE1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_scholarship_students",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U11"
+    },
+    {
+      "check_id": "SV-CHECK-SCHOOL-MAINTENANCE-RES",
+      "domain": "School maintenance",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-MAINT-SCHOOL",
+      "evaluates_rule_ids": [
+        "SV-CAND-MAINT-SCHOOL"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_school_maintenance",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-SPECIAL-CATEGORIES-RES",
+      "domain": "Special categories",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U10.5-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U10.5-A",
+        "SV-OM-U10.5-B",
+        "SV-OM-U10.5-C-I",
+        "SV-OM-U10.5-C-II",
+        "SV-OM-U10.5-D",
+        "SV-OM-U10.5-NOTE1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_special_categories",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U10.5"
+    },
+    {
+      "check_id": "SV-CHECK-SPONSORSHIP-RES",
+      "domain": "Sponsorship",
+      "residual": true,
+      "evaluates_rule_id": "SV-SPON-001",
+      "evaluates_rule_ids": [
+        "SV-SPON-001",
+        "SV-SPON-002",
+        "SV-SPON-003",
+        "SV-SPON-004",
+        "SV-SPON-005",
+        "SV-SPON-006"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_sponsorship",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-ACT-2009-S48-1"
+    },
+    {
+      "check_id": "SV-CHECK-STUDENT-CATEGORIES-RES",
+      "domain": "Student categories",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U4.1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U4.1-A",
+        "SV-OM-U4.1-B",
+        "SV-OM-U4.10-A",
+        "SV-OM-U4.10-B",
+        "SV-OM-U4.15-A",
+        "SV-OM-U4.15-B-I",
+        "SV-OM-U4.15-B-II",
+        "SV-OM-U4.15-NOTE1",
+        "SV-OM-U4.20-A-I",
+        "SV-OM-U4.20-A-II",
+        "SV-OM-U4.20-A-III",
+        "SV-OM-U4.20-B",
+        "SV-OM-U4.5-P1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_student_categories",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U4.1"
+    },
+    {
+      "check_id": "SV-CHECK-STUDY-RES",
+      "domain": "Study",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U3.5-NOTE1",
+      "evaluates_rule_ids": [
+        "SV-OM-U3.5-NOTE1",
+        "SV-OM-U3.5-P1-A",
+        "SV-OM-U3.5-P1-B",
+        "SV-OM-U3.5-P1-C",
+        "SV-OM-U3.5-P1-D",
+        "SV-OM-U3.5-P1-E",
+        "SV-OM-U3.5-P1-F",
+        "SV-OM-U3.5-P1-G",
+        "SV-OM-U3.7-NOTE1",
+        "SV-OM-U3.7-P1-A",
+        "SV-OM-U3.7-P1-B",
+        "SV-OM-U3.7-P1-C",
+        "SV-OM-U3.7-P1-D"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_study",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U3.5"
+    },
+    {
+      "check_id": "SV-CHECK-TERTIARY-MAINTENANCE-RES",
+      "domain": "Tertiary maintenance",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-MAINT-TERTIARY",
+      "evaluates_rule_ids": [
+        "SV-CAND-MAINT-TERTIARY"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_tertiary_maintenance",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-TRAVEL-RES",
+      "domain": "Travel",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U3.25-P1-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U3.25-P1-A",
+        "SV-OM-U3.25-P1-B",
+        "SV-OM-U3.25-P1-C",
+        "SV-OM-U3.25-P1-D",
+        "SV-OM-U3.25-P1-E",
+        "SV-TRAVEL-001"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_travel",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U3.25"
+    },
+    {
+      "check_id": "SV-CHECK-TUITION-RES",
+      "domain": "Tuition",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U3.10-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U3.10-A",
+        "SV-OM-U3.10-B",
+        "SV-OM-U3.10-C",
+        "SV-OM-U3.10-D",
+        "SV-OM-U3.10-TABLE1"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_tuition",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U3.10"
+    },
+    {
+      "check_id": "SV-CHECK-VISA-CONDITIONS-RES",
+      "domain": "Visa conditions",
+      "residual": true,
+      "evaluates_rule_id": "SV-COND-001",
+      "evaluates_rule_ids": [
+        "SV-COND-001",
+        "SV-COND-002",
+        "SV-COND-003",
+        "SV-COND-004",
+        "SV-COND-005",
+        "SV-COND-006",
+        "SV-COND-007",
+        "SV-OM-U6.30-P1-A-I",
+        "SV-OM-U6.30-P1-A-II",
+        "SV-OM-U6.30-P1-B",
+        "SV-OM-U6.30-P1-C",
+        "SV-OM-U6.35-A-I-B1",
+        "SV-OM-U6.35-A-I-B2",
+        "SV-OM-U6.35-A-II",
+        "SV-OM-U6.35-A-III",
+        "SV-OM-U6.35-B",
+        "SV-OM-U6.35-C",
+        "SV-OM-U6.40-A",
+        "SV-OM-U6.40-B",
+        "SV-OM-U6.40-C",
+        "SV-OM-U6.40-D-I",
+        "SV-OM-U6.40-D-II",
+        "SV-OM-U6.40-E",
+        "SV-OM-U6.40-NOTE1",
+        "SV-STUDY-001"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_visa_conditions",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-IMM-ACT-2009-S49-1"
+    },
+    {
+      "check_id": "SV-CHECK-VISA-PRODUCTS-RES",
+      "domain": "Visa products",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-PRODUCTS",
+      "evaluates_rule_ids": [
+        "SV-CAND-PRODUCTS"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_visa_products",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
+    },
+    {
+      "check_id": "SV-CHECK-VOCATIONAL-TRAINEES-RES",
+      "domain": "Vocational trainees",
+      "residual": true,
+      "evaluates_rule_id": "SV-OM-U9.15-A",
+      "evaluates_rule_ids": [
+        "SV-OM-U9.15-A",
+        "SV-OM-U9.15-B",
+        "SV-OM-U9.5-A",
+        "SV-OM-U9.5-B-I",
+        "SV-OM-U9.5-B-II",
+        "SV-OM-U9.5-B-III"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_vocational_trainees",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": "NZ-INZ-OM-U9.15"
+    },
+    {
+      "check_id": "SV-CHECK-WORK-RIGHTS-RES",
+      "domain": "Work rights",
+      "residual": true,
+      "evaluates_rule_id": "SV-CAND-WORK",
+      "evaluates_rule_ids": [
+        "SV-CAND-WORK"
+      ],
+      "executable_rule_ids": [],
+      "automation_class": "PER_RULE",
+      "defined_in": "Implied by IF-38 (not in Table 11)",
+      "trigger_fact_paths": [
+        "application.review_work_rights",
+        "application.review_all_domains"
+      ],
+      "inputs": [],
+      "outcomes": {
+        "requirement_met": "SATISFIED",
+        "requirement_not_met": "NOT_SATISFIED",
+        "not_applicable": "NOT_APPLICABLE",
+        "missing": "UNKNOWN",
+        "a3_or_untested": "HUMAN_REVIEW_REQUIRED",
+        "a4": "DISCRETION_REQUIRED",
+        "a5": "AMBIGUOUS",
+        "candidate": "SOURCE_COVERAGE_GAP"
+      },
+      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
+      "interpretation_flag_ids": [
+        "IF-38"
+      ],
+      "purpose": null,
+      "source_provision_id": null
     }
   ]
 }

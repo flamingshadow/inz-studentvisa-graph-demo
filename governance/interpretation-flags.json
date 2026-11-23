@@ -3,11 +3,10 @@
     {
       "flag_id": "IF-01",
       "kind": "DEVIATION",
-      "title": "Candidate funds thresholds execute; TC-06 expectation adjusted",
-      "detail": "The document says SV-CHECK-FIN-001 should 'only execute after authoritative product threshold is reconciled' and TC-06 expects SOURCE_COVERAGE_GAP. By product-owner decision the candidate figures (tertiary NZD 20,000/yr or 1,667/month; school NZD 17,000/yr or 1,417/month; maternity NZD 9,000) are loaded and the check runs. Every such Threshold and evaluation carries the label 'CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED' and provenance_status RECONCILIATION_REQUIRED. TC-06 now expects that label instead of SOURCE_COVERAGE_GAP.",
+      "title": "Candidate funds thresholds execute",
+      "detail": "The document says SV-CHECK-FIN-001 should 'only execute after authoritative product threshold is reconciled'. By product-owner decision the candidate figures (tertiary NZD 20,000/yr or 1,667/month; school NZD 17,000/yr or 1,417/month; maternity NZD 9,000) are loaded and the check runs. Every such Threshold and evaluation carries the label 'CANDIDATE_FIGURE – SOURCE_COVERAGE_CONFIRMATION_REQUIRED' and provenance_status RECONCILIATION_REQUIRED.",
       "applies_to": [
         "SV-CHECK-FIN-001",
-        "TC-06",
         "SV-CAND-MAINT-TERTIARY",
         "SV-CAND-MAINT-SCHOOL",
         "SV-CAND-MATERNITY"
@@ -176,7 +175,7 @@
       "flag_id": "IF-13",
       "kind": "INTERPRETATION",
       "title": "Decision checks implied by test cases",
-      "detail": "Table 11 defines six checks and F.8 one more. TC-03, TC-07 and TC-09 need checks the table does not list, so SV-CHECK-MIN-001, SV-CHECK-HEALTH-001 and SV-CHECK-EDU-009 are added. SV-CHECK-INSTR-001 reports the 'A2 / gap' rules as SOURCE_COVERAGE_GAP in every assessment.",
+      "detail": "Table 11 defines six checks and F.8 one more. The under-18 consent, medical evidence and provider breach scenarios need checks the table does not list, so SV-CHECK-MIN-001, SV-CHECK-HEALTH-001 and SV-CHECK-EDU-009 are added. SV-CHECK-INSTR-001 reports the 'A2 / gap' rules as SOURCE_COVERAGE_GAP in every assessment.",
       "applies_to": [
         "SV-CHECK-MIN-001",
         "SV-CHECK-HEALTH-001",
@@ -191,16 +190,15 @@
     {
       "flag_id": "IF-14",
       "kind": "INTERPRETATION",
-      "title": "TC-09 expects NOT_SATISFIED for an A3 rule",
-      "detail": "SV-EDU-009 / SV-SCHOOL-009 are A3, yet TC-09 expects NOT_SATISFIED. The check returns NOT_SATISFIED only when verified facts show the provider knew of a breach and did not report it; any other case (suspected breach, unverified facts) is HUMAN_REVIEW_REQUIRED.",
+      "title": "Provider breach check returns NOT_SATISFIED for an A3 rule",
+      "detail": "SV-EDU-009 / SV-SCHOOL-009 are A3, yet the provider breach scenario expects NOT_SATISFIED. The check returns NOT_SATISFIED only when verified facts show the provider knew of a breach and did not report it; any other case (suspected breach, unverified facts) is HUMAN_REVIEW_REQUIRED.",
       "applies_to": [
-        "SV-CHECK-EDU-009",
-        "TC-09"
+        "SV-CHECK-EDU-009"
       ],
       "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23",
-      "resolution": "TC-09 keeps NOT_SATISFIED only for a verified known breach that was not reported; any other case is HUMAN_REVIEW_REQUIRED."
+      "resolution": "The provider breach check keeps NOT_SATISFIED only for a verified known breach that was not reported; any other case is HUMAN_REVIEW_REQUIRED."
     },
     {
       "flag_id": "IF-15",
@@ -245,8 +243,8 @@
     {
       "flag_id": "IF-18",
       "kind": "INTERPRETATION",
-      "title": "Health outcome for TC-07",
-      "detail": "TC-07 expects HUMAN_REVIEW_REQUIRED for health. Health is part of the candidate core-eligibility rule (Section 6), which has no published class; the agent contract forbids scoring health, so the check is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN. With the Operational Manual loaded the check evaluates U3.1(b)(iii) (health and character as set out at A4 and A5) instead of the candidate rule.",
+      "title": "Health outcome",
+      "detail": "Health is expected to give HUMAN_REVIEW_REQUIRED. Health is part of the candidate core-eligibility rule (Section 6), which has no published class; the agent contract forbids scoring health, so the check is A3: medical evidence received -> HUMAN_REVIEW_REQUIRED, none -> UNKNOWN. With the Operational Manual loaded the check evaluates U3.1(b)(iii) (health and character as set out at A4 and A5) instead of the candidate rule.",
       "applies_to": [
         "SV-CHECK-HEALTH-001"
       ],
@@ -298,7 +296,7 @@
       "flag_id": "IF-22",
       "kind": "INTERPRETATION",
       "title": "Test types",
-      "detail": "F.12 has test_type 'PASS' only. Types are taken from Appendix G's testing list (PASS, FAIL, MISSING, BOUNDARY, EXCEPTION, DISCRETION, SOURCE_GAP) plus HUMAN_REVIEW for TC-07 and EXPLANATION for TC-10.",
+      "detail": "F.12 has test_type 'PASS' only. Types are taken from Appendix G's testing list (PASS, FAIL, MISSING, BOUNDARY, EXCEPTION, DISCRETION, SOURCE_GAP) plus HUMAN_REVIEW and EXPLANATION.",
       "applies_to": [
         "testing/test-cases.json"
       ],
@@ -403,8 +401,7 @@
       "title": "Funds check follows Operational Manual U3.20",
       "detail": "SV-CHECK-FIN-001 now applies U3.20.25 / U3.20.30 / U3.20.35 instead of the candidate figures. Under 36 weeks: NZ$1,667 (tertiary or non-compulsory) or NZ$1,417 (compulsory, Years 1-13) per month of study. 36 weeks or longer: NZ$20,000 or NZ$17,000 per year, applied as one year minimum and pro rata beyond 12 months (the IF-15 pro rata decision is retained for multi-year study). Prepaid living expenses are deducted. Citizens of Samoa or Tonga may rely on a verified written guarantee from a New Zealand citizen or residence-class relative. Maternity: an extra NZ$9,000 for applicants due to give birth in New Zealand unless eligible for publicly funded services. The critical-purpose (H5) variants are listed for human review and not computed.",
       "applies_to": [
-        "SV-CHECK-FIN-001",
-        "TC-06"
+        "SV-CHECK-FIN-001"
       ],
       "decision_reference": "Product owner, 23 Nov 2026: Operational Manual integration (provenance, scope, funds check, depth)",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
@@ -481,6 +478,44 @@
         "graph"
       ],
       "decision_reference": "Product owner, 23 Nov 2026: remove duplicate nodes and relationships",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-36",
+      "kind": "INTERPRETATION",
+      "title": "Lodgement check executes the E4 lodgement requirements",
+      "detail": "SV-CHECK-LODG-001 is a POC addition, not in Table 11. It executes the mandatory-form and signature requirements of Operational Manual E4.50.1 (approved paper form), E4.50.2 (electronic form) and E4.50.35 (immigration control area), chosen by the application's lodgement_route (paper, online or ica). Each rule keeps its own automation class (PER_RULE); A1 rules accept unverified structured facts and A2 rules need verified ones. Missing facts return UNKNOWN. The mapping from rule wording to application facts is interpretive. E4 rules that are A3 or A4 are not executed. They stay with the officer.",
+      "applies_to": [
+        "SV-CHECK-LODG-001"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: Lodgement check SV-CHECK-LODG-001 and its fact mapping",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-37",
+      "kind": "INTERPRETATION",
+      "title": "Domain checks for Family, Pathway, Sponsorship, Providers and Work rights",
+      "detail": "SV-CHECK-FAM-001, -PATH-001, -SPON-001, -PROV-001 and -WRK-001 are POC additions, not in Table 11, one per Operational Manual domain (Family 89 rules, Pathway student visas 69, Sponsorship 44, Providers and programmes 40, Work rights 38). Every rule of the domain is linked to its check. Rules with a clear numeric or yes/no test are executed against application facts (om_extract.DOMAIN_CHECKS lists them). The remaining A1, A2 and A3 rules are presented in one HUMAN_REVIEW_REQUIRED result because they have no executable test here (many A2 classes are heuristic, IF-26), and the A4 rules in one DISCRETION_REQUIRED result. Each check runs only when a trigger fact for its domain is present.",
+      "applies_to": [
+        "SV-CHECK-FAM-001",
+        "SV-CHECK-PATH-001",
+        "SV-CHECK-SPON-001",
+        "SV-CHECK-PROV-001",
+        "SV-CHECK-WRK-001"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: domain checks for Family, Pathway, Sponsorship, Providers and Work rights",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-38",
+      "kind": "INTERPRETATION",
+      "title": "Residual checks: every remaining rule belongs to a domain check",
+      "detail": "Every rule that no other check evaluates is linked to a residual check named SV-CHECK-<DOMAIN>-RES, one per domain, so that no rule is left without a check. A residual check runs only when the application carries review_<domain> or review_all_domains. Rules with a clear test are executed (om_extract.RESIDUAL_EXECUTES). Candidate rules return one SOURCE_COVERAGE_GAP result, A4 rules one DISCRETION_REQUIRED result, A5 rules one AMBIGUOUS result, and the other rules (A3, and A1/A2 with no executable test) one HUMAN_REVIEW_REQUIRED result listing them, as in IF-37. The check names and the review_* trigger facts are POC conventions.",
+      "applies_to": [],
+      "decision_reference": "Product owner, 23 Nov 2026: residual domain checks so that every rule has a check",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23"
     }

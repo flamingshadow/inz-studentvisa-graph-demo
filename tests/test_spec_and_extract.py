@@ -80,7 +80,7 @@ def test_funds_thresholds_from_instructions():
 
 def test_deviation_recorded():
     flags = {f["flag_id"]: f for f in json.loads((ROOT / "governance/interpretation-flags.json").read_text())["interpretation_flags"]}
-    assert flags["IF-01"]["kind"] == "DEVIATION" and "TC-06" in flags["IF-01"]["applies_to"]
+    assert flags["IF-01"]["kind"] == "DEVIATION" and "SV-CHECK-FIN-001" in flags["IF-01"]["applies_to"]
 
 
 @pytest.mark.parametrize("ref,ids", [
