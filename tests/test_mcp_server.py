@@ -45,7 +45,7 @@ def test_tools_carry_contract_and_only_one_writes(live):
 
 
 def test_query_and_assess_roundtrip(live):
-    app = json.loads((ROOT / "testing/applications/TC-04.json").read_text())
+    app = json.loads((ROOT / "testing/applications/SVP-027.json").read_text())
 
     async def go(s):
         d = await _call(s, "rule_detail", {"rule_id": "SV-IVL-001"})
@@ -63,7 +63,7 @@ def test_query_and_assess_roundtrip(live):
 
 
 def test_rejects_non_synthetic(live):
-    app = json.loads((ROOT / "testing/applications/TC-01.json").read_text())
+    app = json.loads((ROOT / "testing/applications/SVP-001.json").read_text())
     app["synthetic"] = False
     r = run(lambda s: _call(s, "assess_application", {"application": app}))
     assert "error" in r

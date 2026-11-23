@@ -406,3 +406,61 @@ FUNDS_RULES = {
     "SV-OM-U3.20.35-P1-A": ("maternity", None),
 }
 SAMOA_TONGA_RULE = "SV-OM-U3.20.30-A-III"
+
+# Domain checks (IF-37): one check per Operational Manual domain. Every rule of the domain is linked to the check.
+# "executes" lists the rules with a clear pass/fail test and the application facts each needs. The other
+# A1/A2/A3 rules are presented for human review and the A4 rules for the decision-maker.
+DOMAIN_CHECKS = {
+    "SV-CHECK-FAM-001": {
+        "domain": "Family", "trigger_facts": ["family_basis"],
+        "executes": {
+            "SV-OM-U8.20.6-A": ["supporting_work_visa_type", "supporting_parent_gross_income_nzd"],
+            "SV-OM-U8.20.10-B-I": ["supporting_work_visa_type", "supporting_parent_gross_income_nzd"],
+            "SV-OM-U8.30-B-I": ["applicant_in_new_zealand", "visa_duration_months"],
+            "SV-OM-U8.30-B-II": ["applicant_in_new_zealand", "visa_duration_months"]}},
+    "SV-CHECK-PATH-001": {
+        "domain": "Pathway student visas", "trigger_facts": ["pathway_programme_count"],
+        "executes": {
+            "SV-OM-U14-A": ["pathway_programme_count"],
+            "SV-OM-U14.10-A": ["pathway_visa_duration_months"],
+            "SV-OM-U14.20.5-C": ["max_break_between_programmes_weeks"],
+            "SV-OM-U14.20.5-D": ["english_language_study_weeks"],
+            "SV-OM-U14.20.1-P1-D": ["provider_visa_approval_rate_percent"]}},
+    "SV-CHECK-SPON-001": {
+        "domain": "Sponsorship", "trigger_facts": ["third_party_type", "sponsor_is_natural_person"],
+        "executes": {
+            "SV-OM-U3.20.10-B": ["third_party_type", "third_party_relationship"],
+            "SV-OM-U3.20.10-C": ["third_party_type", "authorised_contact_nominated"],
+            "SV-OM-E6.5-E": ["sponsor_is_natural_person", "authorised_contact_nominated"]}},
+    "SV-CHECK-PROV-001": {
+        "domain": "Providers and programmes",
+        "trigger_facts": ["provider_eer_category", "provider_signatory_to_code",
+                          "provider_certified_programme_compliance"],
+        "executes": {
+            "SV-OM-U5.1-A": ["provider_certified_programme_compliance"],
+            "SV-OM-U5.1-B": ["provider_signatory_to_code"],
+            "SV-OM-U5.1-D": ["provider_eer_category"]}},
+    "SV-CHECK-WRK-001": {
+        "domain": "Work rights", "trigger_facts": ["work_conditions_requested"],
+        "executes": {
+            "SV-OM-U13.15-B": ["applicant_age", "enrolled_at_tertiary_or_pte", "provider_written_permission",
+                               "parental_written_consent"]}},
+}
+
+# Rules with a clear test that the residual domain checks execute (IF-38), with the facts each needs.
+RESIDUAL_EXECUTES = {
+    "SV-FAM-002": ["dependent_child_included", "child_age"],
+    "SV-U18-003": ["applicant_age", "provider_designated_staff_for_under_18s"],
+    "SV-OM-U7.20.1-A": ["part_time_study_months"],
+    "SV-OM-U7.20.1-B": ["part_time_study_months"],
+}
+
+# Lodgement rules (E4) the lodgement check executes (IF-36), by lodgement route. Rules in E4 that are A3/A4
+# stay on the human-review / discretion routes and are not listed here.
+LODGEMENT_RULES = {
+    "paper": ["SV-OM-E4.50.1-P1-A", "SV-OM-E4.50.1-P1-B", "SV-OM-E4.50.1-P2"],
+    "online": ["SV-OM-E4.50.2-B-I", "SV-OM-E4.50.2-B-II", "SV-OM-E4.50.2-B-III", "SV-OM-E4.50.2-B-IV",
+               "SV-OM-E4.50.2-B-VI", "SV-OM-E4.50.2-B-VII"],
+    "ica": ["SV-OM-E4.50.35-A-I", "SV-OM-E4.50.35-A-II", "SV-OM-E4.50.35-A-III", "SV-OM-E4.50.35-A-IV",
+            "SV-OM-E4.50.35-B-I", "SV-OM-E4.50.35-B-II"],
+}

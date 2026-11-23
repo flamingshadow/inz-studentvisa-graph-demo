@@ -110,7 +110,7 @@ def test_final_grant_always_discretion():
 
 
 def test_no_scores_for_health_character_or_genuine_intentions():
-    a = E.assess(json.loads((ROOT / "testing/applications/TC-07.json").read_text()))
+    a = E.assess(json.loads((ROOT / "testing/applications/SVP-032.json").read_text()))
     def keys(o):
         if isinstance(o, dict):
             for k, v in o.items():
@@ -228,3 +228,223 @@ def test_provider_suspected_breach_routes_to_human():
     assert res(a, "SV-EDU-009") == ["HUMAN_REVIEW_REQUIRED"]
 
 
+
+
+# ---- SV-CHECK-LODG-001: Operational Manual E4 lodgement requirements (IF-36) ----------------
+def test_lodgement_not_triggered_without_route():
+    assert res(run(**COMPLETE), "SV-OM-E4.50.1-P1-A") == []
+
+
+def test_lodgement_paper_satisfied_and_not_satisfied():
+    base = {**COMPLETE, "lodgement_route": "paper"}
+    a = run(**base)
+    for rid in ("SV-OM-E4.50.1-P1-A", "SV-OM-E4.50.1-P1-B", "SV-OM-E4.50.1-P2"):
+        assert res(a, rid) == ["SATISFIED"], rid
+    b = run(**{**base, "photographs_provided": 1, "application_signed": False})
+    assert res(b, "SV-OM-E4.50.1-P1-B") == ["NOT_SATISFIED"]
+    assert res(b, "SV-OM-E4.50.1-P2") == ["NOT_SATISFIED"]
+    assert check_result(b, "SV-CHECK-LODG-001") == "NOT_SATISFIED"
+
+
+def test_lodgement_missing_fact_is_unknown_not_failure():
+    facts = {k: v for k, v in COMPLETE.items() if k != "photographs_provided"}
+    assert res(run(**{**facts, "lodgement_route": "paper"}), "SV-OM-E4.50.1-P1-B") == ["UNKNOWN"]
+
+
+def test_lodgement_a2_needs_verified_fact():
+    a = run(**{**COMPLETE, "lodgement_route": "paper", "application_signed": ("UNVERIFIED", True)})
+    assert res(a, "SV-OM-E4.50.1-P2") == ["UNKNOWN"]
+
+
+def test_lodgement_paper_minor_needs_parent_signature():
+    base = {**COMPLETE, "lodgement_route": "paper", "applicant_age": 16}
+    assert res(run(**base), "SV-OM-E4.50.1-P2") == ["UNKNOWN"]
+    assert res(run(**{**base, "signed_by_parent_or_guardian": True}), "SV-OM-E4.50.1-P2") == ["SATISFIED"]
+
+
+ONLINE = dict(lodgement_route="online", full_name_stated=True, date_and_place_of_birth_stated=True,
+              passport_details_stated=True, form_requires_photograph=False, declaration_acknowledged=True,
+              change_notification_agreed=True)
+
+
+def test_lodgement_online():
+    a = run(**{**COMPLETE, **ONLINE})
+    for rid in ("SV-OM-E4.50.2-B-I", "SV-OM-E4.50.2-B-II", "SV-OM-E4.50.2-B-III", "SV-OM-E4.50.2-B-VI",
+                "SV-OM-E4.50.2-B-VII"):
+        assert res(a, rid) == ["SATISFIED"], rid
+    assert res(a, "SV-OM-E4.50.2-B-IV") == ["NOT_APPLICABLE"]
+    assert res(a, "SV-OM-E4.50.1-P1-A") == []
+    b = run(**{**COMPLETE, **ONLINE, "declaration_acknowledged": False})
+    assert res(b, "SV-OM-E4.50.2-B-VI") == ["NOT_SATISFIED"]
+
+
+ICA = dict(lodgement_route="ica")
+
+
+def test_lodgement_ica_adult():
+    a = run(**{**COMPLETE, **ICA})
+    assert res(a, "SV-OM-E4.50.35-A-III") == ["SATISFIED"]
+    assert res(a, "SV-OM-E4.50.35-A-IV") == ["SATISFIED"]
+    assert res(a, "SV-OM-E4.50.35-B-I") == ["NOT_APPLICABLE"]
+    assert res(a, "SV-OM-E4.50.35-B-II") == ["NOT_APPLICABLE"]
+    b = run(**{**COMPLETE, **ICA, "persons_in_application": 2})
+    assert res(b, "SV-OM-E4.50.35-A-III") == ["NOT_SATISFIED"]
+
+
+def test_lodgement_ica_minor_accompanied_and_not():
+    base = {**COMPLETE, **ICA, "applicant_age": 15}
+    acc = run(**{**base, "accompanied_by_parent_or_guardian": True, "signed_by_parent_or_guardian": True})
+    assert res(acc, "SV-OM-E4.50.35-A-IV") == ["NOT_APPLICABLE"]
+    assert res(acc, "SV-OM-E4.50.35-B-I") == ["SATISFIED"]
+    assert res(acc, "SV-OM-E4.50.35-B-II") == ["NOT_APPLICABLE"]
+    alone = run(**{**base, "accompanied_by_parent_or_guardian": False})
+    assert res(alone, "SV-OM-E4.50.35-B-I") == ["NOT_APPLICABLE"]
+    assert res(alone, "SV-OM-E4.50.35-B-II") == ["SATISFIED"]
+
+
+def test_lodgement_unknown_route():
+    assert res(run(**{**COMPLETE, "lodgement_route": "fax"}), "SV-OM-E4.50.1-P1-A") == ["UNKNOWN"]
+
+
+# ---- Domain checks (IF-37): Family, Pathway, Sponsorship, Providers, Work rights --------------
+def _dom(a, check_id):
+    return [e for e in a["rule_evaluations"] if e["check_id"] == check_id]
+
+
+def test_domain_checks_not_triggered_without_trigger_facts():
+    a = run(**COMPLETE)
+    for cid in ("SV-CHECK-FAM-001", "SV-CHECK-PATH-001", "SV-CHECK-SPON-001", "SV-CHECK-PROV-001",
+                "SV-CHECK-WRK-001"):
+        assert _dom(a, cid) == [], cid
+
+
+def test_domain_check_rules_match_domains_and_executors_exist():
+    from svkg import om_extract
+    t = E._dom_tests()
+    for cid, spec in om_extract.DOMAIN_CHECKS.items():
+        c = E.store.check(cid)
+        assert set(c["executable_rule_ids"]) <= set(t)
+        assert set(spec["executes"]) == set(t) & set(spec["executes"])
+        assert all(E.store.rule(r)["domain"] == spec["domain"] for r in c["evaluates_rule_ids"]), cid
+        assert all(E.store.rule(r)["automation"]["class"] in ("A1", "A2") for r in c["executable_rule_ids"]), cid
+
+
+def test_domain_every_rule_is_accounted_for():
+    a = run(**{**COMPLETE, "pathway_programme_count": 2})
+    ev = _dom(a, "SV-CHECK-PATH-001")
+    c = E.store.check("SV-CHECK-PATH-001")
+    seen = {e["rule_id"] for e in ev if e["result"] in ("SATISFIED", "NOT_SATISFIED", "NOT_APPLICABLE", "UNKNOWN")}
+    seen |= {r for e in ev for r in e.get("instruction_rules_presented", [])}
+    assert seen == set(c["evaluates_rule_ids"])
+    assert {e["result"] for e in ev} >= {"HUMAN_REVIEW_REQUIRED", "DISCRETION_REQUIRED"}
+
+
+def test_pathway_limits():
+    base = {**COMPLETE, "pathway_programme_count": 3, "pathway_visa_duration_months": 60,
+            "max_break_between_programmes_weeks": 16, "english_language_study_weeks": 30,
+            "provider_visa_approval_rate_percent": 90}
+    a = run(**base)
+    for rid in ("SV-OM-U14-A", "SV-OM-U14.10-A", "SV-OM-U14.20.5-C", "SV-OM-U14.20.5-D", "SV-OM-U14.20.1-P1-D"):
+        assert res(a, rid) == ["SATISFIED"], rid
+    b = run(**{**base, "pathway_programme_count": 4, "max_break_between_programmes_weeks": 17,
+               "english_language_study_weeks": 31, "provider_visa_approval_rate_percent": 89})
+    for rid in ("SV-OM-U14-A", "SV-OM-U14.20.5-C", "SV-OM-U14.20.5-D", "SV-OM-U14.20.1-P1-D"):
+        assert res(b, rid) == ["NOT_SATISFIED"], rid
+
+
+def test_pathway_missing_fact_is_unknown():
+    assert res(run(**{**COMPLETE, "pathway_programme_count": 2}), "SV-OM-U14.20.5-C") == ["UNKNOWN"]
+
+
+def test_family_income_threshold():
+    base = {**COMPLETE, "family_basis": "dependent_child", "supporting_work_visa_type": "Accredited Employer"}
+    assert res(run(**{**base, "supporting_parent_gross_income_nzd": 58240}), "SV-OM-U8.20.6-A") == ["SATISFIED"]
+    assert res(run(**{**base, "supporting_parent_gross_income_nzd": 58239}), "SV-OM-U8.20.6-A") == ["NOT_SATISFIED"]
+    assert res(run(**{**base, "supporting_parent_gross_income_nzd": 58239}), "SV-OM-U8.20.10-B-I") == ["NOT_APPLICABLE"]
+    rel = {**base, "supporting_work_visa_type": "religious worker", "supporting_parent_gross_income_nzd": 60000}
+    assert res(run(**rel), "SV-OM-U8.20.10-B-I") == ["SATISFIED"]
+
+
+def test_family_nz_parent_visa_duration():
+    base = {**COMPLETE, "family_basis": "nz_citizen_parent", "visa_duration_months": 12}
+    a = run(**{**base, "applicant_in_new_zealand": True})
+    assert res(a, "SV-OM-U8.30-B-II") == ["SATISFIED"] and res(a, "SV-OM-U8.30-B-I") == ["NOT_APPLICABLE"]
+    b = run(**{**base, "applicant_in_new_zealand": False, "visa_duration_months": 13})
+    assert res(b, "SV-OM-U8.30-B-I") == ["NOT_SATISFIED"]
+
+
+def test_sponsorship_third_party():
+    base = {**COMPLETE, "third_party_type": "person", "third_party_relationship": "friend"}
+    assert res(run(**base), "SV-OM-U3.20.10-B") == ["SATISFIED"]
+    assert res(run(**{**base, "third_party_relationship": "employer"}), "SV-OM-U3.20.10-B") == ["NOT_SATISFIED"]
+    assert res(run(**base), "SV-OM-U3.20.10-C") == ["NOT_APPLICABLE"]
+    org = {**COMPLETE, "third_party_type": "organisation", "authorised_contact_nominated": False}
+    assert res(run(**org), "SV-OM-U3.20.10-C") == ["NOT_SATISFIED"]
+    assert res(run(**org), "SV-OM-U3.20.10-B") == ["NOT_APPLICABLE"]
+
+
+def test_providers():
+    base = {**COMPLETE, "provider_eer_category": 2, "provider_signatory_to_code": True,
+            "provider_certified_programme_compliance": True}
+    a = run(**base)
+    assert res(a, "SV-OM-U5.1-B") == ["SATISFIED"] and res(a, "SV-OM-U5.1-D") == ["SATISFIED"]
+    b = run(**{**base, "provider_eer_category": 4, "provider_signatory_to_code": False})
+    assert res(b, "SV-OM-U5.1-D") == ["NOT_SATISFIED"] and res(b, "SV-OM-U5.1-B") == ["NOT_SATISFIED"]
+
+
+def test_work_rights_minor_consent():
+    base = {**COMPLETE, "work_conditions_requested": True, "applicant_age": 17, "enrolled_at_tertiary_or_pte": True,
+            "provider_written_permission": True, "parental_written_consent": True}
+    assert res(run(**base), "SV-OM-U13.15-B") == ["SATISFIED"]
+    assert res(run(**{**base, "parental_written_consent": False}), "SV-OM-U13.15-B") == ["NOT_SATISFIED"]
+    assert res(run(**{**base, "applicant_age": 19}), "SV-OM-U13.15-B") == ["NOT_APPLICABLE"]
+
+
+# ---- Residual domain checks (IF-38): no rule is left without a check ---------------------------
+def test_every_rule_has_a_check():
+    checks = E.store.checks.values()
+    covered = set()
+    for c in checks:
+        for k in ("evaluates_rule_id", "evaluates_rule_id_online", "evaluates_rule_id_school", "exception_rule_id"):
+            if c.get(k):
+                covered.add(c[k])
+        covered |= set(c.get("evaluates_rule_ids", [])) | set(c.get("evaluates_rule_ids_online", []))
+    assert [r for r in E.store.rules if r not in covered] == []
+
+
+def test_residual_checks_do_not_run_without_trigger():
+    a = run(**COMPLETE)
+    assert [e for e in a["rule_evaluations"] if e["check_id"].endswith("-RES")] == []
+
+
+def test_residual_domain_presents_every_rule_once():
+    a = run(**{**COMPLETE, "review_character": True})
+    c = E.store.check("SV-CHECK-CHARACTER-RES")
+    ev = [e for e in a["rule_evaluations"] if e["check_id"] == c["check_id"]]
+    seen = {e["rule_id"] for e in ev if not e.get("instruction_rules_presented") and not e.get("rules_presented")}
+    seen |= {r for e in ev for r in (e.get("instruction_rules_presented") or []) + (e.get("rules_presented") or [])}
+    assert seen == set(c["evaluates_rule_ids"])
+    assert "HUMAN_REVIEW_REQUIRED" in {e["result"] for e in ev}
+
+
+def test_review_all_domains_triggers_every_residual_check():
+    a = run(**{**COMPLETE, "review_all_domains": True})
+    ran = {e["check_id"] for e in a["rule_evaluations"] if e["check_id"].endswith("-RES")}
+    assert ran == {cid for cid, c in E.store.checks.items() if c.get("residual")}
+
+
+def test_residual_candidates_return_coverage_gap():
+    a = run(**{**COMPLETE, "review_all_domains": True})
+    gaps = [e for e in a["rule_evaluations"] if e["result"] == "SOURCE_COVERAGE_GAP" and e.get("rules_presented")]
+    assert gaps and all(e["check_id"].endswith("-RES") for e in gaps)
+
+
+def test_residual_executed_rules():
+    base = {**COMPLETE, "review_all_domains": True}
+    assert res(run(**{**base, "dependent_child_included": True, "child_age": 19}), "SV-FAM-002") == ["SATISFIED"]
+    assert res(run(**{**base, "dependent_child_included": True, "child_age": 20}), "SV-FAM-002") == ["NOT_SATISFIED"]
+    assert res(run(**{**base, "dependent_child_included": False}), "SV-FAM-002") == ["NOT_APPLICABLE"]
+    assert res(run(**{**base, "provider_designated_staff_for_under_18s": False, "applicant_age": 16}),
+               "SV-U18-003") == ["NOT_SATISFIED"]
+    assert res(run(**{**base, "part_time_study_months": 9}), "SV-OM-U7.20.1-A") == ["SATISFIED"]
+    assert res(run(**{**base, "part_time_study_months": 10}), "SV-OM-U7.20.1-B") == ["NOT_SATISFIED"]

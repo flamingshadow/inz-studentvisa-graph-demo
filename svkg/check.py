@@ -177,21 +177,22 @@ def run_checks() -> Report:
     states = {s["name"] for s in _load("decisioning/states.json")["states"]}
     rep.eq({x for r in t12.rows[1:] for x in (r[1], r[2])}, states, "lifecycle states")
 
-    # 12. Test cases TC-01..TC-10
-    t13 = spec.table_by_header("Test", "10.")
+    # 12. Synthetic persona test cases SVP-001..
     tcs = {t["test_case_id"]: t for t in _load("testing/test-cases.json")["test_cases"]}
-    rep.eq([f"TC-{i:02d}" for i in range(1, 11)], [r[0] for r in t13.rows[1:]], "document has TC-01..TC-10")
-    apps = {a["application_id"] for a in _load("testing/synthetic-applications.json")["applications"]}
+    apps = {a["application_id"]: a for a in _load("testing/synthetic-applications.json")["applications"]}
     exp = _load("testing/expected-results.json")["expected_results"]
-    for row in t13.rows[1:]:
-        t = tcs.get(row[0])
-        if rep.check(t is not None, f"test case {row[0]}"):
-            rep.eq(row[1], t["scenario"], f"{row[0]} scenario")
-            rep.eq(row[2], t["expected_outcome_as_published"], f"{row[0]} expected outcome")
-            rep.check(t["application_id"] in apps, f"{row[0]} synthetic application")
-            rep.check(row[0] in exp, f"{row[0]} expected results")
-            rep.check((ROOT / "testing" / "applications" / f"{row[0]}.json").exists(), f"{row[0]} fixture file")
-    rep.check(bool(exp["TC-06"].get("deviation")), "TC-06 deviation recorded")
+    rep.check(len(tcs) >= 50, "at least 50 synthetic personas")
+    rep.eq(sorted(tcs), sorted(exp), "test cases and expected results match")
+    for tc, t in tcs.items():
+        rep.check(t["application_id"] in apps and apps[t["application_id"]].get("synthetic") is True,
+                  f"{tc} synthetic application")
+        rep.check(t["check_id"] in checks, f"{tc} evaluates a known check")
+        rep.check((ROOT / "testing" / "applications" / f"{tc}.json").exists(), f"{tc} fixture file")
+    on_disk = {p.stem for p in (ROOT / "testing" / "applications").glob("*.json")}
+    rep.eq(sorted(on_disk), sorted(tcs), "fixture files match test cases")
+    covered = {t["check_id"] for t in tcs.values()}
+    rep.check(set(checks) - {"SV-CHECK-INSTR-001"} - {c for c in checks if c.endswith("-RES")} <= covered
+              | {"SV-CHECK-DISC-001"}, "every non-residual decision check has a persona")
 
     # 13. Agent contract (Section 9) & definition of done (13)
     ac = _load("schema/agent-contract.yaml")["agent_contract"]

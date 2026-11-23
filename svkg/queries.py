@@ -273,8 +273,8 @@ def get_assessment(assessment_id: str):
 
 def test_cases():
     return read("MATCH (t:TestCase) OPTIONAL MATCH (t)-[:EVALUATES]->(c:DecisionCheck) "
-                "RETURN t.id AS test_case_id, t.scenario AS scenario, t.expected_outcome_as_published AS "
-                "expected_as_published, t.expected_status AS expected_status, t.deviation AS deviation, "
+                "RETURN t.id AS test_case_id, t.scenario AS scenario, t.expected_outcome AS "
+                "expected_outcome, t.test_type AS test_type, t.expected_status AS expected_status, t.deviation AS deviation, "
                 "c.id AS check_id ORDER BY t.id")
 
 

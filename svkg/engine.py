@@ -717,12 +717,283 @@ class Engine:
                     "cite directly) are not in the corpus. No rule is inferred for them."})
         return out
 
+    def check_lodg_001(self, aid, ctx, check):
+        """Operational Manual E4.50.1 / E4.50.2 / E4.50.35 lodgement requirements (IF-36)."""
+        lab = {"provenance_status": "VERIFIED_INSTRUCTION_SOURCE", "interpretation_flag_ids": ["IF-36"]}
+        pairs = []  # (rule_id, evaluator(ev) -> (result, explanation))
+
+        def rec(rid, fn):
+            rule = self.store.rule(rid)
+            ev = Eval(ctx, rule, check, rule["automation"]["class"])
+            try:
+                result, why = fn(ev)
+            except Missing as m:
+                return {**self._missing(aid, ev, str(m)), **lab}
+            return self._record(aid, ev, result, why, **lab)
+
+        def flag(attr, label):
+            def fn(ev):
+                v = ev.get(attr)
+                return ("SATISFIED" if v is True else "NOT_SATISFIED"), f"{label}: application.{attr} = {v!r}."
+            return fn
+
+        def all_of(*attrs):
+            def fn(ev):
+                vals = {a: ev.get(a) for a in attrs}
+                ok = all(v is True for v in vals.values())
+                return ("SATISFIED" if ok else "NOT_SATISFIED"), \
+                       "; ".join(f"{a} = {v!r}" for a, v in vals.items()) + "."
+            return fn
+
+        def photos(ev):
+            n = ev.get("photographs_provided")
+            return ("SATISFIED" if n >= 2 else "NOT_SATISFIED"), f"{n} photograph(s) provided; two are required."
+
+        def online_photo(ev):
+            if ev.get("form_requires_photograph", required=False, verified=False) is False:
+                return "NOT_APPLICABLE", "The electronic form did not prompt for a photograph."
+            v = ev.get("photograph_uploaded")
+            return ("SATISFIED" if v else "NOT_SATISFIED"), f"Photograph uploaded after prompt: {v!r}."
+
+        def signed(ev):
+            if ev.get("applicant_age") >= 18:
+                v = ev.get("application_signed")
+                return ("SATISFIED" if v else "NOT_SATISFIED"), f"Adult applicant; signed by applicant: {v!r}."
+            v = ev.get("signed_by_parent_or_guardian")
+            return ("SATISFIED" if v else "NOT_SATISFIED"), f"Applicant under 18; signed by parent or guardian: {v!r}."
+
+        def one_person(ev):
+            n = ev.get("persons_in_application")
+            return ("SATISFIED" if n == 1 else "NOT_SATISFIED"), f"The application relates to {n} person(s)."
+
+        def ica_adult_signature(ev):
+            if ev.get("applicant_age") >= 18:
+                v = ev.get("application_signed")
+                return ("SATISFIED" if v else "NOT_SATISFIED"), f"Signed by the applicant: {v!r}."
+            return "NOT_APPLICABLE", "Applicant is under 18; E4.50.35(b) applies instead."
+
+        def ica_minor(accompanied_expected):
+            def fn(ev):
+                if ev.get("applicant_age") >= 18:
+                    return "NOT_APPLICABLE", "Applicant is 18 or over; (a)(iv) applies."
+                acc = ev.get("accompanied_by_parent_or_guardian")
+                if bool(acc) != accompanied_expected:
+                    return "NOT_APPLICABLE", f"Accompanied by parent or guardian: {acc!r}; the other limb applies."
+                if accompanied_expected:
+                    v = ev.get("signed_by_parent_or_guardian")
+                    return ("SATISFIED" if v else "NOT_SATISFIED"), f"Accompanied minor; parent or guardian signed: {v!r}."
+                return "SATISFIED", "Unaccompanied minor: the arrival card is not required to be signed."
+            return fn
+
+        route_ev = Eval(ctx, self.store.rule("SV-OM-E4.50.1-P1-A"), check, "A1")
+        try:
+            route = str(route_ev.get("lodgement_route")).lower()
+        except Missing as m:
+            return [{**self._missing(aid, route_ev, str(m)), **lab}]
+        if route == "paper":
+            pairs = [("SV-OM-E4.50.1-P1-A", all_of("approved_form_used", "completed_in_english",
+                                                   "identity_document_provided")),
+                     ("SV-OM-E4.50.1-P1-B", photos), ("SV-OM-E4.50.1-P2", signed)]
+        elif route == "online":
+            pairs = [("SV-OM-E4.50.2-B-I", flag("full_name_stated", "Full name stated")),
+                     ("SV-OM-E4.50.2-B-II", flag("date_and_place_of_birth_stated", "Date and place of birth stated")),
+                     ("SV-OM-E4.50.2-B-III", flag("passport_details_stated", "Passport details stated")),
+                     ("SV-OM-E4.50.2-B-IV", online_photo),
+                     ("SV-OM-E4.50.2-B-VI", flag("declaration_acknowledged", "Declaration acknowledged")),
+                     ("SV-OM-E4.50.2-B-VII", flag("change_notification_agreed", "Change notification agreed"))]
+        elif route == "ica":
+            pairs = [("SV-OM-E4.50.35-A-I", flag("approved_form_used", "Approved form used")),
+                     ("SV-OM-E4.50.35-A-II", flag("completed_in_english", "Completed in English")),
+                     ("SV-OM-E4.50.35-A-III", one_person),
+                     ("SV-OM-E4.50.35-A-IV", ica_adult_signature),
+                     ("SV-OM-E4.50.35-B-I", ica_minor(True)),
+                     ("SV-OM-E4.50.35-B-II", ica_minor(False))]
+        else:
+            route_ev.unresolved.append(f"lodgement_route {route!r} is not paper, online or ica")
+            return [self._record(aid, route_ev, "UNKNOWN", f"No E4 lodgement rules are defined for route {route!r}.", **lab)]
+        return [rec(rid, fn) for rid, fn in pairs]
+
+    # ---- domain checks: Family, Pathway, Sponsorship, Providers, Work rights (IF-37) ------------
+    def _th(self, rule_id):
+        """First numeric threshold value on a rule."""
+        for tid in self.store.rule(rule_id)["qualifiers"].get("threshold_ids", []):
+            t = self.store.thresholds.get(tid)
+            if t and isinstance(t.get("value"), (int, float)):
+                return t["value"]
+        raise ValueError(f"{rule_id} has no numeric threshold")
+
+    def _dom_tests(self):
+        def at_most(attr, limit, unit):
+            def fn(ev):
+                v = ev.get(attr)
+                return ("SATISFIED" if v <= limit else "NOT_SATISFIED"), f"{attr} = {v} {unit}; maximum {limit} {unit}."
+            return fn
+
+        def at_least(attr, minimum, unit):
+            def fn(ev):
+                v = ev.get(attr)
+                return ("SATISFIED" if v >= minimum else "NOT_SATISFIED"), f"{attr} = {v} {unit}; minimum {minimum} {unit}."
+            return fn
+
+        def truth(attr, label):
+            def fn(ev):
+                v = ev.get(attr)
+                return ("SATISFIED" if v is True else "NOT_SATISFIED"), f"{label}: {attr} = {v!r}."
+            return fn
+
+        def income(rid, types):
+            def fn(ev):
+                t = str(ev.get("supporting_work_visa_type")).strip().lower()
+                if t not in types:
+                    return "NOT_APPLICABLE", f"The supporting work visa type {t!r} is not one this threshold covers."
+                need = self._th(rid)
+                v = ev.get("supporting_parent_gross_income_nzd")
+                return ("SATISFIED" if v >= need else "NOT_SATISFIED"), \
+                       f"Gross income NZ${v:,.0f}; minimum NZ${need:,.0f} per annum."
+            return fn
+
+        def duration(rid, in_nz):
+            def fn(ev):
+                here = ev.get("applicant_in_new_zealand")
+                if bool(here) != in_nz:
+                    return "NOT_APPLICABLE", f"applicant_in_new_zealand = {here!r}; the other limb applies."
+                v, cap = ev.get("visa_duration_months"), self._th(rid)
+                return ("SATISFIED" if v <= cap else "NOT_SATISFIED"), f"Visa duration {v} months; maximum {cap:g} months."
+            return fn
+
+        def third_party_person(ev):
+            if str(ev.get("third_party_type")).strip().lower() != "person":
+                return "NOT_APPLICABLE", "The third party is not a person."
+            rel = str(ev.get("third_party_relationship")).strip().lower()
+            return ("SATISFIED" if rel in ("relative", "friend") else "NOT_SATISFIED"), \
+                   f"Third party is a person; relationship to applicant: {rel!r}."
+
+        def contact(attr, applies):
+            def fn(ev):
+                if not applies(ev.get(attr)):
+                    return "NOT_APPLICABLE", f"{attr} = {ev.get(attr)!r}; a nominated contact is not required."
+                v = ev.get("authorised_contact_nominated")
+                return ("SATISFIED" if v is True else "NOT_SATISFIED"), f"Authorised contact nominated: {v!r}."
+            return fn
+
+        def eer4(ev):
+            c = ev.get("provider_eer_category")
+            return ("NOT_SATISFIED" if str(c).strip() in ("4", "Four", "four") else "SATISFIED"), \
+                   f"Provider NZQA EER category: {c!r}; Category Four providers are excluded."
+
+        def minor_work(ev):
+            age = ev.get("applicant_age")
+            if not (16 <= age <= 17) or ev.get("enrolled_at_tertiary_or_pte") is not True:
+                return "NOT_APPLICABLE", f"Age {age}; applies to 16-17 year olds at a tertiary provider or PTE."
+            prov, par = ev.get("provider_written_permission"), ev.get("parental_written_consent")
+            return ("SATISFIED" if prov is True and par is True else "NOT_SATISFIED"), \
+                   f"Provider written permission: {prov!r}; parental written consent: {par!r}."
+
+        def child_under_20(ev):
+            if ev.get("dependent_child_included") is not True:
+                return "NOT_APPLICABLE", "No dependent child is included in the application."
+            age = ev.get("child_age")
+            return ("SATISFIED" if age < 20 else "NOT_SATISFIED"), f"Dependent child aged {age}; must be under 20."
+
+        def staff_for_minors(ev):
+            if ev.get("applicant_age") >= 18:
+                return "NOT_APPLICABLE", "The learner is 18 or over."
+            v = ev.get("provider_designated_staff_for_under_18s")
+            return ("SATISFIED" if v is True else "NOT_SATISFIED"), f"Provider designated a staff member for under-18s: {v!r}."
+
+        aewv = ("accredited employer", "specific purpose", "essential skills")
+        return {
+            "SV-FAM-002": child_under_20,
+            "SV-U18-003": staff_for_minors,
+            "SV-OM-U7.20.1-A": at_most("part_time_study_months", self._th("SV-OM-U7.20.1-A"), "months"),
+            "SV-OM-U7.20.1-B": at_most("part_time_study_months", self._th("SV-OM-U7.20.1-B"), "months"),
+            "SV-OM-U8.20.6-A": income("SV-OM-U8.20.6-A", aewv),
+            "SV-OM-U8.20.10-B-I": income("SV-OM-U8.20.10-B-I", ("religious worker",)),
+            "SV-OM-U8.30-B-I": duration("SV-OM-U8.30-B-I", False),
+            "SV-OM-U8.30-B-II": duration("SV-OM-U8.30-B-II", True),
+            "SV-OM-U14-A": at_most("pathway_programme_count", 3, "programmes"),
+            "SV-OM-U14.10-A": at_most("pathway_visa_duration_months", 60, "months"),
+            "SV-OM-U14.20.5-C": at_most("max_break_between_programmes_weeks", self._th("SV-OM-U14.20.5-C"), "weeks"),
+            "SV-OM-U14.20.5-D": at_most("english_language_study_weeks", self._th("SV-OM-U14.20.5-D"), "weeks"),
+            "SV-OM-U14.20.1-P1-D": at_least("provider_visa_approval_rate_percent", 90, "percent"),
+            "SV-OM-U3.20.10-B": third_party_person,
+            "SV-OM-U3.20.10-C": contact("third_party_type", lambda t: str(t).strip().lower() != "person"),
+            "SV-OM-E6.5-E": contact("sponsor_is_natural_person", lambda n: n is False),
+            "SV-OM-U5.1-A": truth("provider_certified_programme_compliance", "Provider certified compliance"),
+            "SV-OM-U5.1-B": truth("provider_signatory_to_code", "Provider signatory to the Code"),
+            "SV-OM-U5.1-D": eer4,
+            "SV-OM-U13.15-B": minor_work,
+        }
+
+    def _domain_check(self, aid, ctx, check):
+        lab = {"provenance_status": "VERIFIED_INSTRUCTION_SOURCE", "interpretation_flag_ids": ["IF-37"]}
+        tests = self._dom_tests()
+        out = []
+        executed = check["executable_rule_ids"]
+        for rid in executed:
+            rule = self.store.rule(rid)
+            ev = Eval(ctx, rule, check, rule["automation"]["class"])
+            try:
+                result, why = tests[rid](ev)
+            except Missing as m:
+                out.append({**self._missing(aid, ev, str(m)), **lab})
+                continue
+            out.append(self._record(aid, ev, result, why, **lab))
+        rest = [r for r in check["evaluates_rule_ids"] if r not in executed]
+        klass = lambda r: self.store.rule(r)["automation"].get("class")
+        cand = [r for r in rest if self.store.rule(r).get("catalogue") == "CANDIDATE"]
+        a4 = [r for r in rest if r not in cand and klass(r) == "A4"]
+        a5 = [r for r in rest if r not in cand and klass(r) == "A5"]
+        review = [r for r in rest if r not in cand and r not in a4 and r not in a5]
+        dom = check["domain"]
+        if cand:
+            gev = Eval(ctx, self.store.rule(cand[0]), check, None)
+            out.append({**self._gap(aid, gev), "rules_presented": cand, "interpretation_flag_ids": ["IF-38"],
+                        "explanation":
+                        f"{len(cand)} {dom} candidate rules are RECONCILIATION_REQUIRED: their source is not an "
+                        f"authoritative corpus (GAP-01/GAP-02). No rule is inferred."})
+        if a5:
+            out.append(self.route(aid, ctx, a5[0], check, reason=f"{len(a5)} {dom} rules are ambiguous (A5).",
+                                  instruction_rules_presented=a5, **lab))
+        if review:
+            ev = Eval(ctx, self.store.rule(review[0]), check, "A3")
+            ev.unresolved += [f"Verify {r}" for r in review]
+            out.append(self._record(
+                aid, ev, "HUMAN_REVIEW_REQUIRED",
+                f"{len(review)} {dom} rules have no executable test in the POC (A3, or A1/A2 without a clear "
+                f"pass/fail condition). They are listed for the officer to verify (IF-37).",
+                instruction_rules_presented=review, **lab))
+        if a4:
+            out.append(self.route(aid, ctx, a4[0], check,
+                                  reason=f"{len(a4)} {dom} rules are discretionary (A4).",
+                                  instruction_rules_presented=a4, **lab))
+        return out
+
+    def check_fam_001(self, aid, ctx, check):
+        return self._domain_check(aid, ctx, check)
+
+    def check_path_001(self, aid, ctx, check):
+        return self._domain_check(aid, ctx, check)
+
+    def check_spon_001(self, aid, ctx, check):
+        return self._domain_check(aid, ctx, check)
+
+    def check_prov_001(self, aid, ctx, check):
+        return self._domain_check(aid, ctx, check)
+
+    def check_wrk_001(self, aid, ctx, check):
+        return self._domain_check(aid, ctx, check)
+
     HANDLERS = {
         "SV-CHECK-APP-001": "check_app_001", "SV-CHECK-IVL-001": "check_ivl_001",
         "SV-CHECK-U10-001": "check_u10_001", "SV-CHECK-WORK-001": "check_work_001",
         "SV-CHECK-FIN-001": "check_fin_001", "SV-CHECK-APP-005": "check_app_005",
         "SV-CHECK-MIN-001": "check_min_001", "SV-CHECK-HEALTH-001": "check_health_001",
         "SV-CHECK-EDU-009": "check_edu_009", "SV-CHECK-INSTR-001": "check_instr_001",
+        "SV-CHECK-LODG-001": "check_lodg_001",
+        "SV-CHECK-FAM-001": "check_fam_001", "SV-CHECK-PATH-001": "check_path_001",
+        "SV-CHECK-SPON-001": "check_spon_001", "SV-CHECK-PROV-001": "check_prov_001",
+        "SV-CHECK-WRK-001": "check_wrk_001",
     }
 
     # ---- assessment ------------------------------------------------------------------
@@ -734,12 +1005,21 @@ class Engine:
         self._n = 0
         evals, not_triggered = [], []
         for cid, handler in self.HANDLERS.items():
+            if cid not in self.store.checks:  # LODG-001 exists only when the Operational Manual is loaded
+                continue
             check = self.store.check(cid)
             triggers = [p.removeprefix("application.") for p in check.get("trigger_fact_paths", [])]
             if triggers and not any(t in ctx.facts for t in triggers):
                 not_triggered.append(cid)
                 continue
             evals += getattr(self, handler)(aid, ctx, check)
+        for cid, check in self.store.checks.items():  # residual domain checks (IF-38)
+            if check.get("residual"):
+                triggers = [p.removeprefix("application.") for p in check.get("trigger_fact_paths", [])]
+                if any(t in ctx.facts for t in triggers):
+                    evals += self._domain_check(aid, ctx, check)
+                else:
+                    not_triggered.append(cid)
         evals += self.check_disc_001(aid, ctx, self.store.check("SV-CHECK-DISC-001"), evals)
         return self._assemble(aid, app, ctx, evals, not_triggered, now)
 

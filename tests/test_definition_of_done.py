@@ -71,4 +71,4 @@ def test_dod6_candidate_rules_not_presented_as_production(batch):
         assert a["scope"]["production_decision"] is False
         for e in a["rule_evaluations"]:
             if e["catalogue"] == "CANDIDATE":
-                assert e["provenance_status"] == "RECONCILIATION_REQUIRED"
+                assert e["provenance_status"] in ("RECONCILIATION_REQUIRED", "SUPERSEDED_BY_INSTRUCTION")

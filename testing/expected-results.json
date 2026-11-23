@@ -1,6 +1,6 @@
 {
   "expected_results": {
-    "TC-01": {
+    "SVP-001": {
       "check_id": "SV-CHECK-APP-001",
       "rule_id": null,
       "expected_status": "SATISFIED",
@@ -16,26 +16,26 @@
           "accepted": [
             "DISCRETION_REQUIRED"
           ]
+        },
+        {
+          "deterministic_all_pass": true
         }
-      ]
+      ],
+      "test_type": "PASS",
+      "scenario": "Postgraduate engineering student with a complete, verified paper application.",
+      "expected": "Every deterministic check passes and the grant is still routed to the decision-maker."
     },
-    "TC-02": {
+    "SVP-002": {
       "check_id": "SV-CHECK-APP-001",
       "rule_id": "SV-ID-001",
       "expected_status": "UNKNOWN",
       "assert": [
         {
           "check_id": "SV-CHECK-APP-001",
-          "rule_id": "SV-ID-001",
           "accepted": [
             "UNKNOWN"
-          ]
-        },
-        {
-          "check_id": "SV-CHECK-APP-001",
-          "accepted": [
-            "UNKNOWN"
-          ]
+          ],
+          "rule_id": "SV-ID-001"
         },
         {
           "missing_information_includes": "application.identity_document_provided"
@@ -46,9 +46,457 @@
             "NOT_SATISFIED"
           ]
         }
+      ],
+      "test_type": "MISSING",
+      "scenario": "The applicant did not include a passport copy, so identity cannot be established.",
+      "expected": "Missing evidence returns UNKNOWN for SV-ID-001, never a failure."
+    },
+    "SVP-003": {
+      "check_id": "SV-CHECK-APP-001",
+      "rule_id": "SV-PHOTO-001",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-PHOTO-001"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Paper application with a single photograph where two are required.",
+      "expected": "SV-CHECK-APP-001 returns NOT_SATISFIED."
+    },
+    "SVP-004": {
+      "check_id": "SV-CHECK-APP-001",
+      "rule_id": "SV-FEE-001",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-FEE-001"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "The application arrives with no proof that the prescribed fee was paid.",
+      "expected": "SV-CHECK-APP-001 returns NOT_SATISFIED."
+    },
+    "SVP-005": {
+      "check_id": "SV-CHECK-APP-001",
+      "rule_id": "SV-FEE-002",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-FEE-002"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Fee paid but the international visitor levy line on the receipt is unpaid.",
+      "expected": "SV-CHECK-APP-001 returns NOT_SATISFIED."
+    },
+    "SVP-006": {
+      "check_id": "SV-CHECK-APP-001",
+      "rule_id": "SV-FORM-004",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-FORM-004"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Paper application where the adult applicant forgot to sign.",
+      "expected": "SV-CHECK-APP-001 returns NOT_SATISFIED."
+    },
+    "SVP-007": {
+      "check_id": "SV-CHECK-APP-001",
+      "rule_id": null,
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-001",
+          "accepted": [
+            "SATISFIED"
+          ]
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED",
+            "NOT_APPLICABLE"
+          ]
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Online application where every mandatory field and declaration is complete.",
+      "expected": "SV-CHECK-APP-001 returns SATISFIED."
+    },
+    "SVP-008": {
+      "check_id": "SV-CHECK-APP-001",
+      "rule_id": "SV-ONLINE-008",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-ONLINE-008"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.2-B-VI"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Online application where the truth-and-correctness declaration was not acknowledged.",
+      "expected": "SV-CHECK-APP-001 returns NOT_SATISFIED."
+    },
+    "SVP-009": {
+      "check_id": "SV-CHECK-APP-001",
+      "rule_id": "SV-ONLINE-006",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-ONLINE-006"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.2-B-IV"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "The portal prompted for a photograph and none was uploaded.",
+      "expected": "SV-CHECK-APP-001 returns NOT_SATISFIED."
+    },
+    "SVP-010": {
+      "check_id": "SV-CHECK-LODG-001",
+      "rule_id": "SV-OM-E4.50.1-P1-A",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.1-P1-A"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.1-P1-B"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.1-P2"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Adult paper application that satisfies every E4.50.1 requirement.",
+      "expected": "SV-CHECK-LODG-001 returns SATISFIED."
+    },
+    "SVP-011": {
+      "check_id": "SV-CHECK-LODG-001",
+      "rule_id": "SV-OM-E4.50.1-P2",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.1-P2"
+        },
+        {
+          "check_id": "SV-CHECK-MIN-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-MIN-001"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Under-18 applicant whose parent signed the paper form.",
+      "expected": "SV-CHECK-LODG-001 returns SATISFIED."
+    },
+    "SVP-012": {
+      "check_id": "SV-CHECK-LODG-001",
+      "rule_id": "SV-OM-E4.50.1-P2",
+      "expected_status": "UNKNOWN",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "UNKNOWN"
+          ],
+          "rule_id": "SV-OM-E4.50.1-P2"
+        },
+        {
+          "missing_information_includes": "application.signed_by_parent_or_guardian"
+        }
+      ],
+      "test_type": "MISSING",
+      "scenario": "Under-18 applicant for whom no parent or guardian signature fact is recorded.",
+      "expected": "SV-CHECK-LODG-001 returns UNKNOWN."
+    },
+    "SVP-013": {
+      "check_id": "SV-CHECK-LODG-001",
+      "rule_id": "SV-OM-E4.50.35-A-IV",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.35-A-I"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.35-A-III"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.35-A-IV"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-E4.50.35-B-I"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Adult applicant who lodged at an immigration control area.",
+      "expected": "SV-CHECK-LODG-001 returns SATISFIED."
+    },
+    "SVP-014": {
+      "check_id": "SV-CHECK-LODG-001",
+      "rule_id": "SV-OM-E4.50.35-B-I",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.35-B-I"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-E4.50.35-B-II"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-E4.50.35-A-IV"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Under-18 applicant accompanied by a parent who signed the arrival card.",
+      "expected": "SV-CHECK-LODG-001 returns SATISFIED."
+    },
+    "SVP-015": {
+      "check_id": "SV-CHECK-LODG-001",
+      "rule_id": "SV-OM-E4.50.35-B-II",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-E4.50.35-B-II"
+        },
+        {
+          "check_id": "SV-CHECK-LODG-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-E4.50.35-B-I"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Under-18 applicant arriving without a parent, so the arrival card need not be signed.",
+      "expected": "SV-CHECK-LODG-001 returns SATISFIED."
+    },
+    "SVP-016": {
+      "check_id": "SV-CHECK-FIN-001",
+      "rule_id": "SV-OM-U3.20.30-A-I",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.30-A-I",
+          "provenance_status": "VERIFIED_INSTRUCTION_SOURCE"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Funds equal the NZ$20,000 annual figure for a programme of 36 weeks or longer.",
+      "expected": "SV-CHECK-FIN-001 returns SATISFIED.",
+      "deviation": "Instruction figures from Operational Manual U3.20 replace the spec's candidate funds figures (IF-30); the U3.20 source text is retrieved, while the wider Operational Manual remains a SOURCE_COVERAGE_GAP in scope (GAP-01).",
+      "interpretation_flag_ids": [
+        "IF-30"
       ]
     },
-    "TC-03": {
+    "SVP-017": {
+      "check_id": "SV-CHECK-FIN-001",
+      "rule_id": "SV-OM-U3.20.30-A-I",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.30-A-I"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Funds fall NZ$1 short of the annual requirement.",
+      "expected": "SV-CHECK-FIN-001 returns NOT_SATISFIED."
+    },
+    "SVP-018": {
+      "check_id": "SV-CHECK-FIN-001",
+      "rule_id": "SV-OM-U3.20.25-A-I",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.25-A-I"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Programme under 36 weeks, tested against the monthly rate.",
+      "expected": "SV-CHECK-FIN-001 returns SATISFIED."
+    },
+    "SVP-019": {
+      "check_id": "SV-CHECK-FIN-001",
+      "rule_id": "SV-OM-U3.20.30-A-II",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.30-A-II"
+        },
+        {
+          "check_id": "SV-CHECK-MIN-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-MIN-001"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "A 15-year-old school student tested against the NZ$17,000 compulsory-education figure.",
+      "expected": "SV-CHECK-FIN-001 returns SATISFIED."
+    },
+    "SVP-020": {
+      "check_id": "SV-CHECK-FIN-001",
+      "rule_id": "SV-OM-U3.20.35-P1-A",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.35-P1-A"
+        },
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.30-A-I"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Pregnant applicant who must show the extra NZ$9,000 for maternity health services.",
+      "expected": "SV-CHECK-FIN-001 returns SATISFIED."
+    },
+    "SVP-021": {
+      "check_id": "SV-CHECK-FIN-001",
+      "rule_id": "SV-OM-U3.20.30-A-III",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.30-A-III"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Citizen of Tonga relying on a written maintenance guarantee from a New Zealand resident relative.",
+      "expected": "SV-CHECK-FIN-001 returns SATISFIED."
+    },
+    "SVP-022": {
+      "check_id": "SV-CHECK-FIN-001",
+      "rule_id": "SV-OM-U3.20.30-A-I",
+      "expected_status": "UNKNOWN",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FIN-001",
+          "accepted": [
+            "UNKNOWN"
+          ],
+          "rule_id": "SV-OM-U3.20.30-A-I"
+        }
+      ],
+      "test_type": "MISSING",
+      "scenario": "Funds are declared but the bank statement has not been verified.",
+      "expected": "An unverified bank statement gives UNKNOWN, not failure."
+    },
+    "SVP-023": {
       "check_id": "SV-CHECK-MIN-001",
       "rule_id": "SV-MIN-001",
       "expected_status": "DISCRETION_REQUIRED",
@@ -58,14 +506,69 @@
           "accepted": [
             "HUMAN_REVIEW_REQUIRED",
             "DISCRETION_REQUIRED"
-          ]
+          ],
+          "rule_id": "SV-MIN-001"
         },
         {
           "human_review_includes": "SV-MIN-001"
         }
-      ]
+      ],
+      "test_type": "DISCRETION",
+      "scenario": "Unmarried 16-year-old; parental or guardian consent is missing.",
+      "expected": "SV-CHECK-MIN-001 returns DISCRETION_REQUIRED."
     },
-    "TC-04": {
+    "SVP-024": {
+      "check_id": "SV-CHECK-MIN-001",
+      "rule_id": "SV-MIN-001",
+      "expected_status": "NOT_APPLICABLE",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-MIN-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-MIN-001"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Unmarried 16-year-old whose parental consent is verified.",
+      "expected": "SV-CHECK-MIN-001 returns NOT_APPLICABLE."
+    },
+    "SVP-025": {
+      "check_id": "SV-CHECK-U10-001",
+      "rule_id": "SV-U10-001",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-U10-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-U10-001"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Child under 10 who lives with a parent in New Zealand.",
+      "expected": "SV-CHECK-U10-001 returns SATISFIED."
+    },
+    "SVP-026": {
+      "check_id": "SV-CHECK-U10-001",
+      "rule_id": "SV-U10-001",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-U10-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-U10-001"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Child under 10 with no parent or legal guardian in New Zealand.",
+      "expected": "SV-CHECK-U10-001 returns NOT_SATISFIED."
+    },
+    "SVP-027": {
       "check_id": "SV-CHECK-IVL-001",
       "rule_id": "SV-FEE-003",
       "expected_status": "NOT_APPLICABLE",
@@ -75,11 +578,32 @@
           "accepted": [
             "NOT_APPLICABLE"
           ],
+          "rule_id": "SV-FEE-003",
           "exception_rule_id": "SV-IVL-001"
         }
-      ]
+      ],
+      "test_type": "EXCEPTION",
+      "scenario": "Scholar supported by an MFAT-administered scholarship.",
+      "expected": "SV-CHECK-IVL-001 returns NOT_APPLICABLE."
     },
-    "TC-05": {
+    "SVP-028": {
+      "check_id": "SV-CHECK-IVL-001",
+      "rule_id": "SV-FEE-003",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-IVL-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-FEE-003"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Self-funded student with no scholarship who has not paid the IVL.",
+      "expected": "SV-CHECK-IVL-001 returns NOT_SATISFIED."
+    },
+    "SVP-029": {
       "check_id": "SV-CHECK-WORK-001",
       "rule_id": "SV-WORK-001",
       "expected_status": "SATISFIED",
@@ -88,33 +612,49 @@
           "check_id": "SV-CHECK-WORK-001",
           "accepted": [
             "SATISFIED"
-          ]
+          ],
+          "rule_id": "SV-WORK-001"
         }
-      ]
-    },
-    "TC-06": {
-      "check_id": "SV-CHECK-FIN-001",
-      "rule_id": "SV-OM-U3.20.30-A-I",
-      "expected_status": "SATISFIED",
-      "deviation": "Document expects SOURCE_COVERAGE_GAP because Immigration Instruction provenance was absent. The Operational Manual is now loaded (IF-25), so the check applies U3.20.30 with VERIFIED_INSTRUCTION_SOURCE provenance and no candidate label (IF-30, superseding decision 3 / IF-01).",
-      "interpretation_flag_ids": [
-        "IF-30"
       ],
+      "test_type": "BOUNDARY",
+      "scenario": "Student working 20 hours a week against a 25-hour condition.",
+      "expected": "SV-CHECK-WORK-001 returns SATISFIED."
+    },
+    "SVP-030": {
+      "check_id": "SV-CHECK-WORK-001",
+      "rule_id": "SV-WORK-001",
+      "expected_status": "NOT_SATISFIED",
       "assert": [
         {
-          "check_id": "SV-CHECK-FIN-001",
+          "check_id": "SV-CHECK-WORK-001",
           "accepted": [
-            "SATISFIED"
+            "NOT_SATISFIED"
           ],
-          "rule_id": "SV-OM-U3.20.30-A-I",
-          "provenance_status": "VERIFIED_INSTRUCTION_SOURCE"
-        },
-        {
-          "production_decision": false
+          "rule_id": "SV-WORK-001"
         }
-      ]
+      ],
+      "test_type": "FAIL",
+      "scenario": "Student recorded at 28 hours in a week.",
+      "expected": "SV-CHECK-WORK-001 returns NOT_SATISFIED."
     },
-    "TC-07": {
+    "SVP-031": {
+      "check_id": "SV-CHECK-WORK-001",
+      "rule_id": "SV-WORK-001",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-WORK-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-WORK-001"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Student working although the visa conditions do not allow work.",
+      "expected": "SV-CHECK-WORK-001 returns NOT_SATISFIED."
+    },
+    "SVP-032": {
       "check_id": "SV-CHECK-HEALTH-001",
       "rule_id": "SV-OM-U3.1-B-III",
       "expected_status": "HUMAN_REVIEW_REQUIRED",
@@ -126,44 +666,417 @@
           ]
         },
         {
-          "evidence_used_type": "MedicalCertificate",
-          "check_id": "SV-CHECK-HEALTH-001"
+          "check_id": "SV-CHECK-HEALTH-001",
+          "evidence_used_type": "MedicalCertificate"
         }
-      ]
+      ],
+      "test_type": "HUMAN_REVIEW",
+      "scenario": "Medical certificate received; health is never scored and is referred to a human.",
+      "expected": "SV-CHECK-HEALTH-001 returns HUMAN_REVIEW_REQUIRED."
     },
-    "TC-08": {
-      "check_id": "SV-CHECK-DISC-001",
-      "rule_id": "SV-DEC-002",
-      "expected_status": "DISCRETION_REQUIRED",
+    "SVP-033": {
+      "check_id": "SV-CHECK-HEALTH-001",
+      "rule_id": "SV-OM-U3.1-B-III",
+      "expected_status": "UNKNOWN",
       "assert": [
         {
-          "check_id": "SV-CHECK-DISC-001",
+          "check_id": "SV-CHECK-HEALTH-001",
           "accepted": [
-            "DISCRETION_REQUIRED"
+            "UNKNOWN"
           ]
         },
         {
-          "deterministic_all_pass": true
+          "missing_information_includes": "evidence.MedicalCertificate"
         }
-      ]
+      ],
+      "test_type": "MISSING",
+      "scenario": "No medical certificate or X-ray has been received.",
+      "expected": "SV-CHECK-HEALTH-001 returns UNKNOWN."
     },
-    "TC-09": {
+    "SVP-034": {
+      "check_id": "SV-CHECK-APP-005",
+      "rule_id": "SV-APP-005",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-APP-005",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-APP-005"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Applicant's circumstances changed but the change was not disclosed.",
+      "expected": "SV-CHECK-APP-005 returns NOT_SATISFIED."
+    },
+    "SVP-035": {
       "check_id": "SV-CHECK-EDU-009",
       "rule_id": "SV-EDU-009",
       "expected_status": "NOT_SATISFIED",
-      "interpretation_flag_ids": [
-        "IF-14"
-      ],
       "assert": [
         {
           "check_id": "SV-CHECK-EDU-009",
           "accepted": [
             "NOT_SATISFIED"
-          ]
+          ],
+          "rule_id": "SV-EDU-009"
         }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Verified provider compliance record: known visa-condition breach, not reported to INZ.",
+      "expected": "SV-CHECK-EDU-009 returns NOT_SATISFIED.",
+      "interpretation_flag_ids": [
+        "IF-14"
       ]
     },
-    "TC-10": {
+    "SVP-036": {
+      "check_id": "SV-CHECK-EDU-009",
+      "rule_id": "SV-EDU-009",
+      "expected_status": "HUMAN_REVIEW_REQUIRED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-EDU-009",
+          "accepted": [
+            "HUMAN_REVIEW_REQUIRED"
+          ],
+          "rule_id": "SV-EDU-009"
+        }
+      ],
+      "test_type": "HUMAN_REVIEW",
+      "scenario": "Provider suspects a breach that is not yet verified, so it goes to human review.",
+      "expected": "SV-CHECK-EDU-009 returns HUMAN_REVIEW_REQUIRED.",
+      "interpretation_flag_ids": [
+        "IF-14"
+      ]
+    },
+    "SVP-037": {
+      "check_id": "SV-CHECK-FAM-001",
+      "rule_id": "SV-OM-U8.20.6-A",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FAM-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U8.20.6-A"
+        },
+        {
+          "check_id": "SV-CHECK-FAM-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-U8.20.10-B-I"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Child of a parent on an Accredited Employer work visa earning above the income threshold.",
+      "expected": "SV-CHECK-FAM-001 returns SATISFIED."
+    },
+    "SVP-038": {
+      "check_id": "SV-CHECK-FAM-001",
+      "rule_id": "SV-OM-U8.20.6-A",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FAM-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U8.20.6-A"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Dependent child whose parent earns NZ$54,000, under the NZ$58,240 threshold.",
+      "expected": "SV-CHECK-FAM-001 returns NOT_SATISFIED."
+    },
+    "SVP-039": {
+      "check_id": "SV-CHECK-FAM-001",
+      "rule_id": "SV-OM-U8.20.10-B-I",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FAM-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U8.20.10-B-I"
+        },
+        {
+          "check_id": "SV-CHECK-FAM-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-U8.20.6-A"
+        }
+      ],
+      "test_type": "BOUNDARY",
+      "scenario": "Child whose parents hold Religious Worker visas and earn exactly the NZ$58,240 threshold.",
+      "expected": "SV-CHECK-FAM-001 returns SATISFIED."
+    },
+    "SVP-040": {
+      "check_id": "SV-CHECK-FAM-001",
+      "rule_id": "SV-OM-U8.30-B-II",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FAM-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U8.30-B-II"
+        },
+        {
+          "check_id": "SV-CHECK-FAM-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-U8.30-B-I"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Child of a New Zealand citizen granted a 12-month visa while in New Zealand.",
+      "expected": "SV-CHECK-FAM-001 returns SATISFIED."
+    },
+    "SVP-041": {
+      "check_id": "SV-CHECK-PATH-001",
+      "rule_id": "SV-OM-U14.20.5-C",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14-A"
+        },
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14.20.5-C"
+        },
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14.20.5-D"
+        },
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14.20.1-P1-D"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Pathway with three programmes, a 12-week break, 24 weeks of English and a 93% provider approval rate.",
+      "expected": "SV-CHECK-PATH-001 returns SATISFIED."
+    },
+    "SVP-042": {
+      "check_id": "SV-CHECK-PATH-001",
+      "rule_id": "SV-OM-U14.20.5-C",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14-A"
+        },
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14.20.5-C"
+        },
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14.20.5-D"
+        },
+        {
+          "check_id": "SV-CHECK-PATH-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U14.20.1-P1-D"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Four programmes, a 20-week break, 34 weeks of English and a provider at 88% approval.",
+      "expected": "SV-CHECK-PATH-001 returns NOT_SATISFIED."
+    },
+    "SVP-043": {
+      "check_id": "SV-CHECK-SPON-001",
+      "rule_id": "SV-OM-U3.20.10-B",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-SPON-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.10-B"
+        },
+        {
+          "check_id": "SV-CHECK-SPON-001",
+          "accepted": [
+            "NOT_APPLICABLE"
+          ],
+          "rule_id": "SV-OM-U3.20.10-C"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Third party is a person who is a relative.",
+      "expected": "SV-CHECK-SPON-001 returns SATISFIED."
+    },
+    "SVP-044": {
+      "check_id": "SV-CHECK-SPON-001",
+      "rule_id": "SV-OM-E6.5-E",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-SPON-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-E6.5-E"
+        },
+        {
+          "check_id": "SV-CHECK-SPON-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U3.20.10-C"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Organisation sponsor that has not nominated an authorised contact.",
+      "expected": "SV-CHECK-SPON-001 returns NOT_SATISFIED."
+    },
+    "SVP-045": {
+      "check_id": "SV-CHECK-PROV-001",
+      "rule_id": "SV-OM-U5.1-D",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-PROV-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U5.1-A"
+        },
+        {
+          "check_id": "SV-CHECK-PROV-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U5.1-B"
+        },
+        {
+          "check_id": "SV-CHECK-PROV-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U5.1-D"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "Provider is a Code signatory, certified the programme and holds NZQA EER Category 2.",
+      "expected": "SV-CHECK-PROV-001 returns SATISFIED."
+    },
+    "SVP-046": {
+      "check_id": "SV-CHECK-PROV-001",
+      "rule_id": "SV-OM-U5.1-D",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-PROV-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U5.1-D"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "Provider with Category Four status, so a student visa cannot be granted for study there.",
+      "expected": "SV-CHECK-PROV-001 returns NOT_SATISFIED."
+    },
+    "SVP-047": {
+      "check_id": "SV-CHECK-WRK-001",
+      "rule_id": "SV-OM-U13.15-B",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-WRK-001",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-OM-U13.15-B"
+        }
+      ],
+      "test_type": "PASS",
+      "scenario": "17-year-old at a polytechnic with written permission from the provider and a parent.",
+      "expected": "SV-CHECK-WRK-001 returns SATISFIED."
+    },
+    "SVP-048": {
+      "check_id": "SV-CHECK-WRK-001",
+      "rule_id": "SV-OM-U13.15-B",
+      "expected_status": "NOT_SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-WRK-001",
+          "accepted": [
+            "NOT_SATISFIED"
+          ],
+          "rule_id": "SV-OM-U13.15-B"
+        }
+      ],
+      "test_type": "FAIL",
+      "scenario": "16-year-old requesting work conditions without written parental consent.",
+      "expected": "SV-CHECK-WRK-001 returns NOT_SATISFIED."
+    },
+    "SVP-049": {
+      "check_id": "SV-CHECK-FAMILY-RES",
+      "rule_id": "SV-FAM-002",
+      "expected_status": "SATISFIED",
+      "assert": [
+        {
+          "check_id": "SV-CHECK-FAMILY-RES",
+          "accepted": [
+            "SATISFIED"
+          ],
+          "rule_id": "SV-FAM-002"
+        },
+        {
+          "check_id": "SV-CHECK-CHARACTER-RES",
+          "accepted": [
+            "HUMAN_REVIEW_REQUIRED",
+            "DISCRETION_REQUIRED"
+          ]
+        },
+        {
+          "check_id": "SV-CHECK-LODGEMENT-RES",
+          "accepted": [
+            "HUMAN_REVIEW_REQUIRED",
+            "DISCRETION_REQUIRED"
+          ]
+        }
+      ],
+      "test_type": "HUMAN_REVIEW",
+      "scenario": "Complex case reviewed across every domain: the residual checks present all remaining rules.",
+      "expected": "SV-CHECK-FAMILY-RES returns SATISFIED."
+    },
+    "SVP-050": {
       "check_id": "SV-CHECK-APP-001",
       "rule_id": "SV-ID-001",
       "expected_status": "EXPLANATION_CHAIN_COMPLETE",
@@ -178,7 +1091,10 @@
             "AuthoritySource"
           ]
         }
-      ]
+      ],
+      "test_type": "EXPLANATION",
+      "scenario": "Complete application used to trace the explanation chain from an evaluation to its authority.",
+      "expected": "SV-CHECK-APP-001 returns EXPLANATION_CHAIN_COMPLETE."
     }
   }
 }

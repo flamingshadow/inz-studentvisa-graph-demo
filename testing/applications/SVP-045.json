@@ -1,0 +1,407 @@
+{
+  "application_id": "POC-SV-APP-SVP045",
+  "product_id": "STUDENT-VISA",
+  "synthetic": true,
+  "assessment_as_at": "2026-11-23",
+  "channel": "paper",
+  "applicant": {
+    "applicant_id": "APPLICANT-POC-SVP045",
+    "given_name": "Zainab",
+    "family_name": "Yusuf",
+    "sex": "F",
+    "date_of_birth": "2001-01-01",
+    "nationality": "Nigeria",
+    "country_of_residence": "Nigeria",
+    "city_of_residence": "Abuja",
+    "passport_number": "A12455680",
+    "passport_expiry": "2031-06-28",
+    "email": "zainab.yusuf@mail.example",
+    "occupation": "Student",
+    "provider": "Southern Ranges Polytechnic",
+    "programme": "Diploma in Nursing Studies, 2 years"
+  },
+  "evidence_items": [
+    {
+      "evidence_item_id": "EVID-SVP045-001",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "ApplicationForm",
+      "document_reference": "INZ 1012 student visa application form (SVP045-01)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-05T10:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-001",
+        "FACT-SVP045-002",
+        "FACT-SVP045-003",
+        "FACT-SVP045-004",
+        "FACT-SVP045-011",
+        "FACT-SVP045-015"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP045-002",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "Passport",
+      "document_reference": "Nigeria passport A12455680",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-06T11:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-005",
+        "FACT-SVP045-010"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP045-003",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "Photograph",
+      "document_reference": "Passport-size photographs (SVP045-03)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-07T12:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-006"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP045-004",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "PaymentRecord",
+      "document_reference": "Application fee and levy receipt (SVP045-04)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-11-08T13:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-007",
+        "FACT-SVP045-008",
+        "FACT-SVP045-009"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP045-005",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "OfferOfPlace",
+      "document_reference": "Southern Ranges Polytechnic, offer ref OP-2026-2845",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-12T14:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-012",
+        "FACT-SVP045-013"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP045-006",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "BankStatement",
+      "document_reference": "Statements Aug to Oct 2026, account ending 4166",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-13T15:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-014"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP045-007",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "MedicalCertificate",
+      "document_reference": "INZ 1007 medical certificate (SVP045-07)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-14T16:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-016"
+      ]
+    },
+    {
+      "evidence_item_id": "EVID-SVP045-008",
+      "application_id": "POC-SV-APP-SVP045",
+      "evidence_type": "ProviderRecord",
+      "document_reference": "Provider approval record (SVP045-08)",
+      "supplied_by_actor_id": "ACTOR-APPLICANT",
+      "received_at": "2026-10-15T09:15:00+13:00",
+      "verification_status": "VERIFIED",
+      "supports_fact_ids": [
+        "FACT-SVP045-017",
+        "FACT-SVP045-018",
+        "FACT-SVP045-019"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "FACT-SVP045-001",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "approved_form_used",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-002",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "persons_in_application",
+      "value": 1,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP045-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-003",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "completed_in_english",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-004",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "application_signed",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-005",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "identity_document_provided",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-002"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-006",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "photographs_provided",
+      "value": 2,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP045-003"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-007",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "prescribed_fee_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-008",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "immigration_levy_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-009",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "ivl_paid",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-004"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-010",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "applicant_age",
+      "value": 25,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP045-002"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-011",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "applicant_marital_status",
+      "value": "unmarried",
+      "data_type": "string",
+      "evidence_item_ids": [
+        "EVID-SVP045-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-012",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "student_type",
+      "value": "tertiary",
+      "data_type": "string",
+      "evidence_item_ids": [
+        "EVID-SVP045-005"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-013",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "study_duration_months",
+      "value": 24,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP045-005"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-014",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "available_funds_nzd",
+      "value": 44000,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP045-006"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-015",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "material_change_occurred",
+      "value": false,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-001"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-016",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "medical_certificate_received",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-007"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-017",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "provider_eer_category",
+      "value": 2,
+      "data_type": "integer",
+      "evidence_item_ids": [
+        "EVID-SVP045-008"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-018",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "provider_signatory_to_code",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-008"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    },
+    {
+      "fact_id": "FACT-SVP045-019",
+      "application_id": "POC-SV-APP-SVP045",
+      "subject_id": "APPLICANT-POC-SVP045",
+      "attribute": "provider_certified_programme_compliance",
+      "value": true,
+      "data_type": "boolean",
+      "evidence_item_ids": [
+        "EVID-SVP045-008"
+      ],
+      "verification_status": "VERIFIED",
+      "verified_at": "2026-11-16T10:15:00+13:00",
+      "verified_by": "INZ-VO-1045 (synthetic verifier)"
+    }
+  ],
+  "scenario": "Provider is a Code signatory, certified the programme and holds NZQA EER Category 2.",
+  "persona": {
+    "persona_id": "SVP-045",
+    "title": "Compliant provider",
+    "backstory": "Zainab's provider is in good standing, which the provider record confirms.",
+    "synthetic_notice": "Fictional person created for the POC. Any resemblance to a real person is coincidental."
+  }
+}

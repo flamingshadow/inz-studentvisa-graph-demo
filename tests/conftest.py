@@ -19,7 +19,7 @@ def live():
 
 @pytest.fixture(scope="session")
 def apps():
-    return {p.stem: json.loads(p.read_text()) for p in sorted((ROOT / "testing/applications").glob("TC-*.json"))}
+    return {p.stem: json.loads(p.read_text()) for p in sorted((ROOT / "testing/applications").glob("SVP-*.json"))}
 
 
 @pytest.fixture(scope="session")
