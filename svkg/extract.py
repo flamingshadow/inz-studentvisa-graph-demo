@@ -151,6 +151,28 @@ EXECUTABLE_CANDIDATES = {"SV-CAND-MAINT-TERTIARY", "SV-CAND-MAINT-SCHOOL", "SV-C
 
 CLASS_ORDER = ["A1", "A2", "A3", "A4", "A5"]
 
+# Product-owner flag review (23 Nov 2026): every recommendation accepted. A flag raised later
+# (e.g. a new version mismatch) is not in this map and stays OPEN until reviewed.
+FLAG_REVIEW_DECISION = "Product owner flag review, 23 Nov 2026: recommendation accepted"
+_AS_IS = "Accepted as implemented."
+_V03 = "Accepted as implemented; raise with the spec authors for v0.3."
+FLAG_REVIEW = {
+    "IF-02": _V03, "IF-03": _AS_IS,
+    "IF-04": "Most restrictive class used; character rules published A3/A4 route to DISCRETION_REQUIRED.",
+    "IF-05": _AS_IS, "IF-06": _AS_IS, "IF-07": _AS_IS, "IF-08": _AS_IS, "IF-11": _AS_IS, "IF-12": _V03,
+    "IF-13": "All four added checks accepted; propose adding them to Table 11 in spec v0.3.",
+    "IF-14": "TC-09 keeps NOT_SATISFIED only for a verified known breach that was not reported; any other "
+             "case is HUMAN_REVIEW_REQUIRED.",
+    "IF-15": "Monthly figure x months under 12 months; yearly figure pro rata at 12 months or more "
+             "(18 months tertiary = NZD 30,000). Prepaid accommodation stays an unresolved requirement.",
+    "IF-16": "Precedence AMBIGUOUS > NOT_SATISFIED > UNKNOWN > HUMAN_REVIEW_REQUIRED accepted.",
+    "IF-17": _AS_IS,
+    "IF-18": "Health stays A3: medical evidence is referred to a human; no automated health outcome.",
+    "IF-19": _AS_IS, "IF-20": _AS_IS,
+    "IF-21": "Under-10 check stays in assessments, labelled as a provider obligation.",
+    "IF-22": _AS_IS, "IF-23": _AS_IS, "IF-24": _AS_IS,
+}
+
 
 # --------------------------------------------------------------------------- helpers
 def slug(s: str) -> str:
@@ -993,6 +1015,11 @@ class Builder:
           "The loader writes one LoadLog node per run (build plan Phase 3). It is not part of the Section 3 "
           "ontology. Concepts, actors and fact types use the Domain layer label with a 'kind' property because "
           "Section 3 has no dedicated node type for them.", ["graph"])
+        for f in self.flags:
+            res = FLAG_REVIEW.get(f["flag_id"])
+            if res and f["status"] == "OPEN":
+                f.update(status="ACCEPTED_BY_PRODUCT_OWNER", decision_reference=FLAG_REVIEW_DECISION,
+                         resolution=res)
         self.files["governance/interpretation-flags.json"] = {"interpretation_flags": self.flags}
 
     def _version_and_text_flags(self, F):

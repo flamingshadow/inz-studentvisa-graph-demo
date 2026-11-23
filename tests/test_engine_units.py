@@ -198,3 +198,9 @@ def test_minor_with_verified_consent_not_applicable():
 def test_provider_suspected_breach_routes_to_human():
     a = run(**{**COMPLETE, "provider_suspected_visa_condition_breach": True})
     assert res(a, "SV-EDU-009") == ["HUMAN_REVIEW_REQUIRED"]
+
+
+def test_funds_pro_rata_over_12_months_per_if15():
+    a = run(**{**COMPLETE, "available_funds_nzd": 29999, "study_duration_months": 18})
+    ev = next(e for e in a["rule_evaluations"] if e["check_id"] == "SV-CHECK-FIN-001")
+    assert ev["calculation"]["required_nzd"] == 30000 and ev["result"] == "NOT_SATISFIED"

@@ -166,6 +166,10 @@ Example prompts: *"Which Student Visa rules cover sponsorship, and under which p
 ## Deviations and interpretation flags
 
 The full text of each flag is in `governance/interpretation-flags.json` and on `InterpretationFlag` nodes.
+The product owner reviewed every flag on 23 Nov 2026 and accepted all recommendations. Each flag records
+its `status` (`ACCEPTED_BY_PRODUCT_OWNER`), `decision_reference` and `resolution`. A flag raised by a later
+build (for example a new version mismatch) stays `OPEN` until reviewed. IF-02, IF-12 and IF-13 are to be
+raised with the spec authors for v0.3.
 
 | ID | Kind | Title |
 |---|---|---|

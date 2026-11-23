@@ -24,9 +24,10 @@
       "applies_to": [
         "rules/rules.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented; raise with the spec authors for v0.3."
     },
     {
       "flag_id": "IF-03",
@@ -39,9 +40,10 @@
         "SV-ENTRY-001",
         "SV-FAM-004"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-04",
@@ -57,9 +59,10 @@
         "SV-SCHOOL-003",
         "SV-PRIV-004"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Most restrictive class used; character rules published A3/A4 route to DISCRETION_REQUIRED."
     },
     {
       "flag_id": "IF-05",
@@ -69,9 +72,10 @@
       "applies_to": [
         "rules/rules.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-06",
@@ -85,9 +89,10 @@
         "rules/temporal-constraints.json",
         "rules/discretions.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-07",
@@ -97,9 +102,10 @@
       "applies_to": [
         "regulatory/provisions.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-08",
@@ -109,9 +115,10 @@
       "applies_to": [
         "regulatory/sources.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-09",
@@ -145,9 +152,10 @@
       "applies_to": [
         "evidence/evidence-requirements.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-12",
@@ -158,9 +166,10 @@
         "SV-APP-005",
         "SV-EVID-REQ-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented; raise with the spec authors for v0.3."
     },
     {
       "flag_id": "IF-13",
@@ -173,9 +182,10 @@
         "SV-CHECK-EDU-009",
         "SV-CHECK-INSTR-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "All four added checks accepted; propose adding them to Table 11 in spec v0.3."
     },
     {
       "flag_id": "IF-14",
@@ -186,9 +196,10 @@
         "SV-CHECK-EDU-009",
         "TC-09"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "TC-09 keeps NOT_SATISFIED only for a verified known breach that was not reported; any other case is HUMAN_REVIEW_REQUIRED."
     },
     {
       "flag_id": "IF-15",
@@ -198,9 +209,10 @@
       "applies_to": [
         "SV-CHECK-FIN-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Monthly figure x months under 12 months; yearly figure pro rata at 12 months or more (18 months tertiary = NZD 30,000). Prepaid accommodation stays an unresolved requirement."
     },
     {
       "flag_id": "IF-16",
@@ -210,9 +222,10 @@
       "applies_to": [
         "engine"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Precedence AMBIGUOUS > NOT_SATISFIED > UNKNOWN > HUMAN_REVIEW_REQUIRED accepted."
     },
     {
       "flag_id": "IF-17",
@@ -222,9 +235,10 @@
       "applies_to": [
         "regulatory/actors.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-18",
@@ -234,9 +248,10 @@
       "applies_to": [
         "SV-CHECK-HEALTH-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Health stays A3: medical evidence is referred to a human; no automated health outcome."
     },
     {
       "flag_id": "IF-19",
@@ -246,9 +261,10 @@
       "applies_to": [
         "regulatory/concepts.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-20",
@@ -258,9 +274,10 @@
       "applies_to": [
         "SV-CHECK-APP-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-21",
@@ -270,9 +287,10 @@
       "applies_to": [
         "SV-CHECK-U10-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Under-10 check stays in assessments, labelled as a provider obligation."
     },
     {
       "flag_id": "IF-22",
@@ -282,9 +300,10 @@
       "applies_to": [
         "testing/test-cases.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-23",
@@ -294,9 +313,10 @@
       "applies_to": [
         "decisioning/state-transitions.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-24",
@@ -306,9 +326,10 @@
       "applies_to": [
         "graph"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     }
   ]
 }

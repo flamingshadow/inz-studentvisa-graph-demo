@@ -193,7 +193,7 @@ def coverage_gaps():
 
 def interpretation_flags():
     return read("MATCH (f:InterpretationFlag) RETURN f.id AS flag_id, f.kind AS kind, f.title AS title, "
-                "f.detail AS detail, f.status AS status, f.decision_reference AS decision, "
+                "f.detail AS detail, f.status AS status, f.decision_reference AS decision, f.resolution AS resolution, "
                 "f.applies_to AS applies_to ORDER BY f.id")
 
 
