@@ -602,7 +602,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-E-I",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -617,7 +617,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-E-II",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -632,7 +632,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-E-III",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -647,7 +647,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-F-I",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -662,7 +662,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-F-II",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -677,7 +677,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-F-III",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -692,7 +692,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-G-I",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -707,7 +707,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-G-II",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -722,7 +722,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-G-III",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -737,7 +737,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A4.5-I",
+      "source_provision_id": "NZ-INZ-OM-A4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -752,7 +752,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A5.5-G",
+      "source_provision_id": "NZ-INZ-OM-A5.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -767,7 +767,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-A5.5.1-C",
+      "source_provision_id": "NZ-INZ-OM-A5.5.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -782,7 +782,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.1-P1-A",
+      "source_provision_id": "NZ-INZ-OM-E4.50.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -797,7 +797,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.1-P1-B",
+      "source_provision_id": "NZ-INZ-OM-E4.50.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -812,7 +812,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.1-P1-D",
+      "source_provision_id": "NZ-INZ-OM-E4.50.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -827,7 +827,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.1-P1-D",
+      "source_provision_id": "NZ-INZ-OM-E4.50.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -842,7 +842,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.1-P2",
+      "source_provision_id": "NZ-INZ-OM-E4.50.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -857,7 +857,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.2-B-III",
+      "source_provision_id": "NZ-INZ-OM-E4.50.2",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -872,7 +872,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.5-B-III",
+      "source_provision_id": "NZ-INZ-OM-E4.50.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -887,7 +887,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.5-D",
+      "source_provision_id": "NZ-INZ-OM-E4.50.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -902,7 +902,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.15-P1-C",
+      "source_provision_id": "NZ-INZ-OM-E4.50.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -917,7 +917,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.15-P1-E",
+      "source_provision_id": "NZ-INZ-OM-E4.50.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -932,7 +932,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.15-P1-E",
+      "source_provision_id": "NZ-INZ-OM-E4.50.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -947,7 +947,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.15-P1-F",
+      "source_provision_id": "NZ-INZ-OM-E4.50.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -962,7 +962,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.35-B-I",
+      "source_provision_id": "NZ-INZ-OM-E4.50.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -977,7 +977,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.35-B-II",
+      "source_provision_id": "NZ-INZ-OM-E4.50.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -992,7 +992,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.35-C",
+      "source_provision_id": "NZ-INZ-OM-E4.50.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1007,7 +1007,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.35-D",
+      "source_provision_id": "NZ-INZ-OM-E4.50.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1022,7 +1022,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.40-P1-C",
+      "source_provision_id": "NZ-INZ-OM-E4.50.40",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1037,7 +1037,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.40-P1-E",
+      "source_provision_id": "NZ-INZ-OM-E4.50.40",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1052,7 +1052,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E4.50.40-P1-E",
+      "source_provision_id": "NZ-INZ-OM-E4.50.40",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1067,7 +1067,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5-A",
+      "source_provision_id": "NZ-INZ-OM-E6.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1082,7 +1082,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5-E",
+      "source_provision_id": "NZ-INZ-OM-E6.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1097,7 +1097,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5-F-II",
+      "source_provision_id": "NZ-INZ-OM-E6.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1112,7 +1112,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5-NOTE1",
+      "source_provision_id": "NZ-INZ-OM-E6.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1127,7 +1127,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5.1-A-I",
+      "source_provision_id": "NZ-INZ-OM-E6.5.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1142,7 +1142,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5.1-A-IV",
+      "source_provision_id": "NZ-INZ-OM-E6.5.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1157,7 +1157,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5.1-A-V",
+      "source_provision_id": "NZ-INZ-OM-E6.5.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1172,7 +1172,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5.5-A-V",
+      "source_provision_id": "NZ-INZ-OM-E6.5.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1187,7 +1187,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E6.5.5-A-VI",
+      "source_provision_id": "NZ-INZ-OM-E6.5.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1202,7 +1202,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E7.1-B",
+      "source_provision_id": "NZ-INZ-OM-E7.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1217,7 +1217,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E7.10.1-A-I",
+      "source_provision_id": "NZ-INZ-OM-E7.10.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1232,7 +1232,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E7.10.1-A-II",
+      "source_provision_id": "NZ-INZ-OM-E7.10.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1247,7 +1247,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E7.10.1-A-III",
+      "source_provision_id": "NZ-INZ-OM-E7.10.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1262,7 +1262,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E7.10.1-B",
+      "source_provision_id": "NZ-INZ-OM-E7.10.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1277,7 +1277,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E7.10.1-C",
+      "source_provision_id": "NZ-INZ-OM-E7.10.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1292,7 +1292,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U10.5-C-II",
+      "source_provision_id": "NZ-INZ-OM-U10.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1307,7 +1307,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U10.5-C-II",
+      "source_provision_id": "NZ-INZ-OM-U10.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1322,7 +1322,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U12-B",
+      "source_provision_id": "NZ-INZ-OM-U12",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1337,7 +1337,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U12-C-I",
+      "source_provision_id": "NZ-INZ-OM-U12",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1352,7 +1352,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U12-C-I",
+      "source_provision_id": "NZ-INZ-OM-U12",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1367,7 +1367,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U14.10-E",
+      "source_provision_id": "NZ-INZ-OM-U14.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1382,7 +1382,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U14.5.1-A-II",
+      "source_provision_id": "NZ-INZ-OM-U14.5.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1397,7 +1397,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U14.5.1-A-III",
+      "source_provision_id": "NZ-INZ-OM-U14.5.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1412,7 +1412,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U14.5.1-A-IV",
+      "source_provision_id": "NZ-INZ-OM-U14.5.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1427,7 +1427,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U15-A-II",
+      "source_provision_id": "NZ-INZ-OM-U15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1442,7 +1442,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U16.1-A-II",
+      "source_provision_id": "NZ-INZ-OM-U16.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1457,7 +1457,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.1-A-I",
+      "source_provision_id": "NZ-INZ-OM-U3.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1472,7 +1472,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.1-A-II",
+      "source_provision_id": "NZ-INZ-OM-U3.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1487,7 +1487,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.1-A-VII",
+      "source_provision_id": "NZ-INZ-OM-U3.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1502,7 +1502,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.10-A",
+      "source_provision_id": "NZ-INZ-OM-U3.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1517,7 +1517,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.10-D",
+      "source_provision_id": "NZ-INZ-OM-U3.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1532,7 +1532,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.10-TABLE1",
+      "source_provision_id": "NZ-INZ-OM-U3.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1547,7 +1547,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20-A",
+      "source_provision_id": "NZ-INZ-OM-U3.20",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1562,7 +1562,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20-B-II",
+      "source_provision_id": "NZ-INZ-OM-U3.20",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1577,7 +1577,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20-B-II",
+      "source_provision_id": "NZ-INZ-OM-U3.20",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1592,7 +1592,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20-B-III",
+      "source_provision_id": "NZ-INZ-OM-U3.20",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1607,7 +1607,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20-B-IV",
+      "source_provision_id": "NZ-INZ-OM-U3.20",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1622,7 +1622,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.5-C-I",
+      "source_provision_id": "NZ-INZ-OM-U3.20.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1637,7 +1637,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.10-D-I",
+      "source_provision_id": "NZ-INZ-OM-U3.20.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1652,7 +1652,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.25-A-I",
+      "source_provision_id": "NZ-INZ-OM-U3.20.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1667,7 +1667,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.25-A-II",
+      "source_provision_id": "NZ-INZ-OM-U3.20.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1682,7 +1682,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.25-B",
+      "source_provision_id": "NZ-INZ-OM-U3.20.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1697,7 +1697,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.25-C",
+      "source_provision_id": "NZ-INZ-OM-U3.20.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1712,7 +1712,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.30-B",
+      "source_provision_id": "NZ-INZ-OM-U3.20.30",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1727,7 +1727,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.35-P1-A",
+      "source_provision_id": "NZ-INZ-OM-U3.20.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1742,7 +1742,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.20.35-P1-B",
+      "source_provision_id": "NZ-INZ-OM-U3.20.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1757,7 +1757,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.25-P1-D",
+      "source_provision_id": "NZ-INZ-OM-U3.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1772,7 +1772,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.25-P1-D",
+      "source_provision_id": "NZ-INZ-OM-U3.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1787,7 +1787,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.30-A-I",
+      "source_provision_id": "NZ-INZ-OM-U3.30",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1802,7 +1802,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.30-A-II",
+      "source_provision_id": "NZ-INZ-OM-U3.30",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1817,7 +1817,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.30-B",
+      "source_provision_id": "NZ-INZ-OM-U3.30",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1832,7 +1832,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.30.1-P1",
+      "source_provision_id": "NZ-INZ-OM-U3.30.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1847,7 +1847,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-A",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1862,7 +1862,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-B",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1877,7 +1877,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-C",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1892,7 +1892,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-D",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1907,7 +1907,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-E",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1922,7 +1922,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-F",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1937,7 +1937,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-G",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1952,7 +1952,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-H-I",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1967,7 +1967,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-H-II",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1982,7 +1982,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-H-III-B1",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -1997,7 +1997,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-H-III-B2",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2012,7 +2012,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-I-I",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2027,7 +2027,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-I-II",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2042,7 +2042,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-I-III",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2057,7 +2057,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-J",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2072,7 +2072,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-K",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2087,7 +2087,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-L",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2102,7 +2102,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-M",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2117,7 +2117,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.5-P1-N",
+      "source_provision_id": "NZ-INZ-OM-U3.35.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2132,7 +2132,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.15-P1-A",
+      "source_provision_id": "NZ-INZ-OM-U3.35.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2147,7 +2147,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.35.15-P1-B",
+      "source_provision_id": "NZ-INZ-OM-U3.35.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2162,7 +2162,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.40-D",
+      "source_provision_id": "NZ-INZ-OM-U3.40",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2177,7 +2177,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.45-A",
+      "source_provision_id": "NZ-INZ-OM-U3.45",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2192,7 +2192,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.45-B",
+      "source_provision_id": "NZ-INZ-OM-U3.45",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2207,7 +2207,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.45-C",
+      "source_provision_id": "NZ-INZ-OM-U3.45",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2222,7 +2222,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.45-D",
+      "source_provision_id": "NZ-INZ-OM-U3.45",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2237,7 +2237,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-A",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2252,7 +2252,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-B",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2267,7 +2267,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-C",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2282,7 +2282,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-D",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2297,7 +2297,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-D",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2312,7 +2312,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-E",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2327,7 +2327,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-F",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2342,7 +2342,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-P1-G",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2357,7 +2357,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.5-NOTE1",
+      "source_provision_id": "NZ-INZ-OM-U3.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2372,7 +2372,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.7-P1-A",
+      "source_provision_id": "NZ-INZ-OM-U3.7",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2387,7 +2387,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.7-P1-B",
+      "source_provision_id": "NZ-INZ-OM-U3.7",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2402,7 +2402,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.7-P1-C",
+      "source_provision_id": "NZ-INZ-OM-U3.7",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2417,7 +2417,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.7-P1-D",
+      "source_provision_id": "NZ-INZ-OM-U3.7",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2432,7 +2432,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U3.7-NOTE1",
+      "source_provision_id": "NZ-INZ-OM-U3.7",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2447,7 +2447,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U4.15-A",
+      "source_provision_id": "NZ-INZ-OM-U4.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2462,7 +2462,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U4.5-P1",
+      "source_provision_id": "NZ-INZ-OM-U4.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2477,7 +2477,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U5.1.5-A",
+      "source_provision_id": "NZ-INZ-OM-U5.1.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2492,7 +2492,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U5.1.5-C-I",
+      "source_provision_id": "NZ-INZ-OM-U5.1.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2507,7 +2507,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U5.1.5-C-II",
+      "source_provision_id": "NZ-INZ-OM-U5.1.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2522,7 +2522,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U5.1.5-C-III",
+      "source_provision_id": "NZ-INZ-OM-U5.1.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2537,7 +2537,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.30-P1-A-I",
+      "source_provision_id": "NZ-INZ-OM-U6.30",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2552,7 +2552,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.30-P1-A-II",
+      "source_provision_id": "NZ-INZ-OM-U6.30",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2567,7 +2567,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.35-A-I-B1",
+      "source_provision_id": "NZ-INZ-OM-U6.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2582,7 +2582,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.35-A-I-B2",
+      "source_provision_id": "NZ-INZ-OM-U6.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2597,7 +2597,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.35-A-III",
+      "source_provision_id": "NZ-INZ-OM-U6.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2612,7 +2612,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.35-C",
+      "source_provision_id": "NZ-INZ-OM-U6.35",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2627,7 +2627,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.5-D-II",
+      "source_provision_id": "NZ-INZ-OM-U6.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2642,7 +2642,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U6.5-D-III",
+      "source_provision_id": "NZ-INZ-OM-U6.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2657,7 +2657,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.10-A",
+      "source_provision_id": "NZ-INZ-OM-U7.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2672,7 +2672,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.10-A",
+      "source_provision_id": "NZ-INZ-OM-U7.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2687,7 +2687,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.10-B",
+      "source_provision_id": "NZ-INZ-OM-U7.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2702,7 +2702,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.25-A",
+      "source_provision_id": "NZ-INZ-OM-U7.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2717,7 +2717,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.25-B",
+      "source_provision_id": "NZ-INZ-OM-U7.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2732,7 +2732,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.25-C-I",
+      "source_provision_id": "NZ-INZ-OM-U7.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2747,7 +2747,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.25-C-III",
+      "source_provision_id": "NZ-INZ-OM-U7.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2762,7 +2762,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U7.25-E",
+      "source_provision_id": "NZ-INZ-OM-U7.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2777,7 +2777,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U8.10-C",
+      "source_provision_id": "NZ-INZ-OM-U8.10",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2792,7 +2792,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U8.15-C-I",
+      "source_provision_id": "NZ-INZ-OM-U8.15",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2807,7 +2807,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U8.20-C",
+      "source_provision_id": "NZ-INZ-OM-U8.20",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2822,7 +2822,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U8.20-E",
+      "source_provision_id": "NZ-INZ-OM-U8.20",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2837,7 +2837,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U8.25-B",
+      "source_provision_id": "NZ-INZ-OM-U8.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2852,7 +2852,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U8.25-D",
+      "source_provision_id": "NZ-INZ-OM-U8.25",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2867,7 +2867,7 @@
       ],
       "mandatory": false,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U8.30.1-NOTE1",
+      "source_provision_id": "NZ-INZ-OM-U8.30.1",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2882,7 +2882,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U9.5-B-I",
+      "source_provision_id": "NZ-INZ-OM-U9.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]
@@ -2897,7 +2897,7 @@
       ],
       "mandatory": true,
       "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-U9.5-B-III",
+      "source_provision_id": "NZ-INZ-OM-U9.5",
       "interpretation_flag_ids": [
         "IF-26"
       ]

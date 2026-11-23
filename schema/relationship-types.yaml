@@ -65,8 +65,8 @@ relationship_types:
   description: ''
 - type: REQUIRES_EVIDENCE
   from: Rule
-  to: EvidenceRequirement
-  description: ''
+  to: Evidence(type)
+  description: Requirement details are relationship properties (IF-35).
 - type: SUPPORTS_FACT
   from: EvidenceItem
   to: ObservedFact

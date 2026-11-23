@@ -260,7 +260,7 @@
       "doc_inputs": "student type, duration, verified funds, threshold version",
       "doc_routing_logic": "Only execute after authoritative product threshold is reconciled.",
       "defined_in": "Table 11 (Section 7)",
-      "source_provision_id": "NZ-INZ-OM-U3.20.30-A-I"
+      "source_provision_id": "NZ-INZ-OM-U3.20.30"
     },
     {
       "check_id": "SV-CHECK-DISC-001",
@@ -380,7 +380,7 @@
         "IF-18"
       ],
       "purpose": null,
-      "source_provision_id": "NZ-INZ-OM-U3.1-B-III"
+      "source_provision_id": "NZ-INZ-OM-U3.1"
     },
     {
       "check_id": "SV-CHECK-EDU-009",

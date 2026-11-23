@@ -187,5 +187,5 @@ def expected_results() -> dict[str, dict]:
                   "expected_status": "EXPLANATION_CHAIN_COMPLETE",
                   "assert": [{"explanation_chain_for_rule": "SV-ID-001",
                               "chain": ["RuleEvaluation", "DecisionCheck", "Rule", "Provision",
-                                        "InstrumentVersion", "AuthoritySource"]}]},
+                                        "AuthoritySource"]}]},
     }

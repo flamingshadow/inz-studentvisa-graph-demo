@@ -175,7 +175,6 @@
             "DecisionCheck",
             "Rule",
             "Provision",
-            "InstrumentVersion",
             "AuthoritySource"
           ]
         }

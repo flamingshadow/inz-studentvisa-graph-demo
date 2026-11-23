@@ -153,7 +153,6 @@ def build(b) -> None:
     data = b.om
     if not data:
         return
-    iv = b.sources[SID]["instrument_version_id"]
     pages = data["pages"]
     current_codes = {u["code"] for p in pages if p["version_kind"] != "HISTORIC" for u in p["units"]}
     b.om_rules, b.om_evidence_types, b.om_reqs, b.om_duplicates = {}, {}, [], []
@@ -182,44 +181,82 @@ def build(b) -> None:
             "retrieved_at": kw.get("retrieved_at"), "html_sha256": kw.get("sha256"),
             "html_cache": f"data/opsmanual/pages/{kw['page']}", "effective_from": kw.get("effective_from"),
             "effective_to": kw.get("effective_to"), "version_kind": kw["version_kind"],
+            "published_effective_from": kw.get("published_effective_from"),
+            "merged_identical_versions": kw.get("merged") or [],
             "instruction_code": kw.get("code"), "interpretation_status": "CONSISTENT",
             "interpretation_flag_ids": ["IF-25", "IF-28"],
         }
 
-    page_pid = {}
+    def unit_text(p, ui):
+        u = p["units"][ui]
+        text = om.render(u["blocks"])
+        if not text:                      # heading with sub-units only: its published sub-unit text
+            subs = [x for x in p["units"][ui + 1:] if x["code"].startswith(u["code"] + ".")]
+            text = clean(" ".join(f"{x['code']} {x['heading']} {om.render(x['blocks'])}" for x in subs))
+        if not text and ui == 0 and len(p["units"]) == 1 and p.get("section_listing"):
+            text = "In this section: " + "; ".join(p["section_listing"])   # index page: its published listing
+        return text
+
+    # IF-35: per instruction unit, a historic version whose text is identical to the next newer kept version is
+    # the same information. It is merged into that version, which then covers both periods.
+    chains: dict[str, list[tuple[dict, int]]] = {}
+    for p in pages:
+        for ui, u in enumerate(p["units"]):
+            chains.setdefault(u["code"], []).append((p, ui))
+    keep, eff_from, eff_to, merged, supersedes = set(), {}, {}, {}, []
+    for code, items in chains.items():
+        cur = [(p, ui) for p, ui in items if p["version_kind"] != "HISTORIC"][:1]
+        hist = sorted([(p, ui) for p, ui in items if p["version_kind"] == "HISTORIC"],
+                      key=lambda x: x[0]["effective_from"] or "", reverse=True)
+        kept = None
+        for p, ui in cur + hist:
+            key = (p["page"], code)
+            eff_from[key] = p["effective_from"]
+            if kept and unit_text(p, ui) == kept[1]:
+                eff_from[kept[0]] = p["effective_from"]
+                merged.setdefault(kept[0], []).append(p["effective_from"])
+                continue
+            if kept:
+                supersedes.append((kept[0], key))
+                eff_to[key] = eff_from[kept[0]]
+            keep.add(key)
+            kept = (key, unit_text(p, ui))
+    unit_ids: dict[tuple[str, str], str] = {}
+
     for p in sorted(pages, key=lambda x: (x["version_kind"] == "HISTORIC", x["code"])):
         hist = p["version_kind"] == "HISTORIC"
-        ver = p["effective_from"] if hist else None
         for ui, u in enumerate(p["units"]):
+            key = (p["page"], u["code"])
+            if key not in keep:
+                continue
+            ver = eff_from[key] if hist else None        # id carries the start of the period the text covers
             pid = unit_pid(u["code"], ver)
             if pid in b.provisions:
                 if not hist:
                     b.om_duplicates.append((p["page"], u["code"]))   # same unit on an index and a child page
                     continue
                 pid = unit_pid(u["code"], f"{ver}-{p['page'][:-4]}")
-            text = om.render(u["blocks"])
-            if not text:                      # heading with sub-units only: its published sub-unit text
-                subs = [x for x in p["units"][ui + 1:] if x["code"].startswith(u["code"] + ".")]
-                text = clean(" ".join(f"{x['code']} {x['heading']} {om.render(x['blocks'])}" for x in subs))
-            if not text and ui == 0 and len(p["units"]) == 1 and p.get("section_listing"):
-                text = "In this section: " + "; ".join(p["section_listing"])   # index page: its published listing
+            unit_ids[key] = pid
+            text = unit_text(p, ui)
             par = None
-            if ui > 0:
+            if hist:
+                par = None                     # historic versions hang off their newer version via SUPERSEDES
+            elif ui > 0:
                 prev = [x["code"] for x in p["units"][:ui] if u["code"].startswith(x["code"] + ".")]
                 par = unit_pid(max(prev, key=len) if prev else p["units"][0]["code"], ver)
-            elif not hist:
+            else:
                 pc = parent_code(u["code"])
                 par = unit_pid(pc) if pc else None
             add_prov(pid, parent=par, ptype="Instruction", reference=u["code"], heading=u["heading"],
-                     text=text, url=p["url"], effective_from=p["effective_from"], effective_to=p["effective_to"],
+                     text=text, url=p["url"], effective_from=eff_from[key],
+                     effective_to=eff_to.get(key, None if hist else p["effective_to"]),
+                     published_effective_from=p["effective_from"], merged=merged.get(key),
                      version_kind=p["version_kind"], code=u["code"], page=p["page"],
                      retrieved_at=p["retrieved_at"], sha256=p["sha256"])
-            if ui == 0 or p["page"] not in page_pid:
-                page_pid[p["page"]] = pid
             if par:
                 b.edge("PARENT_OF", par, pid)
             elif not hist:
-                b.edge("CONTAINS", iv, pid)
+                b.edge("CONTAINS", SID, pid)
             for sa in u["see_also"]:
                 for m in ACT_REF_RE.finditer(sa):
                     ref = re.sub(r"\band\b", ",", m.group(1)).replace("sections", "ss").replace("section", "s")
@@ -230,29 +267,22 @@ def build(b) -> None:
                         pass
             if hist or p["version_kind"] == "EXPIRED":
                 continue
-            # paragraphs + atomic rules for current units
-            lead = {}
+            # atomic rules for current units. Paragraphs are not separate nodes (IF-35): their text is in the
+            # unit's source_text and in the rule built from each paragraph.
+            lead, refs = {}, set()
             for path, n in om.walk(u["blocks"]):
-                npid = f"{pid}-" + "-".join(x.upper() for x in path)
-                ppid = f"{pid}-" + "-".join(x.upper() for x in path[:-1]) if len(path) > 1 else pid
-                add_prov(npid, parent=ppid, ptype="Paragraph" if len(path) == 1 else "Subparagraph",
-                         reference=f"{u['code']}{roman_path(path)}" + ("" if roman_path(path) else f" {path[-1]}"),
-                         text=om.node_text(n), url=p["url"], effective_from=p["effective_from"],
-                         version_kind="CURRENT", code=u["code"], page=p["page"],
-                         retrieved_at=p["retrieved_at"], sha256=p["sha256"])
-                b.edge("PARENT_OF", ppid, npid)
                 lead[path] = n["text"]
-                refs = set(n["links"]) | {m.group(1) for m in CODE_REF_RE.finditer(n["text"])}
-                for code in sorted(refs):
-                    if code != u["code"] and code in current_codes:
-                        b.edge("REFERENCES", npid, unit_pid(code), kind="cross_reference")
+                refs |= set(n["links"]) | {m.group(1) for m in CODE_REF_RE.finditer(n["text"])}
                 if n["children"] or not n["text"] or path[-1].startswith("h") or not makes_rules(u["code"]):
                     continue
                 chain = [lead[path[:i]] for i in range(1, len(path))] + [n["text"]]
-                _rule(b, u, p, path, npid, compose(chain), seq)
-    for p in pages:
-        if p.get("superseded_by_page") and p["superseded_by_page"] in page_pid and p["page"] in page_pid:
-            b.edge("SUPERSEDES", page_pid[p["superseded_by_page"]], page_pid[p["page"]])
+                _rule(b, u, p, path, pid, compose(chain), seq)
+            for code in sorted(refs):
+                if code != u["code"] and code in current_codes and not code.startswith(u["code"] + "."):
+                    b.edge("REFERENCES", pid, unit_pid(code), kind="cross_reference")
+    for newer, older in supersedes:
+        if newer in unit_ids and older in unit_ids:
+            b.edge("SUPERSEDES", unit_ids[newer], unit_ids[older])
     _reconcile(b)
 
 
@@ -323,7 +353,6 @@ def _rule(b, u, p, path, npid, statement, seq):
                           "mandatory": mod in ("MUST", "MUST_NOT"), "verification_required": True,
                           "source_provision_id": npid, "interpretation_flag_ids": ["IF-26"]})
         rec["evidence_requirement_ids"].append(erid)
-        b.edge("REFERENCES", erid, etid)
     b.om_rules[rid] = rec
 
 

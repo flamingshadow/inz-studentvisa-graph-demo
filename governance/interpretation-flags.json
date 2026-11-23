@@ -137,7 +137,7 @@
       "flag_id": "IF-10",
       "kind": "INTERPRETATION",
       "title": "Provision text retrieved except the Pastoral Care Code",
-      "detail": "2516 of 2566 provisions carry the exact published wording from legislation.govt.nz (labels kept, whitespace normalised, history and compare notes excluded), with URL, version and retrieval date. The Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021 is not published on legislation.govt.nz, so its 50 clauses remain SOURCE_TEXT_NOT_RETRIEVED (decision 8); Appendix G's source-text criterion is met for every rule except the Code rules.",
+      "detail": "784 of 834 provisions carry the exact published wording from legislation.govt.nz (labels kept, whitespace normalised, history and compare notes excluded), with URL, version and retrieval date. The Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021 is not published on legislation.govt.nz, so its 50 clauses remain SOURCE_TEXT_NOT_RETRIEVED (decision 8); Appendix G's source-text criterion is met for every rule except the Code rules.",
       "applies_to": [
         "regulatory/provisions.json"
       ],
@@ -468,6 +468,19 @@
         "graph"
       ],
       "decision_reference": "Product owner, 23 Nov 2026: minimal node types and relationships",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23"
+    },
+    {
+      "flag_id": "IF-35",
+      "kind": "INTERPRETATION",
+      "title": "Duplicate nodes and relationships removed",
+      "detail": "Product owner (23 Nov 2026): remove nodes and relationships that represent the same information. Removed from the graph: Operational Manual paragraph nodes (their text is in the instruction unit and in the rule built from each paragraph); rule APPLIES_TO links to the single Student Visa product (product_id property); REFERENCES links to an actor the rule already binds with PERMITS / IMPOSES_OBLIGATION_ON / PROHIBITS; EvidenceRequirement nodes (now properties of REQUIRES_EVIDENCE from rule to evidence type); Condition, Exception, TemporalConstraint, Discretion and Trigger nodes (verbatim phrases of the rule or transition, now properties); InstrumentVersion nodes (one per source; version is a source property); superseded candidate thresholds (same figures as U3.20); historic instruction versions whose text is identical to the next version (merged into one node covering both periods); repeated fact INPUT_TO links (one per fact and check, listing evaluation_ids). Kept: ObservedFact and VerifiedFact pairs (different claims, required by RISK-01) and legislation parent sections (they hold sibling text found nowhere else). All removed objects remain in the Appendix A JSON files.",
+      "applies_to": [
+        "schema/ontology.yaml",
+        "graph"
+      ],
+      "decision_reference": "Product owner, 23 Nov 2026: remove duplicate nodes and relationships",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23"
     }

@@ -56,7 +56,7 @@ def test_dod5_every_result_explainable(batch):
         steps = [s["step"] for s in x["explanation_chain"]]
         assert steps[:3] == ["RuleEvaluation", "DecisionCheck", "Rule"]
         if e["catalogue"] in ("VERIFIED", "INSTRUCTION"):
-            assert steps[3:] == ["Provision", "InstrumentVersion", "AuthoritySource"] and x["complete"]
+            assert steps[3:] == ["Provision", "AuthoritySource"] and x["complete"]
         else:
             assert steps[3:] == ["CoverageGap"]          # candidate: says so, never invents a provision
 

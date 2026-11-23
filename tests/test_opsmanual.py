@@ -20,9 +20,11 @@ def test_scope_loaded():
 
 
 def test_exact_text_and_effective_date():
-    p = PROVS["NZ-INZ-OM-U3.20.30-A-I"]
-    assert p["source_text"].startswith("(i) they have NZ$20,000.00 per year available to maintain themselves")
+    p = PROVS["NZ-INZ-OM-U3.20.30"]
+    assert "(i) they have NZ$20,000.00 per year available to maintain themselves" in p["source_text"]
     assert p["effective_from"] == "2022-09-26" and p["source_url"].endswith("#43653.htm")
+    assert not any(k.startswith("NZ-INZ-OM-U3.20.30-") for k in PROVS)      # no paragraph duplicates (IF-35)
+    assert RULES["SV-OM-U3.20.30-A-I"]["authority"]["provision_id"] == "NZ-INZ-OM-U3.20.30"
 
 
 def test_atomic_rule_composition():
@@ -31,6 +33,14 @@ def test_atomic_rule_composition():
                                                  "must provide evidence")
     assert r["instruction_statement"].endswith("tertiary or non-compulsory education study")
     assert r["classification"]["modality"] == "MUST" and r["authority"]["provision"] == "U3.20.30(a)(i)"
+
+
+def test_identical_versions_merged():
+    hist = [p for p in PROVS.values() if p["source_id"] == "NZ-INZ-IMMIGRATION-INSTRUCTIONS"
+            and p.get("merged_identical_versions")]
+    assert hist, "expected some identical historic versions to be merged"
+    for p in hist:
+        assert p["effective_from"] <= min(p["merged_identical_versions"])
 
 
 def test_version_chain_has_no_overlaps():
@@ -49,18 +59,22 @@ def test_candidates_reconciled():
 
 @pytest.mark.neo4j
 def test_instruction_as_at(live):
-    r = queries.instruction_text("U3.20", "2015-06-01")
-    assert r["effective_from"] == "2013-12-02" and r["effective_to"] == "2016-08-22"
+    r = queries.instruction_text("U3.20.30", "2015-06-01")
+    assert (r["provision_id"], r["effective_from"], r["effective_to"]) == \
+        ("NZ-INZ-OM-U3.20.30@2013-12-02", "2013-12-02", "2021-02-11")     # text unchanged 2013-2021 (IF-35)
+    assert queries.instruction_text("U3.20", "2015-06-01")["effective_from"] == "2011-07-25"
     cur = queries.instruction_text("U3.20", None)
-    assert cur["effective_from"] == "2022-09-26" and len(cur["sub_instructions"]) == 7
+    assert cur["page_effective_date"] == "2022-09-26" and cur["text_in_force_from"] == "2011-07-25"
+    assert len(cur["sub_instructions"]) == 7
     assert any(x["ref"] == "E6.5" for x in cur["references"])
 
 
 @pytest.mark.neo4j
 def test_instruction_rules_and_history(live):
     assert len(queries.rules_by_instruction("U3.20")) >= 25
-    hist = queries.instruction_history("U3.20")
-    assert len(hist) >= 10 and hist[0]["version_kind"] == "CURRENT"
+    hist = queries.instruction_history("U3.20.30")
+    assert len(hist) >= 8 and hist[0]["version_kind"] == "CURRENT"
+    assert all(a["effective_from"] == b["effective_to"] for a, b in zip(hist, hist[1:]))
 
 
 @pytest.mark.neo4j

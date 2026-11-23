@@ -81,7 +81,6 @@ graph_profile:
   node_labels:
   - Authority
   - AuthoritySource
-  - InstrumentVersion
   - Provision
   - Section
   - Subsection
@@ -98,12 +97,7 @@ graph_profile:
   - EligibilityRule
   - Calculation
   - Qualifier
-  - Condition
-  - Exception
   - Threshold
-  - TemporalConstraint
-  - Discretion
-  - Trigger
   - Domain
   - Visa
   - Applicant
@@ -114,7 +108,6 @@ graph_profile:
   - Guardian
   - ImmigrationOfficer
   - Evidence
-  - EvidenceRequirement
   - EvidenceItem
   - ObservedFact
   - VerifiedFact
@@ -142,25 +135,35 @@ graph_profile:
   - IMPOSES_OBLIGATION_ON
   - PROHIBITS
   - PERMITS
-  - HAS_CONDITION
-  - HAS_EXCEPTION
   - HAS_THRESHOLD
-  - HAS_TIME_CONSTRAINT
-  - HAS_DISCRETION
   - REQUIRES_EVIDENCE
   - SUPPORTS_FACT
   - VERIFIED_AS
   - INPUT_TO
   - EVALUATES
   - PRODUCES_OUTCOME
-  - CAUSES_TRANSITION
   - EXPLAINED_BY
   not_used:
     node_labels:
     - Part
+    - InstrumentVersion
+    - Condition
+    - Exception
+    - TemporalConstraint
+    - Discretion
+    - Trigger
+    - EvidenceRequirement
     relationship_types:
     - AMENDS
-    reason: In the spec vocabulary but nothing in the corpus needs them; add only when a source does.
+    - HAS_CONDITION
+    - HAS_EXCEPTION
+    - HAS_TIME_CONSTRAINT
+    - HAS_DISCRETION
+    - CAUSES_TRANSITION
+    reason: 'Part and AMENDS: nothing in the corpus needs them. The others duplicated information already held elsewhere
+      (IF-35): the source''s version property, the rule''s own text (condition/exception/time phrases are rule properties),
+      the rule''s A4 class and actor link (discretion), the transition''s trigger property, and the REQUIRES_EVIDENCE
+      relationship (evidence requirement). They stay in the Appendix A JSON files.'
   assessment_pattern: One RuleEvaluation per evaluated rule (result and explanation as properties); one DecisionOutcome
     and one Explanation per assessment; facts link to the DecisionCheck with the evaluation_id on the relationship.
 templates:

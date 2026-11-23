@@ -164,25 +164,31 @@ GRAPH_PROFILE = {
                  "create nodes that only restate text or a single value held elsewhere; store it as a property. "
                  "Keep nodes with no relationships in the JSON files only.",
     "node_labels": [
-        "Authority", "AuthoritySource", "InstrumentVersion",
+        "Authority", "AuthoritySource",
         "Provision", "Section", "Subsection", "Paragraph", "Regulation", "Clause", "Instruction",
         "Rule", "Obligation", "Prohibition", "Permission", "Definition", "BusinessRule", "EligibilityRule",
         "Calculation",
-        "Qualifier", "Condition", "Exception", "Threshold", "TemporalConstraint", "Discretion", "Trigger",
+        "Qualifier", "Threshold",
         "Domain", "Visa", "Applicant", "Application", "Provider", "Programme", "Sponsor", "Guardian",
         "ImmigrationOfficer",
-        "Evidence", "EvidenceRequirement", "EvidenceItem", "ObservedFact", "VerifiedFact",
+        "Evidence", "EvidenceItem", "ObservedFact", "VerifiedFact",
         "Decision", "DecisionCheck", "RuleEvaluation", "DecisionOutcome", "Explanation",
         "Lifecycle", "State", "StateTransition",
         "Governance", "CoverageGap", "InterpretationFlag", "TestCase",
         "LoadLog"],
     "relationship_types": [
         "MADE_UNDER", "CONTAINS", "PARENT_OF", "REFERENCES", "SUPERSEDES", "DERIVED_FROM", "APPLIES_TO",
-        "IMPOSES_OBLIGATION_ON", "PROHIBITS", "PERMITS", "HAS_CONDITION", "HAS_EXCEPTION", "HAS_THRESHOLD",
-        "HAS_TIME_CONSTRAINT", "HAS_DISCRETION", "REQUIRES_EVIDENCE", "SUPPORTS_FACT", "VERIFIED_AS", "INPUT_TO",
-        "EVALUATES", "PRODUCES_OUTCOME", "CAUSES_TRANSITION", "EXPLAINED_BY"],
-    "not_used": {"node_labels": ["Part"], "relationship_types": ["AMENDS"],
-                 "reason": "In the spec vocabulary but nothing in the corpus needs them; add only when a source does."},
+        "IMPOSES_OBLIGATION_ON", "PROHIBITS", "PERMITS", "HAS_THRESHOLD", "REQUIRES_EVIDENCE", "SUPPORTS_FACT",
+        "VERIFIED_AS", "INPUT_TO", "EVALUATES", "PRODUCES_OUTCOME", "EXPLAINED_BY"],
+    "not_used": {"node_labels": ["Part", "InstrumentVersion", "Condition", "Exception", "TemporalConstraint",
+                                 "Discretion", "Trigger", "EvidenceRequirement"],
+                 "relationship_types": ["AMENDS", "HAS_CONDITION", "HAS_EXCEPTION", "HAS_TIME_CONSTRAINT",
+                                        "HAS_DISCRETION", "CAUSES_TRANSITION"],
+                 "reason": "Part and AMENDS: nothing in the corpus needs them. The others duplicated information "
+                           "already held elsewhere (IF-35): the source's version property, the rule's own text "
+                           "(condition/exception/time phrases are rule properties), the rule's A4 class and actor "
+                           "link (discretion), the transition's trigger property, and the REQUIRES_EVIDENCE "
+                           "relationship (evidence requirement). They stay in the Appendix A JSON files."},
     "assessment_pattern": "One RuleEvaluation per evaluated rule (result and explanation as properties); one "
                           "DecisionOutcome and one Explanation per assessment; facts link to the DecisionCheck "
                           "with the evaluation_id on the relationship.",
@@ -392,8 +398,7 @@ class Builder:
                 self.edge("MADE_UNDER", sid, made_under)
             if itype not in ("Method", "OriginalWork"):
                 ver = f"{sid}@{src['version_id'] or 'UNVERSIONED'}"
-                src["instrument_version_id"] = ver
-                self.edge("CONTAINS", sid, ver)
+                src["instrument_version_id"] = ver      # file only: the version is a property of the source (IF-35)
         self.sources = {s["source_id"]: s for s in out}
         self.source_by_title = {norm(s["title"]): s["source_id"] for s in out}
         self.files["regulatory/sources.json"] = {"sources": out, "instrument_versions": [
@@ -448,7 +453,7 @@ class Builder:
                     if par:
                         self.edge("PARENT_OF", par.provision_id, pid)
                     else:
-                        self.edge("CONTAINS", self.sources[source_id]["instrument_version_id"], pid)
+                        self.edge("CONTAINS", source_id, pid)
             ids.append(ref.provision_id)
         return ids
 
@@ -753,7 +758,6 @@ class Builder:
                     "source_provision_id": rule["authority"]["provision_id"],
                     "interpretation_flag_ids": ["IF-11"]})
                 rule["evidence_requirement_ids"].append(erid)
-                self.edge("REFERENCES", erid, f"EVTYPE-{code}")
         # F.5 template instance (SV-APP-005), IF-12
         f5_name, f5 = self.spec.json_template("F.5")
         f5 = {**f5, "acceptable_evidence_types": ["EVTYPE-CHANGE-NOTIFICATION"],
@@ -763,7 +767,6 @@ class Builder:
         etypes.append({"evidence_type_id": "EVTYPE-CHANGE-NOTIFICATION", "evidence_item": "ChangeNotification",
                        "supports_fact": "material_change_disclosed", "verification_need": None,
                        "typical_rule_domain": "Application", "source": "Appendix F.5/F.6 templates"})
-        self.edge("REFERENCES", f5["evidence_requirement_id"], "EVTYPE-CHANGE-NOTIFICATION")
         etypes += list(self.om_evidence_types.values())
         reqs += self.om_reqs
         self.files["evidence/evidence-requirements.json"] = {"evidence_types": etypes,
@@ -945,7 +948,6 @@ class Builder:
             self.qualifiers["triggers"].append({"id": trig_id, "rule_id": None, "transition_id": tid,
                                                 "text": trig, "source_provision_id": None,
                                                 "derivation": "Table 12 Trigger column"})
-            self.edge("CAUSES_TRANSITION", trig_id, tid)
             self.edge("APPLIES_TO", tid, snake(frm), role="from")
             self.edge("APPLIES_TO", tid, snake(to), role="to")
             for r in rules:
@@ -1195,6 +1197,20 @@ class Builder:
           "writes one RuleEvaluation per rule, with result and explanation as properties, plus one DecisionOutcome "
           "and one Explanation for the whole assessment; facts link only to the DecisionCheck.",
           ["schema/ontology.yaml", "graph"], decision="Product owner, 23 Nov 2026: minimal node types and relationships")
+        F("IF-35", "Duplicate nodes and relationships removed",
+          "Product owner (23 Nov 2026): remove nodes and relationships that represent the same information. Removed "
+          "from the graph: Operational Manual paragraph nodes (their text is in the instruction unit and in the rule "
+          "built from each paragraph); rule APPLIES_TO links to the single Student Visa product (product_id "
+          "property); REFERENCES links to an actor the rule already binds with PERMITS / IMPOSES_OBLIGATION_ON / "
+          "PROHIBITS; EvidenceRequirement nodes (now properties of REQUIRES_EVIDENCE from rule to evidence type); "
+          "Condition, Exception, TemporalConstraint, Discretion and Trigger nodes (verbatim phrases of the rule or "
+          "transition, now properties); InstrumentVersion nodes (one per source; version is a source property); "
+          "superseded candidate thresholds (same figures as U3.20); historic instruction versions whose text is "
+          "identical to the next version (merged into one node covering both periods); repeated fact INPUT_TO "
+          "links (one per fact and check, listing evaluation_ids). Kept: ObservedFact and VerifiedFact pairs "
+          "(different claims, required by RISK-01) and legislation parent sections (they hold sibling text found "
+          "nowhere else). All removed objects remain in the Appendix A JSON files.",
+          ["schema/ontology.yaml", "graph"], decision="Product owner, 23 Nov 2026: remove duplicate nodes and relationships")
 
     def _version_and_text_flags(self, F):
         fetched = bool(self.leg)
@@ -1325,7 +1341,7 @@ class Builder:
             "HAS_CONDITION": ("Rule", "Condition", ""), "HAS_EXCEPTION": ("Rule", "Exception", ""),
             "HAS_THRESHOLD": ("Rule", "Threshold", ""), "HAS_TIME_CONSTRAINT": ("Rule", "TemporalConstraint", ""),
             "HAS_DISCRETION": ("Rule", "Discretion", ""),
-            "REQUIRES_EVIDENCE": ("Rule", "EvidenceRequirement", ""),
+            "REQUIRES_EVIDENCE": ("Rule", "Evidence(type)", "Requirement details are relationship properties (IF-35)."),
             "SUPPORTS_FACT": ("EvidenceItem", "ObservedFact", "FT-004"),
             "VERIFIED_AS": ("ObservedFact", "VerifiedFact", "FT-005"),
             "INPUT_TO": ("ObservedFact|VerifiedFact", "DecisionCheck|RuleEvaluation", "FT-006"),
@@ -1349,26 +1365,36 @@ class Builder:
 
     # ---- edges for rules etc -----------------------------------------------
     def build_rule_edges(self):
+        """IF-35: one relationship per fact. No rule->product links (product_id is a property); no 'mentions'
+        link to an actor the rule already binds; qualifier spans stay as rule properties; evidence requirements
+        are the REQUIRES_EVIDENCE relationship itself; superseded candidate thresholds are not linked."""
         all_rules = {**self.rules, **self.candidates, **self.om_rules}
+        reqs = {e["evidence_requirement_id"]: e for e in self.evidence_requirements}
+        ths = {t["id"]: t for t in self.qualifiers["thresholds"]}
         for r in all_rules.values():
             rid = r["rule_id"]
-            self.edge("APPLIES_TO", rid, PRODUCT_ID)
             for i, pid in enumerate(r["authority"]["provision_ids"]):
                 self.edge("DERIVED_FROM", rid, pid, primary=(pid == r["authority"]["provision_id"]))
             rel = EDGE_BY_MODALITY.get(r["classification"]["modality"])
-            if rel:
-                for a in r["actor_ids"]:
-                    self.edge(rel, rid, a)
+            bound = set(r["actor_ids"]) if rel else set()
+            for a in sorted(bound):
+                self.edge(rel, rid, a)
             for c in r["concept_ids"]:
-                self.edge("REFERENCES", rid, c)
-            q = r["qualifiers"]
-            for key, rel in (("condition_ids", "HAS_CONDITION"), ("exception_ids", "HAS_EXCEPTION"),
-                             ("threshold_ids", "HAS_THRESHOLD"), ("temporal_constraint_ids", "HAS_TIME_CONSTRAINT"),
-                             ("discretion_ids", "HAS_DISCRETION"), ("trigger_ids", "HAS_CONDITION")):
-                for x in q[key]:
-                    self.edge(rel, rid, x)
+                if c not in bound:
+                    self.edge("REFERENCES", rid, c)
+            for x in r["qualifiers"]["threshold_ids"]:
+                if ths.get(x, {}).get("provenance_status") != "SUPERSEDED_BY_INSTRUCTION":
+                    self.edge("HAS_THRESHOLD", rid, x)
+            seen = set()
             for er in r["evidence_requirement_ids"]:
-                self.edge("REQUIRES_EVIDENCE", rid, er)
+                e = reqs[er]
+                for et in e["acceptable_evidence_types"]:
+                    if et in seen:
+                        continue
+                    seen.add(et)
+                    self.edge("REQUIRES_EVIDENCE", rid, et, requirement_id=er, mandatory=bool(e.get("mandatory")),
+                              verification_required=bool(e.get("verification_required", True)),
+                              description=e.get("description") or "")
         for f in self.flags:
             for t in f["applies_to"]:
                 if t in all_rules or t.startswith(("SV-CHECK", "TC-")):

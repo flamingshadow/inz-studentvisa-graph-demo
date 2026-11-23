@@ -4,7 +4,7 @@ Graph pattern written per assessment (3.1 vocabulary only):
   (Application)-[:APPLIES_TO]->(Visa STUDENT-VISA)                         FT-002
   (Application)-[:CONTAINS]->(EvidenceItem)-[:SUPPORTS_FACT]->(ObservedFact) FT-004
   (ObservedFact)-[:VERIFIED_AS]->(VerifiedFact)                            FT-005
-  (ObservedFact|VerifiedFact)-[:INPUT_TO {evaluation_id}]->(DecisionCheck)  FT-006
+  (ObservedFact|VerifiedFact)-[:INPUT_TO {evaluation_ids}]->(DecisionCheck)  FT-006, one per pair
   (DecisionCheck)-[:PRODUCES_OUTCOME]->(RuleEvaluation)-[:EVALUATES]->(Rule)
   (Application)-[:PRODUCES_OUTCOME]->(DecisionOutcome {kind:'ASSESSMENT'})-[:CONTAINS]->(RuleEvaluation)
   (DecisionOutcome)-[:EXPLAINED_BY]->(Explanation)
@@ -103,7 +103,9 @@ def write_assessment(session, app: Application, a: dict) -> dict:
                  WITH ev, chk, r
                  CALL (chk, r) {
                    UNWIND r.facts AS fid MATCH (f:Evidence {id:fid}) WHERE f:ObservedFact OR f:VerifiedFact
-                   CREATE (f)-[:INPUT_TO {evaluation_id: r.id}]->(chk)
+                   MERGE (f)-[i:INPUT_TO]->(chk)
+                   ON CREATE SET i.evaluation_ids = [r.id]
+                   ON MATCH SET i.evaluation_ids = coalesce(i.evaluation_ids, []) + r.id
                  }""", rows=rows, aid=aid)
         t.run("""MATCH (o:DecisionOutcome {id:$aid})
                  CREATE (x:Decision:Explanation {id: $aid + '-EXPL', name: 'Explanation ' + $aid, text: $text,

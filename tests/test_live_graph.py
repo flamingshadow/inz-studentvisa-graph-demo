@@ -116,15 +116,14 @@ def test_evidence_to_evaluation_path(live, assessed):
     aid = assessed["TC-01"]["assessment_id"]
     rows = q(live, """MATCH p=(:EvidenceItem)-[:SUPPORTS_FACT]->(:ObservedFact)-[:VERIFIED_AS]->(v:VerifiedFact)
                       -[i:INPUT_TO]->(:DecisionCheck)-[:PRODUCES_OUTCOME]->(ev:RuleEvaluation {assessment_id:$a})
-                      WHERE i.evaluation_id = ev.id RETURN count(p) AS n""", a=aid)
+                      WHERE ev.id IN i.evaluation_ids RETURN count(p) AS n""", a=aid)
     assert rows[0]["n"] > 0
 
 
 def test_rule_to_instrument_path(live):
     rows = q(live, """MATCH (r:Rule {catalogue:'VERIFIED'})
                       OPTIONAL MATCH (r)-[:DERIVED_FROM {primary:true}]->(p:Provision)
-                      OPTIONAL MATCH (s:AuthoritySource)-[:CONTAINS]->(:InstrumentVersion)-[:CONTAINS]->(:Provision)
-                                     -[:PARENT_OF*0..]->(p)
+                      OPTIONAL MATCH (s:AuthoritySource)-[:CONTAINS]->(:Provision)-[:PARENT_OF*0..]->(p)
                       WITH r, count(s) AS n WHERE n = 0 RETURN r.id AS id""")
     assert rows == []
 
@@ -179,5 +178,23 @@ def test_check_provenance_survives_load(live):
 
 def test_discretion_text_returned(live):
     from svkg import queries
-    d = next(x for x in queries.rule_detail("SV-MIN-001")["qualifiers"] if x["type"] == "Discretion")
-    assert d["text"].startswith("The Immigration Officer may decline")
+    d = queries.rule_detail("SV-MIN-001")       # IF-35: discretion and conditions are rule properties
+    assert d["automation_class"] == "A4" and d["discretion_holder"] == "Immigration Officer"
+    assert d["qualifier_phrases"]["conditions"] == ["if parental or guardian consent is not established"]
+
+
+def test_no_duplicate_information(live):
+    """IF-35: none of the removed duplicate patterns are in the spec graph."""
+    checks = {
+        "rule->product": "MATCH (:Rule)-[r:APPLIES_TO]->(:Visa) RETURN count(r) AS n",
+        "references to a bound actor": "MATCH (r:Rule)-[:REFERENCES]->(a)<-[:PERMITS|IMPOSES_OBLIGATION_ON|PROHIBITS]-(r) "
+                                       "RETURN count(*) AS n",
+        "qualifier span nodes": "MATCH (n) WHERE n:Condition OR n:Exception OR n:TemporalConstraint OR n:Discretion "
+                                "OR n:Trigger OR n:EvidenceRequirement OR n:InstrumentVersion RETURN count(n) AS n",
+        "instruction paragraph nodes": "MATCH (p:Paragraph {source_id:'NZ-INZ-IMMIGRATION-INSTRUCTIONS'}) RETURN count(p) AS n",
+        "identical consecutive versions": "MATCH (a:Instruction)-[:SUPERSEDES]->(b:Instruction) "
+                                          "WHERE a.source_text = b.source_text RETURN count(*) AS n",
+        "superseded candidate thresholds": "MATCH (t:Threshold) WHERE t.id STARTS WITH 'SV-TH-CAND-' RETURN count(t) AS n",
+    }
+    for name, cy in checks.items():
+        assert q(live, cy)[0]["n"] == 0, name

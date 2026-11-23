@@ -165,7 +165,7 @@ def list_test_cases() -> dict:
 
 
 @tool("""Explain one rule evaluation through the complete provenance chain:
-RuleEvaluation -> DecisionCheck -> Rule -> Provision -> InstrumentVersion -> AuthoritySource,
+RuleEvaluation -> DecisionCheck -> Rule -> Provision -> AuthoritySource (with its version),
 plus the facts and evidence used. Use the evaluation_id from an assessment.""")
 def explain_evaluation(evaluation_id: str) -> dict:
     r = q.explain_evaluation(evaluation_id.strip())
@@ -197,8 +197,9 @@ def list_instructions(prefix: str = "U") -> dict:
     return q.list_instructions(prefix.strip().upper())
 
 
-@tool("""Exact text of one Operational Manual instruction (e.g. 'U3.20.30', 'U3.1', 'E6.5') with its URL and
-effective date, its paragraphs, sub-instructions, cross-references and the rules derived from it. Give as_at
+@tool("""Exact text of one Operational Manual instruction (e.g. 'U3.20.30', 'U3.1', 'E6.5') with its URL, the
+page's published effective date and the date this exact text has been in force from (identical versions are
+merged), its sub-instructions, cross-references and the rules derived from each paragraph. Give as_at
 (YYYY-MM-DD) to get the version in force on that date; historic versions are text only.""")
 def instruction_text(code: str, as_at: str | None = None) -> dict:
     r = q.instruction_text(code.strip().upper(), as_at)

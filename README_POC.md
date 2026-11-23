@@ -16,6 +16,18 @@ that answers staff questions. The allowed labels and relationship types are decl
 just to restate text or one value that lives elsewhere; that goes in a property. Objects with no relationships
 stay in the JSON files and are not loaded. Changing the profile is a deliberate edit, recorded with a flag.
 
+**No duplicate information (IF-35).** No two nodes or relationships hold the same fact:
+- Instruction paragraphs live in their instruction unit's text and in the rule built from each paragraph.
+- Condition, exception and time phrases are properties of their rule. Discretion is the rule's A4 class plus
+  its link to the decision-maker.
+- An evidence requirement is the `REQUIRES_EVIDENCE` relationship itself, carrying the requirement's
+  details.
+- A source's version is a property of the source.
+- A historic instruction version whose text matches the next version is merged into it.
+- Each fact has one `INPUT_TO` per decision check, listing the evaluations that used it.
+
+The Appendix A JSON files still hold every object.
+
 ## What is here
 
 | Path | Contents |
@@ -24,7 +36,7 @@ stay in the JSON files and are not loaded. Changing the profile is a deliberate 
 | `regulatory/` | 9 sources, 217 provisions (parent chain from section to paragraph, exact wording from legislation.govt.nz), concepts, actors, FT-001..FT-018, and every static relationship |
 | `data/legislation/` | Cached legislation.govt.nz pages for the four published instruments, plus `provision-text.json` (wording, URL, version, retrieval date and page SHA-256 per provision) |
 | `data/opsmanual/` | Cached Operational Manual pages (Student Visas U1-U16, all versions, plus the general sections they cite) and `instructions.json` (parsed units, paragraphs, effective dates, version chains) |
-| `rules/` | 137 verified spec rules (12.1 fields), ~1,200 instruction rules (one per paragraph of each current instruction), 10 candidate rules (Section 6, now reconciled to the manual), 11 rule groups (5.2), and qualifiers |
+| `rules/` | 137 verified spec rules (12.1 fields), 731 instruction rules (one per paragraph of each current U1–U16, A4, A5, E4, E5, E6.5 and E7 instruction), 10 candidate rules (Section 6, now reconciled to the manual), 11 rule groups (5.2), and qualifiers (in the graph only thresholds are nodes) |
 | `evidence/` | Table 9 evidence types, evidence requirements per rule, verification rules |
 | `decisioning/` | 11 decision checks, 11 lifecycle states, 10 transitions |
 | `testing/` | TC-01..TC-10 test cases, synthetic applications (`testing/applications/*.json`), expected results |
@@ -74,7 +86,7 @@ CREATE DATABASE studentvisa IF NOT EXISTS;
 ```
 
 ```bash
-.venv/bin/python -m pytest -q                          # 106 tests; needs the live studentvisa database
+.venv/bin/python -m pytest -q                          # 109 tests; needs the live studentvisa database
 ```
 
 - `svkg load` is idempotent. It MERGEs spec nodes (`origin:'SPEC'`), removes stale ones, never touches
@@ -153,10 +165,10 @@ The server reads the Neo4j credentials from the repo's `.env`, so no secret goes
 |---|---|
 | `list_products`, `list_rule_domains` | Orientation |
 | `rules_by_domain`, `rules_by_concept`, `search_rules` | Find applicable rules with instrument and exact provision |
-| `rule_detail` | Qualifiers, provisions (with source-text status), actors, evidence, checks, gaps, flags |
+| `rule_detail` | Thresholds, condition/exception phrases, provisions (with source-text status), actors, evidence, checks, gaps, flags |
 | `evidence_for_rule`, `facts_supported_by_evidence` | Rule → evidence, evidence → facts |
 | `decision_checks`, `lifecycle_transitions`, `coverage_gaps`, `interpretation_flags`, `list_test_cases` | Model and governance |
-| `explain_evaluation` | RuleEvaluation → DecisionCheck → Rule → Provision → InstrumentVersion → AuthoritySource |
+| `explain_evaluation` | RuleEvaluation → DecisionCheck → Rule → Provision → AuthoritySource (with its version) |
 | `list_assessments`, `get_assessment`, `application_template` | Assessment records |
 | `list_instructions`, `instruction_text`, `instruction_history`, `rules_by_instruction` | Operational Manual: exact instruction text with URL and effective date, the version in force on a date (`as_at`), every version, and the rules derived from an instruction |
 | `assess_application` | The only writing tool |
@@ -192,8 +204,8 @@ students?"*
   the spec's 2026-07-10 without a flag.
 - **Operational Manual scope (GAP-01, partly closed).** Only Student Visas (U1–U16, every version) and the
   general sections they link to directly are loaded (current versions only). Anything beyond that still returns
-  `SOURCE_COVERAGE_GAP`. Six manual-related flags (IF-26, 27, 28, 31, 32, 33) are `OPEN` for your review. The
-  automation classes on instruction rules are set from their wording (IF-26).
+  `SOURCE_COVERAGE_GAP`. The automation classes on instruction rules are set from their wording, unless a
+  check executes the rule (IF-26).
 - **Definition of done item 6.** Nine of the ten candidate rules are now reconciled to instructions and marked
   `SUPERSEDED_BY_INSTRUCTION`. Family support is only partly covered, because partner pathways sit in the W and
   V sections. Every assessment still says `production_decision: false`.
@@ -233,15 +245,16 @@ raised with the spec authors for v0.3.
 | IF-23 | Interpretation | Lifecycle IDs and authorising rules |
 | IF-24 | Interpretation | Operational nodes (LoadLog, `kind` property) outside the ontology |
 | IF-25 | **Deviation (accepted)** | Operational Manual used as the Immigration Instructions source |
-| IF-26 | Interpretation (open) | Automation class, evidence and actors for instruction rules are heuristic |
-| IF-27 | Interpretation (open) | Atomic decomposition of instruction text |
-| IF-28 | Interpretation (open) | Versions and history |
+| IF-26 | Interpretation (fixed, accepted) | Automation class, evidence and actors for instruction rules are heuristic |
+| IF-27 | Interpretation (accepted) | Atomic decomposition of instruction text |
+| IF-28 | Interpretation (accepted) | Versions and history |
 | IF-29 | Decision (accepted) | Scope of the Operational Manual load |
 | IF-30 | Decision (accepted) | Funds check follows U3.20 (supersedes IF-01 and the IF-15 boundary) |
-| IF-31 | Interpretation (open) | Candidate rules reconciled to instructions |
-| IF-32 | Interpretation (open) | Domains for instruction rules |
-| IF-33 | Interpretation (open) | SV-INSTR-001 with instructions loaded |
+| IF-31 | Interpretation (accepted) | Candidate rules reconciled to instructions |
+| IF-32 | Interpretation (changed, accepted) | Domains; rules only for the student sections and core general sections |
+| IF-33 | Interpretation (accepted) | SV-INSTR-001 with instructions loaded |
 | IF-34 | Principle (accepted) | Minimal graph: fewest node types and relationships |
+| IF-35 | Principle (accepted) | Duplicate nodes and relationships removed |
 
 **Decision 3, in short (superseded by IF-30 on 23 Nov 2026).** The candidate figures ran: tertiary NZD 20,000/yr or 1,667/month, school
 NZD 17,000/yr or 1,417/month, maternity NZD 9,000. Every Threshold node and every funds evaluation carries

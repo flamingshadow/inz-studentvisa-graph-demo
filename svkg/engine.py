@@ -95,6 +95,11 @@ class FileStore:
         self.discretions = {d["id"]: d for d in j("rules/discretions.json")["discretions"]}
         self.exceptions = {d["id"]: d for d in j("rules/exceptions.json")["exceptions"]}
         self.conditions = {d["id"]: d for d in j("rules/conditions.json")["conditions"]}
+        from .graph import qualifier_texts
+        for rid, qt in qualifier_texts().items():     # same rule properties the graph loader writes (IF-35)
+            if rid in self.rules:
+                self.rules[rid].update(conditions=qt.get("conditions"), exceptions=qt.get("exceptions"),
+                                       discretion_holder=qt.get("discretion_holder"))
         self.origin = "files"
 
     def rule(self, rid):
@@ -118,9 +123,7 @@ class GraphStore(FileStore):
         self.sources = {k: v for k, v in fetch("AuthoritySource").items()}
         self.provisions = fetch("Provision")
         self.gaps = fetch("CoverageGap")
-        self.discretions = fetch("Discretion")
-        self.exceptions = fetch("Exception")
-        self.conditions = fetch("Condition")
+        self.discretions, self.exceptions, self.conditions = {}, {}, {}   # rule properties since IF-35
         if not self.rules or not self.checks:
             raise RuntimeError("studentvisa database has no spec nodes; run `svkg load` first")
         self.origin = "graph"
@@ -252,16 +255,13 @@ class Engine:
         return self._record(aid, ev, res, (reason + " " if reason else "") + expl, **extra)
 
     def _authority(self, rule):
-        discs = [self.store.discretions[d] for d in rule["qualifiers"].get("discretion_ids", [])
-                 if d in self.store.discretions]
-        cons = [self.store.conditions.get(c) or self.store.exceptions.get(c)
-                for d in discs for c in d.get("constraints", [])]
-        return {"rule_id": rule["rule_id"], "power": rule.get("rulespeak_statement"),
-                "decision_maker": discs[0]["holder"] if discs else None,
+        """Discretion details come from the rule itself (IF-35): its subject, conditions and exceptions."""
+        return {"rule_id": rule["rule_id"],
+                "power": rule.get("rulespeak_statement") or rule.get("instruction_statement"),
+                "decision_maker": rule.get("discretion_holder") or rule.get("subject"),
                 "regulatory_instrument": rule["authority"]["regulatory_instrument"],
                 "provision": rule["authority"]["provision"],
-                "discretion_ids": [d["id"] for d in discs],
-                "constraints": [c["text"] for c in cons if c]}
+                "constraints": list(rule.get("conditions") or []) + list(rule.get("exceptions") or [])}
 
     def _gap(self, aid, ev: Eval):
         gid = (ev.rule["automation"].get("coverage_gap_ids") or ["GAP-01"])[0]

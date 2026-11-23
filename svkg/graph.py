@@ -54,6 +54,18 @@ def flatten(rec: dict, **extra) -> dict:
     return out
 
 
+def qualifier_texts() -> dict[str, dict]:
+    out: dict[str, dict] = {}
+    for f, key in (("rules/conditions.json", "conditions"), ("rules/conditions.json", "triggers"),
+                   ("rules/exceptions.json", "exceptions"), ("rules/temporal-constraints.json", "temporal_constraints")):
+        for q in _j(f)[key]:
+            if q.get("rule_id"):
+                out.setdefault(q["rule_id"], {}).setdefault(key, []).append(q["text"])
+    for d in _j("rules/discretions.json")["discretions"]:
+        out.setdefault(d["rule_id"], {})["discretion_holder"] = d.get("holder")
+    return out
+
+
 def spec_nodes() -> list[tuple[str, str | None, dict]]:
     """(layer, type_label, properties) for every spec object."""
     n: list[tuple[str, str | None, dict]] = []
@@ -67,8 +79,10 @@ def spec_nodes() -> list[tuple[str, str | None, dict]]:
         label = "Paragraph" if p["provision_type"] == "Subparagraph" else p["provision_type"]
         n.append(("Provision", label, flatten(p, id=p["provision_id"], name=p["reference"])))
     rules = _j("rules/rules.json")
+    qtext = qualifier_texts()
     for r in rules["rules"] + rules["candidate_rules"] + rules.get("instruction_rules", []):
         a, c = r["authority"], r["classification"]
+        qt = qtext.get(r["rule_id"], {})
         n.append(("Rule", c["rule_type"], flatten(
             r, id=r["rule_id"], name=r["rule_id"], rule_type=c["rule_type"], modality=c["modality"],
             published_type=c["published_type"], automation_class=r["automation"]["class"],
@@ -77,7 +91,11 @@ def spec_nodes() -> list[tuple[str, str | None, dict]]:
             regulatory_instrument=a["regulatory_instrument"], instrument_type=a["instrument_type"],
             provision=a["provision"], source_id=a["source_id"], provision_id=a["provision_id"],
             provision_ids=a["provision_ids"], source_version=a["source_version"],
-            coverage_gap_ids=r["automation"]["coverage_gap_ids"])))
+            coverage_gap_ids=r["automation"]["coverage_gap_ids"],
+            # IF-35: verbatim qualifier phrases are properties of the rule, not separate nodes
+            conditions=qt.get("conditions"), exceptions=qt.get("exceptions"),
+            time_constraints=qt.get("temporal_constraints"), triggers=qt.get("triggers"),
+            discretion_holder=qt.get("discretion_holder"))))
     for f, key, label in (("rules/conditions.json", "conditions", "Condition"),
                           ("rules/conditions.json", "triggers", "Trigger"),
                           ("rules/exceptions.json", "exceptions", "Exception"),
