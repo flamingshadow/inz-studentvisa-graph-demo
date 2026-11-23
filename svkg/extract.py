@@ -16,7 +16,7 @@ from pathlib import Path
 
 import yaml
 
-from . import provref
+from . import legislation, provref
 from .docspec import ROOT, Spec, sha256
 
 PRODUCT_ID = "STUDENT-VISA"
@@ -151,6 +151,28 @@ EXECUTABLE_CANDIDATES = {"SV-CAND-MAINT-TERTIARY", "SV-CAND-MAINT-SCHOOL", "SV-C
 
 CLASS_ORDER = ["A1", "A2", "A3", "A4", "A5"]
 
+# Product-owner flag review (23 Nov 2026): every recommendation accepted. A flag raised later
+# (e.g. a new version mismatch) is not in this map and stays OPEN until reviewed.
+FLAG_REVIEW_DECISION = "Product owner flag review, 23 Nov 2026: recommendation accepted"
+_AS_IS = "Accepted as implemented."
+_V03 = "Accepted as implemented; raise with the spec authors for v0.3."
+FLAG_REVIEW = {
+    "IF-02": _V03, "IF-03": _AS_IS,
+    "IF-04": "Most restrictive class used; character rules published A3/A4 route to DISCRETION_REQUIRED.",
+    "IF-05": _AS_IS, "IF-06": _AS_IS, "IF-07": _AS_IS, "IF-08": _AS_IS, "IF-11": _AS_IS, "IF-12": _V03,
+    "IF-13": "All four added checks accepted; propose adding them to Table 11 in spec v0.3.",
+    "IF-14": "TC-09 keeps NOT_SATISFIED only for a verified known breach that was not reported; any other "
+             "case is HUMAN_REVIEW_REQUIRED.",
+    "IF-15": "Monthly figure x months under 12 months; yearly figure pro rata at 12 months or more "
+             "(18 months tertiary = NZD 30,000). Prepaid accommodation stays an unresolved requirement.",
+    "IF-16": "Precedence AMBIGUOUS > NOT_SATISFIED > UNKNOWN > HUMAN_REVIEW_REQUIRED accepted.",
+    "IF-17": _AS_IS,
+    "IF-18": "Health stays A3: medical evidence is referred to a human; no automated health outcome.",
+    "IF-19": _AS_IS, "IF-20": _AS_IS,
+    "IF-21": "Under-10 check stays in assessments, labelled as a provider obligation.",
+    "IF-22": _AS_IS, "IF-23": _AS_IS, "IF-24": _AS_IS,
+}
+
 
 # --------------------------------------------------------------------------- helpers
 def slug(s: str) -> str:
@@ -268,6 +290,8 @@ class Builder:
         self.flags: list[dict] = []
         self.provisions: dict[str, dict] = {}
         self.qual_seq: dict[tuple[str, str], int] = defaultdict(int)
+        self.leg = legislation.load_cache()
+        self.version_mismatches: list[tuple[str, str, str]] = []
 
     def edge(self, typ, frm, to, **props):
         self.edges.append({"type": typ, "from": frm, "to": to, **({"props": props} if props else {})})
@@ -286,18 +310,27 @@ class Builder:
         t1 = self.spec.table_by_header("Level", "2.")
         rows = {norm(r[1]): r for r in t1.rows[1:]}
         out = []
+        fetched = (self.leg or {}).get("instruments", {})
         for match, sid, itype, made_under in SOURCES:
             r = rows[norm(match)]
+            f = fetched.get(sid, {})
+            doc_v = DOC_SOURCE_VERSIONS.get(sid)
+            if f.get("version_id") and doc_v and f["version_id"] != doc_v:
+                self.version_mismatches.append((sid, doc_v, f["version_id"]))
             src = {
                 "source_id": sid, "title": r[1], "instrument_type": itype, "jurisdiction": "NZ",
                 "hierarchy_level": r[0], "role": r[2], "poc_coverage": r[3],
-                "version_id": DOC_SOURCE_VERSIONS.get(sid), "effective_from": None,
+                "version_id": f.get("version_id") or doc_v, "effective_from": None,
                 "effective_to": None,
                 "status": "IN_FORCE" if itype in ("PrincipalAct", "Regulations", "CodeOfPractice") else None,
-                "authoritative_uri": None,
+                "authoritative_uri": f.get("url"),
+                "version_as_published": f.get("version_as_published"),
+                "spec_stated_version": doc_v,
                 "coverage_status": self._coverage_status(sid, r[3]),
                 "made_under": made_under,
-                "interpretation_flag_ids": ["IF-08", "IF-09"] if sid != "NZ-IMM-ACT-2009" else [],
+                "interpretation_flag_ids": (["IF-08"] if sid != "NZ-IMM-ACT-2009" else [])
+                                           + (["IF-09"] if not f.get("version_id") and itype in
+                                              ("Regulations", "CodeOfPractice", "PrincipalAct") else []),
             }
             out.append(src)
             if made_under:
@@ -311,9 +344,11 @@ class Builder:
         self.files["regulatory/sources.json"] = {"sources": out, "instrument_versions": [
             {"instrument_version_id": s["instrument_version_id"], "source_id": s["source_id"],
              "version_id": s["version_id"], "version_basis":
+                 f"legislation.govt.nz: {s['version_as_published']}" if s.get("version_as_published") else
                  "Stated in spec v0.2 (12.1 source_version)" if s["version_id"] else
-                 "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
-             "retrieved_at": None}
+                 legislation.NOT_PUBLISHED.get(s["source_id"], "Not stated in spec; not fetched"),
+             "spec_stated_version": s.get("spec_stated_version"),
+             "retrieved_at": (self.leg or {}).get("retrieved_at") if s.get("version_as_published") else None}
             for s in out if "instrument_version_id" in s]}
 
     @staticmethod
@@ -332,16 +367,26 @@ class Builder:
                 pid = node.provision_id
                 if pid not in self.provisions:
                     par = node.parent()
+                    cached = (self.leg or {}).get("provisions", {}).get(pid, {})
+                    got = cached.get("source_text_status") == "RETRIEVED"
                     self.provisions[pid] = {
                         "provision_id": pid, "source_id": source_id,
                         "parent_provision_id": par.provision_id if par else None,
                         "provision_type": node.provision_type, "reference": node.reference,
-                        "heading": None, "source_text": None,
-                        "source_text_status": SOURCE_TEXT_NOT_RETRIEVED,
-                        "source_url": None, "source_version": DOC_SOURCE_VERSIONS.get(source_id),
-                        "retrieved_at": None, "effective_from": None, "effective_to": None,
+                        "heading": cached.get("heading"),
+                        "source_text": cached.get("source_text") if got else None,
+                        "source_text_status": "RETRIEVED" if got else SOURCE_TEXT_NOT_RETRIEVED,
+                        "source_text_reason": None if got else cached.get(
+                            "reason", "legislation cache not built (svkg fetch-legislation)"),
+                        "source_url": cached.get("source_url"),
+                        "source_version": cached.get("source_version") or DOC_SOURCE_VERSIONS.get(source_id),
+                        "version_as_published": cached.get("version_as_published"),
+                        "retrieved_at": cached.get("retrieved_at") if got else None,
+                        "html_sha256": cached.get("html_sha256") if got else None,
+                        "html_cache": cached.get("html_cache") if got else None,
+                        "effective_from": None, "effective_to": None,
                         "interpretation_status": "CONSISTENT",
-                        "interpretation_flag_ids": ["IF-07", "IF-10"],
+                        "interpretation_flag_ids": ["IF-07"] + ([] if got else ["IF-10"]),
                     }
                     if par:
                         self.edge("PARENT_OF", par.provision_id, pid)
@@ -900,22 +945,14 @@ class Builder:
           "Section 3 lists Part, Section, Subsection, Regulation, Clause, Instruction and F.2 adds Paragraph. "
           "Sub-units of regulations and Code clauses reuse Subsection / Paragraph / Subparagraph; Privacy Act "
           "IPPs are modelled as Paragraph-level children of s 22. Parts are not modelled (the document never "
-          "cites one).", ["regulatory/provisions.json"])
+          "cites one). The IPPs are published as a table inside s 22, not as sub-units: the text of each "
+          "NZ-PRIVACY-ACT-2020-S22-IPPn provision is the table block that starts at the row 'Information privacy "
+          "principle n' and runs to the next principle (IPP 3A included).", ["regulatory/provisions.json"])
         F("IF-08", "Instrument types for sources other than the Immigration Act",
           "The document gives instrument_type only for the Immigration Act (PrincipalAct / 'Principal Act'). "
           "Regulations, CodeOfPractice, ImmigrationInstruction (from F.11), Method and OriginalWork are used for "
           "the other Table 1 sources.", ["regulatory/sources.json"])
-        F("IF-09", "Source versions not stated",
-          "Only the Immigration Act version (2026-07-10) is stated. Other version_id values are null until the "
-          "legislation fetch (Phase 2) sets them from legislation.govt.nz.", ["regulatory/sources.json"],
-          decision="Product owner, 23 Nov 2026: add legislation sources later")
-        F("IF-10", "Provision text not yet retrieved",
-          "Phase 2 (fetching exact provision wording from legislation.govt.nz) is deferred. Every provision has "
-          f"source_text null and source_text_status {SOURCE_TEXT_NOT_RETRIEVED}. The Education (Pastoral Care) "
-          "Code is not published on legislation.govt.nz, so its clauses will stay "
-          f"{SOURCE_TEXT_NOT_RETRIEVED} under decision 8 even after Phase 2. Appendix G's 'every VERIFIED rule "
-          "has ... source text' criterion is therefore not yet met.", ["regulatory/provisions.json"],
-          decision="Product owner, 23 Nov 2026: add legislation sources later")
+        self._version_and_text_flags(F)
         F("IF-11", "Rule-to-evidence mapping",
           "Table 9 maps evidence items to a 'typical rule domain', not to rules. Evidence requirements are linked "
           "to the rules in that domain (e.g. Police certificate -> SV-CHAR-001..005).",
@@ -978,7 +1015,48 @@ class Builder:
           "The loader writes one LoadLog node per run (build plan Phase 3). It is not part of the Section 3 "
           "ontology. Concepts, actors and fact types use the Domain layer label with a 'kind' property because "
           "Section 3 has no dedicated node type for them.", ["graph"])
+        for f in self.flags:
+            res = FLAG_REVIEW.get(f["flag_id"])
+            if res and f["status"] == "OPEN":
+                f.update(status="ACCEPTED_BY_PRODUCT_OWNER", decision_reference=FLAG_REVIEW_DECISION,
+                         resolution=res)
         self.files["governance/interpretation-flags.json"] = {"interpretation_flags": self.flags}
+
+    def _version_and_text_flags(self, F):
+        fetched = bool(self.leg)
+        code = [p for p in self.provisions.values() if p["source_id"] == "NZ-EDU-PASTORAL-CODE-2021"]
+        missing = [p for p in self.provisions.values() if p["source_text_status"] != "RETRIEVED"]
+        other = [p["provision_id"] for p in missing if p["source_id"] != "NZ-EDU-PASTORAL-CODE-2021"]
+        decision8 = "Build plan decision 8; product owner, 23 Nov 2026: Phase 2 run"
+        if fetched:
+            vers = "; ".join(f"{s['source_id']} {s['version_id']} ('{s['version_as_published']}')"
+                             for s in self.sources.values() if s.get("version_as_published"))
+            F("IF-09", "Source versions taken from legislation.govt.nz",
+              "The spec states only the Immigration Act version (2026-07-10). Versions for the other instruments "
+              f"come from each page's version line: {vers}. The Carriers' Information Obligations Regulations "
+              "print 'Reprint as at' rather than 'Version as at'. The Pastoral Care Code has no legislation.govt.nz "
+              "version, so its version_id stays null; the Education and Training Act is cited by no rule and "
+              "was not fetched.", ["regulatory/sources.json"], decision=decision8)
+            F("IF-10", "Provision text retrieved except the Pastoral Care Code",
+              f"{len(self.provisions) - len(missing)} of {len(self.provisions)} provisions carry the exact published "
+              "wording from legislation.govt.nz (labels kept, whitespace normalised, history and compare notes "
+              "excluded), with URL, version and retrieval date. The Education (Pastoral Care of Tertiary and "
+              "International Learners) Code of Practice 2021 is not published on legislation.govt.nz, so its "
+              f"{len(code)} clauses remain {SOURCE_TEXT_NOT_RETRIEVED} (decision 8); Appendix G's source-text "
+              "criterion is met for every rule except the Code rules."
+              + (f" Not located on the page: {', '.join(other)}." if other else ""),
+              ["regulatory/provisions.json"], decision=decision8)
+        else:
+            F("IF-09", "Source versions not stated",
+              "Only the Immigration Act version (2026-07-10) is stated. Other version_id values are null until "
+              "`svkg fetch-legislation` sets them from legislation.govt.nz.", ["regulatory/sources.json"])
+            F("IF-10", "Provision text not yet retrieved",
+              f"No legislation cache: every provision is {SOURCE_TEXT_NOT_RETRIEVED}. Run `svkg fetch-legislation`.",
+              ["regulatory/provisions.json"])
+        for sid, doc_v, got in self.version_mismatches:
+            F("IF-25", "Fetched version differs from the spec",
+              f"The spec cites {sid} as version {doc_v}; legislation.govt.nz now shows {got}. The fetched version "
+              "is used; rules from this instrument should be re-checked against the spec.", [sid])
 
     # ---- testing -----------------------------------------------------------
     def build_testing(self):
@@ -1157,7 +1235,8 @@ class Builder:
                 "rule_id": r["rule_id"], "catalogue": r["catalogue"], "provenance_status": r["provenance_status"],
                 "source_id": r["authority"]["source_id"], "provision_ids": r["authority"]["provision_ids"],
                 "source_version": r["authority"]["source_version"],
-                "source_text_status": SOURCE_TEXT_NOT_RETRIEVED if r["authority"]["provision_ids"] else None,
+                "source_text_status": self.provisions[r["authority"]["provision_id"]]["source_text_status"]
+                if r["authority"]["provision_ids"] else None,
                 "extracted_from": r["extracted_from"]} for r in {**self.rules, **self.candidates}.values()]}
         return self.files
 

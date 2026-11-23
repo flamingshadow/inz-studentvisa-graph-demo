@@ -220,11 +220,34 @@ def run_checks() -> Report:
         for fl in r.get("interpretation_flag_ids", []):
             rep.check(fl in flags, f"{r['rule_id']} flag {fl} defined")
 
-    # 16. Accepted gaps -> warnings
+    # 16. Provision text (Phase 2, decision 8)
+    cache = ROOT / "data" / "legislation" / "provision-text.json"
+    code = "NZ-EDU-PASTORAL-CODE-2021"
+    for p in provs.values():
+        pid = p["provision_id"]
+        rep.check(p["source_text_status"] in enums["source_text_status"], f"{pid} source_text_status valid")
+        if p["source_text_status"] == "RETRIEVED":
+            rep.check(bool(p["source_text"]) and bool(p["source_url"]) and bool(p["source_version"])
+                      and bool(p["retrieved_at"]), f"{pid} retrieved text has text, URL, version and retrieved_at")
+            rep.check(p["source_url"].startswith("https://www.legislation.govt.nz/"), f"{pid} URL is legislation.govt.nz")
+        else:
+            rep.check(p["source_text"] is None, f"{pid} has no text unless RETRIEVED (never paraphrased)")
+            if cache.exists() and p["source_id"] != code:
+                rep.check(False, f"{pid} not retrieved: {p.get('source_text_reason')}")
+    srcs = {s["source_id"]: s for s in _load("regulatory/sources.json")["sources"]}
+    for r in rules.values():
+        sid = r["authority"]["source_id"]
+        rep.eq(srcs[sid]["version_id"], r["authority"]["source_version"], f"{r['rule_id']} source_version")
+    act = srcs["NZ-IMM-ACT-2009"]
+    if act.get("version_as_published"):
+        rep.eq("2026-07-10", act["version_id"], "Immigration Act version on legislation.govt.nz matches spec 12.1")
     missing_text = [p for p in provs.values() if p["source_text"] is None]
     if missing_text:
-        rep.warn(f"{len(missing_text)}/{len(provs)} provisions have no source text "
-                 f"(SOURCE_TEXT_NOT_RETRIEVED; Phase 2 deferred, IF-10)")
+        codes = sorted(p["reference"] for p in missing_text if p["source_id"] == code)
+        others = [p["provision_id"] for p in missing_text if p["source_id"] != code]
+        rep.warn(f"{len(missing_text)}/{len(provs)} provisions have no source text. Pastoral Care Code "
+                 f"({len(codes)}; not published on legislation.govt.nz, decision 8): {', '.join(codes)}"
+                 + (f". Others: {', '.join(others)}" if others else ""))
     return rep
 
 

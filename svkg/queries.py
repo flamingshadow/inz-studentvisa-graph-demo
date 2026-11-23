@@ -88,7 +88,8 @@ def search(text: str, limit: int):
     provs = read("CALL db.index.fulltext.queryNodes('provision_text', $q) YIELD node AS p, score "
                  "WITH p, score ORDER BY score DESC LIMIT $n "
                  "RETURN p.id AS provision_id, p.reference AS reference, p.source_id AS source_id, "
-                 "p.source_text_status AS source_text_status, score", q=_ft(text), n=limit)
+                 "p.heading AS heading, p.source_text_status AS source_text_status, p.source_url AS source_url, "
+                 "p.source_version AS source_version, p.source_text AS source_text, score", q=_ft(text), n=limit)
     return {"rules": rules, "provisions": provs}
 
 
@@ -192,7 +193,7 @@ def coverage_gaps():
 
 def interpretation_flags():
     return read("MATCH (f:InterpretationFlag) RETURN f.id AS flag_id, f.kind AS kind, f.title AS title, "
-                "f.detail AS detail, f.status AS status, f.decision_reference AS decision, "
+                "f.detail AS detail, f.status AS status, f.decision_reference AS decision, f.resolution AS resolution, "
                 "f.applies_to AS applies_to ORDER BY f.id")
 
 

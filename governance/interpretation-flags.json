@@ -24,9 +24,10 @@
       "applies_to": [
         "rules/rules.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented; raise with the spec authors for v0.3."
     },
     {
       "flag_id": "IF-03",
@@ -39,9 +40,10 @@
         "SV-ENTRY-001",
         "SV-FAM-004"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-04",
@@ -57,9 +59,10 @@
         "SV-SCHOOL-003",
         "SV-PRIV-004"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Most restrictive class used; character rules published A3/A4 route to DISCRETION_REQUIRED."
     },
     {
       "flag_id": "IF-05",
@@ -69,9 +72,10 @@
       "applies_to": [
         "rules/rules.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-06",
@@ -85,21 +89,23 @@
         "rules/temporal-constraints.json",
         "rules/discretions.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-07",
       "kind": "INTERPRETATION",
       "title": "Provision sub-unit types",
-      "detail": "Section 3 lists Part, Section, Subsection, Regulation, Clause, Instruction and F.2 adds Paragraph. Sub-units of regulations and Code clauses reuse Subsection / Paragraph / Subparagraph; Privacy Act IPPs are modelled as Paragraph-level children of s 22. Parts are not modelled (the document never cites one).",
+      "detail": "Section 3 lists Part, Section, Subsection, Regulation, Clause, Instruction and F.2 adds Paragraph. Sub-units of regulations and Code clauses reuse Subsection / Paragraph / Subparagraph; Privacy Act IPPs are modelled as Paragraph-level children of s 22. Parts are not modelled (the document never cites one). The IPPs are published as a table inside s 22, not as sub-units: the text of each NZ-PRIVACY-ACT-2020-S22-IPPn provision is the table block that starts at the row 'Information privacy principle n' and runs to the next principle (IPP 3A included).",
       "applies_to": [
         "regulatory/provisions.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-08",
@@ -109,31 +115,32 @@
       "applies_to": [
         "regulatory/sources.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-09",
       "kind": "INTERPRETATION",
-      "title": "Source versions not stated",
-      "detail": "Only the Immigration Act version (2026-07-10) is stated. Other version_id values are null until the legislation fetch (Phase 2) sets them from legislation.govt.nz.",
+      "title": "Source versions taken from legislation.govt.nz",
+      "detail": "The spec states only the Immigration Act version (2026-07-10). Versions for the other instruments come from each page's version line: NZ-IMM-ACT-2009 2026-07-10 ('Version as at 10 July 2026'); NZ-IMM-VEPRM-REGS-2010 2026-10-20 ('Version as at 20 October 2026'); NZ-IMM-CIO-REGS-2010 2020-09-30 ('Reprint as at 30 September 2020'); NZ-PRIVACY-ACT-2020 2026-10-08 ('Version as at 8 October 2026'). The Carriers' Information Obligations Regulations print 'Reprint as at' rather than 'Version as at'. The Pastoral Care Code has no legislation.govt.nz version, so its version_id stays null; the Education and Training Act is cited by no rule and was not fetched.",
       "applies_to": [
         "regulatory/sources.json"
       ],
-      "decision_reference": "Product owner, 23 Nov 2026: add legislation sources later",
+      "decision_reference": "Build plan decision 8; product owner, 23 Nov 2026: Phase 2 run",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23"
     },
     {
       "flag_id": "IF-10",
       "kind": "INTERPRETATION",
-      "title": "Provision text not yet retrieved",
-      "detail": "Phase 2 (fetching exact provision wording from legislation.govt.nz) is deferred. Every provision has source_text null and source_text_status SOURCE_TEXT_NOT_RETRIEVED. The Education (Pastoral Care) Code is not published on legislation.govt.nz, so its clauses will stay SOURCE_TEXT_NOT_RETRIEVED under decision 8 even after Phase 2. Appendix G's 'every VERIFIED rule has ... source text' criterion is therefore not yet met.",
+      "title": "Provision text retrieved except the Pastoral Care Code",
+      "detail": "167 of 217 provisions carry the exact published wording from legislation.govt.nz (labels kept, whitespace normalised, history and compare notes excluded), with URL, version and retrieval date. The Education (Pastoral Care of Tertiary and International Learners) Code of Practice 2021 is not published on legislation.govt.nz, so its 50 clauses remain SOURCE_TEXT_NOT_RETRIEVED (decision 8); Appendix G's source-text criterion is met for every rule except the Code rules.",
       "applies_to": [
         "regulatory/provisions.json"
       ],
-      "decision_reference": "Product owner, 23 Nov 2026: add legislation sources later",
+      "decision_reference": "Build plan decision 8; product owner, 23 Nov 2026: Phase 2 run",
       "status": "ACCEPTED_BY_PRODUCT_OWNER",
       "raised_on": "2026-11-23"
     },
@@ -145,9 +152,10 @@
       "applies_to": [
         "evidence/evidence-requirements.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-12",
@@ -158,9 +166,10 @@
         "SV-APP-005",
         "SV-EVID-REQ-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented; raise with the spec authors for v0.3."
     },
     {
       "flag_id": "IF-13",
@@ -173,9 +182,10 @@
         "SV-CHECK-EDU-009",
         "SV-CHECK-INSTR-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "All four added checks accepted; propose adding them to Table 11 in spec v0.3."
     },
     {
       "flag_id": "IF-14",
@@ -186,9 +196,10 @@
         "SV-CHECK-EDU-009",
         "TC-09"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "TC-09 keeps NOT_SATISFIED only for a verified known breach that was not reported; any other case is HUMAN_REVIEW_REQUIRED."
     },
     {
       "flag_id": "IF-15",
@@ -198,9 +209,10 @@
       "applies_to": [
         "SV-CHECK-FIN-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Monthly figure x months under 12 months; yearly figure pro rata at 12 months or more (18 months tertiary = NZD 30,000). Prepaid accommodation stays an unresolved requirement."
     },
     {
       "flag_id": "IF-16",
@@ -210,9 +222,10 @@
       "applies_to": [
         "engine"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Precedence AMBIGUOUS > NOT_SATISFIED > UNKNOWN > HUMAN_REVIEW_REQUIRED accepted."
     },
     {
       "flag_id": "IF-17",
@@ -222,9 +235,10 @@
       "applies_to": [
         "regulatory/actors.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-18",
@@ -234,9 +248,10 @@
       "applies_to": [
         "SV-CHECK-HEALTH-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Health stays A3: medical evidence is referred to a human; no automated health outcome."
     },
     {
       "flag_id": "IF-19",
@@ -246,9 +261,10 @@
       "applies_to": [
         "regulatory/concepts.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-20",
@@ -258,9 +274,10 @@
       "applies_to": [
         "SV-CHECK-APP-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-21",
@@ -270,9 +287,10 @@
       "applies_to": [
         "SV-CHECK-U10-001"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Under-10 check stays in assessments, labelled as a provider obligation."
     },
     {
       "flag_id": "IF-22",
@@ -282,9 +300,10 @@
       "applies_to": [
         "testing/test-cases.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-23",
@@ -294,9 +313,10 @@
       "applies_to": [
         "decisioning/state-transitions.json"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     },
     {
       "flag_id": "IF-24",
@@ -306,9 +326,10 @@
       "applies_to": [
         "graph"
       ],
-      "decision_reference": null,
-      "status": "OPEN",
-      "raised_on": "2026-11-23"
+      "decision_reference": "Product owner flag review, 23 Nov 2026: recommendation accepted",
+      "status": "ACCEPTED_BY_PRODUCT_OWNER",
+      "raised_on": "2026-11-23",
+      "resolution": "Accepted as implemented."
     }
   ]
 }

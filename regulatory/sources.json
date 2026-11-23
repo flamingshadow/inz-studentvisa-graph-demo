@@ -12,7 +12,9 @@
       "effective_from": null,
       "effective_to": null,
       "status": "IN_FORCE",
-      "authoritative_uri": null,
+      "authoritative_uri": "https://www.legislation.govt.nz/act/public/2009/51/en/latest/",
+      "version_as_published": "Version as at 10 July 2026",
+      "spec_stated_version": "2026-07-10",
       "coverage_status": "PARTIAL",
       "made_under": null,
       "interpretation_flag_ids": [],
@@ -26,18 +28,19 @@
       "hierarchy_level": "2",
       "role": "Subordinate legislation for application form, information, evidence, online applications, fees, levies and family inclusion.",
       "poc_coverage": "Verified baseline provisions included.",
-      "version_id": null,
+      "version_id": "2026-10-20",
       "effective_from": null,
       "effective_to": null,
       "status": "IN_FORCE",
-      "authoritative_uri": null,
+      "authoritative_uri": "https://www.legislation.govt.nz/secondary-legislation/pco-drafted/2010/241/en/latest/",
+      "version_as_published": "Version as at 20 October 2026",
+      "spec_stated_version": null,
       "coverage_status": "PARTIAL",
       "made_under": "NZ-IMM-ACT-2009",
       "interpretation_flag_ids": [
-        "IF-08",
-        "IF-09"
+        "IF-08"
       ],
-      "instrument_version_id": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED"
+      "instrument_version_id": "NZ-IMM-VEPRM-REGS-2010@2026-10-20"
     },
     {
       "source_id": "NZ-IMM-CIO-REGS-2010",
@@ -47,18 +50,19 @@
       "hierarchy_level": "2",
       "role": "Subordinate legislation for passenger, travel-document, visa and travel-data obligations.",
       "poc_coverage": "Relevant pre-arrival rules included.",
-      "version_id": null,
+      "version_id": "2020-09-30",
       "effective_from": null,
       "effective_to": null,
       "status": "IN_FORCE",
-      "authoritative_uri": null,
+      "authoritative_uri": "https://www.legislation.govt.nz/secondary-legislation/pco-drafted/2010/238/en/latest/",
+      "version_as_published": "Reprint as at 30 September 2020",
+      "spec_stated_version": null,
       "coverage_status": "PARTIAL",
       "made_under": "NZ-IMM-ACT-2009",
       "interpretation_flag_ids": [
-        "IF-08",
-        "IF-09"
+        "IF-08"
       ],
-      "instrument_version_id": "NZ-IMM-CIO-REGS-2010@UNVERSIONED"
+      "instrument_version_id": "NZ-IMM-CIO-REGS-2010@2020-09-30"
     },
     {
       "source_id": "NZ-EDU-TRAINING-ACT-2020",
@@ -73,6 +77,8 @@
       "effective_to": null,
       "status": "IN_FORCE",
       "authoritative_uri": null,
+      "version_as_published": null,
+      "spec_stated_version": null,
       "coverage_status": "PARTIAL",
       "made_under": null,
       "interpretation_flag_ids": [
@@ -94,6 +100,8 @@
       "effective_to": null,
       "status": "IN_FORCE",
       "authoritative_uri": null,
+      "version_as_published": null,
+      "spec_stated_version": null,
       "coverage_status": "PARTIAL",
       "made_under": "NZ-EDU-TRAINING-ACT-2020",
       "interpretation_flag_ids": [
@@ -110,18 +118,19 @@
       "hierarchy_level": "Parallel",
       "role": "Cross-cutting information collection, use, security, disclosure, access and correction rules.",
       "poc_coverage": "Cross-cutting rules included.",
-      "version_id": null,
+      "version_id": "2026-10-08",
       "effective_from": null,
       "effective_to": null,
       "status": "IN_FORCE",
-      "authoritative_uri": null,
+      "authoritative_uri": "https://www.legislation.govt.nz/act/public/2020/31/en/latest/",
+      "version_as_published": "Version as at 8 October 2026",
+      "spec_stated_version": null,
       "coverage_status": "PARTIAL",
       "made_under": null,
       "interpretation_flag_ids": [
-        "IF-08",
-        "IF-09"
+        "IF-08"
       ],
-      "instrument_version_id": "NZ-PRIVACY-ACT-2020@UNVERSIONED"
+      "instrument_version_id": "NZ-PRIVACY-ACT-2020@2026-10-08"
     },
     {
       "source_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
@@ -136,11 +145,12 @@
       "effective_to": null,
       "status": null,
       "authoritative_uri": null,
+      "version_as_published": null,
+      "spec_stated_version": null,
       "coverage_status": "NOT_COVERED",
       "made_under": "NZ-IMM-ACT-2009",
       "interpretation_flag_ids": [
-        "IF-08",
-        "IF-09"
+        "IF-08"
       ],
       "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@UNVERSIONED"
     },
@@ -157,11 +167,12 @@
       "effective_to": null,
       "status": null,
       "authoritative_uri": null,
+      "version_as_published": null,
+      "spec_stated_version": null,
       "coverage_status": null,
       "made_under": null,
       "interpretation_flag_ids": [
-        "IF-08",
-        "IF-09"
+        "IF-08"
       ]
     },
     {
@@ -177,11 +188,12 @@
       "effective_to": null,
       "status": null,
       "authoritative_uri": null,
+      "version_as_published": null,
+      "spec_stated_version": null,
       "coverage_status": null,
       "made_under": null,
       "interpretation_flag_ids": [
-        "IF-08",
-        "IF-09"
+        "IF-08"
       ]
     }
   ],
@@ -190,49 +202,56 @@
       "instrument_version_id": "NZ-IMM-ACT-2009@2026-07-10",
       "source_id": "NZ-IMM-ACT-2009",
       "version_id": "2026-07-10",
-      "version_basis": "Stated in spec v0.2 (12.1 source_version)",
-      "retrieved_at": null
+      "version_basis": "legislation.govt.nz: Version as at 10 July 2026",
+      "spec_stated_version": "2026-07-10",
+      "retrieved_at": "2026-11-23T01:04:39+00:00"
     },
     {
-      "instrument_version_id": "NZ-IMM-VEPRM-REGS-2010@UNVERSIONED",
+      "instrument_version_id": "NZ-IMM-VEPRM-REGS-2010@2026-10-20",
       "source_id": "NZ-IMM-VEPRM-REGS-2010",
-      "version_id": null,
-      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
-      "retrieved_at": null
+      "version_id": "2026-10-20",
+      "version_basis": "legislation.govt.nz: Version as at 20 October 2026",
+      "spec_stated_version": null,
+      "retrieved_at": "2026-11-23T01:04:39+00:00"
     },
     {
-      "instrument_version_id": "NZ-IMM-CIO-REGS-2010@UNVERSIONED",
+      "instrument_version_id": "NZ-IMM-CIO-REGS-2010@2020-09-30",
       "source_id": "NZ-IMM-CIO-REGS-2010",
-      "version_id": null,
-      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
-      "retrieved_at": null
+      "version_id": "2020-09-30",
+      "version_basis": "legislation.govt.nz: Reprint as at 30 September 2020",
+      "spec_stated_version": null,
+      "retrieved_at": "2026-11-23T01:04:39+00:00"
     },
     {
       "instrument_version_id": "NZ-EDU-TRAINING-ACT-2020@UNVERSIONED",
       "source_id": "NZ-EDU-TRAINING-ACT-2020",
       "version_id": null,
-      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "version_basis": "Not stated in spec; not fetched",
+      "spec_stated_version": null,
       "retrieved_at": null
     },
     {
       "instrument_version_id": "NZ-EDU-PASTORAL-CODE-2021@UNVERSIONED",
       "source_id": "NZ-EDU-PASTORAL-CODE-2021",
       "version_id": null,
-      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "version_basis": "Not published on legislation.govt.nz (decision 8: SOURCE_TEXT_NOT_RETRIEVED)",
+      "spec_stated_version": null,
       "retrieved_at": null
     },
     {
-      "instrument_version_id": "NZ-PRIVACY-ACT-2020@UNVERSIONED",
+      "instrument_version_id": "NZ-PRIVACY-ACT-2020@2026-10-08",
       "source_id": "NZ-PRIVACY-ACT-2020",
-      "version_id": null,
-      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
-      "retrieved_at": null
+      "version_id": "2026-10-08",
+      "version_basis": "legislation.govt.nz: Version as at 8 October 2026",
+      "spec_stated_version": null,
+      "retrieved_at": "2026-11-23T01:04:39+00:00"
     },
     {
       "instrument_version_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS@UNVERSIONED",
       "source_id": "NZ-INZ-IMMIGRATION-INSTRUCTIONS",
       "version_id": null,
-      "version_basis": "Not stated in spec; to be set from legislation.govt.nz (Phase 2, deferred)",
+      "version_basis": "Not stated in spec; not fetched",
+      "spec_stated_version": null,
       "retrieved_at": null
     }
   ]

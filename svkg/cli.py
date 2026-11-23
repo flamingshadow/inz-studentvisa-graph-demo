@@ -1,5 +1,6 @@
 """svkg command line.
 
+  svkg fetch-legislation       download provision wording from legislation.govt.nz (then re-extract)
   svkg extract                 parse the spec .docx into the Appendix A files
   svkg check                   diff the files against the document (non-zero exit on mismatch)
   svkg load                    (re)load the studentvisa graph; idempotent
@@ -23,6 +24,8 @@ def _print(obj):
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="svkg", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
+    f = sub.add_parser("fetch-legislation")
+    f.add_argument("--offline", action="store_true", help="re-parse the cached HTML without downloading")
     sub.add_parser("extract")
     sub.add_parser("check")
     sub.add_parser("load")
@@ -37,6 +40,14 @@ def main(argv=None) -> int:
     sub.add_parser("mcp")
     args = p.parse_args(argv)
 
+    if args.cmd == "fetch-legislation":
+        from . import extract, legislation
+        if not (Path(__file__).resolve().parent.parent / "regulatory/provisions.json").exists():
+            extract.run()
+        res = legislation.fetch(download=not args.offline)
+        extract.run()
+        _print(res)
+        print("Next: svkg check && svkg load")
     if args.cmd in ("extract", "build"):
         from . import extract
         _print(extract.run())

@@ -94,3 +94,12 @@ def test_provision_parent_chain():
     p = provref.parse("s 58(3)(a)", "NZ-IMM-ACT-2009")[0]
     assert [x.provision_id for x in p.lineage()] == ["NZ-IMM-ACT-2009-S58", "NZ-IMM-ACT-2009-S58-3",
                                                      "NZ-IMM-ACT-2009-S58-3-A"]
+
+
+def test_flag_review_recorded():
+    flags = json.loads((ROOT / "governance/interpretation-flags.json").read_text())["interpretation_flags"]
+    assert flags and all(f["status"] == "ACCEPTED_BY_PRODUCT_OWNER" for f in flags), \
+        [f["flag_id"] for f in flags if f["status"] != "ACCEPTED_BY_PRODUCT_OWNER"]
+    by_id = {f["flag_id"]: f for f in flags}
+    assert "NZD 30,000" in by_id["IF-15"]["resolution"]
+    assert by_id["IF-01"]["kind"] == "DEVIATION"
