@@ -727,12 +727,12 @@ class Builder:
              "context_rule_ids": ["SV-DEC-001", "SV-DEC-003", "SV-DEC-004", "SV-CHAR-001", "SV-CHAR-002",
                                   "SV-CHAR-003", "SV-CHAR-004", "SV-CHAR-005", "SV-CHAR-006"],
              "outcomes": {"always": "DISCRETION_REQUIRED"}},
-            {**f8, "origin": "Appendix F.8 template", "trigger_fact_paths": [],
+            {**f8, "defined_in": "Appendix F.8 template", "trigger_fact_paths": [],
              "inputs": f8["inputs"] + [{"fact_path": P + "material_change_occurred", "required": False}],
              "note": "material_change_occurred=false -> NOT_APPLICABLE (nothing to disclose)."},
             # ---- checks implied by test cases (IF-13) ----
             {"check_id": "SV-CHECK-MIN-001", "evaluates_rule_id": "SV-MIN-001", "automation_class": "A4",
-             "origin": "Implied by TC-03 (not in Table 11)",
+             "defined_in": "Implied by TC-03 (not in Table 11)",
              "inputs": [{"fact_path": P + a, "required": True} for a in (
                  "applicant_age", "applicant_marital_status", "parental_consent_established")],
              "outcomes": {"adult_or_married": "NOT_APPLICABLE", "consent_verified": "NOT_APPLICABLE",
@@ -740,13 +740,13 @@ class Builder:
              "interpretation_flag_ids": ["IF-13"]},
             {"check_id": "SV-CHECK-HEALTH-001", "evaluates_rule_id": "SV-CAND-ELIGIBILITY",
              "related_verified_rule_ids": ["SV-HEALTH-001"], "automation_class": "A3",
-             "origin": "Implied by TC-07 (not in Table 11)",
+             "defined_in": "Implied by TC-07 (not in Table 11)",
              "inputs": [{"fact_path": "evidence.MedicalCertificate|ChestXray", "required": True}],
              "outcomes": {"evidence_received": "HUMAN_REVIEW_REQUIRED", "missing": "UNKNOWN"},
              "interpretation_flag_ids": ["IF-13", "IF-18"]},
             {"check_id": "SV-CHECK-EDU-009", "evaluates_rule_id": "SV-EDU-009",
              "evaluates_rule_id_school": "SV-SCHOOL-009", "automation_class": "A3",
-             "origin": "Implied by TC-09 (not in Table 11)",
+             "defined_in": "Implied by TC-09 (not in Table 11)",
              "trigger_fact_paths": [P + "provider_known_visa_condition_breach",
                                     P + "provider_suspected_visa_condition_breach"],
              "inputs": [{"fact_path": P + a, "required": True} for a in (
@@ -756,7 +756,7 @@ class Builder:
              "interpretation_flag_ids": ["IF-13", "IF-14"]},
             {"check_id": "SV-CHECK-INSTR-001", "evaluates_rule_id": "SV-INSTR-001",
              "evaluates_rule_id_online": "SV-ONLINE-007", "automation_class": "A2",
-             "origin": "Rules marked 'A2 / gap' in 5.1 and D.1",
+             "defined_in": "Rules marked 'A2 / gap' in 5.1 and D.1",
              "inputs": [], "outcomes": {"always": "SOURCE_COVERAGE_GAP"}, "coverage_gap_ids": ["GAP-01"],
              "interpretation_flag_ids": ["IF-04", "IF-13"]},
         ]
@@ -766,7 +766,7 @@ class Builder:
                 c["purpose"] = row[1]
                 c["doc_inputs"] = row[2]
                 c["doc_routing_logic"] = row[3]
-                c.setdefault("origin", "Table 11 (Section 7)")
+                c.setdefault("defined_in", "Table 11 (Section 7)")
             c.setdefault("purpose", None)
             rid = c.get("evaluates_rule_id")
             rule = self.rules.get(rid) or self.candidates.get(rid)

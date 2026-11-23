@@ -150,3 +150,16 @@ def test_read_session_rejects_writes(live):
         with pytest.raises(ClientError):
             s.execute_read(lambda tx: tx.run("CREATE (:Governance {id:'SHOULD-NOT-EXIST'})").consume())
     assert q(live, "MATCH (n {id:'SHOULD-NOT-EXIST'}) RETURN count(n) AS n")[0]["n"] == 0
+
+
+def test_check_provenance_survives_load(live):
+    rows = {r["id"]: r["d"] for r in q(live, "MATCH (c:DecisionCheck) RETURN c.id AS id, c.defined_in AS d")}
+    assert rows["SV-CHECK-APP-001"] == "Table 11 (Section 7)"
+    assert rows["SV-CHECK-MIN-001"].startswith("Implied by TC-03")
+    assert all(rows.values())
+
+
+def test_discretion_text_returned(live):
+    from svkg import queries
+    d = next(x for x in queries.rule_detail("SV-MIN-001")["qualifiers"] if x["type"] == "Discretion")
+    assert d["text"].startswith("The Immigration Officer may decline")
