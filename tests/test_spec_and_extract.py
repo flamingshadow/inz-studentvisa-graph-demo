@@ -105,9 +105,19 @@ def test_provision_parent_chain():
 def test_flag_review_recorded():
     flags = json.loads((ROOT / "governance/interpretation-flags.json").read_text())["interpretation_flags"]
     open_ = {f["flag_id"] for f in flags if f["status"] != "ACCEPTED_BY_PRODUCT_OWNER"}
-    assert open_ == {"IF-26", "IF-27", "IF-28", "IF-31", "IF-32", "IF-33"}, open_   # Operational Manual: awaiting review
+    assert not open_, open_   # Operational Manual flags reviewed one by one on 23 Nov 2026
     by_id = {f["flag_id"]: f for f in flags}
     assert by_id["IF-25"]["kind"] == "DEVIATION" and by_id["IF-25"]["status"] == "ACCEPTED_BY_PRODUCT_OWNER"
     assert by_id["IF-01"]["superseded_by"] == "IF-30" and by_id["IF-15"]["superseded_by"] == "IF-30"
     assert "NZD 30,000" in by_id["IF-15"]["resolution"]
     assert by_id["IF-01"]["kind"] == "DEVIATION"
+
+
+def test_if26_if32_decisions_applied():
+    ir = {r["rule_id"]: r for r in json.loads((ROOT / "rules/rules.json").read_text())["instruction_rules"]}
+    for rid in ("SV-OM-U3.20.30-A-I", "SV-OM-U3.20.30-A-II", "SV-OM-U3.20.25-A-I"):
+        assert ir[rid]["automation"]["class"] == "A2"
+    assert ir["SV-OM-U3.20.30-A-I"]["automation"]["class_basis"].startswith("set by SV-CHECK-FIN-001")
+    sections = {r["instruction_code"].split(".")[0] for r in ir.values()}
+    assert not sections & {"S1", "V2", "V3", "W2", "H2", "H5", "A6", "E2", "E3", "E11"}
+    assert sum(1 for r in ir.values() if r["actor_ids"]) / len(ir) > 0.6

@@ -36,16 +36,38 @@ DOMAINS = {
     "E7": "Health and character", "E11": "Generic temporary entry", "H2": "Special temporary visas",
     "H5": "COVID-19 measures", "S1": "Residence", "V2": "Visitor", "V3": "Visitor", "W2": "Work",
 }
-ACTOR_WORDS = [  # plural/role subjects used in the instructions -> actor IDs (IF-17 extension)
-    (r"^(immigration officers?|the immigration officer|officers?)\b", ["ACTOR-IMMIGRATION-OFFICER"]),
-    (r"^(applicants?|the applicant|all applicants|pregnant applicants)\b", ["ACTOR-APPLICANT"]),
-    (r"^(students?|the student|a student|student visa holders?|a student visa holder|"
-     r"secondary school students|new zealand scholarship students)\b", ["ACTOR-STUDENT"]),
-    (r"^(sponsors?|the sponsor|a sponsor)\b", ["ACTOR-SPONSOR"]),
-    (r"^(education providers?|the education provider|providers?|the provider)\b", ["ACTOR-EDUCATION-PROVIDER"]),
-    (r"^(the third party|third parties)\b", ["ACTOR-SPONSOR"]),
-    (r"^(the minister)\b", ["ACTOR-MINISTER"]),
+ACTOR_WORDS = [  # role words used as sentence subjects in the instructions -> actor IDs (IF-17, IF-26)
+    (r"\b(immigration officers?|officers?)\b", ["ACTOR-IMMIGRATION-OFFICER"]),
+    (r"\b(applicants?|principal applicant)\b", ["ACTOR-APPLICANT"]),
+    (r"\b(student visa holders?|visa holders?|holders?|students?(?!\s+visas?\b)|trainees?|learners?|children|child)\b",
+     ["ACTOR-STUDENT"]),
+    (r"\b(sponsors?|third part(?:y|ies)|guarantors?)\b", ["ACTOR-SPONSOR"]),
+    (r"\b(education providers?|providers?|schools?|tertiary institutions?|signator(?:y|ies))\b",
+     ["ACTOR-EDUCATION-PROVIDER"]),
+    (r"\b(legal guardians?|guardians?|parents?)\b", ["ACTOR-LEGAL-GUARDIAN"]),
+    (r"\b(the minister)\b", ["ACTOR-MINISTER"]),
 ]
+MODAL_RE = re.compile(r"\b(must not|must|may not|may|will not|will|should|shall|are required to|is required to|"
+                      r"need to|needs to|are not eligible|is not eligible|are eligible|is eligible)\b", re.I)
+# IF-32 (product owner, 23 Nov 2026): atomic rules only for the student sections and the general requirements
+# every student must meet; other cited sections are loaded as quotable text only.
+RULE_SECTIONS = ("A4", "A5", "E4", "E5", "E6.5", "E7")
+
+
+def makes_rules(code: str) -> bool:
+    return code.startswith("U") or any(code == p or code.startswith(p + ".") for p in RULE_SECTIONS)
+
+
+def subject_actors(statement: str) -> list[str]:
+    """Actor = role word nearest before the first modal verb (IF-26)."""
+    m = MODAL_RE.search(statement)
+    window = statement[:m.start()][-90:] if m else statement[:90]
+    best, end = [], -1
+    for pat, ids in ACTOR_WORDS:
+        for hit in re.finditer(pat, window, re.I):
+            if hit.end() > end:
+                best, end = ids, hit.end()
+    return best
 EVIDENCE_WORDS = [  # keyword -> existing Table 9 evidence type (IF-26)
     (r"offer of (a )?place|confirmation of enrolment", "EVTYPE-OFFER-OF-PLACE"),
     (r"tuition fee", "EVTYPE-TUITION"), (r"medical certificate|chest x-ray|medical examination", "EVTYPE-MEDICAL"),
@@ -224,7 +246,7 @@ def build(b) -> None:
                 for code in sorted(refs):
                     if code != u["code"] and code in current_codes:
                         b.edge("REFERENCES", npid, unit_pid(code), kind="cross_reference")
-                if n["children"] or not n["text"] or path[-1].startswith("h"):
+                if n["children"] or not n["text"] or path[-1].startswith("h") or not makes_rules(u["code"]):
                     continue
                 chain = [lead[path[:i]] for i in range(1, len(path))] + [n["text"]]
                 _rule(b, u, p, path, npid, compose(chain), seq)
@@ -245,11 +267,7 @@ def _rule(b, u, p, path, npid, statement, seq):
     if mod is None and not re.search(r"\b(is|are) (defined|treated)|\bmeans\b", statement):
         rtype = "BusinessRule"
     cls, why = automation_class(statement)
-    actors = []
-    for pat, ids in ACTOR_WORDS:
-        if re.search(pat, statement.strip(), re.I):
-            actors = ids
-            break
+    actors = subject_actors(statement)
     rec = {
         "rule_id": rid, "product_id": PRODUCT_ID, "domain": domain_for(u["code"]), "catalogue": "INSTRUCTION",
         "catalogue_section": u["code"],

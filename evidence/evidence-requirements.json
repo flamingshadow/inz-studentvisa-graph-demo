@@ -774,201 +774,6 @@
     },
     {
       "evidence_requirement_id": "SV-EVID-REQ-OM-0013",
-      "rule_id": "SV-OM-E2.1-P1-O",
-      "description": "Evidence named or implied in E2.1(o)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-PASSPORT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E2.1-P1-O",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0014",
-      "rule_id": "SV-OM-E2.1-P1-R",
-      "description": "Evidence named or implied in E2.1(r)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-PASSPORT"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E2.1-P1-R",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0015",
-      "rule_id": "SV-OM-E2.1.1-P1-O",
-      "description": "Evidence named or implied in E2.1.1(o)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-PASSPORT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E2.1.1-P1-O",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0016",
-      "rule_id": "SV-OM-E2.1.1-P1-R",
-      "description": "Evidence named or implied in E2.1.1(r)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-PASSPORT"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E2.1.1-P1-R",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0017",
-      "rule_id": "SV-OM-E3.15-C-I",
-      "description": "Evidence named or implied in E3.15(c)(i)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.15-C-I",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0018",
-      "rule_id": "SV-OM-E3.15-C-I",
-      "description": "Evidence named or implied in E3.15(c)(i)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.15-C-I",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0019",
-      "rule_id": "SV-OM-E3.15-C-II-B3",
-      "description": "Evidence named or implied in E3.15(c)(ii)(b3)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.15-C-II-B3",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0020",
-      "rule_id": "SV-OM-E3.20-P1-A-III",
-      "description": "Evidence named or implied in E3.20(a)(iii)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.20-P1-A-III",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0021",
-      "rule_id": "SV-OM-E3.20-P1-B-IV",
-      "description": "Evidence named or implied in E3.20(b)(iv)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.20-P1-B-IV",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0022",
-      "rule_id": "SV-OM-E3.20-P1-F",
-      "description": "Evidence named or implied in E3.20(f)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-INSURANCE"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.20-P1-F",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0023",
-      "rule_id": "SV-OM-E3.26-B-II",
-      "description": "Evidence named or implied in E3.26(b)(ii)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-PASSPORT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.26-B-II",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0024",
-      "rule_id": "SV-OM-E3.26-B-III-B2",
-      "description": "Evidence named or implied in E3.26(b)(iii)(b2)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-OFFER-OF-PLACE"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.26-B-III-B2",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0025",
-      "rule_id": "SV-OM-E3.26-B-III-B2",
-      "description": "Evidence named or implied in E3.26(b)(iii)(b2)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-TUITION"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-E3.26-B-III-B2",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0026",
       "rule_id": "SV-OM-E4.50.1-P1-A",
       "description": "Evidence named or implied in E4.50.1(a)",
       "required_fact_type_id": null,
@@ -983,7 +788,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0027",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0014",
       "rule_id": "SV-OM-E4.50.1-P1-B",
       "description": "Evidence named or implied in E4.50.1(b)",
       "required_fact_type_id": null,
@@ -998,7 +803,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0028",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0015",
       "rule_id": "SV-OM-E4.50.1-P1-D",
       "description": "Evidence named or implied in E4.50.1(d)",
       "required_fact_type_id": null,
@@ -1013,7 +818,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0029",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0016",
       "rule_id": "SV-OM-E4.50.1-P1-D",
       "description": "Evidence named or implied in E4.50.1(d)",
       "required_fact_type_id": null,
@@ -1028,7 +833,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0030",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0017",
       "rule_id": "SV-OM-E4.50.1-P2",
       "description": "Evidence named or implied in E4.50.1",
       "required_fact_type_id": null,
@@ -1043,7 +848,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0031",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0018",
       "rule_id": "SV-OM-E4.50.2-B-III",
       "description": "Evidence named or implied in E4.50.2(b)(iii)",
       "required_fact_type_id": null,
@@ -1058,7 +863,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0032",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0019",
       "rule_id": "SV-OM-E4.50.5-B-III",
       "description": "Evidence named or implied in E4.50.5(b)(iii)",
       "required_fact_type_id": null,
@@ -1073,7 +878,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0033",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0020",
       "rule_id": "SV-OM-E4.50.5-D",
       "description": "Evidence named or implied in E4.50.5(d)",
       "required_fact_type_id": null,
@@ -1088,7 +893,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0034",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0021",
       "rule_id": "SV-OM-E4.50.15-P1-C",
       "description": "Evidence named or implied in E4.50.15(c)",
       "required_fact_type_id": null,
@@ -1103,7 +908,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0035",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0022",
       "rule_id": "SV-OM-E4.50.15-P1-E",
       "description": "Evidence named or implied in E4.50.15(e)",
       "required_fact_type_id": null,
@@ -1118,7 +923,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0036",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0023",
       "rule_id": "SV-OM-E4.50.15-P1-E",
       "description": "Evidence named or implied in E4.50.15(e)",
       "required_fact_type_id": null,
@@ -1133,7 +938,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0037",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0024",
       "rule_id": "SV-OM-E4.50.15-P1-F",
       "description": "Evidence named or implied in E4.50.15(f)",
       "required_fact_type_id": null,
@@ -1148,7 +953,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0038",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0025",
       "rule_id": "SV-OM-E4.50.35-B-I",
       "description": "Evidence named or implied in E4.50.35(b)(i)",
       "required_fact_type_id": null,
@@ -1163,7 +968,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0039",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0026",
       "rule_id": "SV-OM-E4.50.35-B-II",
       "description": "Evidence named or implied in E4.50.35(b)(ii)",
       "required_fact_type_id": null,
@@ -1178,7 +983,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0040",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0027",
       "rule_id": "SV-OM-E4.50.35-C",
       "description": "Evidence named or implied in E4.50.35(c)",
       "required_fact_type_id": null,
@@ -1193,7 +998,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0041",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0028",
       "rule_id": "SV-OM-E4.50.35-D",
       "description": "Evidence named or implied in E4.50.35(d)",
       "required_fact_type_id": null,
@@ -1208,7 +1013,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0042",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0029",
       "rule_id": "SV-OM-E4.50.40-P1-C",
       "description": "Evidence named or implied in E4.50.40(c)",
       "required_fact_type_id": null,
@@ -1223,7 +1028,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0043",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0030",
       "rule_id": "SV-OM-E4.50.40-P1-E",
       "description": "Evidence named or implied in E4.50.40(e)",
       "required_fact_type_id": null,
@@ -1238,7 +1043,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0044",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0031",
       "rule_id": "SV-OM-E4.50.40-P1-E",
       "description": "Evidence named or implied in E4.50.40(e)",
       "required_fact_type_id": null,
@@ -1253,7 +1058,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0045",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0032",
       "rule_id": "SV-OM-E6.5-A",
       "description": "Evidence named or implied in E6.5(a)",
       "required_fact_type_id": null,
@@ -1268,7 +1073,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0046",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0033",
       "rule_id": "SV-OM-E6.5-E",
       "description": "Evidence named or implied in E6.5(e)",
       "required_fact_type_id": null,
@@ -1283,7 +1088,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0047",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0034",
       "rule_id": "SV-OM-E6.5-F-II",
       "description": "Evidence named or implied in E6.5(f)(ii)",
       "required_fact_type_id": null,
@@ -1298,7 +1103,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0048",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0035",
       "rule_id": "SV-OM-E6.5-NOTE1",
       "description": "Evidence named or implied in E6.5",
       "required_fact_type_id": null,
@@ -1313,7 +1118,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0049",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0036",
       "rule_id": "SV-OM-E6.5.1-A-I",
       "description": "Evidence named or implied in E6.5.1(a)(i)",
       "required_fact_type_id": null,
@@ -1328,7 +1133,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0050",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0037",
       "rule_id": "SV-OM-E6.5.1-A-IV",
       "description": "Evidence named or implied in E6.5.1(a)(iv)",
       "required_fact_type_id": null,
@@ -1343,7 +1148,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0051",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0038",
       "rule_id": "SV-OM-E6.5.1-A-V",
       "description": "Evidence named or implied in E6.5.1(a)(v)",
       "required_fact_type_id": null,
@@ -1358,7 +1163,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0052",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0039",
       "rule_id": "SV-OM-E6.5.5-A-V",
       "description": "Evidence named or implied in E6.5.5(a)(v)",
       "required_fact_type_id": null,
@@ -1373,7 +1178,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0053",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0040",
       "rule_id": "SV-OM-E6.5.5-A-VI",
       "description": "Evidence named or implied in E6.5.5(a)(vi)",
       "required_fact_type_id": null,
@@ -1388,7 +1193,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0054",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0041",
       "rule_id": "SV-OM-E7.1-B",
       "description": "Evidence named or implied in E7.1(b)",
       "required_fact_type_id": null,
@@ -1403,7 +1208,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0055",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0042",
       "rule_id": "SV-OM-E7.10.1-A-I",
       "description": "Evidence named or implied in E7.10.1(a)(i)",
       "required_fact_type_id": null,
@@ -1418,7 +1223,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0056",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0043",
       "rule_id": "SV-OM-E7.10.1-A-II",
       "description": "Evidence named or implied in E7.10.1(a)(ii)",
       "required_fact_type_id": null,
@@ -1433,7 +1238,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0057",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0044",
       "rule_id": "SV-OM-E7.10.1-A-III",
       "description": "Evidence named or implied in E7.10.1(a)(iii)",
       "required_fact_type_id": null,
@@ -1448,7 +1253,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0058",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0045",
       "rule_id": "SV-OM-E7.10.1-B",
       "description": "Evidence named or implied in E7.10.1(b)",
       "required_fact_type_id": null,
@@ -1463,7 +1268,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0059",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0046",
       "rule_id": "SV-OM-E7.10.1-C",
       "description": "Evidence named or implied in E7.10.1(c)",
       "required_fact_type_id": null,
@@ -1478,7 +1283,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0060",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0047",
       "rule_id": "SV-OM-U10.5-C-II",
       "description": "Evidence named or implied in U10.5(c)(ii)",
       "required_fact_type_id": null,
@@ -1493,7 +1298,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0061",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0048",
       "rule_id": "SV-OM-U10.5-C-II",
       "description": "Evidence named or implied in U10.5(c)(ii)",
       "required_fact_type_id": null,
@@ -1508,7 +1313,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0062",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0049",
       "rule_id": "SV-OM-U12-B",
       "description": "Evidence named or implied in U12(b)",
       "required_fact_type_id": null,
@@ -1523,7 +1328,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0063",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0050",
       "rule_id": "SV-OM-U12-C-I",
       "description": "Evidence named or implied in U12(c)(i)",
       "required_fact_type_id": null,
@@ -1538,7 +1343,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0064",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0051",
       "rule_id": "SV-OM-U12-C-I",
       "description": "Evidence named or implied in U12(c)(i)",
       "required_fact_type_id": null,
@@ -1553,7 +1358,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0065",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0052",
       "rule_id": "SV-OM-U14.10-E",
       "description": "Evidence named or implied in U14.10(e)",
       "required_fact_type_id": null,
@@ -1568,7 +1373,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0066",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0053",
       "rule_id": "SV-OM-U14.5.1-A-II",
       "description": "Evidence named or implied in U14.5.1(a)(ii)",
       "required_fact_type_id": null,
@@ -1583,7 +1388,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0067",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0054",
       "rule_id": "SV-OM-U14.5.1-A-III",
       "description": "Evidence named or implied in U14.5.1(a)(iii)",
       "required_fact_type_id": null,
@@ -1598,7 +1403,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0068",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0055",
       "rule_id": "SV-OM-U14.5.1-A-IV",
       "description": "Evidence named or implied in U14.5.1(a)(iv)",
       "required_fact_type_id": null,
@@ -1613,7 +1418,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0069",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0056",
       "rule_id": "SV-OM-U15-A-II",
       "description": "Evidence named or implied in U15(a)(ii)",
       "required_fact_type_id": null,
@@ -1628,7 +1433,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0070",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0057",
       "rule_id": "SV-OM-U16.1-A-II",
       "description": "Evidence named or implied in U16.1(a)(ii)",
       "required_fact_type_id": null,
@@ -1643,7 +1448,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0071",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0058",
       "rule_id": "SV-OM-U3.1-A-I",
       "description": "Evidence named or implied in U3.1(a)(i)",
       "required_fact_type_id": null,
@@ -1658,7 +1463,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0072",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0059",
       "rule_id": "SV-OM-U3.1-A-II",
       "description": "Evidence named or implied in U3.1(a)(ii)",
       "required_fact_type_id": null,
@@ -1673,7 +1478,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0073",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0060",
       "rule_id": "SV-OM-U3.1-A-VII",
       "description": "Evidence named or implied in U3.1(a)(vii)",
       "required_fact_type_id": null,
@@ -1688,7 +1493,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0074",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0061",
       "rule_id": "SV-OM-U3.10-A",
       "description": "Evidence named or implied in U3.10(a)",
       "required_fact_type_id": null,
@@ -1703,7 +1508,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0075",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0062",
       "rule_id": "SV-OM-U3.10-D",
       "description": "Evidence named or implied in U3.10(d)",
       "required_fact_type_id": null,
@@ -1718,7 +1523,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0076",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0063",
       "rule_id": "SV-OM-U3.10-TABLE1",
       "description": "Evidence named or implied in U3.10",
       "required_fact_type_id": null,
@@ -1733,7 +1538,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0077",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0064",
       "rule_id": "SV-OM-U3.20-A",
       "description": "Evidence named or implied in U3.20(a)",
       "required_fact_type_id": null,
@@ -1748,7 +1553,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0078",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0065",
       "rule_id": "SV-OM-U3.20-B-II",
       "description": "Evidence named or implied in U3.20(b)(ii)",
       "required_fact_type_id": null,
@@ -1763,7 +1568,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0079",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0066",
       "rule_id": "SV-OM-U3.20-B-II",
       "description": "Evidence named or implied in U3.20(b)(ii)",
       "required_fact_type_id": null,
@@ -1778,7 +1583,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0080",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0067",
       "rule_id": "SV-OM-U3.20-B-III",
       "description": "Evidence named or implied in U3.20(b)(iii)",
       "required_fact_type_id": null,
@@ -1793,7 +1598,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0081",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0068",
       "rule_id": "SV-OM-U3.20-B-IV",
       "description": "Evidence named or implied in U3.20(b)(iv)",
       "required_fact_type_id": null,
@@ -1808,7 +1613,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0082",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0069",
       "rule_id": "SV-OM-U3.20.5-C-I",
       "description": "Evidence named or implied in U3.20.5(c)(i)",
       "required_fact_type_id": null,
@@ -1823,7 +1628,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0083",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0070",
       "rule_id": "SV-OM-U3.20.10-D-I",
       "description": "Evidence named or implied in U3.20.10(d)(i)",
       "required_fact_type_id": null,
@@ -1838,7 +1643,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0084",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0071",
       "rule_id": "SV-OM-U3.20.25-A-I",
       "description": "Evidence named or implied in U3.20.25(a)(i)",
       "required_fact_type_id": null,
@@ -1853,7 +1658,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0085",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0072",
       "rule_id": "SV-OM-U3.20.25-A-II",
       "description": "Evidence named or implied in U3.20.25(a)(ii)",
       "required_fact_type_id": null,
@@ -1868,7 +1673,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0086",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0073",
       "rule_id": "SV-OM-U3.20.25-B",
       "description": "Evidence named or implied in U3.20.25(b)",
       "required_fact_type_id": null,
@@ -1883,7 +1688,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0087",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0074",
       "rule_id": "SV-OM-U3.20.25-C",
       "description": "Evidence named or implied in U3.20.25(c)",
       "required_fact_type_id": null,
@@ -1898,7 +1703,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0088",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0075",
       "rule_id": "SV-OM-U3.20.30-B",
       "description": "Evidence named or implied in U3.20.30(b)",
       "required_fact_type_id": null,
@@ -1913,7 +1718,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0089",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0076",
       "rule_id": "SV-OM-U3.20.35-P1-A",
       "description": "Evidence named or implied in U3.20.35(a)",
       "required_fact_type_id": null,
@@ -1928,7 +1733,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0090",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0077",
       "rule_id": "SV-OM-U3.20.35-P1-B",
       "description": "Evidence named or implied in U3.20.35(b)",
       "required_fact_type_id": null,
@@ -1943,7 +1748,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0091",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0078",
       "rule_id": "SV-OM-U3.25-P1-D",
       "description": "Evidence named or implied in U3.25(d)",
       "required_fact_type_id": null,
@@ -1958,7 +1763,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0092",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0079",
       "rule_id": "SV-OM-U3.25-P1-D",
       "description": "Evidence named or implied in U3.25(d)",
       "required_fact_type_id": null,
@@ -1973,7 +1778,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0093",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0080",
       "rule_id": "SV-OM-U3.30-A-I",
       "description": "Evidence named or implied in U3.30(a)(i)",
       "required_fact_type_id": null,
@@ -1988,7 +1793,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0094",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0081",
       "rule_id": "SV-OM-U3.30-A-II",
       "description": "Evidence named or implied in U3.30(a)(ii)",
       "required_fact_type_id": null,
@@ -2003,7 +1808,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0095",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0082",
       "rule_id": "SV-OM-U3.30-B",
       "description": "Evidence named or implied in U3.30(b)",
       "required_fact_type_id": null,
@@ -2018,7 +1823,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0096",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0083",
       "rule_id": "SV-OM-U3.30.1-P1",
       "description": "Evidence named or implied in U3.30.1",
       "required_fact_type_id": null,
@@ -2033,7 +1838,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0097",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0084",
       "rule_id": "SV-OM-U3.35.5-P1-A",
       "description": "Evidence named or implied in U3.35.5(a)",
       "required_fact_type_id": null,
@@ -2048,7 +1853,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0098",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0085",
       "rule_id": "SV-OM-U3.35.5-P1-B",
       "description": "Evidence named or implied in U3.35.5(b)",
       "required_fact_type_id": null,
@@ -2063,7 +1868,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0099",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0086",
       "rule_id": "SV-OM-U3.35.5-P1-C",
       "description": "Evidence named or implied in U3.35.5(c)",
       "required_fact_type_id": null,
@@ -2078,7 +1883,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0100",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0087",
       "rule_id": "SV-OM-U3.35.5-P1-D",
       "description": "Evidence named or implied in U3.35.5(d)",
       "required_fact_type_id": null,
@@ -2093,7 +1898,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0101",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0088",
       "rule_id": "SV-OM-U3.35.5-P1-E",
       "description": "Evidence named or implied in U3.35.5(e)",
       "required_fact_type_id": null,
@@ -2108,7 +1913,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0102",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0089",
       "rule_id": "SV-OM-U3.35.5-P1-F",
       "description": "Evidence named or implied in U3.35.5(f)",
       "required_fact_type_id": null,
@@ -2123,7 +1928,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0103",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0090",
       "rule_id": "SV-OM-U3.35.5-P1-G",
       "description": "Evidence named or implied in U3.35.5(g)",
       "required_fact_type_id": null,
@@ -2138,7 +1943,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0104",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0091",
       "rule_id": "SV-OM-U3.35.5-P1-H-I",
       "description": "Evidence named or implied in U3.35.5(i)",
       "required_fact_type_id": null,
@@ -2153,7 +1958,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0105",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0092",
       "rule_id": "SV-OM-U3.35.5-P1-H-II",
       "description": "Evidence named or implied in U3.35.5(ii)",
       "required_fact_type_id": null,
@@ -2168,7 +1973,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0106",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0093",
       "rule_id": "SV-OM-U3.35.5-P1-H-III-B1",
       "description": "Evidence named or implied in U3.35.5(iii)(b1)",
       "required_fact_type_id": null,
@@ -2183,7 +1988,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0107",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0094",
       "rule_id": "SV-OM-U3.35.5-P1-H-III-B2",
       "description": "Evidence named or implied in U3.35.5(iii)(b2)",
       "required_fact_type_id": null,
@@ -2198,7 +2003,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0108",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0095",
       "rule_id": "SV-OM-U3.35.5-P1-I-I",
       "description": "Evidence named or implied in U3.35.5(i)(i)",
       "required_fact_type_id": null,
@@ -2213,7 +2018,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0109",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0096",
       "rule_id": "SV-OM-U3.35.5-P1-I-II",
       "description": "Evidence named or implied in U3.35.5(i)(ii)",
       "required_fact_type_id": null,
@@ -2228,7 +2033,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0110",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0097",
       "rule_id": "SV-OM-U3.35.5-P1-I-III",
       "description": "Evidence named or implied in U3.35.5(i)(iii)",
       "required_fact_type_id": null,
@@ -2243,7 +2048,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0111",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0098",
       "rule_id": "SV-OM-U3.35.5-P1-J",
       "description": "Evidence named or implied in U3.35.5(j)",
       "required_fact_type_id": null,
@@ -2258,7 +2063,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0112",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0099",
       "rule_id": "SV-OM-U3.35.5-P1-K",
       "description": "Evidence named or implied in U3.35.5(k)",
       "required_fact_type_id": null,
@@ -2273,7 +2078,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0113",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0100",
       "rule_id": "SV-OM-U3.35.5-P1-L",
       "description": "Evidence named or implied in U3.35.5(l)",
       "required_fact_type_id": null,
@@ -2288,7 +2093,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0114",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0101",
       "rule_id": "SV-OM-U3.35.5-P1-M",
       "description": "Evidence named or implied in U3.35.5(m)",
       "required_fact_type_id": null,
@@ -2303,7 +2108,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0115",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0102",
       "rule_id": "SV-OM-U3.35.5-P1-N",
       "description": "Evidence named or implied in U3.35.5(n)",
       "required_fact_type_id": null,
@@ -2318,7 +2123,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0116",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0103",
       "rule_id": "SV-OM-U3.35.15-P1-A",
       "description": "Evidence named or implied in U3.35.15(a)",
       "required_fact_type_id": null,
@@ -2333,7 +2138,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0117",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0104",
       "rule_id": "SV-OM-U3.35.15-P1-B",
       "description": "Evidence named or implied in U3.35.15(b)",
       "required_fact_type_id": null,
@@ -2348,7 +2153,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0118",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0105",
       "rule_id": "SV-OM-U3.40-D",
       "description": "Evidence named or implied in U3.40(d)",
       "required_fact_type_id": null,
@@ -2363,7 +2168,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0119",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0106",
       "rule_id": "SV-OM-U3.45-A",
       "description": "Evidence named or implied in U3.45(a)",
       "required_fact_type_id": null,
@@ -2378,7 +2183,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0120",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0107",
       "rule_id": "SV-OM-U3.45-B",
       "description": "Evidence named or implied in U3.45(b)",
       "required_fact_type_id": null,
@@ -2393,7 +2198,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0121",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0108",
       "rule_id": "SV-OM-U3.45-C",
       "description": "Evidence named or implied in U3.45(c)",
       "required_fact_type_id": null,
@@ -2408,7 +2213,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0122",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0109",
       "rule_id": "SV-OM-U3.45-D",
       "description": "Evidence named or implied in U3.45(d)",
       "required_fact_type_id": null,
@@ -2423,7 +2228,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0123",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0110",
       "rule_id": "SV-OM-U3.5-P1-A",
       "description": "Evidence named or implied in U3.5(a)",
       "required_fact_type_id": null,
@@ -2438,7 +2243,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0124",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0111",
       "rule_id": "SV-OM-U3.5-P1-B",
       "description": "Evidence named or implied in U3.5(b)",
       "required_fact_type_id": null,
@@ -2453,7 +2258,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0125",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0112",
       "rule_id": "SV-OM-U3.5-P1-C",
       "description": "Evidence named or implied in U3.5(c)",
       "required_fact_type_id": null,
@@ -2468,7 +2273,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0126",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0113",
       "rule_id": "SV-OM-U3.5-P1-D",
       "description": "Evidence named or implied in U3.5(d)",
       "required_fact_type_id": null,
@@ -2483,7 +2288,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0127",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0114",
       "rule_id": "SV-OM-U3.5-P1-D",
       "description": "Evidence named or implied in U3.5(d)",
       "required_fact_type_id": null,
@@ -2498,7 +2303,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0128",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0115",
       "rule_id": "SV-OM-U3.5-P1-E",
       "description": "Evidence named or implied in U3.5(e)",
       "required_fact_type_id": null,
@@ -2513,7 +2318,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0129",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0116",
       "rule_id": "SV-OM-U3.5-P1-F",
       "description": "Evidence named or implied in U3.5(f)",
       "required_fact_type_id": null,
@@ -2528,7 +2333,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0130",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0117",
       "rule_id": "SV-OM-U3.5-P1-G",
       "description": "Evidence named or implied in U3.5(g)",
       "required_fact_type_id": null,
@@ -2543,7 +2348,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0131",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0118",
       "rule_id": "SV-OM-U3.5-NOTE1",
       "description": "Evidence named or implied in U3.5",
       "required_fact_type_id": null,
@@ -2558,7 +2363,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0132",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0119",
       "rule_id": "SV-OM-U3.7-P1-A",
       "description": "Evidence named or implied in U3.7(a)",
       "required_fact_type_id": null,
@@ -2573,7 +2378,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0133",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0120",
       "rule_id": "SV-OM-U3.7-P1-B",
       "description": "Evidence named or implied in U3.7(b)",
       "required_fact_type_id": null,
@@ -2588,7 +2393,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0134",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0121",
       "rule_id": "SV-OM-U3.7-P1-C",
       "description": "Evidence named or implied in U3.7(c)",
       "required_fact_type_id": null,
@@ -2603,7 +2408,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0135",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0122",
       "rule_id": "SV-OM-U3.7-P1-D",
       "description": "Evidence named or implied in U3.7(d)",
       "required_fact_type_id": null,
@@ -2618,7 +2423,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0136",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0123",
       "rule_id": "SV-OM-U3.7-NOTE1",
       "description": "Evidence named or implied in U3.7",
       "required_fact_type_id": null,
@@ -2633,7 +2438,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0137",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0124",
       "rule_id": "SV-OM-U4.15-A",
       "description": "Evidence named or implied in U4.15(a)",
       "required_fact_type_id": null,
@@ -2648,7 +2453,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0138",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0125",
       "rule_id": "SV-OM-U4.5-P1",
       "description": "Evidence named or implied in U4.5",
       "required_fact_type_id": null,
@@ -2663,7 +2468,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0139",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0126",
       "rule_id": "SV-OM-U5.1.5-A",
       "description": "Evidence named or implied in U5.1.5(a)",
       "required_fact_type_id": null,
@@ -2678,7 +2483,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0140",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0127",
       "rule_id": "SV-OM-U5.1.5-C-I",
       "description": "Evidence named or implied in U5.1.5(c)(i)",
       "required_fact_type_id": null,
@@ -2693,7 +2498,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0141",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0128",
       "rule_id": "SV-OM-U5.1.5-C-II",
       "description": "Evidence named or implied in U5.1.5(c)(ii)",
       "required_fact_type_id": null,
@@ -2708,7 +2513,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0142",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0129",
       "rule_id": "SV-OM-U5.1.5-C-III",
       "description": "Evidence named or implied in U5.1.5(c)(iii)",
       "required_fact_type_id": null,
@@ -2723,7 +2528,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0143",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0130",
       "rule_id": "SV-OM-U6.30-P1-A-I",
       "description": "Evidence named or implied in U6.30(a)(i)",
       "required_fact_type_id": null,
@@ -2738,7 +2543,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0144",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0131",
       "rule_id": "SV-OM-U6.30-P1-A-II",
       "description": "Evidence named or implied in U6.30(a)(ii)",
       "required_fact_type_id": null,
@@ -2753,7 +2558,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0145",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0132",
       "rule_id": "SV-OM-U6.35-A-I-B1",
       "description": "Evidence named or implied in U6.35(a)(i)(b1)",
       "required_fact_type_id": null,
@@ -2768,7 +2573,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0146",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0133",
       "rule_id": "SV-OM-U6.35-A-I-B2",
       "description": "Evidence named or implied in U6.35(a)(i)(b2)",
       "required_fact_type_id": null,
@@ -2783,7 +2588,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0147",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0134",
       "rule_id": "SV-OM-U6.35-A-III",
       "description": "Evidence named or implied in U6.35(a)(iii)",
       "required_fact_type_id": null,
@@ -2798,7 +2603,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0148",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0135",
       "rule_id": "SV-OM-U6.35-C",
       "description": "Evidence named or implied in U6.35(c)",
       "required_fact_type_id": null,
@@ -2813,7 +2618,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0149",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0136",
       "rule_id": "SV-OM-U6.5-D-II",
       "description": "Evidence named or implied in U6.5(d)(ii)",
       "required_fact_type_id": null,
@@ -2828,7 +2633,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0150",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0137",
       "rule_id": "SV-OM-U6.5-D-III",
       "description": "Evidence named or implied in U6.5(d)(iii)",
       "required_fact_type_id": null,
@@ -2843,7 +2648,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0151",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0138",
       "rule_id": "SV-OM-U7.10-A",
       "description": "Evidence named or implied in U7.10(a)",
       "required_fact_type_id": null,
@@ -2858,7 +2663,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0152",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0139",
       "rule_id": "SV-OM-U7.10-A",
       "description": "Evidence named or implied in U7.10(a)",
       "required_fact_type_id": null,
@@ -2873,7 +2678,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0153",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0140",
       "rule_id": "SV-OM-U7.10-B",
       "description": "Evidence named or implied in U7.10(b)",
       "required_fact_type_id": null,
@@ -2888,7 +2693,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0154",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0141",
       "rule_id": "SV-OM-U7.25-A",
       "description": "Evidence named or implied in U7.25(a)",
       "required_fact_type_id": null,
@@ -2903,7 +2708,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0155",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0142",
       "rule_id": "SV-OM-U7.25-B",
       "description": "Evidence named or implied in U7.25(b)",
       "required_fact_type_id": null,
@@ -2918,7 +2723,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0156",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0143",
       "rule_id": "SV-OM-U7.25-C-I",
       "description": "Evidence named or implied in U7.25(c)(i)",
       "required_fact_type_id": null,
@@ -2933,7 +2738,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0157",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0144",
       "rule_id": "SV-OM-U7.25-C-III",
       "description": "Evidence named or implied in U7.25(c)(iii)",
       "required_fact_type_id": null,
@@ -2948,7 +2753,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0158",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0145",
       "rule_id": "SV-OM-U7.25-E",
       "description": "Evidence named or implied in U7.25(e)",
       "required_fact_type_id": null,
@@ -2963,7 +2768,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0159",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0146",
       "rule_id": "SV-OM-U8.10-C",
       "description": "Evidence named or implied in U8.10(c)",
       "required_fact_type_id": null,
@@ -2978,7 +2783,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0160",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0147",
       "rule_id": "SV-OM-U8.15-C-I",
       "description": "Evidence named or implied in U8.15(c)(i)",
       "required_fact_type_id": null,
@@ -2993,7 +2798,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0161",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0148",
       "rule_id": "SV-OM-U8.20-C",
       "description": "Evidence named or implied in U8.20(c)",
       "required_fact_type_id": null,
@@ -3008,7 +2813,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0162",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0149",
       "rule_id": "SV-OM-U8.20-E",
       "description": "Evidence named or implied in U8.20(e)",
       "required_fact_type_id": null,
@@ -3023,7 +2828,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0163",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0150",
       "rule_id": "SV-OM-U8.25-B",
       "description": "Evidence named or implied in U8.25(b)",
       "required_fact_type_id": null,
@@ -3038,7 +2843,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0164",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0151",
       "rule_id": "SV-OM-U8.25-D",
       "description": "Evidence named or implied in U8.25(d)",
       "required_fact_type_id": null,
@@ -3053,7 +2858,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0165",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0152",
       "rule_id": "SV-OM-U8.30.1-NOTE1",
       "description": "Evidence named or implied in U8.30.1",
       "required_fact_type_id": null,
@@ -3068,7 +2873,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0166",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0153",
       "rule_id": "SV-OM-U9.5-B-I",
       "description": "Evidence named or implied in U9.5(b)(i)",
       "required_fact_type_id": null,
@@ -3083,7 +2888,7 @@
       ]
     },
     {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0167",
+      "evidence_requirement_id": "SV-EVID-REQ-OM-0154",
       "rule_id": "SV-OM-U9.5-B-III",
       "description": "Evidence named or implied in U9.5(b)(iii)",
       "required_fact_type_id": null,
@@ -3093,366 +2898,6 @@
       "mandatory": true,
       "verification_required": true,
       "source_provision_id": "NZ-INZ-OM-U9.5-B-III",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0168",
-      "rule_id": "SV-OM-V2.1-P1-B",
-      "description": "Evidence named or implied in V2.1(b)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V2.1-P1-B",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0169",
-      "rule_id": "SV-OM-V3.100-A-I",
-      "description": "Evidence named or implied in V3.100(a)(i)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100-A-I",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0170",
-      "rule_id": "SV-OM-V3.100-A-II",
-      "description": "Evidence named or implied in V3.100(a)(ii)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100-A-II",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0171",
-      "rule_id": "SV-OM-V3.100-B",
-      "description": "Evidence named or implied in V3.100(b)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100-B",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0172",
-      "rule_id": "SV-OM-V3.100-D",
-      "description": "Evidence named or implied in V3.100(d)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100-D",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0173",
-      "rule_id": "SV-OM-V3.100.1-NOTE1",
-      "description": "Evidence named or implied in V3.100.1",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100.1-NOTE1",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0174",
-      "rule_id": "SV-OM-V3.100.5-P1-A",
-      "description": "Evidence named or implied in V3.100.5(a)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100.5-P1-A",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0175",
-      "rule_id": "SV-OM-V3.100.5-P1-B",
-      "description": "Evidence named or implied in V3.100.5(b)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100.5-P1-B",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0176",
-      "rule_id": "SV-OM-V3.100.10-NOTE1",
-      "description": "Evidence named or implied in V3.100.10",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100.10-NOTE1",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0177",
-      "rule_id": "SV-OM-V3.100.15-B",
-      "description": "Evidence named or implied in V3.100.15(b)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-GUARDIAN"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100.15-B",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0178",
-      "rule_id": "SV-OM-V3.100.25-P1",
-      "description": "Evidence named or implied in V3.100.25",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.100.25-P1",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0179",
-      "rule_id": "SV-OM-V3.115-B-I",
-      "description": "Evidence named or implied in V3.115(b)(i)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.115-B-I",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0180",
-      "rule_id": "SV-OM-V3.115-B-II",
-      "description": "Evidence named or implied in V3.115(b)(ii)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-V3.115-B-II",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0181",
-      "rule_id": "SV-OM-W2.15-A-IV",
-      "description": "Evidence named or implied in W2.15(a)(iv)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15-A-IV",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0182",
-      "rule_id": "SV-OM-W2.15-B",
-      "description": "Evidence named or implied in W2.15(b)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15-B",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0183",
-      "rule_id": "SV-OM-W2.15-B",
-      "description": "Evidence named or implied in W2.15(b)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15-B",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0184",
-      "rule_id": "SV-OM-W2.15.1-P1-B1",
-      "description": "Evidence named or implied in W2.15.1(b1)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.1-P1-B1",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0185",
-      "rule_id": "SV-OM-W2.15.1-P1-B2",
-      "description": "Evidence named or implied in W2.15.1(b2)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.1-P1-B2",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0186",
-      "rule_id": "SV-OM-W2.15.1-P1-B3",
-      "description": "Evidence named or implied in W2.15.1(b3)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.1-P1-B3",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0187",
-      "rule_id": "SV-OM-W2.15.1-P1-B4",
-      "description": "Evidence named or implied in W2.15.1(b4)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.1-P1-B4",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0188",
-      "rule_id": "SV-OM-W2.15.1-P1-B5",
-      "description": "Evidence named or implied in W2.15.1(b5)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.1-P1-B5",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0189",
-      "rule_id": "SV-OM-W2.15.1-P1-B6",
-      "description": "Evidence named or implied in W2.15.1(b6)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": false,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.1-P1-B6",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0190",
-      "rule_id": "SV-OM-W2.15.5-P1-A",
-      "description": "Evidence named or implied in W2.15.5(a)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-BANK-STATEMENT"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.5-P1-A",
-      "interpretation_flag_ids": [
-        "IF-26"
-      ]
-    },
-    {
-      "evidence_requirement_id": "SV-EVID-REQ-OM-0191",
-      "rule_id": "SV-OM-W2.15.5-P1-B",
-      "description": "Evidence named or implied in W2.15.5(b)",
-      "required_fact_type_id": null,
-      "acceptable_evidence_types": [
-        "EVTYPE-SPONSORSHIP"
-      ],
-      "mandatory": true,
-      "verification_required": true,
-      "source_provision_id": "NZ-INZ-OM-W2.15.5-P1-B",
       "interpretation_flag_ids": [
         "IF-26"
       ]

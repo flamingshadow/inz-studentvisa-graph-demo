@@ -154,6 +154,7 @@ CLASS_ORDER = ["A1", "A2", "A3", "A4", "A5"]
 # Product-owner flag review (23 Nov 2026): every recommendation accepted. A flag raised later
 # (e.g. a new version mismatch) is not in this map and stays OPEN until reviewed.
 FLAG_REVIEW_DECISION = "Product owner flag review, 23 Nov 2026: recommendation accepted"
+FLAG_REVIEW_DECISION_OM = "Product owner review of Operational Manual flags (one by one), 23 Nov 2026"
 _AS_IS = "Accepted as implemented."
 _V03 = "Accepted as implemented; raise with the spec authors for v0.3."
 # Minimal-graph principle (IF-34, product owner 23 Nov 2026): the only labels and relationship types the graph
@@ -187,6 +188,7 @@ GRAPH_PROFILE = {
                           "with the evaluation_id on the relationship.",
 }
 
+OM_REVIEWED = {"IF-26", "IF-27", "IF-28", "IF-31", "IF-32", "IF-33"}
 SUPERSEDED_FLAGS = {"IF-01": "IF-30", "IF-15": "IF-30"}
 FLAG_REVIEW = {
     "IF-02": _V03, "IF-03": _AS_IS,
@@ -203,6 +205,16 @@ FLAG_REVIEW = {
     "IF-19": _AS_IS, "IF-20": _AS_IS,
     "IF-21": "Under-10 check stays in assessments, labelled as a provider obligation.",
     "IF-22": _AS_IS, "IF-23": _AS_IS, "IF-24": _AS_IS,
+    # Operational Manual flags, reviewed one by one on 23 Nov 2026
+    "IF-26": "Fixed, then accepted: rules run by an executable check take that check's class (U3.20.30(a)(i)/(ii) "
+             "are A2, set by SV-CHECK-FIN-001); actors come from the role word nearest the modal verb.",
+    "IF-27": "Accepted as implemented: verbatim lead-in + paragraph, not rewritten into RuleSpeak.",
+    "IF-28": "Accepted as implemented: unit-level text for historic versions; rules for current versions only.",
+    "IF-31": "Accepted as implemented: 9 candidates superseded; family support stays RECONCILIATION_REQUIRED.",
+    "IF-32": "Changed, then accepted: atomic rules only for U1-U16 and A4, A5, E4, E5, E6.5, E7; the other cited "
+             "sections are loaded as quotable, linked text with no rules.",
+    "IF-33": "Accepted as implemented: HUMAN_REVIEW_REQUIRED for loaded U3.1 requirements, "
+             "SOURCE_COVERAGE_GAP for instructions outside scope.",
 }
 
 
@@ -887,6 +899,16 @@ class Builder:
                                  | set(c.get("evaluates_rule_ids", []))
                                  | set(c.get("evaluates_rule_ids_online", []))):
                 self.edge("EVALUATES", c["check_id"], target)
+        # IF-26: a rule that an executable check runs takes that check's automation class
+        for c in checks:
+            if c.get("automation_class") not in ("A1", "A2"):
+                continue
+            for rid in {c.get("evaluates_rule_id"), *c.get("evaluates_rule_ids", [])}:
+                r = self.om_rules.get(rid)
+                if r and r["automation"]["class"] != c["automation_class"]:
+                    r["automation"].update(class_as_derived=r["automation"]["class"],
+                                           class_basis=f"set by {c['check_id']}, which executes it",
+                                           **{"class": c["automation_class"], "machine_evaluable": True})
         self.checks = checks
         self.files["decisioning/decision-checks.json"] = {
             "automation_classes": [{"class": r[0], "meaning": r[1], "agent_action": r[2]}
@@ -1097,8 +1119,9 @@ class Builder:
                 f["superseded_by"] = SUPERSEDED_FLAGS[f["flag_id"]]
             res = FLAG_REVIEW.get(f["flag_id"])
             if res and f["status"] == "OPEN":
-                f.update(status="ACCEPTED_BY_PRODUCT_OWNER", decision_reference=FLAG_REVIEW_DECISION,
-                         resolution=res)
+                f.update(status="ACCEPTED_BY_PRODUCT_OWNER", resolution=res,
+                         decision_reference=FLAG_REVIEW_DECISION_OM if f["flag_id"] in OM_REVIEWED
+                         else FLAG_REVIEW_DECISION)
         self.files["governance/interpretation-flags.json"] = {"interpretation_flags": self.flags}
 
     def _opsmanual_flags(self, F):
@@ -1117,8 +1140,10 @@ class Builder:
           "The manual does not classify its rules. Automation class is set from wording: a power or discretion "
           "('may grant', 'special direction') is A4; evaluative words ('satisfied', 'genuine', 'bona fide', "
           "'consider', 'sufficient') are A3; definitions are A1; anything else is A2. Evidence types come from INZ "
-          "form numbers and keywords, and actors from the sentence subject. Each rule records class_basis so a "
-          "reviewer can see why.", ["rules/rules.json"])
+          "form numbers and keywords. The actor is the role word nearest before the first modal verb (e.g. "
+          "'applicants must' -> Applicant). A rule that an executable check runs takes that check's class, e.g. "
+          "U3.20.30(a)(i)/(ii) are A2 because SV-CHECK-FIN-001 executes them (the wording-based class is kept as "
+          "class_as_derived). Each rule records class_basis so a reviewer can see why.", ["rules/rules.json"])
         F("IF-27", "Atomic decomposition of instruction text",
           "Every leaf paragraph of every current instruction unit becomes one rule. Its statement is the lead-in "
           "text of its parent items followed by the leaf text, joined verbatim with trailing 'and'/'or' removed. "
@@ -1151,7 +1176,11 @@ class Builder:
           "figures no longer execute and lose the candidate label.", [c for c in self.candidates])
         F("IF-32", "Domains for instruction rules",
           "Instruction rules take a domain from their instruction code (e.g. U3.20 -> Maintenance, U13 -> Work "
-          "rights, A5 -> Character), so rules_by_domain returns spec and manual rules together.", ["rules/rules.json"])
+          "rights, A5 -> Character), so rules_by_domain returns spec and manual rules together. Atomic rules are "
+          "created only for U1-U16 and the general requirements every student must meet (A4 health, A5 character, "
+          "E4 lodgement, E5 bona fides, E6.5 sponsorship, E7 processing). The other cited sections (S1, V2, V3, W2, "
+          "H2, H5, A6, E2, E3, E11) are loaded as quotable, searchable, linked text with no rules (minimal-graph "
+          "principle, IF-34).", ["rules/rules.json"])
         F("IF-33", "SV-INSTR-001 with instructions loaded",
           "SV-INSTR-001 / SV-ONLINE-007 ('information and evidence required by Immigration Instructions') no longer "
           "return SOURCE_COVERAGE_GAP for the student instructions. The check returns HUMAN_REVIEW_REQUIRED, "

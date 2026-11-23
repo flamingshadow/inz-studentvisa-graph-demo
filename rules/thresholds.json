@@ -553,615 +553,6 @@
     },
     {
       "id": "SV-TH-OM-009",
-      "rule_id": "SV-OM-E11.55.15-P1",
-      "text": "3 months",
-      "value": 3,
-      "unit": "months",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E11.55.15-P1",
-      "version_id": "2022-07-31",
-      "effective_from": "2022-07-31",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-010",
-      "rule_id": "SV-OM-E3.26-A-II",
-      "text": "longer than 3 months",
-      "value": 3,
-      "unit": "months",
-      "per": null,
-      "comparator": "GREATER_THAN",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26-A-II",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-011",
-      "rule_id": "SV-OM-E3.26.1.10-NOTE1",
-      "text": "40 hours",
-      "value": 40,
-      "unit": "hours",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.1.10-NOTE1",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-012",
-      "rule_id": "SV-OM-E3.26.1.21-D-I",
-      "text": "12 months",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.1.21-D-I",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-013",
-      "rule_id": "SV-OM-E3.26.5-C",
-      "text": "up to 25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-C",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-014",
-      "rule_id": "SV-OM-E3.26.5-D-I-B1",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-I-B1",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-015",
-      "rule_id": "SV-OM-E3.26.5-D-I-B2",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-I-B2",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-016",
-      "rule_id": "SV-OM-E3.26.5-D-I-B3",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-I-B3",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-017",
-      "rule_id": "SV-OM-E3.26.5-D-II",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-II",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-018",
-      "rule_id": "SV-OM-E3.26.5-D-II",
-      "text": "24 years",
-      "value": 24,
-      "unit": "years",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-II",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-019",
-      "rule_id": "SV-OM-E3.26.5-D-III",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-III",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-020",
-      "rule_id": "SV-OM-E3.26.5-D-III",
-      "text": "17 years",
-      "value": 17,
-      "unit": "years",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-III",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-021",
-      "rule_id": "SV-OM-E3.26.5-D-IV",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-IV",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-022",
-      "rule_id": "SV-OM-E3.26.5-D-V-B1",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-V-B1",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-023",
-      "rule_id": "SV-OM-E3.26.5-D-V-B2",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-V-B2",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-024",
-      "rule_id": "SV-OM-E3.26.5-D-V-B3",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-V-B3",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-025",
-      "rule_id": "SV-OM-E3.26.5-D-V-B4",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-V-B4",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-026",
-      "rule_id": "SV-OM-E3.26.5-D-V-B5",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-V-B5",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-027",
-      "rule_id": "SV-OM-E3.26.5-D-V-B6",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-V-B6",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-028",
-      "rule_id": "SV-OM-E3.26.5-D-V-B7",
-      "text": "up to 20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.5-D-V-B7",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-029",
-      "rule_id": "SV-OM-E3.26.10-B",
-      "text": "20 hours",
-      "value": 20,
-      "unit": "hours",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.10-B",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-030",
-      "rule_id": "SV-OM-E3.26.10-B",
-      "text": "25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.10-B",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-031",
-      "rule_id": "SV-OM-E3.26.15-B-I",
-      "text": "up to 25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.15-B-I",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-032",
-      "rule_id": "SV-OM-E3.26.15-B-II",
-      "text": "up to 25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.15-B-II",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-033",
-      "rule_id": "SV-OM-E3.26.15-B-III",
-      "text": "up to 25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.15-B-III",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-034",
-      "rule_id": "SV-OM-E3.26.15-B-III",
-      "text": "17 years",
-      "value": 17,
-      "unit": "years",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.15-B-III",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-035",
-      "rule_id": "SV-OM-E3.26.15-B-IV",
-      "text": "up to 25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.15-B-IV",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-036",
-      "rule_id": "SV-OM-E3.26.15-C-I",
-      "text": "up to 25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.15-C-I",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-037",
-      "rule_id": "SV-OM-E3.26.15-C-II",
-      "text": "up to 25 hours",
-      "value": 25,
-      "unit": "hours",
-      "per": null,
-      "comparator": "LESS_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-E3.26.15-C-II",
-      "version_id": "2026-07-20",
-      "effective_from": "2026-07-20",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-038",
       "rule_id": "SV-OM-E4.1-B-I",
       "text": "less than 20 years",
       "value": 20,
@@ -1182,7 +573,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-039",
+      "id": "SV-TH-OM-010",
       "rule_id": "SV-OM-E4.1-B-II",
       "text": "less than 20 years",
       "value": 20,
@@ -1203,7 +594,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-040",
+      "id": "SV-TH-OM-011",
       "rule_id": "SV-OM-E4.1-B-III",
       "text": "less than 20 years",
       "value": 20,
@@ -1224,7 +615,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-041",
+      "id": "SV-TH-OM-012",
       "rule_id": "SV-OM-E4.1-G",
       "text": "less than 18 years",
       "value": 18,
@@ -1245,7 +636,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-042",
+      "id": "SV-TH-OM-013",
       "rule_id": "SV-OM-E4.1.10-A-I-B1",
       "text": "under 18 years",
       "value": 18,
@@ -1266,7 +657,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-043",
+      "id": "SV-TH-OM-014",
       "rule_id": "SV-OM-E4.1.10-A-I-B2",
       "text": "under 18 years",
       "value": 18,
@@ -1287,7 +678,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-044",
+      "id": "SV-TH-OM-015",
       "rule_id": "SV-OM-E4.1.10-A-I-B3",
       "text": "under 18 years",
       "value": 18,
@@ -1308,7 +699,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-045",
+      "id": "SV-TH-OM-016",
       "rule_id": "SV-OM-E4.1.10-A-II-B1",
       "text": "19 years",
       "value": 19,
@@ -1329,7 +720,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-046",
+      "id": "SV-TH-OM-017",
       "rule_id": "SV-OM-E4.1.10-A-II-B2",
       "text": "19 years",
       "value": 19,
@@ -1350,7 +741,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-047",
+      "id": "SV-TH-OM-018",
       "rule_id": "SV-OM-E4.1.10-A-II-B3",
       "text": "19 years",
       "value": 19,
@@ -1371,7 +762,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-048",
+      "id": "SV-TH-OM-019",
       "rule_id": "SV-OM-E4.1.10-B",
       "text": "under 18 years",
       "value": 18,
@@ -1392,7 +783,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-049",
+      "id": "SV-TH-OM-020",
       "rule_id": "SV-OM-E4.1.10-C",
       "text": "19 years",
       "value": 19,
@@ -1413,7 +804,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-050",
+      "id": "SV-TH-OM-021",
       "rule_id": "SV-OM-E4.1.15-A-I",
       "text": "12 months or more",
       "value": 12,
@@ -1434,7 +825,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-051",
+      "id": "SV-TH-OM-022",
       "rule_id": "SV-OM-E4.1.15-A-I",
       "text": "16 years",
       "value": 16,
@@ -1455,7 +846,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-052",
+      "id": "SV-TH-OM-023",
       "rule_id": "SV-OM-E4.1.15-A-II",
       "text": "12 months or more",
       "value": 12,
@@ -1476,7 +867,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-053",
+      "id": "SV-TH-OM-024",
       "rule_id": "SV-OM-E4.1.15-A-II",
       "text": "16 years",
       "value": 16,
@@ -1497,7 +888,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-054",
+      "id": "SV-TH-OM-025",
       "rule_id": "SV-OM-E4.1.15-A-III",
       "text": "12 months or more",
       "value": 12,
@@ -1518,7 +909,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-055",
+      "id": "SV-TH-OM-026",
       "rule_id": "SV-OM-E4.50.1-P2",
       "text": "less than 18 years",
       "value": 18,
@@ -1539,7 +930,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-056",
+      "id": "SV-TH-OM-027",
       "rule_id": "SV-OM-E4.50.5-D",
       "text": "less than 18 years",
       "value": 18,
@@ -1560,7 +951,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-057",
+      "id": "SV-TH-OM-028",
       "rule_id": "SV-OM-E4.50.20-P1",
       "text": "16 years",
       "value": 16,
@@ -1581,7 +972,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-058",
+      "id": "SV-TH-OM-029",
       "rule_id": "SV-OM-E4.50.35-B-I",
       "text": "less than 18 years",
       "value": 18,
@@ -1602,7 +993,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-059",
+      "id": "SV-TH-OM-030",
       "rule_id": "SV-OM-E4.50.35-B-II",
       "text": "less than 18 years",
       "value": 18,
@@ -1623,238 +1014,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-060",
-      "rule_id": "SV-OM-S1.10.30-A-II",
-      "text": "at least 12 months",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.10.30-A-II",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-061",
-      "rule_id": "SV-OM-S1.10.30-A-II",
-      "text": "at least 12 months",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.10.30-A-II",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-062",
-      "rule_id": "SV-OM-S1.10.30-B-I",
-      "text": "at least 30 hours",
-      "value": 30,
-      "unit": "hours",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.10.30-B-I",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-063",
-      "rule_id": "SV-OM-S1.10.35-B",
-      "text": "NZ$55,404.96",
-      "value": 55404.96,
-      "unit": "NZD",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": "available_funds_nzd",
-      "source_provision_id": "NZ-INZ-OM-S1.10.35-B",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-064",
-      "rule_id": "SV-OM-S1.10.35.1-B",
-      "text": "12 months or more",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.10.35.1-B",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-065",
-      "rule_id": "SV-OM-S1.10.55-B",
-      "text": "12 months",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.10.55-B",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-066",
-      "rule_id": "SV-OM-S1.40.30-A-II",
-      "text": "at least 12 months",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.40.30-A-II",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-067",
-      "rule_id": "SV-OM-S1.40.30-A-II",
-      "text": "at least 12 months",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.40.30-A-II",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-068",
-      "rule_id": "SV-OM-S1.40.30-B-I",
-      "text": "at least 30 hours",
-      "value": 30,
-      "unit": "hours",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.40.30-B-I",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-069",
-      "rule_id": "SV-OM-S1.40.35.1-B",
-      "text": "12 months or more",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.40.35.1-B",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-070",
-      "rule_id": "SV-OM-S1.40.55-B",
-      "text": "12 months",
-      "value": 12,
-      "unit": "months",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-S1.40.55-B",
-      "version_id": "2026-04-30",
-      "effective_from": "2026-04-30",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-071",
+      "id": "SV-TH-OM-031",
       "rule_id": "SV-OM-U10.5-A",
       "text": "12 months",
       "value": 12,
@@ -1875,7 +1035,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-072",
+      "id": "SV-TH-OM-032",
       "rule_id": "SV-OM-U11.1-A-I",
       "text": "up to 25 hours",
       "value": 25,
@@ -1896,7 +1056,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-073",
+      "id": "SV-TH-OM-033",
       "rule_id": "SV-OM-U11.1-A-I",
       "text": "up to 25 hours",
       "value": 25,
@@ -1917,7 +1077,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-074",
+      "id": "SV-TH-OM-034",
       "rule_id": "SV-OM-U11.1-A-II",
       "text": "up to 25 hours",
       "value": 25,
@@ -1938,7 +1098,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-075",
+      "id": "SV-TH-OM-035",
       "rule_id": "SV-OM-U11.1-A-II",
       "text": "up to 25 hours",
       "value": 25,
@@ -1959,7 +1119,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-076",
+      "id": "SV-TH-OM-036",
       "rule_id": "SV-OM-U13.10-A-I",
       "text": "up to 25 hours",
       "value": 25,
@@ -1980,7 +1140,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-077",
+      "id": "SV-TH-OM-037",
       "rule_id": "SV-OM-U13.10-A-II",
       "text": "up to 25 hours",
       "value": 25,
@@ -2001,7 +1161,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-078",
+      "id": "SV-TH-OM-038",
       "rule_id": "SV-OM-U13.10-A-III",
       "text": "up to 25 hours",
       "value": 25,
@@ -2022,7 +1182,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-079",
+      "id": "SV-TH-OM-039",
       "rule_id": "SV-OM-U13.10-C",
       "text": "18 years",
       "value": 18,
@@ -2043,7 +1203,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-080",
+      "id": "SV-TH-OM-040",
       "rule_id": "SV-OM-U13.15-B",
       "text": "17 years",
       "value": 17,
@@ -2064,7 +1224,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-081",
+      "id": "SV-TH-OM-041",
       "rule_id": "SV-OM-U13.15.1-A-I",
       "text": "up to 25 hours",
       "value": 25,
@@ -2085,7 +1245,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-082",
+      "id": "SV-TH-OM-042",
       "rule_id": "SV-OM-U13.15.1-A-II",
       "text": "up to 25 hours",
       "value": 25,
@@ -2106,7 +1266,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-083",
+      "id": "SV-TH-OM-043",
       "rule_id": "SV-OM-U13.15.1-A-III",
       "text": "up to 25 hours",
       "value": 25,
@@ -2127,7 +1287,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-084",
+      "id": "SV-TH-OM-044",
       "rule_id": "SV-OM-U13.15.1-A-IV-B1",
       "text": "up to 25 hours",
       "value": 25,
@@ -2148,7 +1308,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-085",
+      "id": "SV-TH-OM-045",
       "rule_id": "SV-OM-U13.15.1-A-IV-B2",
       "text": "up to 25 hours",
       "value": 25,
@@ -2169,7 +1329,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-086",
+      "id": "SV-TH-OM-046",
       "rule_id": "SV-OM-U13.15.1-A-IV-B2",
       "text": "more than 2 years",
       "value": 2,
@@ -2190,7 +1350,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-087",
+      "id": "SV-TH-OM-047",
       "rule_id": "SV-OM-U13.15.1-A-V-B1",
       "text": "up to 25 hours",
       "value": 25,
@@ -2211,7 +1371,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-088",
+      "id": "SV-TH-OM-048",
       "rule_id": "SV-OM-U13.15.1-A-V-B2",
       "text": "up to 25 hours",
       "value": 25,
@@ -2232,7 +1392,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-089",
+      "id": "SV-TH-OM-049",
       "rule_id": "SV-OM-U13.15.1-A-VI",
       "text": "up to 25 hours",
       "value": 25,
@@ -2253,7 +1413,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-090",
+      "id": "SV-TH-OM-050",
       "rule_id": "SV-OM-U14.10-F-II",
       "text": "16 week",
       "value": 16,
@@ -2274,7 +1434,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-091",
+      "id": "SV-TH-OM-051",
       "rule_id": "SV-OM-U14.10-G",
       "text": "30 week",
       "value": 30,
@@ -2295,7 +1455,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-092",
+      "id": "SV-TH-OM-052",
       "rule_id": "SV-OM-U14.15.5-A-II",
       "text": "16 weeks",
       "value": 16,
@@ -2316,7 +1476,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-093",
+      "id": "SV-TH-OM-053",
       "rule_id": "SV-OM-U14.15.5-A-III",
       "text": "30 week",
       "value": 30,
@@ -2337,7 +1497,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-094",
+      "id": "SV-TH-OM-054",
       "rule_id": "SV-OM-U14.20.1-P1-D",
       "text": "12 month",
       "value": 12,
@@ -2358,7 +1518,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-095",
+      "id": "SV-TH-OM-055",
       "rule_id": "SV-OM-U14.20.5-C",
       "text": "16 weeks",
       "value": 16,
@@ -2379,7 +1539,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-096",
+      "id": "SV-TH-OM-056",
       "rule_id": "SV-OM-U14.20.5-D",
       "text": "30 weeks",
       "value": 30,
@@ -2400,7 +1560,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-097",
+      "id": "SV-TH-OM-057",
       "rule_id": "SV-OM-U14.20.10-B-IV",
       "text": "16 week",
       "value": 16,
@@ -2421,7 +1581,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-098",
+      "id": "SV-TH-OM-058",
       "rule_id": "SV-OM-U14.20.10-B-VIII-B1",
       "text": "16 weeks",
       "value": 16,
@@ -2442,7 +1602,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-099",
+      "id": "SV-TH-OM-059",
       "rule_id": "SV-OM-U14.5.1-NOTE1",
       "text": "12 months",
       "value": 12,
@@ -2463,7 +1623,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-100",
+      "id": "SV-TH-OM-060",
       "rule_id": "SV-OM-U15-A-I",
       "text": "at least 14 weeks",
       "value": 14,
@@ -2484,7 +1644,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-101",
+      "id": "SV-TH-OM-061",
       "rule_id": "SV-OM-U16.5-A",
       "text": "up to 25 hours",
       "value": 25,
@@ -2505,7 +1665,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-102",
+      "id": "SV-TH-OM-062",
       "rule_id": "SV-OM-U3.20.25-A-I",
       "text": "NZ$1,667 per month of study",
       "value": 1667,
@@ -2526,7 +1686,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-103",
+      "id": "SV-TH-OM-063",
       "rule_id": "SV-OM-U3.20.25-A-I",
       "text": "less than 36 weeks",
       "value": 36,
@@ -2547,7 +1707,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-104",
+      "id": "SV-TH-OM-064",
       "rule_id": "SV-OM-U3.20.25-A-II",
       "text": "NZ$1,417 per month of study",
       "value": 1417,
@@ -2568,7 +1728,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-105",
+      "id": "SV-TH-OM-065",
       "rule_id": "SV-OM-U3.20.25-A-II",
       "text": "less than 36 weeks",
       "value": 36,
@@ -2589,7 +1749,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-106",
+      "id": "SV-TH-OM-066",
       "rule_id": "SV-OM-U3.20.25-B",
       "text": "NZ$1,667 per month of study",
       "value": 1667,
@@ -2610,7 +1770,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-107",
+      "id": "SV-TH-OM-067",
       "rule_id": "SV-OM-U3.20.25-C",
       "text": "NZ$1,250 per month of study",
       "value": 1250,
@@ -2631,7 +1791,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-108",
+      "id": "SV-TH-OM-068",
       "rule_id": "SV-OM-U3.20.30-A-I",
       "text": "NZ$20,000.00 per year",
       "value": 20000,
@@ -2652,7 +1812,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-109",
+      "id": "SV-TH-OM-069",
       "rule_id": "SV-OM-U3.20.30-A-I",
       "text": "36 weeks or longer",
       "value": 36,
@@ -2673,7 +1833,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-110",
+      "id": "SV-TH-OM-070",
       "rule_id": "SV-OM-U3.20.30-A-II",
       "text": "NZ$17,000.00 per year",
       "value": 17000,
@@ -2694,7 +1854,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-111",
+      "id": "SV-TH-OM-071",
       "rule_id": "SV-OM-U3.20.30-A-II",
       "text": "36 weeks or longer",
       "value": 36,
@@ -2715,7 +1875,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-112",
+      "id": "SV-TH-OM-072",
       "rule_id": "SV-OM-U3.20.30-A-III",
       "text": "36 weeks or longer",
       "value": 36,
@@ -2736,7 +1896,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-113",
+      "id": "SV-TH-OM-073",
       "rule_id": "SV-OM-U3.20.30-B",
       "text": "NZ$1,667 per month of study",
       "value": 1667,
@@ -2757,7 +1917,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-114",
+      "id": "SV-TH-OM-074",
       "rule_id": "SV-OM-U3.20.30-C",
       "text": "NZ$15,000.00 per year",
       "value": 15000,
@@ -2778,7 +1938,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-115",
+      "id": "SV-TH-OM-075",
       "rule_id": "SV-OM-U3.20.35-P1-A",
       "text": "NZ$9,000",
       "value": 9000,
@@ -2799,7 +1959,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-116",
+      "id": "SV-TH-OM-076",
       "rule_id": "SV-OM-U5.20-C-I",
       "text": "longer than 3 months",
       "value": 3,
@@ -2820,7 +1980,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-117",
+      "id": "SV-TH-OM-077",
       "rule_id": "SV-OM-U5.20-C-II",
       "text": "longer than 3 months",
       "value": 3,
@@ -2841,7 +2001,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-118",
+      "id": "SV-TH-OM-078",
       "rule_id": "SV-OM-U5.20-C-III-B1",
       "text": "longer than 3 months",
       "value": 3,
@@ -2862,7 +2022,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-119",
+      "id": "SV-TH-OM-079",
       "rule_id": "SV-OM-U5.20-C-III-B2",
       "text": "longer than 3 months",
       "value": 3,
@@ -2883,7 +2043,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-120",
+      "id": "SV-TH-OM-080",
       "rule_id": "SV-OM-U6.1.1-A-I",
       "text": "a minimum of 20 hours",
       "value": 20,
@@ -2904,7 +2064,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-121",
+      "id": "SV-TH-OM-081",
       "rule_id": "SV-OM-U6.25-P1-A-I",
       "text": "3 months",
       "value": 3,
@@ -2925,7 +2085,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-122",
+      "id": "SV-TH-OM-082",
       "rule_id": "SV-OM-U6.25-P1-A-II",
       "text": "3 months",
       "value": 3,
@@ -2946,7 +2106,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-123",
+      "id": "SV-TH-OM-083",
       "rule_id": "SV-OM-U6.25-P1-C-I",
       "text": "3 months",
       "value": 3,
@@ -2967,7 +2127,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-124",
+      "id": "SV-TH-OM-084",
       "rule_id": "SV-OM-U6.25-P1-C-II",
       "text": "3 months",
       "value": 3,
@@ -2988,7 +2148,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-125",
+      "id": "SV-TH-OM-085",
       "rule_id": "SV-OM-U6.30-P1-A-I",
       "text": "4 years",
       "value": 4,
@@ -3009,7 +2169,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-126",
+      "id": "SV-TH-OM-086",
       "rule_id": "SV-OM-U6.30-P1-A-I",
       "text": "4 years",
       "value": 4,
@@ -3030,7 +2190,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-127",
+      "id": "SV-TH-OM-087",
       "rule_id": "SV-OM-U6.30-P1-A-II",
       "text": "4 years",
       "value": 4,
@@ -3051,7 +2211,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-128",
+      "id": "SV-TH-OM-088",
       "rule_id": "SV-OM-U6.30-P1-A-II",
       "text": "4 years",
       "value": 4,
@@ -3072,7 +2232,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-129",
+      "id": "SV-TH-OM-089",
       "rule_id": "SV-OM-U6.5-B",
       "text": "more than 3 months",
       "value": 3,
@@ -3093,7 +2253,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-130",
+      "id": "SV-TH-OM-090",
       "rule_id": "SV-OM-U6.5-C",
       "text": "less than 3 months",
       "value": 3,
@@ -3114,7 +2274,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-131",
+      "id": "SV-TH-OM-091",
       "rule_id": "SV-OM-U6.5-D-II",
       "text": "more than 3 months",
       "value": 3,
@@ -3135,7 +2295,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-132",
+      "id": "SV-TH-OM-092",
       "rule_id": "SV-OM-U7.20.1-A",
       "text": "9 months",
       "value": 9,
@@ -3156,7 +2316,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-133",
+      "id": "SV-TH-OM-093",
       "rule_id": "SV-OM-U7.20.1-A",
       "text": "more than 9 months",
       "value": 9,
@@ -3177,7 +2337,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-134",
+      "id": "SV-TH-OM-094",
       "rule_id": "SV-OM-U7.20.1-B",
       "text": "9 months",
       "value": 9,
@@ -3198,7 +2358,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-135",
+      "id": "SV-TH-OM-095",
       "rule_id": "SV-OM-U7.20.1-C-I",
       "text": "longer than 9 months",
       "value": 9,
@@ -3219,7 +2379,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-136",
+      "id": "SV-TH-OM-096",
       "rule_id": "SV-OM-U7.20.1-C-II",
       "text": "longer than 9 months",
       "value": 9,
@@ -3240,7 +2400,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-137",
+      "id": "SV-TH-OM-097",
       "rule_id": "SV-OM-U7.20.1-D-I",
       "text": "up to 9 months",
       "value": 9,
@@ -3261,7 +2421,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-138",
+      "id": "SV-TH-OM-098",
       "rule_id": "SV-OM-U7.20.1-D-II",
       "text": "up to 9 months",
       "value": 9,
@@ -3282,7 +2442,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-139",
+      "id": "SV-TH-OM-099",
       "rule_id": "SV-OM-U8.20.2-A-V",
       "text": "24 months",
       "value": 24,
@@ -3303,7 +2463,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-140",
+      "id": "SV-TH-OM-100",
       "rule_id": "SV-OM-U8.20.6-A",
       "text": "NZ$58,240",
       "value": 58240,
@@ -3324,7 +2484,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-141",
+      "id": "SV-TH-OM-101",
       "rule_id": "SV-OM-U8.20.10-B-I",
       "text": "NZ$58,240",
       "value": 58240,
@@ -3345,7 +2505,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-142",
+      "id": "SV-TH-OM-102",
       "rule_id": "SV-OM-U8.30-B-I",
       "text": "12 months",
       "value": 12,
@@ -3366,7 +2526,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-143",
+      "id": "SV-TH-OM-103",
       "rule_id": "SV-OM-U8.30-B-II",
       "text": "12 months",
       "value": 12,
@@ -3387,7 +2547,7 @@
       ]
     },
     {
-      "id": "SV-TH-OM-144",
+      "id": "SV-TH-OM-104",
       "rule_id": "SV-OM-U9.15-B",
       "text": "12 months",
       "value": 12,
@@ -3398,111 +2558,6 @@
       "source_provision_id": "NZ-INZ-OM-U9.15-B",
       "version_id": "2019-05-13",
       "effective_from": "2019-05-13",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-145",
-      "rule_id": "SV-OM-V3.100-A-I",
-      "text": "17 years",
-      "value": 17,
-      "unit": "years",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-V3.100-A-I",
-      "version_id": "2024-04-11",
-      "effective_from": "2024-04-11",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-146",
-      "rule_id": "SV-OM-V3.100.10-NOTE1",
-      "text": "18 years",
-      "value": 18,
-      "unit": "years",
-      "per": null,
-      "comparator": null,
-      "applies_to_attribute": null,
-      "source_provision_id": "NZ-INZ-OM-V3.100.10-NOTE1",
-      "version_id": "2024-04-11",
-      "effective_from": "2024-04-11",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-147",
-      "rule_id": "SV-OM-V3.100.20-P1",
-      "text": "NZ$1,000 per month",
-      "value": 1000,
-      "unit": "NZD",
-      "per": "month",
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": "available_funds_nzd",
-      "source_provision_id": "NZ-INZ-OM-V3.100.20-P1",
-      "version_id": "2024-04-11",
-      "effective_from": "2024-04-11",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-148",
-      "rule_id": "SV-OM-V3.100.20-P1",
-      "text": "NZ$400 per month",
-      "value": 400,
-      "unit": "NZD",
-      "per": "month",
-      "comparator": null,
-      "applies_to_attribute": "available_funds_nzd",
-      "source_provision_id": "NZ-INZ-OM-V3.100.20-P1",
-      "version_id": "2024-04-11",
-      "effective_from": "2024-04-11",
-      "effective_to": null,
-      "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
-      "label": null,
-      "executable": false,
-      "derivation": "Figure in the instruction text",
-      "interpretation_flag_ids": [
-        "IF-25"
-      ]
-    },
-    {
-      "id": "SV-TH-OM-149",
-      "rule_id": "SV-OM-W2.15.5-P1-A",
-      "text": "NZ$9,000",
-      "value": 9000,
-      "unit": "NZD",
-      "per": null,
-      "comparator": "GREATER_THAN_OR_EQUAL",
-      "applies_to_attribute": "available_funds_nzd",
-      "source_provision_id": "NZ-INZ-OM-W2.15.5-P1-A",
-      "version_id": "2011-11-21",
-      "effective_from": "2011-11-21",
       "effective_to": null,
       "provenance_status": "VERIFIED_INSTRUCTION_SOURCE",
       "label": null,
