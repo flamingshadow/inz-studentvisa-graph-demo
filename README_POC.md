@@ -86,7 +86,7 @@ CREATE DATABASE studentvisa IF NOT EXISTS;
 ```
 
 ```bash
-.venv/bin/python -m pytest -q                          # 174 tests; needs the live studentvisa database
+.venv/bin/python -m pytest -q                          # 194 tests; needs the live studentvisa database
 ```
 
 - `svkg load` is idempotent. It MERGEs spec nodes (`origin:'SPEC'`), removes stale ones, never touches
@@ -139,6 +139,33 @@ SV-CHECK-APP-005 comes from F.8. MIN-001, HEALTH-001, EDU-009 and INSTR-001 were
 Every evaluation returns the rule, facts used, evidence used, unresolved requirements, automation class,
 instrument, provision and version.
 
+## Scenario dashboard
+
+```bash
+.venv/bin/svkg dashboard --open        # http://127.0.0.1:8765/
+```
+
+A local web page for viewing the 50 synthetic scenarios and running them. It needs **no Claude API key**: the
+engine is ordinary Python, and the page only needs the live `studentvisa` database.
+
+- **Scenarios:** a card for each persona with its topic, test type and expected result. Search, and filter by
+  expected outcome, topic or test type. **Run all scenarios** checks every scenario's result against its expected
+  result in about a second (nothing is saved).
+- **One scenario:** the persona, its application facts and evidence (each marked verified or not), and the
+  expected results. **Run scenario** shows an overall red/amber/green banner, key actions with who must act, then
+  every rule's result with its explanation, the exact source provision (instrument, version, link and wording), the
+  facts and evidence used, and what is still needed.
+- **Status colours:** green = met, amber = a person must act (evidence missing, officer review, decision-maker, or
+  outside the corpus), red = not met or the engine stopped, grey = not applicable. Each status also has an icon and
+  a label, so colour is never the only signal. An assessment is never green overall, because the final grant is
+  always the decision-maker's.
+- **Runs write nothing** unless you tick "Save assessment to the graph", which records it exactly as `svkg assess`
+  does.
+- **Copy summary for Claude** copies a short structured digest; paste it into Claude Desktop and ask for a summary.
+  **Download JSON** saves the full result.
+- **Safety:** it listens on `127.0.0.1` only, rejects other host names, and requires a custom header on every
+  POST. It loads no external fonts or scripts.
+
 ## Claude Desktop
 
 Add this to `~/Library/Application Support/Claude/claude_desktop_config.json` under `mcpServers`, then
@@ -171,7 +198,14 @@ The server reads the Neo4j credentials from the repo's `.env`, so no secret goes
 | `explain_evaluation` | RuleEvaluation → DecisionCheck → Rule → Provision → AuthoritySource (with its version) |
 | `list_assessments`, `get_assessment`, `application_template` | Assessment records |
 | `list_instructions`, `instruction_text`, `instruction_history`, `rules_by_instruction` | Operational Manual: exact instruction text with URL and effective date, the version in force on a date (`as_at`), every version, and the rules derived from an instruction |
+| `run_test_case` | Run a scenario (SVP-001 to SVP-050) against the live graph, dry run: red/amber/green status, whether the expected result was met, key actions, one line per rule |
+| `digest_assessment` | Turn an assessment (from `assess_application`, the dashboard's Download JSON or its Copy button) into a digest of key actions for Claude to put into words |
 | `assess_application` | The only writing tool |
+
+**Natural-language summaries.** Ask for them in Claude Desktop, for example *"Run SVP-017 and summarise it for an
+officer with the key actions"*, or paste the dashboard's copied text and ask for a summary. The tools do the
+checking and list the key actions in priority order; Claude only writes them up, following the digest's
+`writing_guidance` (about 200 words, plain NZ English, never recommending a grant or decline).
 
 Example prompts: *"Which Student Visa rules cover sponsorship, and under which provisions?"*,
 *"Assess this synthetic application"* (paste JSON), *"Why did SV-FEE-003 come out NOT_APPLICABLE?"*,
