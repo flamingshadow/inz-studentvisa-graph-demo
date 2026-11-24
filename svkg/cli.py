@@ -8,6 +8,7 @@
   svkg build                   extract + check + load
   svkg assess app.json         assess one synthetic application (writes assessment nodes + audit log)
   svkg assess-batch dir/       assess every *.json in a directory
+  svkg dashboard               local web dashboard: view scenarios, run one, see every rule's result
   svkg mcp                     run the read-only Claude Desktop MCP server (stdio)
 """
 from __future__ import annotations
@@ -40,6 +41,9 @@ def main(argv=None) -> int:
     b = sub.add_parser("assess-batch")
     b.add_argument("dir")
     b.add_argument("--no-write", action="store_true")
+    dsh = sub.add_parser("dashboard")
+    dsh.add_argument("--port", type=int, default=8765)
+    dsh.add_argument("--open", action="store_true", help="open the page in your browser")
     sub.add_parser("mcp")
     args = p.parse_args(argv)
 
@@ -77,6 +81,9 @@ def main(argv=None) -> int:
             res = assess(json.loads(f.read_text()), write=not args.no_write, channel="cli-batch")
             rows.append({"file": f.name, "assessment_id": res["assessment_id"], **res["summary"]})
         _print(rows)
+    if args.cmd == "dashboard":
+        from .dashboard.server import serve
+        serve(args.port, args.open)
     if args.cmd == "mcp":
         from .mcp_server import main as mcp_main
         mcp_main()

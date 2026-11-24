@@ -36,6 +36,7 @@ def test_tools_carry_contract_and_only_one_writes(live):
     names = {t.name for t in tools}
     assert "assess_application" in names and len(names) >= 15
     assert {"instruction_text", "instruction_history", "rules_by_instruction", "list_instructions"} <= names
+    assert {"run_test_case", "digest_assessment"} <= names
     for t in tools:
         assert "POC NOTICE" in t.description and "Return SOURCE_COVERAGE_GAP" in t.description
         props = set((t.input_schema or {}).get("properties", {}))
@@ -67,3 +68,19 @@ def test_rejects_non_synthetic(live):
     app["synthetic"] = False
     r = run(lambda s: _call(s, "assess_application", {"application": app}))
     assert "error" in r
+
+
+def test_run_test_case_and_digest_for_claude(live):
+    async def go(s):
+        r = await _call(s, "run_test_case", {"test_case_id": "svp-017"})
+        d = await _call(s, "digest_assessment", {"assessment": {"digest": r["result"]}})
+        miss = await _call(s, "run_test_case", {"test_case_id": "TC-01"})
+        bad = await _call(s, "digest_assessment", {"assessment": {"nonsense": 1}})
+        return r, d, miss, bad
+    r, d, miss, bad = run(go)
+    c = r["result"]
+    assert c["overall"]["rag"] == "red" and c["expected_result_met"] and c["saved"] is False
+    assert c["key_actions"][0]["type"] == "RESOLVE" and "Never recommend granting or declining" in c["writing_guidance"]
+    assert c["rules"] and {"rule_id", "result", "rag", "provision", "explanation"} <= set(c["rules"][0])
+    assert d["result"]["key_actions"] == c["key_actions"]
+    assert "not_found" in miss["result"] and "error" in bad["result"]
